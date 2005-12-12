@@ -1,0 +1,71 @@
+#!/bin/sh 
+
+# Utility to establish another link in an ssh tunnel. Intermediate links
+# have "forward_machine" typically set to "localhost"
+
+#    Copyright 2005 Victor Chudnovsky
+
+#    This program is free software; you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation; either version 2 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program; if not, write to the Free Software
+#    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+# $Author: grantwallace $ $Revision: 1.1.1.1 $ $Date: 2005-12-12 21:51:19 $
+
+#
+
+# setup
+#
+
+THIS_COMMAND=`basename $0`
+
+if [ $# -eq 0 ]; then
+   echo Usage: $THIS_COMMAND \"ssh-options\" [LOCAL_PORT FORWARD_MACHINE REMOTE_MACHINE forwarded_port_]...;
+  exit 1;
+fi
+
+
+SSH_OPTIONS=$1;
+LOCAL_PORT=$2;
+FORWARD_MACHINE=$3;
+REMOTE_MACHINE=$4;
+REMOTE_PORT=$5;
+shift
+shift;
+shift;
+shift;
+shift;
+
+
+
+if [ $# -ne 0 ]; then
+
+   # We must continue tunneling: we tell ssh to execute $SHELL, and
+   # we tell $SHELL to execute $THIS_COMMAND on the next link in the
+   # chain. The reason for invoking the shell is to force the path to
+   # be read so the we do not have to hard-code the location of
+   # $THIS_COMMAND on the remote system.
+
+    COMMAND="\$SHELL -c '$THIS_COMMAND \"$SSH_OPTIONS\" $REMOTE_PORT";
+    EOL=" ' ";
+
+else
+    
+    # We are finished tunneling
+
+    COMMAND=;
+    EOL=;
+
+fi
+
+echo $THIS_COMMAND:  [$HOST:$LOCAL_PORT -\> $REMOTE_MACHINE:$FORWARD_MACHINE:$REMOTE_PORT]
+ssh $SSH_OPTIONS -t -L $LOCAL_PORT:$FORWARD_MACHINE:$REMOTE_PORT $REMOTE_MACHINE $COMMAND $* $EOL
