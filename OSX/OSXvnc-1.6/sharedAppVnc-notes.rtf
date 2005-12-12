@@ -1,0 +1,30 @@
+{\rtf1\mac\ansicpg10000\cocoartf102
+{\fonttbl\f0\fswiss\fcharset77 Helvetica;\f1\fnil\fcharset77 Monaco;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww12440\viewh12560\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f0\fs24 \cf0 TODO:\
+Figure out which portion of a window is visible and only send refresh for those portions. - See how OSXvnc normally tracks changes, also look at tightvnc and daniel's tracking code. Can one of these methods be applied to the windows only (like a diff method). Keep the rects that are the visible area for each window, need to recalculate whenever level, size or position changes. Intersect the rects from all shared windows to find out if changes are pending, do this check in the clientOutput main loop by calling "sharedapp->getWindowsArea" and setting haveUpdates appropiately.\
+\
+Memory leaks.\
+Application Hide/Unhide - unhide doesn't work.\
+Sometimes app gets so loaded that things stop responding.\
+Check for runaway sending of repetitive or unnecessary mouse or update events.\
+Scale client image.\
+\
+Need to disallow mouse/keyboard events from client to server if not directed toward a shared window.\
+Need to build a blackout region of window and not send or receive mouse/keyboard events if in blackout region of app.\
+\
+BUGS:\
+(1)Occassionally when multiple shared windows are added and closed it sends a message type 0 which is framebuffer update and the shared window frames are closed and there is an exception, unknown rfb rectangle encoding.\
+(1) fix - I believe this was due to failure to reset the bool variables 
+\f1\fs20 \CocoaLigature0 sendRichCursorEncoding and sendCursorPositionEncoding
+\f0\fs24 \CocoaLigature1  to false after each loop iteration on shared windows.\
+Problems encountered while building SharedAppVnc\
+\
+1. BOOL and Cursor redefined - need to add -I./include/X11 where they have tested if obj_C is defined\
+2. 3000+ errors related to objective-c keywords. Need to pass -ObjC as an extra CFLAG to the compiler. Also in the "General" tab of preferences, may need to override the default file type, for example cutpaste.c should be made objective-c.\
+3. Had to get rid of appkit.framework in the prefix header setting of SharedAppVnc.\
+\
+Regarding hack to get a pointer to the sharedApp object in main.c. As Daniel suggested, I could replace the "File's Owner" in IB with my SharedApp class. But the problem is my class doesn't implement all the NSApplicaiton stuff like "hide other" etc. So I could make SharedApp a subclass of NSApplication and then edit Info.plist to say SharedApp is the principal class. But this seems like a hack also. So for now I'm leaving the callback hack.}

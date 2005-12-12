@@ -1,0 +1,44 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                actionConnectToClient = id; 
+                actionDisconnectClient = id; 
+                actionHideAll = id; 
+                actionHideSelected = id; 
+                actionSelectWindow = id; 
+                actionShowPreferencePanel = id; 
+                changeDimming = id; 
+                changeDisableRemoteEvents = id; 
+                changeLimitLocal = id; 
+                changePassword = id; 
+                changeSharing = id; 
+                changeSleep = id; 
+                changeSwapMouse = id; 
+                loadUserDefaults = id; 
+            }; 
+            CLASS = SharedApp; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                buttonDisableRemoteEvents = NSButton; 
+                buttonEnable = NSButton; 
+                buttonLimitToLocalConnections = NSButton; 
+                buttonPreventDimming = NSButton; 
+                buttonPreventSleeping = NSButton; 
+                buttonSelectToShare = NSButton; 
+                buttonSwapMouseButtons = NSButton; 
+                buttonUnshare = NSButton; 
+                buttonUnshareAll = NSButton; 
+                comboboxConnectToClient = NSComboBox; 
+                preferencePanel = NSPanel; 
+                tableConnectedClients = NSTableView; 
+                tableSharedWindows = NSTableView; 
+                textfieldPassword = NSTextField; 
+                window = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

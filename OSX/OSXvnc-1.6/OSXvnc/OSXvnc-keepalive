@@ -1,0 +1,39 @@
+#!/bin/sh 
+#
+# OSXvnc-keepalive 
+#
+# This little script, as you might imagine, will relaunch OSXvnc-server
+# when a user logs out and the OS kills the process (because it's running an event loop)
+# 
+# Modification Log:
+#
+# 1.5
+# Replace spurious ls -l entry with a much more appropriate pwd
+#
+# 1.4
+# Uses proper -lt and checks for less than 200 rather than more than 0 since process only return unsigned shorts
+#
+# 1.33
+# Modified so that keepalive only shuts down on unrecoverable errors
+#
+# 1.31
+# Modified so that OSXvnc can live in directories with spaces
+#
+# 1.11
+# Initial version
+
+RESULT=15
+pwd
+# OS X will send a SIGINT or SIGTERM to shutdown OSXvnc-server
+# On a negative SIGNAL we'll stop properly (this is what the server returns internally when an error occurs)
+while [[ "$RESULT" -lt "200" ]]
+do
+	echo "$0: Starting Server"
+	"$@" # Run our parameters
+	RESULT=$? # Record Result
+	echo $RESULT
+	sleep 5
+done
+
+echo "$0 Shutdown with exit status " $RESULT
+
