@@ -1,0 +1,11 @@
+
+This is the directory containing the code specific to the TightVNC X server.
+Note that within this directory the name RFB is still used instead of VNC.
+
+NOTE:
+
+The is the new XFree86 v4 architecture VNC server code.
+
+Modified entirely by Alan Hourihane <alanh@fairlite.demon.co.uk>
+
+For information please visit http://xf4vnc.sourceforge.net

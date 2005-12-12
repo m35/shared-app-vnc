@@ -1,0 +1,180 @@
+               Installation Details for XFree86[tm] 4.3.99.902
+
+                          The XFree86 Project, Inc
+
+                              24 February 2003
+
+                                  Abstract
+
+     How to install XFree86.
+
+1.  Introduction
+
+This document contains information about installing the XFree86 binaries as
+provided by The XFree86 Project.
+
+The XFree86 binaries that we provide for UNIX-like OS's (Linux, the BSDs,
+Solaris, etc) are packaged in a platform-independent gzipped tar format (aka
+"tarballs" identified by the .tgz suffix).  Along with the binaries we pro-
+vide a customized version of the GNU tar utility called "extract" and an
+installation script.  We recommend that these be used to install the bina-
+ries.  (The source for this customized version of GNU tar can be found in the
+XFree86 CVS repository's "utils" module, and from our ftp site
+<URL:ftp://ftp.xfree86.org/pub/XFree86/misc/utils-1.1.1.tgz>.)
+
+Note: for snapshot releases like this one, binaries are only available for a
+small number of platforms.
+
+2.  Downloading the XFree86 4.3.99.902 binaries
+
+We provide XFree86 4.3.99.902 binaries for a range of operating systems at
+our ftp site <URL:ftp://ftp.xfree86.org/pub/XFree86/snap-
+shots/4.3.99.902/binaries/> and our web site
+<URL:http://ftp.xfree86.org/pub/XFree86/snapshots/4.3.99.902/binaries/>.
+Often during releases our site is heavily loaded.  Instead of downloading
+directly from us we recommend that instead you use one of our mirror sites.
+
+Our binaries are organized by sub-directories which correspond to each of the
+OS/platforms for which we provide binaries.  First go to the sub-directory
+that represents your OS platform. In some cases (e.g., Linux) there may be a
+number of choices depending on the architecture or libc version your platform
+uses.  In all case we recommend that you first download the Xinstall.sh
+script, and run it as in the following example to find out which binary dis-
+tribution you should download.
+
+     sh Xinstall.sh -check
+
+The output of this utility tells you which is the correct set of binaries for
+you to download.  If you are careful with this step you will save yourself a
+lot time and trouble from NOT downloading an incompatible distribution.
+
+NOTES:
+
+   o The Xinstall.sh script must be downloaded in binary mode, otherwise it
+     won't run correctly.  If you get lots of "command not found" messages
+     when you try to run it, then it is most likely because the script wasn't
+     downloaded in binary mode.  Some web browsers won't do this for files of
+     that name, so we also have a copy of it called "Xinstall.bin", and most
+     browsers should download that correctly.  When downloading it under this
+     name, select "save as" on your browser, and save the file under the name
+     "Xinstall.sh".
+
+   o The Xinstall.sh script requires some system commands and utilities to
+     function correctly.  While most systems will have these, some Linux
+     installations may not.  If you find that the script is failing because
+     of some missing system command, you will need to install it before you
+     can continue.  If you don't know how to do this, then we recommend that
+     you obtain this version of XFree86 from your Operating System distribu-
+     tor.
+
+   o Always use the version of the Xinstall.sh script that's provided with
+     the release you're installing.  Older versions of the script may not
+     install newer releases correctly.
+
+   o If the binary distribution reported by the Xinstall.sh script isn't
+     present on our site, then there are two possibilities.  The first is
+     that it hasn't been prepared and uploaded yet.  This is likely if you
+     are looking soon after the release date.  The second possibility is that
+     we won't have it available at all for this release.  This is likely if
+     it's still not there about two weeks after the release date.  Check here
+     <URL:http://www.xfree86.org/4.3.99.902/UPDATES.html> for information
+     about updates to our binary distributions, and here
+     <URL:http://www.xfree86.org/4.3.99.902/ERRATA.html> for errata related
+     to this release.
+
+Once you're run the Xinstall.sh script and found which binary distribution is
+suitable for your system, download the necessary files.  The  mandatory files
+for all installations are listed below.  If you have not downloaded all of
+the files, the installer script will complain.
+
+NOTES:
+
+   o Some web browsers have a problem downloading the extract utility cor-
+     rectly.  If you encounter this problem, download the version called
+     extract.exe instead.  This should fix the problem.  (This is not a
+     DOS/Windows executable.)
+
+   o The Darwin/Mac OS X distribution doesn't have or require the
+      tarball.
+
+   o Some distributions may have additional mandatory tarballs.  While rare,
+     the installer script will tell you if any are missing.
+
+3.  Installing XFree86 4.3.99.902 using the Xinstall.sh script
+
+We strongly recommend that our XFree86 4.3.99.902 binaries be installed using
+the Xinstall.sh script that we provide.  There are a lot of steps in the man-
+ual installation process, and those steps can vary according to the platform
+and hardware setup.
+
+You must login as the super user (root) to run the installer script.  Place
+all of the downloaded files into a single directory (choose a temporary loca-
+tion with enough space).  Use the cd command to change to that directory and
+then run the installer script as follows:
+
+     sh Xinstall.sh
+
+Answer the prompts as they come up.  If you are missing something that is
+required, the installer may tell you to install it before trying again.  If
+the problem is that you did not download all of mandatory files aforemen-
+tioned, then the installer will tell you which ones are missing and ask you
+to download them before proceeding.
+
+3.1  Questions the installer may ask
+
+The installer asks some questions that may not have obvious answers.  The
+information here should help you answer them.  In most cases, apart from the
+first question, the default answers should be OK.
+
+If you run the installer from within an X session (the installer checks if
+$DISPLAY is set), you will be warned that doing so is not a good idea.
+Unless you have a good reason for knowing that this won't be a problem, you
+should exit your X session, including stopping xdm or equivalent if it is
+running, before continuing.  If you ignore this warning and run into prob-
+lems, well, you were warned!
+
+will be warned that proceeding with this installation will overwrite it.
+Only those things that are part of our standard distribution will be over-
+written.  Other X applications that you may have installed will not be
+removed.  Some configuration files may be overwritten though, but the
+installer should prompt you before doing so.  As the opening greeting says,
+it is strongly recommended that you backup any existing installation before
+proceeding.  If you want your old applications to still be there after you've
+installed, don't do the "backup" by simply renaming your old /usr/X11R6
+directory.  It is better to make a copy of it, and then install over the top
+of the original one.  If you run into problems and want to revert to the old
+installation, you can then delete the overwritten one and copy the saved ver-
+sion back.
+
+During the first part of the installation over an existing version, the
+script may remove some old files or directories that would get in the way of
+the new installation.  It will list which files/directories have been
+removed.  If none are listed, then none were removed.
+
+3.2  After the installation is complete
+
+The next step is to configure the X server.  That is covered in detail in an
+as-yet unwritten document :-(.  In the meantime, there are three ways to cre-
+ate a basic X server configuration file for XFree86 4.3.99.902.  One is to
+run the xf86config utility.  Another is to run the xf86cfg utility.  The
+third option is to use the new -configure X server option:
+
+     XFree86 -configure
+
+Note that if you are running Darwin/Mac OS X, there is no step 3 :-).  You
+should skip this step, as configuration is not required or possible.  The X
+server configuration file is not used on Darwin/Mac OS X.
+
+The X server config file (XF86Config) format has changed compared to 3.3.x.
+Also, its default location is now /etc/X11.  Finally, there is now only one X
+server for driving video hardware, and it is called "XFree86".  Once you're
+satisfied with the operation of the new X server, you can safely remove the
+old XF86_* and/or XF98_* X server binaries from /usr/X11R6/bin.
+
+After the X server configuration is done, it may be advisable to reboot,
+especially if you run xdm (or equivalent) or the font server (xfs).
+
+     Generated from XFree86: xc/programs/Xserver/hw/xfree86/doc/sgml/Install.sgml,v 1.17 dawes Exp $
+
+
+$XFree86: xc/programs/Xserver/hw/xfree86/doc/Install,v 1.27 2003/12/19 04:36:36 dawes Exp $

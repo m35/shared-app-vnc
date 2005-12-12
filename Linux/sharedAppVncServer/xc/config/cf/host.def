@@ -1,0 +1,38 @@
+/* VNC for XFree86 v4.x host.def */
+
+#define XVendorString "XF4VNC"
+#define XFree86CustomVersion "XF4VNC-4.4.0.0"
+
+#define XvncServer YES
+#define XF86VNC YES
+#define BuildXKBlib YES
+#define BuildXInputExt YES
+#define BuildXFree86OnSparcSunOS YES
+#define BuildXInputLib NO
+#define BuildFontLib YES
+
+/* Useful for debugging */
+
+/* #define GccWarningOptions -Wall -Wpointer-arith -Wstrict-prototypes \
+                          -Wmissing-prototypes -Wmissing-declarations \
+                          -Wnested-externs */
+/* #define DefaultCCOptions -ansi GccWarningOptions -pipe -g -O2 */
+
+/* We're not using these at all here */
+#define BuildFonts NO
+#define BuildServersOnly YES
+#define BuildLibrariesForXServers YES
+#define BuildVncExtLib YES
+#define BuildPexExt NO
+#define BuildXIE NO
+#define BuildDocs NO
+#define BuildClients NO
+#define BuildGLXLibrary NO
+#define BuildXprint NO
+#define XnestServer NO
+#define XVirtualFramebufferServer NO
+#define XprtServer NO
+#define XsunServer NO
+#ifdef cygwinArchitecture
+#define SharedVncExtReqs $(LDPRELIB) $(EXTENSIONLIB) $(XLIBONLY)
+#endif

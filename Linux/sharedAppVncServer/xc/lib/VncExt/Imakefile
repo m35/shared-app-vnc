@@ -1,0 +1,28 @@
+#define DoNormalLib NormalLibVncExt
+#define DoSharedLib SharedLibVncExt
+#define DoExtraLib SharedLibVncExt
+#define DoDebugLib DebugLibVncExt
+#define DoProfileLib ProfileLibVncExt
+#define LibName VncExt
+#define SoRev SOVNCEXTREV
+#define LibHeaders NO
+
+#include <Threads.tmpl>
+
+#ifdef SharedVncExtReqs
+REQUIREDLIBS = SharedVncExtReqs
+#endif
+
+#if Malloc0ReturnsNull
+ALLOC_DEFINES = Malloc0ReturnsNullDefines
+#endif
+
+      DEFINES = $(ALLOC_DEFINES)
+     INCLUDES = -I$(XLIBSRC) -I$(EXTINCSRC)
+         SRCS = Vnc.c
+         OBJS = Vnc.o
+     LINTLIBS = $(LINTXLIB)
+
+#include <Library.tmpl>
+
+DependTarget()

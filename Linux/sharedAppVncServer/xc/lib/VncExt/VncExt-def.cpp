@@ -1,0 +1,10 @@
+LIBRARY VncExt
+VERSION LIBRARY_VERSION
+EXPORTS
+XVncGetEventBase
+XVncQueryExtension
+XVncSelectNotify
+XVncConnection
+XVncListConnections
+XVncChromiumStart
+XVncChromiumMonitor

@@ -1,0 +1,12 @@
+Changes for version 1.1
+
+1) Change shareAppUpdate Message. Rather than indicating how many windows will be updated upfront, iteratate sending new update messages and put an "end of updates" tag in the last update message. This will allow us to recurse into child windows and add them as needed. - Maybe we don't need "EOF" marker - would only be useful if regulated how often update requests are generated.
+
+2) We will send out a sharedAppRemove message whenever a window is killed or no longer shared. This is how client will know when to remove a frame as opposed to the old method of a shared window count.
+
+3) New windows will be discovered when an update arrives for the new window.
+
+4) Add a field to indicate which windows are children of other windows, so that they can all be closed when needed.
+
+
+

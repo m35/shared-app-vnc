@@ -1,0 +1,83 @@
+XCOMM $XFree86: $
+XCOMM
+XCOMM This is an Imakefile for the VNC driver.  
+XCOMM
+
+#include <Server.tmpl>
+
+XCOMM SUBDIRS = /*rfbkeyb rfbmouse*/
+
+SRCS = vncInit.c cmap.c \
+	draw.c rfbserver.c sockets.c auth.c loginauth.c \
+	translate.c \
+	kbdptr.c hextile.c corre.c cutpaste.c httpd.c \
+	rre.c stats.c cursor.c tight.c zlib.c \
+	rfbkeyb.c rfbmouse.c vncext.c list.c sharedapp.c
+OBJS = vncInit.o cmap.o \
+	draw.o rfbserver.o sockets.o auth.o loginauth.o \
+	translate.o \
+	kbdptr.o hextile.o corre.o cutpaste.o httpd.o \
+	rre.o stats.o cursor.o tight.o zlib.o \
+	rfbkeyb.o rfbmouse.o vncext.o list.o sharedapp.o
+
+XCOMM Define CHROMIUM for now - make this configurable at top level host.def
+DEFINES = -DXFREE86VNC=1 -DCHROMIUM -DSHAREDAPP
+
+#if defined(XF86DriverSDK)
+INCLUDES = -I. -I../../include
+#else
+INCLUDES = -I. -I$(XF86COMSRC) -I$(XF86OSSRC) -I$(SERVERSRC)/Xext \
+           -I$(SERVERSRC)/mi -I$(XF86SRC)/xaa -I$(SERVERSRC)/fb \
+	   -I$(XF86SRC)/xf1bpp \
+	   -I$(SERVERSRC)/render -I$(XF86SRC)/shadowfb \
+	   -I$(XF86SRC)/xf4bpp -I$(SERVERSRC)/mfb \
+           -I$(XF86SRC)/vgahw -I$(XF86SRC)/ramdac \
+           -I$(XF86SRC)/rac -I$(XF86SRC)/int10 \
+	   -I$(XF86SRC)/ddc -I$(XF86SRC)/i2c \
+           -I$(FONTINCSRC) -I$(SERVERSRC)/include -I$(XINCLUDESRC) \
+	   -I$(XTOP)/include/extensions -I$(XF86OSSRC)/vbe \
+	   -I$(XTOP)/../libvncauth -I$(XTOP)/../include -I/usr/local/include
+#endif
+
+LinkSourceFile(rfbkeyb.c,../../vnc)
+LinkSourceFile(rfbmouse.c,../../vnc)
+LinkSourceFile(auth.c,../../vnc)
+LinkSourceFile(loginauth.c,../../vnc)
+LinkSourceFile(cmap.c,../../vnc)
+LinkSourceFile(draw.c,../../vnc)
+LinkSourceFile(rfbserver.c,../../vnc)
+LinkSourceFile(sockets.c,../../vnc)
+LinkSourceFile(translate.c,../../vnc)
+LinkSourceFile(kbdptr.c,../../vnc)
+LinkSourceFile(hextile.c,../../vnc)
+LinkSourceFile(corre.c,../../vnc)
+LinkSourceFile(cutpaste.c,../../vnc)
+LinkSourceFile(httpd.c,../../vnc)
+LinkSourceFile(rre.c,../../vnc)
+LinkSourceFile(stats.c,../../vnc)
+LinkSourceFile(cursor.c,../../vnc)
+LinkSourceFile(tight.c,../../vnc)
+LinkSourceFile(zlib.c,../../vnc)
+LinkSourceFile(rfb.h,../../vnc)
+LinkSourceFile(sprite.h,../../vnc)
+LinkSourceFile(tableinitcmtemplate.c,../../vnc)
+LinkSourceFile(tableinittctemplate.c,../../vnc)
+LinkSourceFile(tabletranstemplate.c,../../vnc)
+LinkSourceFile(keyboard.h,../../vnc)
+LinkSourceFile(vncext.c,../../vnc)
+LinkSourceFile(list.c,../../vnc)
+LinkSourceFile(list.h,../../vnc)
+LinkSourceFile(sharedapp.c,../../vnc)
+LinkSourceFile(sharedapp.h,../../vnc)
+
+SHLIBLDFLAGS += -L/usr/local/lib
+
+#if DoLoadableServer
+DynamicModuleTarget(vnc.so,$(OBJS) $(TOP)/../libvncauth/libvncauth.a -ljpeg -lcrypt)
+InstallDynamicModule(vnc.so,$(MODULEDIR),)
+#else
+DepLibraryModuleTarget(vnc, $(OBJS), $(OBJS))
+InstallLibraryModule(vnc,$(MODULEDIR),.)
+#endif
+
+DependTarget()

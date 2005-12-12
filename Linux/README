@@ -1,0 +1,32 @@
+Files:
+
+Xvnc - vnc server application. use "vncserver" command to start
+vnc.so - vnc server module. Copy to /usr/X11R6/lib/modules and edit XF86Config as directed here http://xf4vnc.sourceforge.net/doc.html
+
+SharedWinVnc.jar - vnc viewer java archive
+runviewer - scipt to start viewer (can pass in -host <host> -port <port> -xoff <offset> -yoff <offset>
+
+javactrl.jar - sharing control java archive.
+javactrl - script to start sharing control applet. This applet tells the server to share or unshare windows.
+
+windowshare - a linux app that is use by javactrl to contact the server. This application can be useful for debuging the communication interface.
+example: 
+get a windows id by using xwininfo and clicking on the window
+tell the server to share that window with using windowshare command
+windowshare -passwd ~/.vnc/passwd -command share -id 0x200002
+
+
+General usage:
+  Run the vnc viewer appliation on a workstation that would like to view the shared windows. The viewer will automatically listen for new connections.
+  Run the vnc server application on a workstation from which you want to share windows.
+  Run the javactrl application on the workstation running vnc server. This will allow you to control the server. The javactrl can have the server initiate a connection to a viewer using menu:client:connect. The client will typically be listening on port 5500, so the connect string should be host:5500.
+
+
+CHANGES
+Sharing of Dialog windows
+Added capabilities message
+Scroll bars on viewer
+Limit events to the top focused window
+"Push" connection
+Javactrl reverse connect and include dialogs option
+
