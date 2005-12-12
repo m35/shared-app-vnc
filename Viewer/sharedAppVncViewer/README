@@ -1,0 +1,18 @@
+To run vnc viewer
+
+>runviewer -host <host> -port <port> -xoff <x-offset> -yoff <y-offset>
+
+or to just listen for incoming connections
+>runviewer
+
+To run across ssh tunnel
+
+1. setup tunnel
+
+ssh -L 5920:localhost:5900 user@host
+
+2. connect through tunnel
+
+runviewer -host localhost -port 5920
+
+3. to connect to other servers simultaneously increment 5920 port
