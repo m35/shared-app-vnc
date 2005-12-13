@@ -81,6 +81,9 @@
 				AB25D88E08686FC40065843D,
 				AB25D98F086876B80065843D,
 				5177D2990907F4C200D92AE0,
+				51794CDE094F486B00A2D6F6,
+				51794CE1094F490E00A2D6F6,
+				51794CE4094F496300A2D6F6,
 			);
 		};
 		29B97314FDCFA39411CA2CEA = {
@@ -226,6 +229,42 @@
 //512
 //513
 //514
+		51075924094F4E0D00DDD3AE = {
+			containerPortal = 29B97313FDCFA39411CA2CEA;
+			isa = PBXContainerItemProxy;
+			proxyType = 1;
+			remoteGlobalIDString = 51794CDE094F486B00A2D6F6;
+			remoteInfo = libjpeg;
+		};
+		51075925094F4E0D00DDD3AE = {
+			isa = PBXTargetDependency;
+			target = 51794CDE094F486B00A2D6F6;
+			targetProxy = 51075924094F4E0D00DDD3AE;
+		};
+		51075926094F4E1200DDD3AE = {
+			containerPortal = 29B97313FDCFA39411CA2CEA;
+			isa = PBXContainerItemProxy;
+			proxyType = 1;
+			remoteGlobalIDString = 51794CE1094F490E00A2D6F6;
+			remoteInfo = librdr;
+		};
+		51075927094F4E1200DDD3AE = {
+			isa = PBXTargetDependency;
+			target = 51794CE1094F490E00A2D6F6;
+			targetProxy = 51075926094F4E1200DDD3AE;
+		};
+		51075928094F4E1700DDD3AE = {
+			containerPortal = 29B97313FDCFA39411CA2CEA;
+			isa = PBXContainerItemProxy;
+			proxyType = 1;
+			remoteGlobalIDString = 51794CE4094F496300A2D6F6;
+			remoteInfo = libvncauth;
+		};
+		51075929094F4E1700DDD3AE = {
+			isa = PBXTargetDependency;
+			target = 51794CE4094F496300A2D6F6;
+			targetProxy = 51075928094F4E1700DDD3AE;
+		};
 		516602E408EB38690095D50D = {
 			fileEncoding = 30;
 			isa = PBXFileReference;
@@ -422,6 +461,9 @@
 				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
 			};
 			dependencies = (
+				51075925094F4E0D00DDD3AE,
+				51075927094F4E1200DDD3AE,
+				51075929094F4E1700DDD3AE,
 			);
 			isa = PBXNativeTarget;
 			name = SharedAppVnc;
@@ -465,10 +507,9 @@
 		5177D29C0907F4C200D92AE0 = {
 			isa = PBXFileReference;
 			lastKnownFileType = text.xml;
-			name = "SharedAppVnc-Info.plist";
-			path = "/Users/gwallace/src/collab/OSXvnc-1.6/SharedAppVnc-Info.plist";
-			refType = 0;
-			sourceTree = "<absolute>";
+			path = "SharedAppVnc-Info.plist";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
 		};
 		5177D29D0907F4DF00D92AE0 = {
 			fileRef = 51733CF9090553B500F7E0FB;
@@ -721,6 +762,69 @@
 			isa = PBXBuildFile;
 			settings = {
 			};
+		};
+		51794CDE094F486B00A2D6F6 = {
+			buildArgumentsString = "$(ACTION)";
+			buildPhases = (
+			);
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libjpeg.a;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+			};
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "OSXvnc-server/libjpeg";
+			dependencies = (
+			);
+			isa = PBXLegacyTarget;
+			name = libjpeg;
+			passBuildSettingsInEnvironment = 1;
+			productName = libjpeg;
+		};
+		51794CE1094F490E00A2D6F6 = {
+			buildArgumentsString = "$(ACTION)";
+			buildPhases = (
+			);
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = librdr.a;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+			};
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "OSXvnc-server/rdr";
+			dependencies = (
+			);
+			isa = PBXLegacyTarget;
+			name = librdr;
+			passBuildSettingsInEnvironment = 1;
+			productName = librdr;
+		};
+		51794CE4094F496300A2D6F6 = {
+			buildArgumentsString = "$(ACTION)";
+			buildPhases = (
+			);
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libvncauth.a;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+			};
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "OSXvnc-server/libvncauth";
+			dependencies = (
+			);
+			isa = PBXLegacyTarget;
+			name = libvncauth;
+			passBuildSettingsInEnvironment = 1;
+			productName = libvncauth;
 		};
 //510
 //511
