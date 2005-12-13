@@ -193,7 +193,7 @@ class Dispatcher extends Thread {
   
         cursorPosReceived = false;
 
-        System.out.print("TRACE [" + msgCount + "]: Message Type " + msgType);
+//        System.out.print("TRACE [" + msgCount + "]: Message Type " + msgType);
         msgCount++;
   
         // Process the message depending on its type.
@@ -321,7 +321,7 @@ class Dispatcher extends Thread {
     rfb.updateRect.width = win.rect.width;
     rfb.updateRect.height = win.rect.height;
 
-    System.out.println("    nRects 0x" + Integer.toHexString(rfb.updateNRects));
+    //System.out.println("    nRects 0x" + Integer.toHexString(rfb.updateNRects)); // TRACE
 
     for (int i = 0; i < rfb.updateNRects; i++) {
       rfb.readFramebufferUpdateRectHdr();
@@ -436,7 +436,7 @@ class Dispatcher extends Thread {
     win.setCursorOffset(rfb.cursorOffset.x, rfb.cursorOffset.y);
 
     //System.out.println("Update Win " + win.windowId + " rect: " + win.rect.toString());
-    System.out.println("    nRects 0x" + Integer.toHexString(rfb.updateNRects));
+    //System.out.println("    nRects 0x" + Integer.toHexString(rfb.updateNRects)); // TRACE
 
     for (int j = 0; j < rfb.updateNRects; j++) {
       rfb.readFramebufferUpdateRectHdr();
@@ -445,7 +445,7 @@ class Dispatcher extends Thread {
       int rw = rfb.updateRectW;
       int rh = rfb.updateRectH;
 
-      System.out.println("TRACE [" + msgCount + "]: Rect[" + j + "] Encoding " + Integer.toHexString(rfb.updateRectEncoding));
+//      System.out.println("TRACE [" + msgCount + "]: Rect[" + j + "] Encoding " + Integer.toHexString(rfb.updateRectEncoding));
       msgCount++;
 
       if (rfb.updateRectEncoding == rfb.EncodingLastRect)

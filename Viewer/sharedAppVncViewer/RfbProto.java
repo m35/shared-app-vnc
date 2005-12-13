@@ -575,7 +575,7 @@ class RfbProto {
 
   void writeMultiCursor(int cursor) throws IOException {
     byte[] b = new byte[4];
-    System.out.println("Writing Multicursor " + cursor);
+    //System.out.println("Writing Multicursor " + cursor);
 
     b[0] = (byte) MultiCursor;
     b[2] = (byte) ((cursor >> 8) & 0xff);
