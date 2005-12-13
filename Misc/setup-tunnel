@@ -20,6 +20,11 @@
  #  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307,
  #  USA.
 
+if [ $# -eq 0 ]; then
+  echo "Usage: $0 -in localPort:commonHost:inTunnelPort -out localPort:commonHost:outTunnelPort [-opts ssh-options]"
+  exit 1;
+fi
+
 for arg in $*
 do
     shift
@@ -34,46 +39,40 @@ do
     fi
 done
 
-if [ ! $in ]; then
-  echo "Usage: $0 -in localPort:commonHost:inTunnelPort -out localPort:commonHost:outTunnelPort [-opts ssh-options]"
-  exit 0;
-fi
-
-if [ ! $out ]; then
-  echo "Usage: $0 -in localPort:commonHost:inTunnelPort -out localPort:commonHost:outTunnelPort [-opts ssh-options]"
-  exit 0;
-fi
-
-#inHost=`expr "$in" : '\(.*\):'`;
-#inport=`expr "$in" : '.*:\(.*\)'`;
-#outHost=`expr "$out" : '\(.*\):'`;
-#outport=`expr "$out" : '.*:\(.*\)'`;
-
-inLocalPort=`expr "$in" : '\([0-9]*\)'`;
-outLocalPort=`expr "$out" : '\([0-9]*\)'`;
-inHost=`expr "$in" : '[0-9:]*\(.*\):'`;
-outHost=`expr "$out" : '[0-9:]*\(.*\):'`;
-inTunnelPort=`expr "$in" : '.*:\(.*\)'`;
-outTunnelPort=`expr "$out" : '.*:\(.*\)'`;
-
-if [ -z $outLocalPort ]; then
-  outLocalPort=$outTunnelPort
-fi
-if [ -z $inLocalPort ]; then
-  inLocalPort=5500
-  #inLocalPort=$inTunnelPort
-fi
 
 echo "Setting up tunnels"
-echo "IN: $inLocalPort:$inHost:$inTunnelPort"
-echo "OUT: $outLocalPort:$outHost:$outTunnelPort"
+if [ $in ]; then
+  inLocalPort=`expr "$in" : '\([0-9]*\)'`;
+  inHost=`expr "$in" : '[0-9:]*\(.*\):'`;
+  inTunnelPort=`expr "$in" : '.*:\(.*\)'`;
+  if [ -z $inLocalPort ]; then
+    inLocalPort=5500
+    #inLocalPort=$inTunnelPort
+  fi
+  echo "IN: $inLocalPort:$inHost:$inTunnelPort"
+  # set up incomming tunnel
+  echo ssh $sshopts -g -f -N -R $inTunnelPort:localhost:$inLocalPort $inHost 
+  ssh $sshopts -g -f -N -R $inTunnelPort:localhost:$inLocalPort $inHost 
 
-# set up incomming tunnel
-echo ssh $sshopts -g -f -N -R $inTunnelPort:localhost:$inLocalPort $inHost 
-ssh $sshopts -g -f -N -R $inTunnelPort:localhost:$inLocalPort $inHost 
+fi
 
-# set up outgoing tunnel
-echo ssh $sshopts -g -f -N -L $outLocalPort:localhost:$outTunnelPort $outHost 
-ssh $sshopts -g -f -N -L $outLocalPort:localhost:$outTunnelPort $outHost 
+if [ $out ]; then
+  outLocalPort=`expr "$out" : '\([0-9]*\)'`;
+  outHost=`expr "$out" : '[0-9:]*\(.*\):'`;
+  outTunnelPort=`expr "$out" : '.*:\(.*\)'`;
+  if [ -z $outLocalPort ]; then
+    outLocalPort=$outTunnelPort
+  fi
+  echo "OUT: $outLocalPort:$outHost:$outTunnelPort"
+  # set up outgoing tunnel
+  echo ssh $sshopts -g -f -N -L $outLocalPort:localhost:$outTunnelPort $outHost 
+  ssh $sshopts -g -f -N -L $outLocalPort:localhost:$outTunnelPort $outHost 
+
+fi
+
+
+
+
+
 
 exit 0;
