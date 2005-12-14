@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
-# libc:	(6.3.5)
+# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
+# libc:	(6.3.3)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce
+      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -963,7 +963,7 @@ cleandir::
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 -DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP 	-DXCSECURITY -DTOGCUP  	-DXF86BIGFONT -DDPMSExtension 	  -DPANORAMIX 	 -DRENDER -DRANDR -DGCCUSESGAS -DAVOID_GLYPHBLT -DPIXPRIV -DSINGLEDEPTH 				-DXFreeXDGA -DXvExtension 				-DXFree86LOADER  -DXFree86Server 				-DXF86VIDMODE 				-DXvMCExtension 				-DSMART_SCHEDULE 				-DBUILDDEBUG -DXResExtension 				-DX_BYTE_ORDER=$(X_BYTE_ORDER) -DNDEBUG  $(SERVER_THREAD_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce
+CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 EXT_DEFINES =  -DMITMISC -DXTEST -DXTRAP 	-DXSYNC -DXCMISC -DXRECORD 	-DMITSHM -DBIGREQS -DXF86VIDMODE 	-DXF86MISC -DDBE -DDPMSExtension -DEVI 	-DSCREENSAVER -DXV -DXVMC 	-DGLXEXT -DXF86DRI -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN -DGLX_USE_MESA  -DFONTCACHE          -DRES
 OS_DEFINES  = -DDDXOSINIT -DSERVER_LOCK -DDDXOSFATALERROR 				-DDDXOSVERRORF -DDDXTIME -DPART_NET
 
@@ -1145,10 +1145,10 @@ main.o: ../../../../../exports/include/X11/Xdefs.h
 main.o: ../../../../../programs/Xserver/include/os.h
 main.o: ../../../../../include/Xalloca.h
 main.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-main.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+main.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 main.o: ../../../../../programs/Xserver/include/xf86_libc.h
 main.o: ../../../../../include/Xfuncs.h
-main.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+main.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 main.o: ../../../../../programs/Xserver/include/xf86Version.h
 main.o: ../../../include/fontmisc.h
 main.o: ../../../../../extras/FreeType/lib/freetype.h
@@ -1167,10 +1167,10 @@ ISO8859_10toUCS2.o: ../../../../../exports/include/X11/Xdefs.h
 ISO8859_10toUCS2.o: ../../../../../programs/Xserver/include/os.h
 ISO8859_10toUCS2.o: ../../../../../include/Xalloca.h
 ISO8859_10toUCS2.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-ISO8859_10toUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ISO8859_10toUCS2.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 ISO8859_10toUCS2.o: ../../../../../programs/Xserver/include/xf86_libc.h
 ISO8859_10toUCS2.o: ../../../../../include/Xfuncs.h
-ISO8859_10toUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ISO8859_10toUCS2.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 ISO8859_10toUCS2.o: ../../../../../programs/Xserver/include/xf86Version.h
 ISO8859_10toUCS2.o: ../../../include/fontmisc.h
 ISO8859_10toUCS2.o: ../../../../../extras/FreeType/lib/freetype.h

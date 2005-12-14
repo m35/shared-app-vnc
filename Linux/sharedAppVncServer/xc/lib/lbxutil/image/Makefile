@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
-# libc:	(6.3.5)
+# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
+# libc:	(6.3.3)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce
+      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -930,7 +930,7 @@ CXXPROJECT_DEFINES =
 
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 $(PROJECT_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce
+CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CLIBDEBUGFLAGS =
      CFLAGS = $(CDEBUGFLAGS) $(CLIBDEBUGFLAGS) $(CCOPTIONS) $(THREADS_CFLAGS) $(ALLDEFINES)
 
@@ -1076,15 +1076,16 @@ distclean::
 dfaxg42d.o: ../../../exports/include/X11/Xos.h
 dfaxg42d.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 dfaxg42d.o: /usr/include/features.h /usr/include/sys/cdefs.h
-dfaxg42d.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
-dfaxg42d.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-dfaxg42d.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+dfaxg42d.o: /usr/include/gnu/stubs.h /usr/include/bits/types.h
+dfaxg42d.o: /usr/include/bits/wordsize.h
+dfaxg42d.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 dfaxg42d.o: /usr/include/bits/typesizes.h /usr/include/time.h
 dfaxg42d.o: /usr/include/endian.h /usr/include/bits/endian.h
 dfaxg42d.o: /usr/include/sys/select.h /usr/include/bits/select.h
 dfaxg42d.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 dfaxg42d.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
-dfaxg42d.o: /usr/include/string.h /usr/include/xlocale.h /usr/include/fcntl.h
+dfaxg42d.o: /usr/include/bits/sched.h /usr/include/string.h
+dfaxg42d.o: /usr/include/xlocale.h /usr/include/fcntl.h
 dfaxg42d.o: /usr/include/bits/fcntl.h /usr/include/sys/stat.h
 dfaxg42d.o: /usr/include/bits/stat.h /usr/include/unistd.h
 dfaxg42d.o: /usr/include/bits/posix_opt.h /usr/include/bits/environments.h
@@ -1098,35 +1099,36 @@ dfaxg42d.o: ../../../include/extensions/lbximage.h
 dpackbits.o: ../../../exports/include/X11/Xos.h
 dpackbits.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 dpackbits.o: /usr/include/features.h /usr/include/sys/cdefs.h
-dpackbits.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
-dpackbits.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-dpackbits.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+dpackbits.o: /usr/include/gnu/stubs.h /usr/include/bits/types.h
+dpackbits.o: /usr/include/bits/wordsize.h
+dpackbits.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 dpackbits.o: /usr/include/bits/typesizes.h /usr/include/time.h
 dpackbits.o: /usr/include/endian.h /usr/include/bits/endian.h
 dpackbits.o: /usr/include/sys/select.h /usr/include/bits/select.h
 dpackbits.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 dpackbits.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
-dpackbits.o: /usr/include/string.h /usr/include/xlocale.h
-dpackbits.o: /usr/include/fcntl.h /usr/include/bits/fcntl.h
-dpackbits.o: /usr/include/sys/stat.h /usr/include/bits/stat.h
-dpackbits.o: /usr/include/unistd.h /usr/include/bits/posix_opt.h
-dpackbits.o: /usr/include/bits/environments.h /usr/include/bits/confname.h
-dpackbits.o: /usr/include/getopt.h /usr/include/sys/time.h
-dpackbits.o: ../../../exports/include/X11/Xarch.h
+dpackbits.o: /usr/include/bits/sched.h /usr/include/string.h
+dpackbits.o: /usr/include/xlocale.h /usr/include/fcntl.h
+dpackbits.o: /usr/include/bits/fcntl.h /usr/include/sys/stat.h
+dpackbits.o: /usr/include/bits/stat.h /usr/include/unistd.h
+dpackbits.o: /usr/include/bits/posix_opt.h /usr/include/bits/environments.h
+dpackbits.o: /usr/include/bits/confname.h /usr/include/getopt.h
+dpackbits.o: /usr/include/sys/time.h ../../../exports/include/X11/Xarch.h
 dpackbits.o: ../../../exports/include/X11/Xfuncproto.h
 dpackbits.o: ../../../include/extensions/lbximage.h
 efaxg42d.o: ../../../exports/include/X11/Xos.h
 efaxg42d.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 efaxg42d.o: /usr/include/features.h /usr/include/sys/cdefs.h
-efaxg42d.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
-efaxg42d.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-efaxg42d.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+efaxg42d.o: /usr/include/gnu/stubs.h /usr/include/bits/types.h
+efaxg42d.o: /usr/include/bits/wordsize.h
+efaxg42d.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 efaxg42d.o: /usr/include/bits/typesizes.h /usr/include/time.h
 efaxg42d.o: /usr/include/endian.h /usr/include/bits/endian.h
 efaxg42d.o: /usr/include/sys/select.h /usr/include/bits/select.h
 efaxg42d.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 efaxg42d.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
-efaxg42d.o: /usr/include/string.h /usr/include/xlocale.h /usr/include/fcntl.h
+efaxg42d.o: /usr/include/bits/sched.h /usr/include/string.h
+efaxg42d.o: /usr/include/xlocale.h /usr/include/fcntl.h
 efaxg42d.o: /usr/include/bits/fcntl.h /usr/include/sys/stat.h
 efaxg42d.o: /usr/include/bits/stat.h /usr/include/unistd.h
 efaxg42d.o: /usr/include/bits/posix_opt.h /usr/include/bits/environments.h

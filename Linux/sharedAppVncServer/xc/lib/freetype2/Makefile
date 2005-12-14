@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
-# libc:	(6.3.5)
+# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
+# libc:	(6.3.3)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce
+      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -1013,7 +1013,7 @@ OBJS = $(OBJS_BASE)       $(OBJS_MACBASE)       $(OBJS_AUTOHINT)       $(OBJS_BD
 
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 $(PROJECT_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce
+CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CLIBDEBUGFLAGS =
      CFLAGS = $(CDEBUGFLAGS) $(CLIBDEBUGFLAGS) $(CCOPTIONS) $(THREADS_CFLAGS) $(ALLDEFINES)
 
@@ -1775,39 +1775,40 @@ ftapi.o: ./freetype/freetype.h ./freetype/config/ftconfig.h
 ftapi.o: ./freetype/config/ftoption.h ./freetype/config/ftstdlib.h
 ftapi.o: /usr/include/limits.h /usr/include/features.h
 ftapi.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-ftapi.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
-ftapi.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+ftapi.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
 ftapi.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 ftapi.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 ftapi.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
 ftapi.o: /usr/include/ctype.h /usr/include/bits/types.h
-ftapi.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ftapi.o: /usr/include/bits/wordsize.h
+ftapi.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 ftapi.o: /usr/include/bits/typesizes.h /usr/include/endian.h
 ftapi.o: /usr/include/bits/endian.h /usr/include/xlocale.h
 ftapi.o: /usr/include/string.h /usr/include/stdio.h /usr/include/libio.h
 ftapi.o: /usr/include/_G_config.h /usr/include/wchar.h
 ftapi.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-ftapi.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ftapi.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 ftapi.o: /usr/include/bits/sys_errlist.h /usr/include/stdlib.h
 ftapi.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 ftapi.o: /usr/include/sys/types.h /usr/include/time.h
 ftapi.o: /usr/include/sys/select.h /usr/include/bits/select.h
 ftapi.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 ftapi.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
-ftapi.o: /usr/include/alloca.h /usr/include/setjmp.h
-ftapi.o: /usr/include/bits/setjmp.h ../../exports/include/X11/Xmd.h
-ftapi.o: ./freetype/fterrors.h ./freetype/ftmoderr.h ./freetype/fterrdef.h
-ftapi.o: ./freetype/fttypes.h ./freetype/config/ftconfig.h
-ftapi.o: ./freetype/ftsystem.h ./freetype/ftimage.h ./freetype/ftoutln.h
-ftapi.o: ./freetype/freetype.h ./freetype/internal/ftobjs.h
-ftapi.o: ./freetype/ftrender.h ./freetype/ftmodule.h ./freetype/ftglyph.h
-ftapi.o: ./freetype/ftsizes.h ./freetype/internal/ftmemory.h
-ftapi.o: ./freetype/fttypes.h ./freetype/internal/ftgloadr.h
-ftapi.o: ./freetype/internal/ftdriver.h ./freetype/ftmodule.h
-ftapi.o: ./freetype/internal/autohint.h ./freetype/internal/ftobject.h
-ftapi.o: ./freetype/internal/fthash.h ./freetype/internal/ftdebug.h
-ftapi.o: ./freetype/internal/ftstream.h ./freetype/internal/ftobjs.h
-ftapi.o: ./freetype/tttables.h ./freetype/ftoutln.h
+ftapi.o: /usr/include/bits/sched.h /usr/include/alloca.h
+ftapi.o: /usr/include/setjmp.h /usr/include/bits/setjmp.h
+ftapi.o: ../../exports/include/X11/Xmd.h ./freetype/fterrors.h
+ftapi.o: ./freetype/ftmoderr.h ./freetype/fterrdef.h ./freetype/fttypes.h
+ftapi.o: ./freetype/config/ftconfig.h ./freetype/ftsystem.h
+ftapi.o: ./freetype/ftimage.h ./freetype/ftoutln.h ./freetype/freetype.h
+ftapi.o: ./freetype/internal/ftobjs.h ./freetype/ftrender.h
+ftapi.o: ./freetype/ftmodule.h ./freetype/ftglyph.h ./freetype/ftsizes.h
+ftapi.o: ./freetype/internal/ftmemory.h ./freetype/fttypes.h
+ftapi.o: ./freetype/internal/ftgloadr.h ./freetype/internal/ftdriver.h
+ftapi.o: ./freetype/ftmodule.h ./freetype/internal/autohint.h
+ftapi.o: ./freetype/internal/ftobject.h ./freetype/internal/fthash.h
+ftapi.o: ./freetype/internal/ftdebug.h ./freetype/internal/ftstream.h
+ftapi.o: ./freetype/internal/ftobjs.h ./freetype/tttables.h
+ftapi.o: ./freetype/ftoutln.h
 ftbase.o: ./ft2build.h ./freetype/config/ftheader.h
 ftbase.o: ./freetype/internal/internal.h
 ftbase.o: ../../extras/freetype2/src/base/ftutil.c
@@ -1872,13 +1873,12 @@ ftsystem.o: ./freetype/internal/ftdebug.h ./freetype/ftsystem.h
 ftsystem.o: ./freetype/fterrors.h ./freetype/ftmoderr.h ./freetype/fterrdef.h
 ftsystem.o: ./freetype/fttypes.h /usr/include/stdio.h /usr/include/features.h
 ftsystem.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-ftsystem.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
-ftsystem.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
-ftsystem.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
-ftsystem.o: /usr/include/libio.h /usr/include/_G_config.h
-ftsystem.o: /usr/include/wchar.h /usr/include/bits/wchar.h
-ftsystem.o: /usr/include/gconv.h
-ftsystem.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ftsystem.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+ftsystem.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
+ftsystem.o: /usr/include/bits/typesizes.h /usr/include/libio.h
+ftsystem.o: /usr/include/_G_config.h /usr/include/wchar.h
+ftsystem.o: /usr/include/bits/wchar.h /usr/include/gconv.h
+ftsystem.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 ftsystem.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 ftsystem.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 ftsystem.o: /usr/include/bits/waitstatus.h /usr/include/endian.h
@@ -1887,7 +1887,7 @@ ftsystem.o: /usr/include/sys/types.h /usr/include/time.h
 ftsystem.o: /usr/include/sys/select.h /usr/include/bits/select.h
 ftsystem.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 ftsystem.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
-ftsystem.o: /usr/include/alloca.h
+ftsystem.o: /usr/include/bits/sched.h /usr/include/alloca.h
 fttype1.o: ./ft2build.h ./freetype/config/ftheader.h
 fttype1.o: ./freetype/internal/internal.h ./freetype/internal/t1types.h
 fttype1.o: ./freetype/t1tables.h ./freetype/freetype.h

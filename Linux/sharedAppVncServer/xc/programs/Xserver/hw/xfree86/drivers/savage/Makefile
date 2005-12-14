@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
-# libc:	(6.3.5)
+# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
+# libc:	(6.3.3)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce
+      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -929,7 +929,7 @@ CXXPROJECT_DEFINES =
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 -DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP 	-DXCSECURITY -DTOGCUP  	-DXF86BIGFONT -DDPMSExtension 	  -DPANORAMIX 	 -DRENDER -DRANDR -DGCCUSESGAS -DAVOID_GLYPHBLT -DPIXPRIV -DSINGLEDEPTH 				-DXFreeXDGA -DXvExtension 				-DXFree86LOADER  -DXFree86Server 				-DXF86VIDMODE 				-DXvMCExtension 				-DSMART_SCHEDULE 				-DBUILDDEBUG -DXResExtension 				-DX_BYTE_ORDER=$(X_BYTE_ORDER) -DNDEBUG  $(SERVER_THREAD_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce
+CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 EXT_DEFINES =  -DMITMISC -DXTEST -DXTRAP 	-DXSYNC -DXCMISC -DXRECORD 	-DMITSHM -DBIGREQS -DXF86VIDMODE 	-DXF86MISC -DDBE -DDPMSExtension -DEVI 	-DSCREENSAVER -DXV -DXVMC 	-DGLXEXT -DXF86DRI -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN -DGLX_USE_MESA  -DFONTCACHE          -DRES
 OS_DEFINES  = -DDDXOSINIT -DSERVER_LOCK -DDDXOSFATALERROR 				-DDDXOSVERRORF -DDDXTIME -DPART_NET
 
@@ -1324,10 +1324,10 @@ savage_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 savage_driver.o: ../../../../../../programs/Xserver/include/os.h
 savage_driver.o: ../../../../../../exports/include/X11/Xalloca.h
 savage_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-savage_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+savage_driver.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 savage_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 savage_driver.o: ../../../../../../exports/include/X11/Xfuncs.h
-savage_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+savage_driver.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 savage_driver.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 savage_driver.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 savage_driver.o: ../../../../../../programs/Xserver/include/input.h
@@ -1420,10 +1420,10 @@ savage_accel.o: ../../../../../../exports/include/X11/Xdefs.h
 savage_accel.o: ../../../../../../programs/Xserver/include/os.h
 savage_accel.o: ../../../../../../exports/include/X11/Xalloca.h
 savage_accel.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-savage_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+savage_accel.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 savage_accel.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 savage_accel.o: ../../../../../../exports/include/X11/Xfuncs.h
-savage_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+savage_accel.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 savage_accel.o: ../../../../../../programs/Xserver/include/pixmap.h
 savage_accel.o: ../../../../../../programs/Xserver/include/regionstr.h
 savage_accel.o: ../../../../../../programs/Xserver/include/miscstruct.h
@@ -1496,7 +1496,7 @@ savage_accel.o: ../../../../../../include/extensions/Xvproto.h savage_regs.h
 savage_accel.o: savage_bci.h
 savage_cursor.o: savage_driver.h
 savage_cursor.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-savage_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+savage_cursor.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 savage_cursor.o: ../../../../../../programs/Xserver/include/misc.h
 savage_cursor.o: ../../../../../../exports/include/X11/Xosdefs.h
 savage_cursor.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -1507,7 +1507,7 @@ savage_cursor.o: ../../../../../../programs/Xserver/include/os.h
 savage_cursor.o: ../../../../../../exports/include/X11/Xalloca.h
 savage_cursor.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 savage_cursor.o: ../../../../../../exports/include/X11/Xfuncs.h
-savage_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+savage_cursor.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 savage_cursor.o: ../../../../../../programs/Xserver/hw/xfree86/common/compiler.h
 savage_cursor.o: ../../../../../../programs/Xserver/hw/xfree86/vgahw/vgaHW.h
 savage_cursor.o: ../../../../../../exports/include/X11/X.h
@@ -1597,10 +1597,10 @@ savage_dga.o: ../../../../../../exports/include/X11/Xdefs.h
 savage_dga.o: ../../../../../../programs/Xserver/include/os.h
 savage_dga.o: ../../../../../../exports/include/X11/Xalloca.h
 savage_dga.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-savage_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+savage_dga.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 savage_dga.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 savage_dga.o: ../../../../../../exports/include/X11/Xfuncs.h
-savage_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+savage_dga.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 savage_dga.o: ../../../../../../programs/Xserver/include/pixmap.h
 savage_dga.o: ../../../../../../programs/Xserver/include/regionstr.h
 savage_dga.o: ../../../../../../programs/Xserver/include/miscstruct.h
@@ -1681,10 +1681,10 @@ savage_i2c.o: ../../../../../../exports/include/X11/Xdefs.h
 savage_i2c.o: ../../../../../../programs/Xserver/include/os.h
 savage_i2c.o: ../../../../../../exports/include/X11/Xalloca.h
 savage_i2c.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-savage_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+savage_i2c.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 savage_i2c.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 savage_i2c.o: ../../../../../../exports/include/X11/Xfuncs.h
-savage_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+savage_i2c.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 savage_i2c.o: ../../../../../../programs/Xserver/include/input.h
 savage_i2c.o: ../../../../../../programs/Xserver/include/screenint.h
 savage_i2c.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1759,7 +1759,7 @@ savage_i2c.o: ../../../../../../programs/Xserver/Xext/xvdix.h
 savage_i2c.o: ../../../../../../include/extensions/Xvproto.h savage_regs.h
 savage_image.o: savage_driver.h
 savage_image.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-savage_image.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+savage_image.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 savage_image.o: ../../../../../../programs/Xserver/include/misc.h
 savage_image.o: ../../../../../../exports/include/X11/Xosdefs.h
 savage_image.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -1770,7 +1770,7 @@ savage_image.o: ../../../../../../programs/Xserver/include/os.h
 savage_image.o: ../../../../../../exports/include/X11/Xalloca.h
 savage_image.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 savage_image.o: ../../../../../../exports/include/X11/Xfuncs.h
-savage_image.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+savage_image.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 savage_image.o: ../../../../../../programs/Xserver/hw/xfree86/common/compiler.h
 savage_image.o: ../../../../../../programs/Xserver/hw/xfree86/vgahw/vgaHW.h
 savage_image.o: ../../../../../../exports/include/X11/X.h
@@ -1848,7 +1848,7 @@ savage_image.o: ../../../../../../programs/Xserver/hw/xfree86/xaa/xaarop.h
 savage_image.o: savage_bci.h
 savage_shadow.o: savage_driver.h
 savage_shadow.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-savage_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+savage_shadow.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 savage_shadow.o: ../../../../../../programs/Xserver/include/misc.h
 savage_shadow.o: ../../../../../../exports/include/X11/Xosdefs.h
 savage_shadow.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -1859,7 +1859,7 @@ savage_shadow.o: ../../../../../../programs/Xserver/include/os.h
 savage_shadow.o: ../../../../../../exports/include/X11/Xalloca.h
 savage_shadow.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 savage_shadow.o: ../../../../../../exports/include/X11/Xfuncs.h
-savage_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+savage_shadow.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 savage_shadow.o: ../../../../../../programs/Xserver/hw/xfree86/common/compiler.h
 savage_shadow.o: ../../../../../../programs/Xserver/hw/xfree86/vgahw/vgaHW.h
 savage_shadow.o: ../../../../../../exports/include/X11/X.h
@@ -1936,7 +1936,7 @@ savage_shadow.o: ../../../../../../include/extensions/Xvproto.h savage_regs.h
 savage_shadow.o: ../../../../../../programs/Xserver/hw/xfree86/shadowfb/shadowfb.h
 savage_vbe.o: savage_driver.h
 savage_vbe.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-savage_vbe.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+savage_vbe.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 savage_vbe.o: ../../../../../../programs/Xserver/include/misc.h
 savage_vbe.o: ../../../../../../exports/include/X11/Xosdefs.h
 savage_vbe.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -1947,7 +1947,7 @@ savage_vbe.o: ../../../../../../programs/Xserver/include/os.h
 savage_vbe.o: ../../../../../../exports/include/X11/Xalloca.h
 savage_vbe.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 savage_vbe.o: ../../../../../../exports/include/X11/Xfuncs.h
-savage_vbe.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+savage_vbe.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 savage_vbe.o: ../../../../../../programs/Xserver/hw/xfree86/common/compiler.h
 savage_vbe.o: ../../../../../../programs/Xserver/hw/xfree86/vgahw/vgaHW.h
 savage_vbe.o: ../../../../../../exports/include/X11/X.h
@@ -2038,10 +2038,10 @@ savage_video.o: ../../../../../../exports/include/X11/Xdefs.h
 savage_video.o: ../../../../../../programs/Xserver/include/os.h
 savage_video.o: ../../../../../../exports/include/X11/Xalloca.h
 savage_video.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-savage_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+savage_video.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 savage_video.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 savage_video.o: ../../../../../../exports/include/X11/Xfuncs.h
-savage_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+savage_video.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 savage_video.o: ../../../../../../programs/Xserver/include/pixmap.h
 savage_video.o: ../../../../../../programs/Xserver/include/window.h
 savage_video.o: ../../../../../../programs/Xserver/include/region.h

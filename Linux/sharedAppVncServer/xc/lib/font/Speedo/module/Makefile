@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
-# libc:	(6.3.5)
+# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
+# libc:	(6.3.3)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce
+      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -929,7 +929,7 @@ CXXPROJECT_DEFINES =
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 -DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP 	-DXCSECURITY -DTOGCUP  	-DXF86BIGFONT -DDPMSExtension 	  -DPANORAMIX 	 -DRENDER -DRANDR -DGCCUSESGAS -DAVOID_GLYPHBLT -DPIXPRIV -DSINGLEDEPTH 				-DXFreeXDGA -DXvExtension 				-DXFree86LOADER  -DXFree86Server 				-DXF86VIDMODE 				-DXvMCExtension 				-DSMART_SCHEDULE 				-DBUILDDEBUG -DXResExtension 				-DX_BYTE_ORDER=$(X_BYTE_ORDER) -DNDEBUG  $(SERVER_THREAD_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce
+CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 EXT_DEFINES =  -DMITMISC -DXTEST -DXTRAP 	-DXSYNC -DXCMISC -DXRECORD 	-DMITSHM -DBIGREQS -DXF86VIDMODE 	-DXF86MISC -DDBE -DDPMSExtension -DEVI 	-DSCREENSAVER -DXV -DXVMC 	-DGLXEXT -DXF86DRI -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN -DGLX_USE_MESA  -DFONTCACHE          -DRES
 OS_DEFINES  = -DDDXOSINIT -DSERVER_LOCK -DDDXOSFATALERROR 				-DDDXOSVERRORF -DDDXTIME -DPART_NET
 
@@ -1311,11 +1311,11 @@ spfuncs.o: ../../../../exports/include/X11/fonts/FS.h
 spfuncs.o: ../../../../exports/include/X11/fonts/fsmasks.h
 spfuncs.o: ../../include/fntfil.h ../../include/fontutil.h ../spint.h
 spfuncs.o: ../../../../programs/Xserver/include/xf86_ansic.h
-spfuncs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+spfuncs.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 spfuncs.o: ../../../../programs/Xserver/include/xf86_libc.h
 spfuncs.o: ../../../../exports/include/X11/Xfuncs.h
 spfuncs.o: ../../../../exports/include/X11/Xosdefs.h
-spfuncs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../speedo.h
+spfuncs.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h ../speedo.h
 spfuncs.o: ../useropt.h
 spfile.o: ../../include/fntfilst.h ../../include/fontmisc.h
 spfile.o: ../../../../exports/include/X11/Xdefs.h
@@ -1332,11 +1332,11 @@ spfile.o: ../../../../exports/include/X11/fonts/FS.h
 spfile.o: ../../../../exports/include/X11/fonts/fsmasks.h
 spfile.o: ../../include/fntfil.h ../../include/fontenc.h
 spfile.o: ../../../../programs/Xserver/include/xf86_ansic.h
-spfile.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+spfile.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 spfile.o: ../../../../programs/Xserver/include/xf86_libc.h
 spfile.o: ../../../../exports/include/X11/Xfuncs.h
 spfile.o: ../../../../exports/include/X11/Xosdefs.h
-spfile.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../spint.h
+spfile.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h ../spint.h
 spfile.o: ../speedo.h ../useropt.h ../bics-unicode.h ../keys.h
 spinfo.o: ../../include/fntfilst.h ../../include/fontmisc.h
 spinfo.o: ../../../../exports/include/X11/Xdefs.h
@@ -1353,11 +1353,11 @@ spinfo.o: ../../../../exports/include/X11/fonts/FS.h
 spinfo.o: ../../../../exports/include/X11/fonts/fsmasks.h
 spinfo.o: ../../include/fntfil.h ../../include/fontutil.h ../spint.h
 spinfo.o: ../../../../programs/Xserver/include/xf86_ansic.h
-spinfo.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+spinfo.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 spinfo.o: ../../../../programs/Xserver/include/xf86_libc.h
 spinfo.o: ../../../../exports/include/X11/Xfuncs.h
 spinfo.o: ../../../../exports/include/X11/Xosdefs.h
-spinfo.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../speedo.h
+spinfo.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h ../speedo.h
 spinfo.o: ../useropt.h
 sperr.o: ../spint.h ../../include/fntfilst.h ../../include/fontmisc.h
 sperr.o: ../../../../exports/include/X11/Xdefs.h
@@ -1373,11 +1373,11 @@ sperr.o: ../../../../exports/include/X11/fonts/FS.h
 sperr.o: ../../../../exports/include/X11/fonts/fsmasks.h
 sperr.o: ../../include/fntfil.h
 sperr.o: ../../../../programs/Xserver/include/xf86_ansic.h
-sperr.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+sperr.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 sperr.o: ../../../../programs/Xserver/include/xf86_libc.h
 sperr.o: ../../../../exports/include/X11/Xfuncs.h
 sperr.o: ../../../../exports/include/X11/Xosdefs.h
-sperr.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../speedo.h
+sperr.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h ../speedo.h
 sperr.o: ../useropt.h
 spfont.o: ../../../../include/fonts/FSproto.h
 spfont.o: ../../../../exports/include/X11/fonts/FS.h
@@ -1394,11 +1394,11 @@ spfont.o: ../../../../exports/include/X11/Xfuncproto.h
 spfont.o: ../../../../include/fonts/fontproto.h ../../include/fontxlfd.h
 spfont.o: ../../include/fntfil.h
 spfont.o: ../../../../programs/Xserver/include/xf86_ansic.h
-spfont.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+spfont.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 spfont.o: ../../../../programs/Xserver/include/xf86_libc.h
 spfont.o: ../../../../exports/include/X11/Xfuncs.h
 spfont.o: ../../../../exports/include/X11/Xosdefs.h
-spfont.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../speedo.h
+spfont.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h ../speedo.h
 spfont.o: ../useropt.h ../../../../programs/Xserver/include/servermd.h
 spfont.o: ../../include/fontutil.h
 spglyph.o: ../../../../exports/include/X11/X.h ../spint.h
@@ -1417,11 +1417,11 @@ spglyph.o: ../../../../exports/include/X11/fonts/FS.h
 spglyph.o: ../../../../exports/include/X11/fonts/fsmasks.h
 spglyph.o: ../../include/fntfil.h
 spglyph.o: ../../../../programs/Xserver/include/xf86_ansic.h
-spglyph.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+spglyph.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 spglyph.o: ../../../../programs/Xserver/include/xf86_libc.h
 spglyph.o: ../../../../exports/include/X11/Xfuncs.h
 spglyph.o: ../../../../exports/include/X11/Xosdefs.h
-spglyph.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../speedo.h
+spglyph.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h ../speedo.h
 spglyph.o: ../useropt.h ../../include/fontutil.h
 spencode.o: ../spint.h ../../include/fntfilst.h ../../include/fontmisc.h
 spencode.o: ../../../../exports/include/X11/Xdefs.h
@@ -1438,11 +1438,11 @@ spencode.o: ../../../../exports/include/X11/fonts/FS.h
 spencode.o: ../../../../exports/include/X11/fonts/fsmasks.h
 spencode.o: ../../include/fntfil.h
 spencode.o: ../../../../programs/Xserver/include/xf86_ansic.h
-spencode.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+spencode.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 spencode.o: ../../../../programs/Xserver/include/xf86_libc.h
 spencode.o: ../../../../exports/include/X11/Xfuncs.h
 spencode.o: ../../../../exports/include/X11/Xosdefs.h
-spencode.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../speedo.h
+spencode.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h ../speedo.h
 spencode.o: ../useropt.h
 bics-unicode.o: ../bics-unicode.h
 do_char.o: ../spdo_prv.h ../speedo.h ../../../../exports/include/X11/Xmd.h
@@ -1462,10 +1462,10 @@ speedomod.o: ../../../../exports/include/X11/Xdefs.h
 speedomod.o: ../../../../programs/Xserver/include/os.h
 speedomod.o: ../../../../exports/include/X11/Xalloca.h
 speedomod.o: ../../../../programs/Xserver/include/xf86_ansic.h
-speedomod.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+speedomod.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 speedomod.o: ../../../../programs/Xserver/include/xf86_libc.h
 speedomod.o: ../../../../exports/include/X11/Xfuncs.h
-speedomod.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+speedomod.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 speedomod.o: ../../include/fontmod.h
 speedomod.o: ../../../../programs/Xserver/include/xf86Module.h
 speedomod.o: ../../../../programs/Xserver/include/xf86Version.h

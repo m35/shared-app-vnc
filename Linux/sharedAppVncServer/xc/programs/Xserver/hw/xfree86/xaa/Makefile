@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
-# libc:	(6.3.5)
+# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
+# libc:	(6.3.3)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce
+      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -929,7 +929,7 @@ CXXPROJECT_DEFINES =
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 -DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP 	-DXCSECURITY -DTOGCUP  	-DXF86BIGFONT -DDPMSExtension 	  -DPANORAMIX 	 -DRENDER -DRANDR -DGCCUSESGAS -DAVOID_GLYPHBLT -DPIXPRIV -DSINGLEDEPTH 				-DXFreeXDGA -DXvExtension 				-DXFree86LOADER  -DXFree86Server 				-DXF86VIDMODE 				-DXvMCExtension 				-DSMART_SCHEDULE 				-DBUILDDEBUG -DXResExtension 				-DX_BYTE_ORDER=$(X_BYTE_ORDER) -DNDEBUG  $(SERVER_THREAD_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce
+CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 EXT_DEFINES =  -DMITMISC -DXTEST -DXTRAP 	-DXSYNC -DXCMISC -DXRECORD 	-DMITSHM -DBIGREQS -DXF86VIDMODE 	-DXF86MISC -DDBE -DDPMSExtension -DEVI 	-DSCREENSAVER -DXV -DXVMC 	-DGLXEXT -DXF86DRI -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN -DGLX_USE_MESA  -DFONTCACHE          -DRES
 OS_DEFINES  = -DDDXOSINIT -DSERVER_LOCK -DDDXOSFATALERROR 				-DDDXOSVERRORF -DDDXTIME -DPART_NET
 
@@ -1333,10 +1333,10 @@ xaaInit.o: ../../../../../exports/include/X11/Xdefs.h
 xaaInit.o: ../../../../../programs/Xserver/include/os.h
 xaaInit.o: ../../../../../exports/include/X11/Xalloca.h
 xaaInit.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaInit.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaInit.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaInit.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaInit.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaInit.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaInit.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaInit.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaInit.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaInit.o: ../../../../../programs/Xserver/include/input.h
@@ -1395,10 +1395,10 @@ xaaGC.o: ../../../../../exports/include/X11/Xdefs.h
 xaaGC.o: ../../../../../programs/Xserver/include/os.h
 xaaGC.o: ../../../../../exports/include/X11/Xalloca.h
 xaaGC.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaGC.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaGC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaGC.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaGC.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaGC.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaGC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaGC.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaGC.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaGC.o: ../../../../../programs/Xserver/include/input.h
@@ -1455,10 +1455,10 @@ xaaInitAccel.o: ../../../../../exports/include/X11/Xdefs.h
 xaaInitAccel.o: ../../../../../programs/Xserver/include/os.h
 xaaInitAccel.o: ../../../../../exports/include/X11/Xalloca.h
 xaaInitAccel.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaInitAccel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaInitAccel.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaInitAccel.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaInitAccel.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaInitAccel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaInitAccel.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaInitAccel.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaInitAccel.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaInitAccel.o: ../../../../../programs/Xserver/include/input.h
@@ -1515,10 +1515,10 @@ xaaFallback.o: ../../../../../exports/include/X11/Xdefs.h
 xaaFallback.o: ../../../../../programs/Xserver/include/os.h
 xaaFallback.o: ../../../../../exports/include/X11/Xalloca.h
 xaaFallback.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaFallback.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaFallback.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaFallback.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaFallback.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaFallback.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaFallback.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaFallback.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaFallback.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaFallback.o: ../../../../../programs/Xserver/include/input.h
@@ -1574,10 +1574,10 @@ xaaBitBlt.o: ../../../../../exports/include/X11/Xdefs.h
 xaaBitBlt.o: ../../../../../programs/Xserver/include/os.h
 xaaBitBlt.o: ../../../../../exports/include/X11/Xalloca.h
 xaaBitBlt.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaBitBlt.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaBitBlt.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaBitBlt.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaBitBlt.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaBitBlt.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaBitBlt.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaBitBlt.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaBitBlt.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaBitBlt.o: ../../../../../programs/Xserver/include/input.h
@@ -1634,10 +1634,10 @@ xaaCpyArea.o: ../../../../../exports/include/X11/Xdefs.h
 xaaCpyArea.o: ../../../../../programs/Xserver/include/os.h
 xaaCpyArea.o: ../../../../../exports/include/X11/Xalloca.h
 xaaCpyArea.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaCpyArea.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaCpyArea.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaCpyArea.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaCpyArea.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaCpyArea.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaCpyArea.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaCpyArea.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaCpyArea.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaCpyArea.o: ../../../../../programs/Xserver/include/input.h
@@ -1694,10 +1694,10 @@ xaaGCmisc.o: ../../../../../exports/include/X11/Xdefs.h
 xaaGCmisc.o: ../../../../../programs/Xserver/include/os.h
 xaaGCmisc.o: ../../../../../exports/include/X11/Xalloca.h
 xaaGCmisc.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaGCmisc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaGCmisc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaGCmisc.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaGCmisc.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaGCmisc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaGCmisc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaGCmisc.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaGCmisc.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaGCmisc.o: ../../../../../programs/Xserver/include/input.h
@@ -1760,10 +1760,10 @@ xaaCpyWin.o: ../../../../../exports/include/X11/Xdefs.h
 xaaCpyWin.o: ../../../../../programs/Xserver/include/os.h
 xaaCpyWin.o: ../../../../../exports/include/X11/Xalloca.h
 xaaCpyWin.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaCpyWin.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaCpyWin.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaCpyWin.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaCpyWin.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaCpyWin.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaCpyWin.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaCpyWin.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaCpyWin.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaCpyWin.o: ../../../../../programs/Xserver/include/input.h
@@ -1820,10 +1820,10 @@ xaaCpyPlane.o: ../../../../../exports/include/X11/Xdefs.h
 xaaCpyPlane.o: ../../../../../programs/Xserver/include/os.h
 xaaCpyPlane.o: ../../../../../exports/include/X11/Xalloca.h
 xaaCpyPlane.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaCpyPlane.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaCpyPlane.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaCpyPlane.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaCpyPlane.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaCpyPlane.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaCpyPlane.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaCpyPlane.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaCpyPlane.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaCpyPlane.o: ../../../../../programs/Xserver/include/input.h
@@ -1881,10 +1881,10 @@ xaaFillRect.o: ../../../../../exports/include/X11/Xdefs.h
 xaaFillRect.o: ../../../../../programs/Xserver/include/os.h
 xaaFillRect.o: ../../../../../exports/include/X11/Xalloca.h
 xaaFillRect.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaFillRect.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaFillRect.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaFillRect.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaFillRect.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaFillRect.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaFillRect.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaFillRect.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaFillRect.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaFillRect.o: ../../../../../programs/Xserver/include/input.h
@@ -1940,10 +1940,10 @@ xaaTEText.o: ../../../../../exports/include/X11/Xdefs.h
 xaaTEText.o: ../../../../../programs/Xserver/include/os.h
 xaaTEText.o: ../../../../../exports/include/X11/Xalloca.h
 xaaTEText.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaTEText.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaTEText.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaTEText.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaTEText.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaTEText.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaTEText.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaTEText.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaTEText.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaTEText.o: ../../../../../programs/Xserver/include/input.h
@@ -2005,10 +2005,10 @@ xaaNonTEText.o: ../../../../../exports/include/X11/Xdefs.h
 xaaNonTEText.o: ../../../../../programs/Xserver/include/os.h
 xaaNonTEText.o: ../../../../../exports/include/X11/Xalloca.h
 xaaNonTEText.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaNonTEText.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaNonTEText.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaNonTEText.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaNonTEText.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaNonTEText.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaNonTEText.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaNonTEText.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaNonTEText.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaNonTEText.o: ../../../../../programs/Xserver/include/input.h
@@ -2070,10 +2070,10 @@ xaaPCache.o: ../../../../../exports/include/X11/Xdefs.h
 xaaPCache.o: ../../../../../programs/Xserver/include/os.h
 xaaPCache.o: ../../../../../exports/include/X11/Xalloca.h
 xaaPCache.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaPCache.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaPCache.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaPCache.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaPCache.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaPCache.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaPCache.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaPCache.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaPCache.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaPCache.o: ../../../../../programs/Xserver/include/input.h
@@ -2132,10 +2132,10 @@ xaaSpans.o: ../../../../../exports/include/X11/Xdefs.h
 xaaSpans.o: ../../../../../programs/Xserver/include/os.h
 xaaSpans.o: ../../../../../exports/include/X11/Xalloca.h
 xaaSpans.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaSpans.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaSpans.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaSpans.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaSpans.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaSpans.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaSpans.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaSpans.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaSpans.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaSpans.o: ../../../../../programs/Xserver/include/input.h
@@ -2193,10 +2193,10 @@ xaaROP.o: ../../../../../exports/include/X11/Xdefs.h
 xaaROP.o: ../../../../../programs/Xserver/include/os.h
 xaaROP.o: ../../../../../exports/include/X11/Xalloca.h
 xaaROP.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaROP.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaROP.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaROP.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaROP.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaROP.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaROP.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaROP.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaROP.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaROP.o: ../../../../../programs/Xserver/include/input.h
@@ -2251,10 +2251,10 @@ xaaImage.o: ../../../../../exports/include/X11/Xdefs.h
 xaaImage.o: ../../../../../programs/Xserver/include/os.h
 xaaImage.o: ../../../../../exports/include/X11/Xalloca.h
 xaaImage.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaImage.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaImage.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaImage.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaImage.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaImage.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaImage.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaImage.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaImage.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaImage.o: ../../../../../programs/Xserver/include/input.h
@@ -2311,10 +2311,10 @@ xaaPaintWin.o: ../../../../../exports/include/X11/Xdefs.h
 xaaPaintWin.o: ../../../../../programs/Xserver/include/os.h
 xaaPaintWin.o: ../../../../../exports/include/X11/Xalloca.h
 xaaPaintWin.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaPaintWin.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaPaintWin.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaPaintWin.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaPaintWin.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaPaintWin.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaPaintWin.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaPaintWin.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaPaintWin.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaPaintWin.o: ../../../../../programs/Xserver/include/input.h
@@ -2374,10 +2374,10 @@ xaaRect.o: ../../../../../exports/include/X11/Xdefs.h
 xaaRect.o: ../../../../../programs/Xserver/include/os.h
 xaaRect.o: ../../../../../exports/include/X11/Xalloca.h
 xaaRect.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaRect.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaRect.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaRect.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaRect.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaRect.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaRect.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaRect.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaRect.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaRect.o: ../../../../../programs/Xserver/include/input.h
@@ -2433,10 +2433,10 @@ xaaLineMisc.o: ../../../../../exports/include/X11/Xdefs.h
 xaaLineMisc.o: ../../../../../programs/Xserver/include/os.h
 xaaLineMisc.o: ../../../../../exports/include/X11/Xalloca.h
 xaaLineMisc.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaLineMisc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaLineMisc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaLineMisc.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaLineMisc.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaLineMisc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaLineMisc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaLineMisc.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaLineMisc.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaLineMisc.o: ../../../../../programs/Xserver/include/input.h
@@ -2494,10 +2494,10 @@ xaaFillPoly.o: ../../../../../exports/include/X11/Xdefs.h
 xaaFillPoly.o: ../../../../../programs/Xserver/include/os.h
 xaaFillPoly.o: ../../../../../exports/include/X11/Xalloca.h
 xaaFillPoly.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaFillPoly.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaFillPoly.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaFillPoly.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaFillPoly.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaFillPoly.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaFillPoly.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaFillPoly.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaFillPoly.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaFillPoly.o: ../../../../../programs/Xserver/include/input.h
@@ -2555,10 +2555,10 @@ xaaWideLine.o: ../../../../../exports/include/X11/Xdefs.h
 xaaWideLine.o: ../../../../../programs/Xserver/include/os.h
 xaaWideLine.o: ../../../../../exports/include/X11/Xalloca.h
 xaaWideLine.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaWideLine.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaWideLine.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaWideLine.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaWideLine.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaWideLine.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaWideLine.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaWideLine.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaWideLine.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaWideLine.o: ../../../../../programs/Xserver/include/input.h
@@ -2618,10 +2618,10 @@ xaaFillArc.o: ../../../../../exports/include/X11/Xdefs.h
 xaaFillArc.o: ../../../../../programs/Xserver/include/os.h
 xaaFillArc.o: ../../../../../exports/include/X11/Xalloca.h
 xaaFillArc.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaFillArc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaFillArc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaFillArc.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaFillArc.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaFillArc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaFillArc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaFillArc.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaFillArc.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaFillArc.o: ../../../../../programs/Xserver/include/input.h
@@ -2679,10 +2679,10 @@ xaaLine.o: ../../../../../exports/include/X11/Xdefs.h
 xaaLine.o: ../../../../../programs/Xserver/include/os.h
 xaaLine.o: ../../../../../exports/include/X11/Xalloca.h
 xaaLine.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaLine.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaLine.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaLine.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaLine.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaLine.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaLine.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaLine.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaLine.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaLine.o: ../../../../../programs/Xserver/include/input.h
@@ -2739,10 +2739,10 @@ xaaSeg.o: ../../../../../exports/include/X11/Xdefs.h
 xaaSeg.o: ../../../../../programs/Xserver/include/os.h
 xaaSeg.o: ../../../../../exports/include/X11/Xalloca.h
 xaaSeg.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaSeg.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaSeg.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaSeg.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaSeg.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaSeg.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaSeg.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaSeg.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaSeg.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaSeg.o: ../../../../../programs/Xserver/include/input.h
@@ -2799,10 +2799,10 @@ xaaDashLine.o: ../../../../../exports/include/X11/Xdefs.h
 xaaDashLine.o: ../../../../../programs/Xserver/include/os.h
 xaaDashLine.o: ../../../../../exports/include/X11/Xalloca.h
 xaaDashLine.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaDashLine.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaDashLine.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaDashLine.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaDashLine.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaDashLine.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaDashLine.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaDashLine.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaDashLine.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaDashLine.o: ../../../../../programs/Xserver/include/input.h
@@ -2859,10 +2859,10 @@ xaaDashSeg.o: ../../../../../exports/include/X11/Xdefs.h
 xaaDashSeg.o: ../../../../../programs/Xserver/include/os.h
 xaaDashSeg.o: ../../../../../exports/include/X11/Xalloca.h
 xaaDashSeg.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaDashSeg.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaDashSeg.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaDashSeg.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaDashSeg.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaDashSeg.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaDashSeg.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaDashSeg.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaDashSeg.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaDashSeg.o: ../../../../../programs/Xserver/include/input.h
@@ -2918,10 +2918,10 @@ xaaOverlay.o: ../../../../../exports/include/X11/Xdefs.h
 xaaOverlay.o: ../../../../../programs/Xserver/include/os.h
 xaaOverlay.o: ../../../../../exports/include/X11/Xalloca.h
 xaaOverlay.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaOverlay.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaOverlay.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaOverlay.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaOverlay.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaOverlay.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaOverlay.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaOverlay.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaOverlay.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaOverlay.o: ../../../../../programs/Xserver/include/input.h
@@ -2982,10 +2982,10 @@ xaaOffscreen.o: ../../../../../exports/include/X11/Xdefs.h
 xaaOffscreen.o: ../../../../../programs/Xserver/include/os.h
 xaaOffscreen.o: ../../../../../exports/include/X11/Xalloca.h
 xaaOffscreen.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaOffscreen.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaOffscreen.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaOffscreen.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaOffscreen.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaOffscreen.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaOffscreen.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaOffscreen.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaOffscreen.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaOffscreen.o: ../../../../../programs/Xserver/include/input.h
@@ -3044,10 +3044,10 @@ xaaOverlayDF.o: ../../../../../exports/include/X11/Xdefs.h
 xaaOverlayDF.o: ../../../../../programs/Xserver/include/os.h
 xaaOverlayDF.o: ../../../../../exports/include/X11/Xalloca.h
 xaaOverlayDF.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaOverlayDF.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaOverlayDF.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaOverlayDF.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaOverlayDF.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaOverlayDF.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaOverlayDF.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaOverlayDF.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaOverlayDF.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaOverlayDF.o: ../../../../../programs/Xserver/include/input.h
@@ -3106,10 +3106,10 @@ xaaStateChange.o: ../../../../../exports/include/X11/Xdefs.h
 xaaStateChange.o: ../../../../../programs/Xserver/include/os.h
 xaaStateChange.o: ../../../../../exports/include/X11/Xalloca.h
 xaaStateChange.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaStateChange.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaStateChange.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaStateChange.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaStateChange.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaStateChange.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaStateChange.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaStateChange.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaStateChange.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaStateChange.o: ../../../../../programs/Xserver/include/input.h
@@ -3169,10 +3169,10 @@ xaaPict.o: ../../../../../exports/include/X11/Xdefs.h
 xaaPict.o: ../../../../../programs/Xserver/include/os.h
 xaaPict.o: ../../../../../exports/include/X11/Xalloca.h
 xaaPict.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xaaPict.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaPict.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xaaPict.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xaaPict.o: ../../../../../exports/include/X11/Xfuncs.h
-xaaPict.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaPict.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xaaPict.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xaaPict.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xaaPict.o: ../../../../../programs/Xserver/include/input.h

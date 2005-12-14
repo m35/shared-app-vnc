@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
-# libc:	(6.3.5)
+# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
+# libc:	(6.3.3)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce
+      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -929,7 +929,7 @@ CXXPROJECT_DEFINES =
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 -DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP 	-DXCSECURITY -DTOGCUP  	-DXF86BIGFONT -DDPMSExtension 	  -DPANORAMIX 	 -DRENDER -DRANDR -DGCCUSESGAS -DAVOID_GLYPHBLT -DPIXPRIV -DSINGLEDEPTH 				-DXFreeXDGA -DXvExtension 				-DXFree86LOADER  -DXFree86Server 				-DXF86VIDMODE 				-DXvMCExtension 				-DSMART_SCHEDULE 				-DBUILDDEBUG -DXResExtension 				-DX_BYTE_ORDER=$(X_BYTE_ORDER) -DNDEBUG  $(SERVER_THREAD_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce
+CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 EXT_DEFINES =  -DMITMISC -DXTEST -DXTRAP 	-DXSYNC -DXCMISC -DXRECORD 	-DMITSHM -DBIGREQS -DXF86VIDMODE 	-DXF86MISC -DDBE -DDPMSExtension -DEVI 	-DSCREENSAVER -DXV -DXVMC 	-DGLXEXT -DXF86DRI -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN -DGLX_USE_MESA  -DFONTCACHE          -DRES
 OS_DEFINES  = -DDDXOSINIT -DSERVER_LOCK -DDDXOSFATALERROR 				-DDDXOSVERRORF -DDDXTIME -DPART_NET
 
@@ -1362,10 +1362,10 @@ arith.o: ../../../../exports/include/X11/X.h
 arith.o: ../../../../exports/include/X11/Xdefs.h
 arith.o: ../../../../exports/include/X11/Xalloca.h
 arith.o: ../../../../programs/Xserver/include/xf86_ansic.h
-arith.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+arith.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 arith.o: ../../../../programs/Xserver/include/xf86_libc.h
 arith.o: ../../../../exports/include/X11/Xfuncs.h
-arith.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../objects.h
+arith.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h ../objects.h
 arith.o: ../../../../exports/include/X11/Xdefs.h
 arith.o: ../../../../exports/include/X11/Xfuncproto.h ../spaces.h ../arith.h
 curves.o: ../../../../programs/Xserver/include/os.h
@@ -1377,21 +1377,21 @@ curves.o: ../../../../exports/include/X11/X.h
 curves.o: ../../../../exports/include/X11/Xdefs.h
 curves.o: ../../../../exports/include/X11/Xalloca.h
 curves.o: ../../../../programs/Xserver/include/xf86_ansic.h
-curves.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+curves.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 curves.o: ../../../../programs/Xserver/include/xf86_libc.h
 curves.o: ../../../../exports/include/X11/Xfuncs.h
-curves.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../objects.h
+curves.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h ../objects.h
 curves.o: ../../../../exports/include/X11/Xdefs.h
 curves.o: ../../../../exports/include/X11/Xfuncproto.h ../spaces.h ../paths.h
 curves.o: ../regions.h ../curves.h ../lines.h ../arith.h
 fontfcn.o: ../../../../exports/include/X11/Xmd.h
 fontfcn.o: ../../../../exports/include/X11/Xdefs.h
 fontfcn.o: ../../../../programs/Xserver/include/xf86_ansic.h
-fontfcn.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fontfcn.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fontfcn.o: ../../../../programs/Xserver/include/xf86_libc.h
 fontfcn.o: ../../../../exports/include/X11/Xfuncs.h
 fontfcn.o: ../../../../exports/include/X11/Xosdefs.h
-fontfcn.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fontfcn.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fontfcn.o: ../t1imager.h ../objects.h
 fontfcn.o: ../../../../exports/include/X11/Xfuncproto.h ../spaces.h
 fontfcn.o: ../paths.h ../regions.h ../util.h ../range.h
@@ -1418,10 +1418,10 @@ hints.o: ../../../../exports/include/X11/X.h
 hints.o: ../../../../exports/include/X11/Xdefs.h
 hints.o: ../../../../exports/include/X11/Xalloca.h
 hints.o: ../../../../programs/Xserver/include/xf86_ansic.h
-hints.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+hints.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 hints.o: ../../../../programs/Xserver/include/xf86_libc.h
 hints.o: ../../../../exports/include/X11/Xfuncs.h
-hints.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../objects.h
+hints.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h ../objects.h
 hints.o: ../../../../exports/include/X11/Xdefs.h
 hints.o: ../../../../exports/include/X11/Xfuncproto.h ../spaces.h ../paths.h
 hints.o: ../regions.h ../hints.h
@@ -1439,10 +1439,10 @@ objects.o: ../../../../exports/include/X11/X.h
 objects.o: ../../../../exports/include/X11/Xdefs.h
 objects.o: ../../../../exports/include/X11/Xalloca.h
 objects.o: ../../../../programs/Xserver/include/xf86_ansic.h
-objects.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+objects.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 objects.o: ../../../../programs/Xserver/include/xf86_libc.h
 objects.o: ../../../../exports/include/X11/Xfuncs.h
-objects.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../objects.h
+objects.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h ../objects.h
 objects.o: ../../../../exports/include/X11/Xfuncproto.h ../spaces.h
 objects.o: ../paths.h ../regions.h ../fonts.h ../pictures.h ../strokes.h
 objects.o: ../cluts.h
@@ -1455,10 +1455,10 @@ paths.o: ../../../../exports/include/X11/X.h
 paths.o: ../../../../exports/include/X11/Xdefs.h
 paths.o: ../../../../exports/include/X11/Xalloca.h
 paths.o: ../../../../programs/Xserver/include/xf86_ansic.h
-paths.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+paths.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 paths.o: ../../../../programs/Xserver/include/xf86_libc.h
 paths.o: ../../../../exports/include/X11/Xfuncs.h
-paths.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../objects.h
+paths.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h ../objects.h
 paths.o: ../../../../exports/include/X11/Xdefs.h
 paths.o: ../../../../exports/include/X11/Xfuncproto.h ../spaces.h ../paths.h
 paths.o: ../regions.h ../fonts.h ../pictures.h ../strokes.h ../trig.h
@@ -1471,10 +1471,10 @@ regions.o: ../../../../exports/include/X11/X.h
 regions.o: ../../../../exports/include/X11/Xdefs.h
 regions.o: ../../../../exports/include/X11/Xalloca.h
 regions.o: ../../../../programs/Xserver/include/xf86_ansic.h
-regions.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+regions.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 regions.o: ../../../../programs/Xserver/include/xf86_libc.h
 regions.o: ../../../../exports/include/X11/Xfuncs.h
-regions.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../objects.h
+regions.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h ../objects.h
 regions.o: ../../../../exports/include/X11/Xdefs.h
 regions.o: ../../../../exports/include/X11/Xfuncproto.h ../spaces.h
 regions.o: ../paths.h ../regions.h ../curves.h ../lines.h ../pictures.h
@@ -1482,11 +1482,11 @@ regions.o: ../fonts.h ../hints.h ../strokes.h
 scanfont.o: ../../../../exports/include/X11/Xdefs.h
 scanfont.o: ../../../../exports/include/X11/Xmd.h
 scanfont.o: ../../../../programs/Xserver/include/xf86_ansic.h
-scanfont.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+scanfont.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 scanfont.o: ../../../../programs/Xserver/include/xf86_libc.h
 scanfont.o: ../../../../exports/include/X11/Xfuncs.h
 scanfont.o: ../../../../exports/include/X11/Xosdefs.h
-scanfont.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+scanfont.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 scanfont.o: ../t1stdio.h ../util.h ../token.h ../range.h ../objects.h
 scanfont.o: ../../../../exports/include/X11/Xfuncproto.h ../spaces.h
 scanfont.o: ../fontfcn.h ../blues.h
@@ -1501,20 +1501,20 @@ spaces.o: ../../../../exports/include/X11/X.h
 spaces.o: ../../../../exports/include/X11/Xdefs.h
 spaces.o: ../../../../exports/include/X11/Xalloca.h
 spaces.o: ../../../../programs/Xserver/include/xf86_ansic.h
-spaces.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+spaces.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 spaces.o: ../../../../programs/Xserver/include/xf86_libc.h
 spaces.o: ../../../../exports/include/X11/Xfuncs.h
-spaces.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../objects.h
+spaces.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h ../objects.h
 spaces.o: ../../../../exports/include/X11/Xfuncproto.h ../spaces.h ../paths.h
 spaces.o: ../pictures.h ../fonts.h ../arith.h ../trig.h
 t1funcs.o: ../../../../exports/include/X11/Xmd.h
 t1funcs.o: ../../../../exports/include/X11/Xdefs.h
 t1funcs.o: ../../../../programs/Xserver/include/xf86_ansic.h
-t1funcs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+t1funcs.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 t1funcs.o: ../../../../programs/Xserver/include/xf86_libc.h
 t1funcs.o: ../../../../exports/include/X11/Xfuncs.h
 t1funcs.o: ../../../../exports/include/X11/Xosdefs.h
-t1funcs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+t1funcs.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 t1funcs.o: ../../../../programs/Xserver/include/os.h
 t1funcs.o: ../../../../programs/Xserver/include/misc.h
 t1funcs.o: ../../../../exports/include/X11/Xfuncproto.h
@@ -1551,22 +1551,22 @@ t1info.o: ../../../../exports/include/X11/fonts/FS.h
 t1info.o: ../../../../exports/include/X11/fonts/fsmasks.h
 t1info.o: ../../include/fntfil.h ../../include/fontutil.h
 t1info.o: ../../../../programs/Xserver/include/xf86_ansic.h
-t1info.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+t1info.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 t1info.o: ../../../../programs/Xserver/include/xf86_libc.h
 t1info.o: ../../../../exports/include/X11/Xfuncs.h
 t1info.o: ../../../../exports/include/X11/Xosdefs.h
-t1info.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../objects.h
+t1info.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h ../objects.h
 t1info.o: ../../../../exports/include/X11/Xdefs.h
 t1info.o: ../../../../exports/include/X11/Xfuncproto.h ../spaces.h ../range.h
 t1info.o: ../util.h ../fontfcn.h ../t1intf.h ../AFM.h
 t1io.o: ../../../../exports/include/X11/Xdefs.h
 t1io.o: ../../../../exports/include/X11/Xmd.h
 t1io.o: ../../../../programs/Xserver/include/xf86_ansic.h
-t1io.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+t1io.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 t1io.o: ../../../../programs/Xserver/include/xf86_libc.h
 t1io.o: ../../../../exports/include/X11/Xfuncs.h
 t1io.o: ../../../../exports/include/X11/Xosdefs.h
-t1io.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../t1stdio.h
+t1io.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h ../t1stdio.h
 t1io.o: ../t1hdigit.h
 t1malloc.o: ../../../../exports/include/X11/Xdefs.h
 t1malloc.o: ../../../../exports/include/X11/Xmd.h
@@ -1579,10 +1579,10 @@ t1malloc.o: ../../../../exports/include/X11/X.h
 t1malloc.o: ../../../../exports/include/X11/Xdefs.h
 t1malloc.o: ../../../../exports/include/X11/Xalloca.h
 t1malloc.o: ../../../../programs/Xserver/include/xf86_ansic.h
-t1malloc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+t1malloc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 t1malloc.o: ../../../../programs/Xserver/include/xf86_libc.h
 t1malloc.o: ../../../../exports/include/X11/Xfuncs.h
-t1malloc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+t1malloc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 t1malloc.o: ../objects.h ../../../../exports/include/X11/Xfuncproto.h
 t1snap.o: ../objects.h ../../../../exports/include/X11/Xdefs.h
 t1snap.o: ../../../../exports/include/X11/Xfuncproto.h ../spaces.h ../paths.h
@@ -1598,41 +1598,41 @@ t1stub.o: ../../../../exports/include/X11/X.h
 t1stub.o: ../../../../exports/include/X11/Xdefs.h
 t1stub.o: ../../../../exports/include/X11/Xalloca.h
 t1stub.o: ../../../../programs/Xserver/include/xf86_ansic.h
-t1stub.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+t1stub.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 t1stub.o: ../../../../programs/Xserver/include/xf86_libc.h
 t1stub.o: ../../../../exports/include/X11/Xfuncs.h
-t1stub.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../objects.h
+t1stub.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h ../objects.h
 t1stub.o: ../../../../exports/include/X11/Xfuncproto.h
 token.o: ../t1stdio.h ../util.h ../digit.h ../token.h ../tokst.h ../hdigit.h
 type1.o: ../../../../exports/include/X11/Xdefs.h
 type1.o: ../../../../exports/include/X11/Xmd.h
 type1.o: ../../../../programs/Xserver/include/xf86_ansic.h
-type1.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+type1.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 type1.o: ../../../../programs/Xserver/include/xf86_libc.h
 type1.o: ../../../../exports/include/X11/Xfuncs.h
 type1.o: ../../../../exports/include/X11/Xosdefs.h
-type1.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../objects.h
+type1.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h ../objects.h
 type1.o: ../../../../exports/include/X11/Xfuncproto.h ../spaces.h ../paths.h
 type1.o: ../fonts.h ../pictures.h ../range.h ../util.h ../fontfcn.h
 type1.o: ../blues.h
 util.o: ../../../../exports/include/X11/Xdefs.h
 util.o: ../../../../exports/include/X11/Xmd.h
 util.o: ../../../../programs/Xserver/include/xf86_ansic.h
-util.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+util.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 util.o: ../../../../programs/Xserver/include/xf86_libc.h
 util.o: ../../../../exports/include/X11/Xfuncs.h
 util.o: ../../../../exports/include/X11/Xosdefs.h
-util.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../util.h
+util.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h ../util.h
 util.o: ../../include/fontmisc.h ../../../../exports/include/X11/Xdefs.h
 t1unicode.o: ../t1unicode.h
 cidchar.o: ../../../../exports/include/X11/Xmd.h
 cidchar.o: ../../../../exports/include/X11/Xdefs.h
 cidchar.o: ../../../../programs/Xserver/include/xf86_ansic.h
-cidchar.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+cidchar.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cidchar.o: ../../../../programs/Xserver/include/xf86_libc.h
 cidchar.o: ../../../../exports/include/X11/Xfuncs.h
 cidchar.o: ../../../../exports/include/X11/Xosdefs.h
-cidchar.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+cidchar.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cidchar.o: ../../include/fntfilst.h ../../include/fontmisc.h
 cidchar.o: ../../../../exports/include/X11/Xdefs.h
 cidchar.o: ../../../../include/fonts/fontstruct.h
@@ -1652,11 +1652,11 @@ cidchar.o: ../range.h ../util.h ../fontfcn.h ../blues.h ../AFM.h ../t1intf.h
 afm.o: ../../../../exports/include/X11/Xmd.h
 afm.o: ../../../../exports/include/X11/Xdefs.h
 afm.o: ../../../../programs/Xserver/include/xf86_ansic.h
-afm.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afm.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 afm.o: ../../../../programs/Xserver/include/xf86_libc.h
 afm.o: ../../../../exports/include/X11/Xfuncs.h
 afm.o: ../../../../exports/include/X11/Xosdefs.h
-afm.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afm.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 afm.o: ../../include/fontmisc.h ../../../../exports/include/X11/Xdefs.h
 afm.o: ../AFM.h
 type1mod.o: ../../../../programs/Xserver/include/misc.h
@@ -1668,10 +1668,10 @@ type1mod.o: ../../../../exports/include/X11/Xdefs.h
 type1mod.o: ../../../../programs/Xserver/include/os.h
 type1mod.o: ../../../../exports/include/X11/Xalloca.h
 type1mod.o: ../../../../programs/Xserver/include/xf86_ansic.h
-type1mod.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+type1mod.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 type1mod.o: ../../../../programs/Xserver/include/xf86_libc.h
 type1mod.o: ../../../../exports/include/X11/Xfuncs.h
-type1mod.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+type1mod.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 type1mod.o: ../../include/fontmod.h
 type1mod.o: ../../../../programs/Xserver/include/xf86Module.h
 type1mod.o: ../../../../programs/Xserver/include/xf86Version.h

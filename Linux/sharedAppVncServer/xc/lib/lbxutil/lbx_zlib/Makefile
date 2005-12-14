@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
-# libc:	(6.3.5)
+# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
+# libc:	(6.3.3)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce
+      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -928,7 +928,7 @@ CXXPROJECT_DEFINES =
 
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 $(PROJECT_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce
+CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CLIBDEBUGFLAGS =
      CFLAGS = $(CDEBUGFLAGS) $(CLIBDEBUGFLAGS) $(CCOPTIONS) $(THREADS_CFLAGS) $(ALLDEFINES)
 
@@ -1058,15 +1058,16 @@ distclean::
 lbx_zlib.o: ../../../exports/include/X11/Xos.h
 lbx_zlib.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 lbx_zlib.o: /usr/include/features.h /usr/include/sys/cdefs.h
-lbx_zlib.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
-lbx_zlib.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-lbx_zlib.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+lbx_zlib.o: /usr/include/gnu/stubs.h /usr/include/bits/types.h
+lbx_zlib.o: /usr/include/bits/wordsize.h
+lbx_zlib.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 lbx_zlib.o: /usr/include/bits/typesizes.h /usr/include/time.h
 lbx_zlib.o: /usr/include/endian.h /usr/include/bits/endian.h
 lbx_zlib.o: /usr/include/sys/select.h /usr/include/bits/select.h
 lbx_zlib.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 lbx_zlib.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
-lbx_zlib.o: /usr/include/string.h /usr/include/xlocale.h /usr/include/fcntl.h
+lbx_zlib.o: /usr/include/bits/sched.h /usr/include/string.h
+lbx_zlib.o: /usr/include/xlocale.h /usr/include/fcntl.h
 lbx_zlib.o: /usr/include/bits/fcntl.h /usr/include/sys/stat.h
 lbx_zlib.o: /usr/include/bits/stat.h /usr/include/unistd.h
 lbx_zlib.o: /usr/include/bits/posix_opt.h /usr/include/bits/environments.h
@@ -1076,12 +1077,12 @@ lbx_zlib.o: ../../../exports/include/X11/Xfuncs.h /usr/include/stdio.h
 lbx_zlib.o: /usr/include/libio.h /usr/include/_G_config.h
 lbx_zlib.o: /usr/include/wchar.h /usr/include/bits/wchar.h
 lbx_zlib.o: /usr/include/gconv.h
-lbx_zlib.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+lbx_zlib.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 lbx_zlib.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 lbx_zlib.o: /usr/include/errno.h /usr/include/bits/errno.h
 lbx_zlib.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
 lbx_zlib.o: /usr/include/sys/param.h /usr/include/limits.h
-lbx_zlib.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+lbx_zlib.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
 lbx_zlib.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 lbx_zlib.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 lbx_zlib.o: /usr/include/bits/xopen_lim.h /usr/include/linux/param.h
@@ -1107,26 +1108,25 @@ lbx_zlib_io.o: ../../../exports/include/X11/Xos.h
 lbx_zlib_io.o: ../../../exports/include/X11/Xosdefs.h
 lbx_zlib_io.o: /usr/include/sys/types.h /usr/include/features.h
 lbx_zlib_io.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-lbx_zlib_io.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
-lbx_zlib_io.o: /usr/include/bits/types.h
-lbx_zlib_io.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+lbx_zlib_io.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
+lbx_zlib_io.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 lbx_zlib_io.o: /usr/include/bits/typesizes.h /usr/include/time.h
 lbx_zlib_io.o: /usr/include/endian.h /usr/include/bits/endian.h
 lbx_zlib_io.o: /usr/include/sys/select.h /usr/include/bits/select.h
 lbx_zlib_io.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 lbx_zlib_io.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
-lbx_zlib_io.o: /usr/include/string.h /usr/include/xlocale.h
-lbx_zlib_io.o: /usr/include/fcntl.h /usr/include/bits/fcntl.h
-lbx_zlib_io.o: /usr/include/sys/stat.h /usr/include/bits/stat.h
-lbx_zlib_io.o: /usr/include/unistd.h /usr/include/bits/posix_opt.h
-lbx_zlib_io.o: /usr/include/bits/environments.h /usr/include/bits/confname.h
-lbx_zlib_io.o: /usr/include/getopt.h /usr/include/sys/time.h
-lbx_zlib_io.o: ../../../exports/include/X11/Xarch.h
+lbx_zlib_io.o: /usr/include/bits/sched.h /usr/include/string.h
+lbx_zlib_io.o: /usr/include/xlocale.h /usr/include/fcntl.h
+lbx_zlib_io.o: /usr/include/bits/fcntl.h /usr/include/sys/stat.h
+lbx_zlib_io.o: /usr/include/bits/stat.h /usr/include/unistd.h
+lbx_zlib_io.o: /usr/include/bits/posix_opt.h /usr/include/bits/environments.h
+lbx_zlib_io.o: /usr/include/bits/confname.h /usr/include/getopt.h
+lbx_zlib_io.o: /usr/include/sys/time.h ../../../exports/include/X11/Xarch.h
 lbx_zlib_io.o: ../../../exports/include/X11/Xfuncs.h /usr/include/errno.h
 lbx_zlib_io.o: /usr/include/bits/errno.h /usr/include/linux/errno.h
 lbx_zlib_io.o: /usr/include/asm/errno.h /usr/include/sys/param.h
 lbx_zlib_io.o: /usr/include/limits.h
-lbx_zlib_io.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+lbx_zlib_io.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
 lbx_zlib_io.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 lbx_zlib_io.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 lbx_zlib_io.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1151,7 +1151,7 @@ lbx_zlib_io.o: /usr/include/bits/mathcalls.h /usr/include/assert.h
 lbx_zlib_io.o: /usr/include/ctype.h /usr/include/stdio.h /usr/include/libio.h
 lbx_zlib_io.o: /usr/include/_G_config.h /usr/include/wchar.h
 lbx_zlib_io.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-lbx_zlib_io.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+lbx_zlib_io.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 lbx_zlib_io.o: /usr/include/bits/sys_errlist.h
 lbx_zlib_io.o: ../../../exports/include/X11/Xalloca.h
 reqstats.o: reqstats.h

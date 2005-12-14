@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
-# libc:	(6.3.5)
+# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
+# libc:	(6.3.3)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce
+      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -932,7 +932,7 @@ CXXPROJECT_DEFINES =
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 -DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP 	-DXCSECURITY -DTOGCUP  	-DXF86BIGFONT -DDPMSExtension 	  -DPANORAMIX 	 -DRENDER -DRANDR -DGCCUSESGAS -DAVOID_GLYPHBLT -DPIXPRIV -DSINGLEDEPTH 				-DXFreeXDGA -DXvExtension 				-DXFree86LOADER  -DXFree86Server 				-DXF86VIDMODE 				-DXvMCExtension 				-DSMART_SCHEDULE 				-DBUILDDEBUG -DXResExtension 				-DX_BYTE_ORDER=$(X_BYTE_ORDER) -DNDEBUG  $(SERVER_THREAD_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce
+CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 EXT_DEFINES =  -DMITMISC -DXTEST -DXTRAP 	-DXSYNC -DXCMISC -DXRECORD 	-DMITSHM -DBIGREQS -DXF86VIDMODE 	-DXF86MISC -DDBE -DDPMSExtension -DEVI 	-DSCREENSAVER -DXV -DXVMC 	-DGLXEXT -DXF86DRI -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN -DGLX_USE_MESA  -DFONTCACHE          -DRES
 OS_DEFINES  = -DDDXOSINIT -DSERVER_LOCK -DDDXOSFATALERROR 				-DDDXOSVERRORF -DDDXTIME -DPART_NET
 
@@ -1153,10 +1153,10 @@ fbmodule.o: ../../../exports/include/X11/Xdefs.h
 fbmodule.o: ../../../programs/Xserver/include/os.h
 fbmodule.o: ../../../exports/include/X11/Xalloca.h
 fbmodule.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbmodule.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbmodule.o: ../../../programs/Xserver/include/xf86_libc.h
 fbmodule.o: ../../../exports/include/X11/Xfuncs.h
-fbmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbmodule.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbmodule.o: ../../../programs/Xserver/include/xf86Version.h fb.h
 fbmodule.o: ../../../exports/include/X11/X.h
 fbmodule.o: ../../../programs/Xserver/include/scrnintstr.h
@@ -1208,10 +1208,10 @@ fballpriv.o: ../../../exports/include/X11/Xdefs.h
 fballpriv.o: ../../../programs/Xserver/include/os.h
 fballpriv.o: ../../../exports/include/X11/Xalloca.h
 fballpriv.o: ../../../programs/Xserver/include/xf86_ansic.h
-fballpriv.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fballpriv.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fballpriv.o: ../../../programs/Xserver/include/xf86_libc.h
 fballpriv.o: ../../../exports/include/X11/Xfuncs.h
-fballpriv.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fballpriv.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fballpriv.o: ../../../programs/Xserver/include/regionstr.h
 fballpriv.o: ../../../programs/Xserver/include/miscstruct.h
 fballpriv.o: ../../../exports/include/X11/Xprotostr.h
@@ -1258,10 +1258,10 @@ fbbits.o: ../../../exports/include/X11/Xdefs.h
 fbbits.o: ../../../programs/Xserver/include/os.h
 fbbits.o: ../../../exports/include/X11/Xalloca.h
 fbbits.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbbits.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbbits.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbbits.o: ../../../programs/Xserver/include/xf86_libc.h
 fbbits.o: ../../../exports/include/X11/Xfuncs.h
-fbbits.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbbits.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbbits.o: ../../../programs/Xserver/include/regionstr.h
 fbbits.o: ../../../programs/Xserver/include/miscstruct.h
 fbbits.o: ../../../exports/include/X11/Xprotostr.h
@@ -1310,10 +1310,10 @@ fbblt.o: ../../../exports/include/X11/Xdefs.h
 fbblt.o: ../../../programs/Xserver/include/os.h
 fbblt.o: ../../../exports/include/X11/Xalloca.h
 fbblt.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbblt.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbblt.o: ../../../programs/Xserver/include/xf86_libc.h
 fbblt.o: ../../../exports/include/X11/Xfuncs.h
-fbblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbblt.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbblt.o: ../../../programs/Xserver/include/regionstr.h
 fbblt.o: ../../../programs/Xserver/include/miscstruct.h
 fbblt.o: ../../../exports/include/X11/Xprotostr.h
@@ -1360,10 +1360,10 @@ fbbltone.o: ../../../exports/include/X11/Xdefs.h
 fbbltone.o: ../../../programs/Xserver/include/os.h
 fbbltone.o: ../../../exports/include/X11/Xalloca.h
 fbbltone.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbbltone.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbbltone.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbbltone.o: ../../../programs/Xserver/include/xf86_libc.h
 fbbltone.o: ../../../exports/include/X11/Xfuncs.h
-fbbltone.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbbltone.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbbltone.o: ../../../programs/Xserver/include/regionstr.h
 fbbltone.o: ../../../programs/Xserver/include/miscstruct.h
 fbbltone.o: ../../../exports/include/X11/Xprotostr.h
@@ -1411,10 +1411,10 @@ fbbstore.o: ../../../exports/include/X11/Xdefs.h
 fbbstore.o: ../../../programs/Xserver/include/os.h
 fbbstore.o: ../../../exports/include/X11/Xalloca.h
 fbbstore.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbbstore.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbbstore.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbbstore.o: ../../../programs/Xserver/include/xf86_libc.h
 fbbstore.o: ../../../exports/include/X11/Xfuncs.h
-fbbstore.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbbstore.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbbstore.o: ../../../programs/Xserver/include/regionstr.h
 fbbstore.o: ../../../programs/Xserver/include/miscstruct.h
 fbbstore.o: ../../../exports/include/X11/Xprotostr.h
@@ -1464,10 +1464,10 @@ fbcmap.o: ../../../exports/include/X11/Xdefs.h
 fbcmap.o: ../../../programs/Xserver/include/os.h
 fbcmap.o: ../../../exports/include/X11/Xalloca.h
 fbcmap.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbcmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbcmap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbcmap.o: ../../../programs/Xserver/include/xf86_libc.h
 fbcmap.o: ../../../exports/include/X11/Xfuncs.h
-fbcmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbcmap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbcmap.o: ../../../programs/Xserver/include/regionstr.h
 fbcmap.o: ../../../programs/Xserver/include/miscstruct.h
 fbcmap.o: ../../../programs/Xserver/include/gc.h
@@ -1516,10 +1516,10 @@ fbcompose.o: ../../../exports/include/X11/Xdefs.h
 fbcompose.o: ../../../programs/Xserver/include/os.h
 fbcompose.o: ../../../exports/include/X11/Xalloca.h
 fbcompose.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbcompose.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbcompose.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbcompose.o: ../../../programs/Xserver/include/xf86_libc.h
 fbcompose.o: ../../../exports/include/X11/Xfuncs.h
-fbcompose.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbcompose.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbcompose.o: ../../../programs/Xserver/include/regionstr.h
 fbcompose.o: ../../../programs/Xserver/include/miscstruct.h
 fbcompose.o: ../../../exports/include/X11/Xprotostr.h
@@ -1567,10 +1567,10 @@ fbcopy.o: ../../../exports/include/X11/Xdefs.h
 fbcopy.o: ../../../programs/Xserver/include/os.h
 fbcopy.o: ../../../exports/include/X11/Xalloca.h
 fbcopy.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbcopy.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbcopy.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbcopy.o: ../../../programs/Xserver/include/xf86_libc.h
 fbcopy.o: ../../../exports/include/X11/Xfuncs.h
-fbcopy.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbcopy.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbcopy.o: ../../../programs/Xserver/include/regionstr.h
 fbcopy.o: ../../../programs/Xserver/include/miscstruct.h
 fbcopy.o: ../../../exports/include/X11/Xprotostr.h
@@ -1617,10 +1617,10 @@ fbfill.o: ../../../exports/include/X11/Xdefs.h
 fbfill.o: ../../../programs/Xserver/include/os.h
 fbfill.o: ../../../exports/include/X11/Xalloca.h
 fbfill.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbfill.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbfill.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbfill.o: ../../../programs/Xserver/include/xf86_libc.h
 fbfill.o: ../../../exports/include/X11/Xfuncs.h
-fbfill.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbfill.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbfill.o: ../../../programs/Xserver/include/regionstr.h
 fbfill.o: ../../../programs/Xserver/include/miscstruct.h
 fbfill.o: ../../../exports/include/X11/Xprotostr.h
@@ -1668,10 +1668,10 @@ fbfillrect.o: ../../../exports/include/X11/Xdefs.h
 fbfillrect.o: ../../../programs/Xserver/include/os.h
 fbfillrect.o: ../../../exports/include/X11/Xalloca.h
 fbfillrect.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbfillrect.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbfillrect.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbfillrect.o: ../../../programs/Xserver/include/xf86_libc.h
 fbfillrect.o: ../../../exports/include/X11/Xfuncs.h
-fbfillrect.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbfillrect.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbfillrect.o: ../../../programs/Xserver/include/regionstr.h
 fbfillrect.o: ../../../programs/Xserver/include/miscstruct.h
 fbfillrect.o: ../../../exports/include/X11/Xprotostr.h
@@ -1719,10 +1719,10 @@ fbfillsp.o: ../../../exports/include/X11/Xdefs.h
 fbfillsp.o: ../../../programs/Xserver/include/os.h
 fbfillsp.o: ../../../exports/include/X11/Xalloca.h
 fbfillsp.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbfillsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbfillsp.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbfillsp.o: ../../../programs/Xserver/include/xf86_libc.h
 fbfillsp.o: ../../../exports/include/X11/Xfuncs.h
-fbfillsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbfillsp.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbfillsp.o: ../../../programs/Xserver/include/regionstr.h
 fbfillsp.o: ../../../programs/Xserver/include/miscstruct.h
 fbfillsp.o: ../../../exports/include/X11/Xprotostr.h
@@ -1769,10 +1769,10 @@ fbgc.o: ../../../exports/include/X11/Xdefs.h
 fbgc.o: ../../../programs/Xserver/include/os.h
 fbgc.o: ../../../exports/include/X11/Xalloca.h
 fbgc.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbgc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbgc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbgc.o: ../../../programs/Xserver/include/xf86_libc.h
 fbgc.o: ../../../exports/include/X11/Xfuncs.h
-fbgc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbgc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbgc.o: ../../../programs/Xserver/include/regionstr.h
 fbgc.o: ../../../programs/Xserver/include/miscstruct.h
 fbgc.o: ../../../exports/include/X11/Xprotostr.h
@@ -1819,10 +1819,10 @@ fbgetsp.o: ../../../exports/include/X11/Xdefs.h
 fbgetsp.o: ../../../programs/Xserver/include/os.h
 fbgetsp.o: ../../../exports/include/X11/Xalloca.h
 fbgetsp.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbgetsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbgetsp.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbgetsp.o: ../../../programs/Xserver/include/xf86_libc.h
 fbgetsp.o: ../../../exports/include/X11/Xfuncs.h
-fbgetsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbgetsp.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbgetsp.o: ../../../programs/Xserver/include/regionstr.h
 fbgetsp.o: ../../../programs/Xserver/include/miscstruct.h
 fbgetsp.o: ../../../exports/include/X11/Xprotostr.h
@@ -1870,10 +1870,10 @@ fbglyph.o: ../../../exports/include/X11/Xdefs.h
 fbglyph.o: ../../../programs/Xserver/include/os.h
 fbglyph.o: ../../../exports/include/X11/Xalloca.h
 fbglyph.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbglyph.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbglyph.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbglyph.o: ../../../programs/Xserver/include/xf86_libc.h
 fbglyph.o: ../../../exports/include/X11/Xfuncs.h
-fbglyph.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbglyph.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbglyph.o: ../../../programs/Xserver/include/regionstr.h
 fbglyph.o: ../../../programs/Xserver/include/miscstruct.h
 fbglyph.o: ../../../exports/include/X11/Xprotostr.h
@@ -1926,10 +1926,10 @@ fbimage.o: ../../../exports/include/X11/Xdefs.h
 fbimage.o: ../../../programs/Xserver/include/os.h
 fbimage.o: ../../../exports/include/X11/Xalloca.h
 fbimage.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbimage.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbimage.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbimage.o: ../../../programs/Xserver/include/xf86_libc.h
 fbimage.o: ../../../exports/include/X11/Xfuncs.h
-fbimage.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbimage.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbimage.o: ../../../programs/Xserver/include/regionstr.h
 fbimage.o: ../../../programs/Xserver/include/miscstruct.h
 fbimage.o: ../../../exports/include/X11/Xprotostr.h
@@ -1986,10 +1986,10 @@ fbline.o: ../../../exports/include/X11/Xdefs.h
 fbline.o: ../../../programs/Xserver/include/os.h
 fbline.o: ../../../exports/include/X11/Xalloca.h
 fbline.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbline.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbline.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbline.o: ../../../programs/Xserver/include/xf86_libc.h
 fbline.o: ../../../exports/include/X11/Xfuncs.h
-fbline.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbline.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbline.o: ../../../programs/Xserver/include/regionstr.h
 fbline.o: ../../../programs/Xserver/include/miscstruct.h
 fbline.o: ../../../exports/include/X11/Xprotostr.h
@@ -2037,10 +2037,10 @@ fboverlay.o: ../../../exports/include/X11/Xdefs.h
 fboverlay.o: ../../../programs/Xserver/include/os.h
 fboverlay.o: ../../../exports/include/X11/Xalloca.h
 fboverlay.o: ../../../programs/Xserver/include/xf86_ansic.h
-fboverlay.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fboverlay.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fboverlay.o: ../../../programs/Xserver/include/xf86_libc.h
 fboverlay.o: ../../../exports/include/X11/Xfuncs.h
-fboverlay.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fboverlay.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fboverlay.o: ../../../programs/Xserver/include/regionstr.h
 fboverlay.o: ../../../programs/Xserver/include/miscstruct.h
 fboverlay.o: ../../../exports/include/X11/Xprotostr.h
@@ -2088,10 +2088,10 @@ fbpixmap.o: ../../../exports/include/X11/Xdefs.h
 fbpixmap.o: ../../../programs/Xserver/include/os.h
 fbpixmap.o: ../../../exports/include/X11/Xalloca.h
 fbpixmap.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbpixmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbpixmap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbpixmap.o: ../../../programs/Xserver/include/xf86_libc.h
 fbpixmap.o: ../../../exports/include/X11/Xfuncs.h
-fbpixmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbpixmap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbpixmap.o: ../../../programs/Xserver/include/regionstr.h
 fbpixmap.o: ../../../programs/Xserver/include/miscstruct.h
 fbpixmap.o: ../../../exports/include/X11/Xprotostr.h
@@ -2139,10 +2139,10 @@ fbpoint.o: ../../../exports/include/X11/Xdefs.h
 fbpoint.o: ../../../programs/Xserver/include/os.h
 fbpoint.o: ../../../exports/include/X11/Xalloca.h
 fbpoint.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbpoint.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbpoint.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbpoint.o: ../../../programs/Xserver/include/xf86_libc.h
 fbpoint.o: ../../../exports/include/X11/Xfuncs.h
-fbpoint.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbpoint.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbpoint.o: ../../../programs/Xserver/include/regionstr.h
 fbpoint.o: ../../../programs/Xserver/include/miscstruct.h
 fbpoint.o: ../../../exports/include/X11/Xprotostr.h
@@ -2189,10 +2189,10 @@ fbpush.o: ../../../exports/include/X11/Xdefs.h
 fbpush.o: ../../../programs/Xserver/include/os.h
 fbpush.o: ../../../exports/include/X11/Xalloca.h
 fbpush.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbpush.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbpush.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbpush.o: ../../../programs/Xserver/include/xf86_libc.h
 fbpush.o: ../../../exports/include/X11/Xfuncs.h
-fbpush.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbpush.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbpush.o: ../../../programs/Xserver/include/regionstr.h
 fbpush.o: ../../../programs/Xserver/include/miscstruct.h
 fbpush.o: ../../../exports/include/X11/Xprotostr.h
@@ -2240,10 +2240,10 @@ fbscreen.o: ../../../exports/include/X11/Xdefs.h
 fbscreen.o: ../../../programs/Xserver/include/os.h
 fbscreen.o: ../../../exports/include/X11/Xalloca.h
 fbscreen.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbscreen.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbscreen.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbscreen.o: ../../../programs/Xserver/include/xf86_libc.h
 fbscreen.o: ../../../exports/include/X11/Xfuncs.h
-fbscreen.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbscreen.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbscreen.o: ../../../programs/Xserver/include/regionstr.h
 fbscreen.o: ../../../programs/Xserver/include/miscstruct.h
 fbscreen.o: ../../../exports/include/X11/Xprotostr.h
@@ -2290,10 +2290,10 @@ fbseg.o: ../../../exports/include/X11/Xdefs.h
 fbseg.o: ../../../programs/Xserver/include/os.h
 fbseg.o: ../../../exports/include/X11/Xalloca.h
 fbseg.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbseg.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbseg.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbseg.o: ../../../programs/Xserver/include/xf86_libc.h
 fbseg.o: ../../../exports/include/X11/Xfuncs.h
-fbseg.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbseg.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbseg.o: ../../../programs/Xserver/include/regionstr.h
 fbseg.o: ../../../programs/Xserver/include/miscstruct.h
 fbseg.o: ../../../exports/include/X11/Xprotostr.h
@@ -2341,10 +2341,10 @@ fbsetsp.o: ../../../exports/include/X11/Xdefs.h
 fbsetsp.o: ../../../programs/Xserver/include/os.h
 fbsetsp.o: ../../../exports/include/X11/Xalloca.h
 fbsetsp.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbsetsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbsetsp.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbsetsp.o: ../../../programs/Xserver/include/xf86_libc.h
 fbsetsp.o: ../../../exports/include/X11/Xfuncs.h
-fbsetsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbsetsp.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbsetsp.o: ../../../programs/Xserver/include/regionstr.h
 fbsetsp.o: ../../../programs/Xserver/include/miscstruct.h
 fbsetsp.o: ../../../exports/include/X11/Xprotostr.h
@@ -2392,10 +2392,10 @@ fbsolid.o: ../../../exports/include/X11/Xdefs.h
 fbsolid.o: ../../../programs/Xserver/include/os.h
 fbsolid.o: ../../../exports/include/X11/Xalloca.h
 fbsolid.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbsolid.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbsolid.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbsolid.o: ../../../programs/Xserver/include/xf86_libc.h
 fbsolid.o: ../../../exports/include/X11/Xfuncs.h
-fbsolid.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbsolid.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbsolid.o: ../../../programs/Xserver/include/regionstr.h
 fbsolid.o: ../../../programs/Xserver/include/miscstruct.h
 fbsolid.o: ../../../exports/include/X11/Xprotostr.h
@@ -2443,10 +2443,10 @@ fbstipple.o: ../../../exports/include/X11/Xdefs.h
 fbstipple.o: ../../../programs/Xserver/include/os.h
 fbstipple.o: ../../../exports/include/X11/Xalloca.h
 fbstipple.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbstipple.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbstipple.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbstipple.o: ../../../programs/Xserver/include/xf86_libc.h
 fbstipple.o: ../../../exports/include/X11/Xfuncs.h
-fbstipple.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbstipple.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbstipple.o: ../../../programs/Xserver/include/regionstr.h
 fbstipple.o: ../../../programs/Xserver/include/miscstruct.h
 fbstipple.o: ../../../exports/include/X11/Xprotostr.h
@@ -2493,10 +2493,10 @@ fbtile.o: ../../../exports/include/X11/Xdefs.h
 fbtile.o: ../../../programs/Xserver/include/os.h
 fbtile.o: ../../../exports/include/X11/Xalloca.h
 fbtile.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbtile.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbtile.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbtile.o: ../../../programs/Xserver/include/xf86_libc.h
 fbtile.o: ../../../exports/include/X11/Xfuncs.h
-fbtile.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbtile.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbtile.o: ../../../programs/Xserver/include/regionstr.h
 fbtile.o: ../../../programs/Xserver/include/miscstruct.h
 fbtile.o: ../../../exports/include/X11/Xprotostr.h
@@ -2543,10 +2543,10 @@ fbtrap.o: ../../../exports/include/X11/Xdefs.h
 fbtrap.o: ../../../programs/Xserver/include/os.h
 fbtrap.o: ../../../exports/include/X11/Xalloca.h
 fbtrap.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbtrap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbtrap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbtrap.o: ../../../programs/Xserver/include/xf86_libc.h
 fbtrap.o: ../../../exports/include/X11/Xfuncs.h
-fbtrap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbtrap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbtrap.o: ../../../programs/Xserver/include/regionstr.h
 fbtrap.o: ../../../programs/Xserver/include/miscstruct.h
 fbtrap.o: ../../../exports/include/X11/Xprotostr.h
@@ -2594,10 +2594,10 @@ fbutil.o: ../../../exports/include/X11/Xdefs.h
 fbutil.o: ../../../programs/Xserver/include/os.h
 fbutil.o: ../../../exports/include/X11/Xalloca.h
 fbutil.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbutil.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbutil.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbutil.o: ../../../programs/Xserver/include/xf86_libc.h
 fbutil.o: ../../../exports/include/X11/Xfuncs.h
-fbutil.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbutil.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbutil.o: ../../../programs/Xserver/include/regionstr.h
 fbutil.o: ../../../programs/Xserver/include/miscstruct.h
 fbutil.o: ../../../exports/include/X11/Xprotostr.h
@@ -2645,10 +2645,10 @@ fbwindow.o: ../../../exports/include/X11/Xdefs.h
 fbwindow.o: ../../../programs/Xserver/include/os.h
 fbwindow.o: ../../../exports/include/X11/Xalloca.h
 fbwindow.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbwindow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbwindow.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbwindow.o: ../../../programs/Xserver/include/xf86_libc.h
 fbwindow.o: ../../../exports/include/X11/Xfuncs.h
-fbwindow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbwindow.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbwindow.o: ../../../programs/Xserver/include/regionstr.h
 fbwindow.o: ../../../programs/Xserver/include/miscstruct.h
 fbwindow.o: ../../../exports/include/X11/Xprotostr.h
@@ -2698,10 +2698,10 @@ fb24_32.o: ../../../exports/include/X11/Xdefs.h
 fb24_32.o: ../../../programs/Xserver/include/os.h
 fb24_32.o: ../../../exports/include/X11/Xalloca.h
 fb24_32.o: ../../../programs/Xserver/include/xf86_ansic.h
-fb24_32.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fb24_32.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fb24_32.o: ../../../programs/Xserver/include/xf86_libc.h
 fb24_32.o: ../../../exports/include/X11/Xfuncs.h
-fb24_32.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fb24_32.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fb24_32.o: ../../../programs/Xserver/include/input.h
 fb24_32.o: ../../../programs/Xserver/include/screenint.h
 fb24_32.o: ../../../exports/include/X11/Xproto.h
@@ -2759,10 +2759,10 @@ fbpict.o: ../../../exports/include/X11/Xdefs.h
 fbpict.o: ../../../programs/Xserver/include/os.h
 fbpict.o: ../../../exports/include/X11/Xalloca.h
 fbpict.o: ../../../programs/Xserver/include/xf86_ansic.h
-fbpict.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fbpict.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fbpict.o: ../../../programs/Xserver/include/xf86_libc.h
 fbpict.o: ../../../exports/include/X11/Xfuncs.h
-fbpict.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fbpict.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 fbpict.o: ../../../programs/Xserver/include/regionstr.h
 fbpict.o: ../../../programs/Xserver/include/miscstruct.h
 fbpict.o: ../../../exports/include/X11/Xprotostr.h
