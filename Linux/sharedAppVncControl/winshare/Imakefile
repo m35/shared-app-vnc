@@ -18,7 +18,7 @@ VNC_EXTRA_LIBRARIES = -ldl
 VNC_EXTRA_LIBRARIES += -rdynamic
 #endif
 
-CCOPTIONS = -g
+CCOPTIONS = 
 INCLUDES = -I../../sharedAppVncServer/include -I. -I/usr/local/include 
 XLIB = -lX11 -lXext -lXmu
 VNCAUTH_LIB = ../../sharedAppVncServer/libvncauth/libvncauth.a
