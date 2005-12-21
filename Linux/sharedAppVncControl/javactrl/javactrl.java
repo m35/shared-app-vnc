@@ -58,7 +58,7 @@ public class javactrl extends JFrame {
             }
         });
 
-        setTitle("SharedAppVnc Shareing Control");
+        setTitle("SharedAppVnc Sharing Controller");
 
         JMenuBar menuBar = new JMenuBar();
         JMenu menu = new JMenu("Client");
@@ -173,7 +173,7 @@ public class javactrl extends JFrame {
           defaultValues.load(in);
           in.close();
         } catch (Exception e) {
-          System.out.println("INFO: User defaults file not found: " + defaultsFile);
+          if (debug) System.out.println("INFO: User defaults file not found: " + defaultsFile);
         }
     }
 
@@ -190,17 +190,17 @@ public class javactrl extends JFrame {
       String str;
 
         try {
-            System.out.println(basecmd + cmd);
+            if (debug) System.out.println(basecmd + cmd);
             Process p = Runtime.getRuntime().exec(basecmd + cmd);
             //DataInputStream in = new DataInputStream(p.getInputStream());
             //DataInputStream err = new DataInputStream(p.getErrorStream());
             BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
             BufferedReader err = new BufferedReader(new InputStreamReader(p.getErrorStream()));
             while ( (str = in.readLine()) != null) {
-              System.out.println(str); 
+              if (debug) System.out.println(str); 
             }
             while ( (str = err.readLine()) != null) {
-              System.out.println(str); 
+              if (debug) System.out.println(str); 
             }
             p.waitFor();
         } catch (Exception e) {
@@ -326,6 +326,7 @@ public class javactrl extends JFrame {
     private static String displayName = ":0";
     private static String passwdFile = null; //"passwd";
     private static String defaultsFile = System.getProperty("user.home") + "/.collab/javactrl.cfg";
+    private boolean debug = false;
     // End of variables declaration
     
 }
