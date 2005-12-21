@@ -48,7 +48,6 @@ main(int argc, char **argv)
   if (!InitialiseRFBConnection()) exit(1);
 
   /* send window sharing command */
-  /* printf("Sending windowCommand %x windowId %x\n", windowCommand, windowId); */
   SendWindowShare(windowCommand, windowId, reverseConnectHost);
   
   /* Now enter the main loop, processing VNC messages.  GTK events will

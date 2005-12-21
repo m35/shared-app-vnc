@@ -94,7 +94,7 @@ GetArgsAndResources(int argc, char **argv)
 
   displayName = Get_Display_Name(&argc, argv);
   if (!displayName) { displayName=getenv("DISPLAY"); }
-  if (!displayName) { printf("no display name set\n"); usage(); }
+  if (!displayName) { fprintf(stderr, "no display name set\n"); usage(); }
   dpy = Open_Display(displayName);
   screen = DefaultScreen(dpy);
   windowId = Select_Window_Args(&argc, argv);
@@ -138,15 +138,15 @@ GetArgsAndResources(int argc, char **argv)
 
   if (!windowCommand) 
   {
-    printf("No command specified.\n\n");
+    fprintf(stderr, "No command specified.\n\n");
     usage();
   }
   else if (windowCommand == rfbSharedAppRequestShow || windowCommand == rfbSharedAppRequestHide)
   {
     if (!windowId)
     {
-      printf("\n");
-      printf("winshare: Please use the mouse to click "
+      fprintf(stderr,"\n");
+      fprintf(stderr,"winshare: Please use the mouse to click "
              "on the window you would like to %s\n", commandStr);
       windowId = Select_Window(dpy);
       if (windowId && !appData.frame) {
@@ -167,7 +167,7 @@ GetArgsAndResources(int argc, char **argv)
   {
       if (windowId)
       {
-        printf("Window Id not used for %s command\n", commandStr);
+        fprintf(stderr,"Window Id not used for %s command\n", commandStr);
       }
   }
 
