@@ -166,6 +166,9 @@ public class javactrl extends JFrame {
 
         pack();
 
+        execCommand("hideall");
+        System.out.println("Connected to server successfully");
+
         defaultValues = new Properties();
         try
         {
@@ -197,12 +200,20 @@ public class javactrl extends JFrame {
             BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
             BufferedReader err = new BufferedReader(new InputStreamReader(p.getErrorStream()));
             while ( (str = in.readLine()) != null) {
-              if (debug) System.out.println(str); 
+              System.out.println(str); 
             }
             while ( (str = err.readLine()) != null) {
               if (debug) System.out.println(str); 
             }
             p.waitFor();
+            if (p.exitValue() != 0)
+	    {
+	      System.out.println("**Failed to connect to server**");
+	      System.out.println("Verify server is running. Check password file and path. Restart controller with -debug option.");
+              usage();
+              System.exit(1);
+	    }
+
         } catch (Exception e) {
             System.err.println(e);
             System.exit(1);
@@ -276,7 +287,7 @@ public class javactrl extends JFrame {
           port = port + 5500;
         }
         client = "connect " + clientParams[0] + ":" + port;
-        System.out.println("Connect to " + client);
+        if (debug) System.out.println("Connect to " + client);
         execCommand(client);
       }
     }
@@ -299,6 +310,8 @@ public class javactrl extends JFrame {
           } else if (args[i].equals("-passwd")) {
             if (i + 1 > args.length) usage();
             passwdFile = args[++i];
+          } else if (args[i].equals("-debug")) {
+	    debug = true;
           }
         }
       }
@@ -308,7 +321,7 @@ public class javactrl extends JFrame {
 
     private static void usage()
     {
-      System.out.println("javactrl [-display <DPY>] [-passwd <pwdfile>]");
+      System.out.println("javactrl [-display <DPY>] [-passwd <pwdfile>] [-debug]");
     }
     
     // Variables declaration
@@ -326,7 +339,7 @@ public class javactrl extends JFrame {
     private static String displayName = ":0";
     private static String passwdFile = null; //"passwd";
     private static String defaultsFile = System.getProperty("user.home") + "/.collab/javactrl.cfg";
-    private boolean debug = false;
+    private static boolean debug = false;
     // End of variables declaration
     
 }
