@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
-# libc:	(6.3.3)
+# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# libc:	(6.3.5)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+      CDEBUGFLAGS = -O2 -fno-strength-reduce
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -933,7 +933,7 @@ CXXPROJECT_DEFINES =
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 -DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP 	-DXCSECURITY -DTOGCUP  	-DXF86BIGFONT -DDPMSExtension 	  -DPANORAMIX 	 -DRENDER -DRANDR -DGCCUSESGAS -DAVOID_GLYPHBLT -DPIXPRIV -DSINGLEDEPTH 				-DXFreeXDGA -DXvExtension 				-DXFree86LOADER  -DXFree86Server 				-DXF86VIDMODE 				-DXvMCExtension 				-DSMART_SCHEDULE 				-DBUILDDEBUG -DXResExtension 				-DX_BYTE_ORDER=$(X_BYTE_ORDER) -DNDEBUG  $(SERVER_THREAD_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+CDEBUGFLAGS = -O2 -fno-strength-reduce
 EXT_DEFINES =  -DMITMISC -DXTEST -DXTRAP 	-DXSYNC -DXCMISC -DXRECORD 	-DMITSHM -DBIGREQS -DXF86VIDMODE 	-DXF86MISC -DDBE -DDPMSExtension -DEVI 	-DSCREENSAVER -DXV -DXVMC 	-DGLXEXT -DXF86DRI -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN -DGLX_USE_MESA  -DFONTCACHE          -DRES
 OS_DEFINES  = -DDDXOSINIT -DSERVER_LOCK -DDDXOSFATALERROR 				-DDDXOSVERRORF -DDDXTIME -DPART_NET
 
@@ -1573,10 +1573,10 @@ rendition.o: ../../../../../../exports/include/X11/Xdefs.h
 rendition.o: ../../../../../../programs/Xserver/include/os.h
 rendition.o: ../../../../../../exports/include/X11/Xalloca.h
 rendition.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-rendition.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+rendition.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 rendition.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 rendition.o: ../../../../../../exports/include/X11/Xfuncs.h
-rendition.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+rendition.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 rendition.o: ../../../../../../programs/Xserver/include/input.h
 rendition.o: ../../../../../../programs/Xserver/include/screenint.h
 rendition.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1663,10 +1663,10 @@ vboard.o: ../../../../../../exports/include/X11/Xdefs.h
 vboard.o: ../../../../../../programs/Xserver/include/os.h
 vboard.o: ../../../../../../exports/include/X11/Xalloca.h
 vboard.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-vboard.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+vboard.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 vboard.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 vboard.o: ../../../../../../exports/include/X11/Xfuncs.h
-vboard.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+vboard.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 vboard.o: ../../../../../../programs/Xserver/include/input.h
 vboard.o: ../../../../../../programs/Xserver/include/screenint.h
 vboard.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1751,10 +1751,10 @@ vmodes.o: ../../../../../../exports/include/X11/Xdefs.h
 vmodes.o: ../../../../../../programs/Xserver/include/os.h
 vmodes.o: ../../../../../../exports/include/X11/Xalloca.h
 vmodes.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-vmodes.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+vmodes.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 vmodes.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 vmodes.o: ../../../../../../exports/include/X11/Xfuncs.h
-vmodes.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+vmodes.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 vmodes.o: ../../../../../../programs/Xserver/include/input.h
 vmodes.o: ../../../../../../programs/Xserver/include/screenint.h
 vmodes.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1839,10 +1839,10 @@ vramdac.o: ../../../../../../exports/include/X11/Xdefs.h
 vramdac.o: ../../../../../../programs/Xserver/include/os.h
 vramdac.o: ../../../../../../exports/include/X11/Xalloca.h
 vramdac.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-vramdac.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+vramdac.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 vramdac.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 vramdac.o: ../../../../../../exports/include/X11/Xfuncs.h
-vramdac.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+vramdac.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 vramdac.o: ../../../../../../programs/Xserver/include/input.h
 vramdac.o: ../../../../../../programs/Xserver/include/screenint.h
 vramdac.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1926,10 +1926,10 @@ v1krisc.o: ../../../../../../exports/include/X11/Xdefs.h
 v1krisc.o: ../../../../../../programs/Xserver/include/os.h
 v1krisc.o: ../../../../../../exports/include/X11/Xalloca.h
 v1krisc.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-v1krisc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+v1krisc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 v1krisc.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 v1krisc.o: ../../../../../../exports/include/X11/Xfuncs.h
-v1krisc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+v1krisc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 v1krisc.o: ../../../../../../programs/Xserver/include/input.h
 v1krisc.o: ../../../../../../programs/Xserver/include/screenint.h
 v1krisc.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2013,10 +2013,10 @@ hwcursor.o: ../../../../../../exports/include/X11/Xdefs.h
 hwcursor.o: ../../../../../../programs/Xserver/include/os.h
 hwcursor.o: ../../../../../../exports/include/X11/Xalloca.h
 hwcursor.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-hwcursor.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+hwcursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 hwcursor.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 hwcursor.o: ../../../../../../exports/include/X11/Xfuncs.h
-hwcursor.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+hwcursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 hwcursor.o: ../../../../../../programs/Xserver/include/input.h
 hwcursor.o: ../../../../../../programs/Xserver/include/screenint.h
 hwcursor.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2100,10 +2100,10 @@ vloaduc.o: ../../../../../../exports/include/X11/Xdefs.h
 vloaduc.o: ../../../../../../programs/Xserver/include/os.h
 vloaduc.o: ../../../../../../exports/include/X11/Xalloca.h
 vloaduc.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-vloaduc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+vloaduc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 vloaduc.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 vloaduc.o: ../../../../../../exports/include/X11/Xfuncs.h
-vloaduc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+vloaduc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 vloaduc.o: ../../../../../../programs/Xserver/include/input.h
 vloaduc.o: ../../../../../../programs/Xserver/include/screenint.h
 vloaduc.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2188,10 +2188,10 @@ accel.o: ../../../../../../exports/include/X11/Xdefs.h
 accel.o: ../../../../../../programs/Xserver/include/os.h
 accel.o: ../../../../../../exports/include/X11/Xalloca.h
 accel.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-accel.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 accel.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 accel.o: ../../../../../../exports/include/X11/Xfuncs.h
-accel.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 accel.o: ../../../../../../programs/Xserver/include/input.h
 accel.o: ../../../../../../programs/Xserver/include/screenint.h
 accel.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2276,10 +2276,10 @@ rendition_shadow.o: ../../../../../../exports/include/X11/Xdefs.h
 rendition_shadow.o: ../../../../../../programs/Xserver/include/os.h
 rendition_shadow.o: ../../../../../../exports/include/X11/Xalloca.h
 rendition_shadow.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-rendition_shadow.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+rendition_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 rendition_shadow.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 rendition_shadow.o: ../../../../../../exports/include/X11/Xfuncs.h
-rendition_shadow.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+rendition_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 rendition_shadow.o: ../../../../../../programs/Xserver/include/input.h
 rendition_shadow.o: ../../../../../../programs/Xserver/include/screenint.h
 rendition_shadow.o: ../../../../../../exports/include/X11/Xproto.h

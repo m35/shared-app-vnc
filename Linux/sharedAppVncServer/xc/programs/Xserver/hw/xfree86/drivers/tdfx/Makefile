@@ -2,7 +2,7 @@
 # $Xorg: imake.c,v 1.6 2001/02/09 02:03:15 xorgcvs Exp $
 
 # ----------------------------------------------------------------------
-# Makefile generated from "Imake.tmpl" and </tmp/IIf.m6sJow>
+# Makefile generated from "Imake.tmpl" and </tmp/IIf.DHZNpm>
 # $Xorg: Imake.tmpl,v 1.4 2000/08/17 19:41:46 cpqbld Exp $
 #
 #
@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
-# libc:	(6.3.3)
+# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# libc:	(6.3.5)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+      CDEBUGFLAGS = -O2 -fno-strength-reduce
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -932,7 +932,7 @@ CXXPROJECT_DEFINES =
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 -DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP 	-DXCSECURITY -DTOGCUP  	-DXF86BIGFONT -DDPMSExtension 	  -DPANORAMIX 	 -DRENDER -DRANDR -DGCCUSESGAS -DAVOID_GLYPHBLT -DPIXPRIV -DSINGLEDEPTH 				-DXFreeXDGA -DXvExtension 				-DXFree86LOADER  -DXFree86Server 				-DXF86VIDMODE 				-DXvMCExtension 				-DSMART_SCHEDULE 				-DBUILDDEBUG -DXResExtension 				-DX_BYTE_ORDER=$(X_BYTE_ORDER) -DNDEBUG  $(SERVER_THREAD_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+CDEBUGFLAGS = -O2 -fno-strength-reduce
 EXT_DEFINES =  -DMITMISC -DXTEST -DXTRAP 	-DXSYNC -DXCMISC -DXRECORD 	-DMITSHM -DBIGREQS -DXF86VIDMODE 	-DXF86MISC -DDBE -DDPMSExtension -DEVI 	-DSCREENSAVER -DXV -DXVMC 	-DGLXEXT -DXF86DRI -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN -DGLX_USE_MESA  -DFONTCACHE          -DRES
 OS_DEFINES  = -DDDXOSINIT -DSERVER_LOCK -DDDXOSFATALERROR 				-DDDXOSVERRORF -DDDXTIME -DPART_NET
 
@@ -1338,10 +1338,10 @@ tdfx_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 tdfx_driver.o: ../../../../../../programs/Xserver/include/os.h
 tdfx_driver.o: ../../../../../../exports/include/X11/Xalloca.h
 tdfx_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tdfx_driver.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+tdfx_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 tdfx_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tdfx_driver.o: ../../../../../../exports/include/X11/Xfuncs.h
-tdfx_driver.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+tdfx_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 tdfx_driver.o: ../../../../../../programs/Xserver/include/input.h
 tdfx_driver.o: ../../../../../../programs/Xserver/include/screenint.h
 tdfx_driver.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1434,10 +1434,10 @@ tdfx_io.o: ../../../../../../exports/include/X11/Xdefs.h
 tdfx_io.o: ../../../../../../programs/Xserver/include/os.h
 tdfx_io.o: ../../../../../../exports/include/X11/Xalloca.h
 tdfx_io.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tdfx_io.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+tdfx_io.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 tdfx_io.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tdfx_io.o: ../../../../../../exports/include/X11/Xfuncs.h
-tdfx_io.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+tdfx_io.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 tdfx_io.o: ../../../../../../programs/Xserver/include/input.h
 tdfx_io.o: ../../../../../../programs/Xserver/include/screenint.h
 tdfx_io.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1504,10 +1504,10 @@ tdfx_hwcurs.o: ../../../../../../exports/include/X11/Xdefs.h
 tdfx_hwcurs.o: ../../../../../../programs/Xserver/include/os.h
 tdfx_hwcurs.o: ../../../../../../exports/include/X11/Xalloca.h
 tdfx_hwcurs.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tdfx_hwcurs.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+tdfx_hwcurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 tdfx_hwcurs.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tdfx_hwcurs.o: ../../../../../../exports/include/X11/Xfuncs.h
-tdfx_hwcurs.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+tdfx_hwcurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 tdfx_hwcurs.o: ../../../../../../programs/Xserver/include/input.h
 tdfx_hwcurs.o: ../../../../../../programs/Xserver/include/screenint.h
 tdfx_hwcurs.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1573,10 +1573,10 @@ tdfx_accel.o: ../../../../../../exports/include/X11/Xdefs.h
 tdfx_accel.o: ../../../../../../programs/Xserver/include/os.h
 tdfx_accel.o: ../../../../../../exports/include/X11/Xalloca.h
 tdfx_accel.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tdfx_accel.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+tdfx_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 tdfx_accel.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tdfx_accel.o: ../../../../../../exports/include/X11/Xfuncs.h
-tdfx_accel.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+tdfx_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 tdfx_accel.o: ../../../../../../programs/Xserver/include/input.h
 tdfx_accel.o: ../../../../../../programs/Xserver/include/screenint.h
 tdfx_accel.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1647,10 +1647,10 @@ tdfx_dga.o: ../../../../../../exports/include/X11/Xdefs.h
 tdfx_dga.o: ../../../../../../programs/Xserver/include/os.h
 tdfx_dga.o: ../../../../../../exports/include/X11/Xalloca.h
 tdfx_dga.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tdfx_dga.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+tdfx_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 tdfx_dga.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tdfx_dga.o: ../../../../../../exports/include/X11/Xfuncs.h
-tdfx_dga.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+tdfx_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 tdfx_dga.o: ../../../../../../programs/Xserver/include/input.h
 tdfx_dga.o: ../../../../../../programs/Xserver/include/screenint.h
 tdfx_dga.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1725,10 +1725,10 @@ tdfx_priv.o: ../../../../../../exports/include/X11/Xdefs.h
 tdfx_priv.o: ../../../../../../programs/Xserver/include/os.h
 tdfx_priv.o: ../../../../../../exports/include/X11/Xalloca.h
 tdfx_priv.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tdfx_priv.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+tdfx_priv.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 tdfx_priv.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tdfx_priv.o: ../../../../../../exports/include/X11/Xfuncs.h
-tdfx_priv.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+tdfx_priv.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 tdfx_priv.o: ../../../../../../programs/Xserver/include/input.h
 tdfx_priv.o: ../../../../../../programs/Xserver/include/screenint.h
 tdfx_priv.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1795,10 +1795,10 @@ tdfx_sli.o: ../../../../../../exports/include/X11/Xdefs.h
 tdfx_sli.o: ../../../../../../programs/Xserver/include/os.h
 tdfx_sli.o: ../../../../../../exports/include/X11/Xalloca.h
 tdfx_sli.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tdfx_sli.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+tdfx_sli.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 tdfx_sli.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tdfx_sli.o: ../../../../../../exports/include/X11/Xfuncs.h
-tdfx_sli.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+tdfx_sli.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 tdfx_sli.o: ../../../../../../programs/Xserver/include/input.h
 tdfx_sli.o: ../../../../../../programs/Xserver/include/screenint.h
 tdfx_sli.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1863,10 +1863,10 @@ tdfx_video.o: ../../../../../../exports/include/X11/Xdefs.h
 tdfx_video.o: ../../../../../../programs/Xserver/include/os.h
 tdfx_video.o: ../../../../../../exports/include/X11/Xalloca.h
 tdfx_video.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tdfx_video.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+tdfx_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 tdfx_video.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tdfx_video.o: ../../../../../../exports/include/X11/Xfuncs.h
-tdfx_video.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+tdfx_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 tdfx_video.o: ../../../../../../programs/Xserver/include/input.h
 tdfx_video.o: ../../../../../../programs/Xserver/include/screenint.h
 tdfx_video.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1931,10 +1931,10 @@ tdfx_dri.o: ../../../../../../exports/include/X11/Xdefs.h
 tdfx_dri.o: ../../../../../../programs/Xserver/include/os.h
 tdfx_dri.o: ../../../../../../exports/include/X11/Xalloca.h
 tdfx_dri.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tdfx_dri.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+tdfx_dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 tdfx_dri.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tdfx_dri.o: ../../../../../../exports/include/X11/Xfuncs.h
-tdfx_dri.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+tdfx_dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 tdfx_dri.o: ../../../../../../programs/Xserver/include/input.h
 tdfx_dri.o: ../../../../../../programs/Xserver/include/screenint.h
 tdfx_dri.o: ../../../../../../exports/include/X11/Xproto.h

@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
-# libc:	(6.3.3)
+# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# libc:	(6.3.5)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+      CDEBUGFLAGS = -O2 -fno-strength-reduce
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -931,7 +931,7 @@ CXXPROJECT_DEFINES =
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 -DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP 	-DXCSECURITY -DTOGCUP  	-DXF86BIGFONT -DDPMSExtension 	  -DPANORAMIX 	 -DRENDER -DRANDR -DGCCUSESGAS -DAVOID_GLYPHBLT -DPIXPRIV -DSINGLEDEPTH 				-DXFreeXDGA -DXvExtension 				-DXFree86LOADER  -DXFree86Server 				-DXF86VIDMODE 				-DXvMCExtension 				-DSMART_SCHEDULE 				-DBUILDDEBUG -DXResExtension 				-DX_BYTE_ORDER=$(X_BYTE_ORDER) -DNDEBUG  $(SERVER_THREAD_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+CDEBUGFLAGS = -O2 -fno-strength-reduce
 EXT_DEFINES =  -DMITMISC -DXTEST -DXTRAP 	-DXSYNC -DXCMISC -DXRECORD 	-DMITSHM -DBIGREQS -DXF86VIDMODE 	-DXF86MISC -DDBE -DDPMSExtension -DEVI 	-DSCREENSAVER -DXV -DXVMC 	-DGLXEXT -DXF86DRI -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN -DGLX_USE_MESA  -DFONTCACHE          -DRES
 OS_DEFINES  = -DDDXOSINIT -DSERVER_LOCK -DDDXOSFATALERROR 				-DDDXOSVERRORF -DDDXTIME -DPART_NET
 
@@ -1219,23 +1219,23 @@ dbe.o: ../../../programs/Xserver/include/misc.h
 dbe.o: ../../../exports/include/X11/Xosdefs.h
 dbe.o: ../../../exports/include/X11/Xfuncproto.h
 dbe.o: ../../../exports/include/X11/X.h ../../../exports/include/X11/Xdefs.h
-dbe.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+dbe.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 dbe.o: ../../../programs/Xserver/include/os.h
 dbe.o: ../../../exports/include/X11/Xalloca.h
-dbe.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+dbe.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 dbe.o: /usr/include/string.h /usr/include/features.h /usr/include/sys/cdefs.h
-dbe.o: /usr/include/gnu/stubs.h /usr/include/xlocale.h
+dbe.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
+dbe.o: /usr/include/gnu/stubs-32.h /usr/include/xlocale.h
 dbe.o: ../../../exports/include/X11/Xfuncs.h /usr/include/stdlib.h
 dbe.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 dbe.o: /usr/include/endian.h /usr/include/bits/endian.h
 dbe.o: /usr/include/sys/types.h /usr/include/bits/types.h
-dbe.o: /usr/include/bits/wordsize.h /usr/include/bits/typesizes.h
-dbe.o: /usr/include/time.h /usr/include/sys/select.h
-dbe.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
-dbe.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-dbe.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
+dbe.o: /usr/include/bits/typesizes.h /usr/include/time.h
+dbe.o: /usr/include/sys/select.h /usr/include/bits/select.h
+dbe.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
+dbe.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
 dbe.o: /usr/include/alloca.h /usr/include/limits.h
-dbe.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
+dbe.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
 dbe.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 dbe.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 dbe.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1286,24 +1286,24 @@ midbe.o: ../../../exports/include/X11/Xosdefs.h
 midbe.o: ../../../exports/include/X11/Xfuncproto.h
 midbe.o: ../../../exports/include/X11/X.h
 midbe.o: ../../../exports/include/X11/Xdefs.h
-midbe.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+midbe.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 midbe.o: ../../../programs/Xserver/include/os.h
 midbe.o: ../../../exports/include/X11/Xalloca.h
-midbe.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+midbe.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 midbe.o: /usr/include/string.h /usr/include/features.h
 midbe.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+midbe.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
 midbe.o: /usr/include/xlocale.h ../../../exports/include/X11/Xfuncs.h
 midbe.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 midbe.o: /usr/include/bits/waitstatus.h /usr/include/endian.h
 midbe.o: /usr/include/bits/endian.h /usr/include/sys/types.h
-midbe.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-midbe.o: /usr/include/bits/typesizes.h /usr/include/time.h
-midbe.o: /usr/include/sys/select.h /usr/include/bits/select.h
-midbe.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
-midbe.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
-midbe.o: /usr/include/bits/sched.h /usr/include/alloca.h
+midbe.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+midbe.o: /usr/include/time.h /usr/include/sys/select.h
+midbe.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
+midbe.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
+midbe.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 midbe.o: /usr/include/limits.h
-midbe.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
+midbe.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
 midbe.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 midbe.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 midbe.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h

@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
-# libc:	(6.3.3)
+# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# libc:	(6.3.5)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+      CDEBUGFLAGS = -O2 -fno-strength-reduce
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -956,7 +956,7 @@ OBJS =	AuDispose.o AuFileName.o AuGetAddr.o AuGetBest.o AuLock.o 	AuRead.o AuUnl
 
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 $(PROJECT_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+CDEBUGFLAGS = -O2 -fno-strength-reduce
 CLIBDEBUGFLAGS =
      CFLAGS = $(CDEBUGFLAGS) $(CLIBDEBUGFLAGS) $(CCOPTIONS) $(THREADS_CFLAGS) $(ALLDEFINES)
 
@@ -1159,14 +1159,15 @@ AuDispose.o: ../../exports/include/X11/Xfuncproto.h
 AuDispose.o: ../../exports/include/X11/Xfuncs.h
 AuDispose.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 AuDispose.o: /usr/include/features.h /usr/include/sys/cdefs.h
-AuDispose.o: /usr/include/gnu/stubs.h
-AuDispose.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+AuDispose.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
+AuDispose.o: /usr/include/gnu/stubs-32.h
+AuDispose.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 AuDispose.o: /usr/include/xlocale.h /usr/include/stdio.h
-AuDispose.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-AuDispose.o: /usr/include/bits/typesizes.h /usr/include/libio.h
-AuDispose.o: /usr/include/_G_config.h /usr/include/wchar.h
-AuDispose.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-AuDispose.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+AuDispose.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+AuDispose.o: /usr/include/libio.h /usr/include/_G_config.h
+AuDispose.o: /usr/include/wchar.h /usr/include/bits/wchar.h
+AuDispose.o: /usr/include/gconv.h
+AuDispose.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 AuDispose.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 AuDispose.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 AuDispose.o: /usr/include/bits/waitstatus.h /usr/include/endian.h
@@ -1174,132 +1175,130 @@ AuDispose.o: /usr/include/bits/endian.h /usr/include/sys/types.h
 AuDispose.o: /usr/include/time.h /usr/include/sys/select.h
 AuDispose.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 AuDispose.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-AuDispose.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
-AuDispose.o: /usr/include/alloca.h
+AuDispose.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 AuFileName.o: ../../exports/include/X11/Xauth.h
 AuFileName.o: ../../exports/include/X11/Xfuncproto.h
 AuFileName.o: ../../exports/include/X11/Xfuncs.h
 AuFileName.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 AuFileName.o: /usr/include/features.h /usr/include/sys/cdefs.h
-AuFileName.o: /usr/include/gnu/stubs.h
-AuFileName.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+AuFileName.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
+AuFileName.o: /usr/include/gnu/stubs-32.h
+AuFileName.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 AuFileName.o: /usr/include/xlocale.h /usr/include/stdio.h
-AuFileName.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-AuFileName.o: /usr/include/bits/typesizes.h /usr/include/libio.h
-AuFileName.o: /usr/include/_G_config.h /usr/include/wchar.h
-AuFileName.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-AuFileName.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+AuFileName.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+AuFileName.o: /usr/include/libio.h /usr/include/_G_config.h
+AuFileName.o: /usr/include/wchar.h /usr/include/bits/wchar.h
+AuFileName.o: /usr/include/gconv.h
+AuFileName.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 AuFileName.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 AuFileName.o: ../../exports/include/X11/Xos.h /usr/include/sys/types.h
 AuFileName.o: /usr/include/time.h /usr/include/endian.h
 AuFileName.o: /usr/include/bits/endian.h /usr/include/sys/select.h
 AuFileName.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 AuFileName.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-AuFileName.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
-AuFileName.o: /usr/include/fcntl.h /usr/include/bits/fcntl.h
-AuFileName.o: /usr/include/sys/stat.h /usr/include/bits/stat.h
-AuFileName.o: /usr/include/unistd.h /usr/include/bits/posix_opt.h
-AuFileName.o: /usr/include/bits/environments.h /usr/include/bits/confname.h
-AuFileName.o: /usr/include/getopt.h /usr/include/sys/time.h
-AuFileName.o: ../../exports/include/X11/Xarch.h /usr/include/stdlib.h
-AuFileName.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
-AuFileName.o: /usr/include/alloca.h
+AuFileName.o: /usr/include/bits/pthreadtypes.h /usr/include/fcntl.h
+AuFileName.o: /usr/include/bits/fcntl.h /usr/include/sys/stat.h
+AuFileName.o: /usr/include/bits/stat.h /usr/include/unistd.h
+AuFileName.o: /usr/include/bits/posix_opt.h /usr/include/bits/environments.h
+AuFileName.o: /usr/include/bits/confname.h /usr/include/getopt.h
+AuFileName.o: /usr/include/sys/time.h ../../exports/include/X11/Xarch.h
+AuFileName.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
+AuFileName.o: /usr/include/bits/waitstatus.h /usr/include/alloca.h
 AuGetAddr.o: ../../exports/include/X11/Xauth.h
 AuGetAddr.o: ../../exports/include/X11/Xfuncproto.h
 AuGetAddr.o: ../../exports/include/X11/Xfuncs.h
 AuGetAddr.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 AuGetAddr.o: /usr/include/features.h /usr/include/sys/cdefs.h
-AuGetAddr.o: /usr/include/gnu/stubs.h
-AuGetAddr.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+AuGetAddr.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
+AuGetAddr.o: /usr/include/gnu/stubs-32.h
+AuGetAddr.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 AuGetAddr.o: /usr/include/xlocale.h /usr/include/stdio.h
-AuGetAddr.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-AuGetAddr.o: /usr/include/bits/typesizes.h /usr/include/libio.h
-AuGetAddr.o: /usr/include/_G_config.h /usr/include/wchar.h
-AuGetAddr.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-AuGetAddr.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+AuGetAddr.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+AuGetAddr.o: /usr/include/libio.h /usr/include/_G_config.h
+AuGetAddr.o: /usr/include/wchar.h /usr/include/bits/wchar.h
+AuGetAddr.o: /usr/include/gconv.h
+AuGetAddr.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 AuGetAddr.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 AuGetAddr.o: ../../exports/include/X11/Xos.h /usr/include/sys/types.h
 AuGetAddr.o: /usr/include/time.h /usr/include/endian.h
 AuGetAddr.o: /usr/include/bits/endian.h /usr/include/sys/select.h
 AuGetAddr.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 AuGetAddr.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-AuGetAddr.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
-AuGetAddr.o: /usr/include/fcntl.h /usr/include/bits/fcntl.h
-AuGetAddr.o: /usr/include/sys/stat.h /usr/include/bits/stat.h
-AuGetAddr.o: /usr/include/unistd.h /usr/include/bits/posix_opt.h
-AuGetAddr.o: /usr/include/bits/environments.h /usr/include/bits/confname.h
-AuGetAddr.o: /usr/include/getopt.h /usr/include/sys/time.h
-AuGetAddr.o: ../../exports/include/X11/Xarch.h
+AuGetAddr.o: /usr/include/bits/pthreadtypes.h /usr/include/fcntl.h
+AuGetAddr.o: /usr/include/bits/fcntl.h /usr/include/sys/stat.h
+AuGetAddr.o: /usr/include/bits/stat.h /usr/include/unistd.h
+AuGetAddr.o: /usr/include/bits/posix_opt.h /usr/include/bits/environments.h
+AuGetAddr.o: /usr/include/bits/confname.h /usr/include/getopt.h
+AuGetAddr.o: /usr/include/sys/time.h ../../exports/include/X11/Xarch.h
 AuGetBest.o: ../../exports/include/X11/Xauth.h
 AuGetBest.o: ../../exports/include/X11/Xfuncproto.h
 AuGetBest.o: ../../exports/include/X11/Xfuncs.h
 AuGetBest.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 AuGetBest.o: /usr/include/features.h /usr/include/sys/cdefs.h
-AuGetBest.o: /usr/include/gnu/stubs.h
-AuGetBest.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+AuGetBest.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
+AuGetBest.o: /usr/include/gnu/stubs-32.h
+AuGetBest.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 AuGetBest.o: /usr/include/xlocale.h /usr/include/stdio.h
-AuGetBest.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-AuGetBest.o: /usr/include/bits/typesizes.h /usr/include/libio.h
-AuGetBest.o: /usr/include/_G_config.h /usr/include/wchar.h
-AuGetBest.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-AuGetBest.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+AuGetBest.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+AuGetBest.o: /usr/include/libio.h /usr/include/_G_config.h
+AuGetBest.o: /usr/include/wchar.h /usr/include/bits/wchar.h
+AuGetBest.o: /usr/include/gconv.h
+AuGetBest.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 AuGetBest.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 AuGetBest.o: ../../exports/include/X11/Xos.h /usr/include/sys/types.h
 AuGetBest.o: /usr/include/time.h /usr/include/endian.h
 AuGetBest.o: /usr/include/bits/endian.h /usr/include/sys/select.h
 AuGetBest.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 AuGetBest.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-AuGetBest.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
-AuGetBest.o: /usr/include/fcntl.h /usr/include/bits/fcntl.h
-AuGetBest.o: /usr/include/sys/stat.h /usr/include/bits/stat.h
-AuGetBest.o: /usr/include/unistd.h /usr/include/bits/posix_opt.h
-AuGetBest.o: /usr/include/bits/environments.h /usr/include/bits/confname.h
-AuGetBest.o: /usr/include/getopt.h /usr/include/sys/time.h
-AuGetBest.o: ../../exports/include/X11/Xarch.h
+AuGetBest.o: /usr/include/bits/pthreadtypes.h /usr/include/fcntl.h
+AuGetBest.o: /usr/include/bits/fcntl.h /usr/include/sys/stat.h
+AuGetBest.o: /usr/include/bits/stat.h /usr/include/unistd.h
+AuGetBest.o: /usr/include/bits/posix_opt.h /usr/include/bits/environments.h
+AuGetBest.o: /usr/include/bits/confname.h /usr/include/getopt.h
+AuGetBest.o: /usr/include/sys/time.h ../../exports/include/X11/Xarch.h
 AuGetBest.o: ../../exports/include/X11/Xthreads.h /usr/include/pthread.h
-AuGetBest.o: /usr/include/sched.h /usr/include/signal.h
-AuGetBest.o: /usr/include/bits/initspin.h /usr/include/bits/sigthread.h
+AuGetBest.o: /usr/include/sched.h /usr/include/bits/sched.h
+AuGetBest.o: /usr/include/signal.h /usr/include/bits/setjmp.h
 AuLock.o: ../../exports/include/X11/Xauth.h
 AuLock.o: ../../exports/include/X11/Xfuncproto.h
 AuLock.o: ../../exports/include/X11/Xfuncs.h
 AuLock.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 AuLock.o: /usr/include/features.h /usr/include/sys/cdefs.h
-AuLock.o: /usr/include/gnu/stubs.h
-AuLock.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+AuLock.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
+AuLock.o: /usr/include/gnu/stubs-32.h
+AuLock.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 AuLock.o: /usr/include/xlocale.h /usr/include/stdio.h
-AuLock.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-AuLock.o: /usr/include/bits/typesizes.h /usr/include/libio.h
-AuLock.o: /usr/include/_G_config.h /usr/include/wchar.h
+AuLock.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+AuLock.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 AuLock.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-AuLock.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+AuLock.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 AuLock.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 AuLock.o: ../../exports/include/X11/Xos.h /usr/include/sys/types.h
 AuLock.o: /usr/include/time.h /usr/include/endian.h
 AuLock.o: /usr/include/bits/endian.h /usr/include/sys/select.h
 AuLock.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 AuLock.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-AuLock.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
-AuLock.o: /usr/include/fcntl.h /usr/include/bits/fcntl.h
-AuLock.o: /usr/include/sys/stat.h /usr/include/bits/stat.h
-AuLock.o: /usr/include/unistd.h /usr/include/bits/posix_opt.h
-AuLock.o: /usr/include/bits/environments.h /usr/include/bits/confname.h
-AuLock.o: /usr/include/getopt.h /usr/include/sys/time.h
-AuLock.o: ../../exports/include/X11/Xarch.h /usr/include/errno.h
-AuLock.o: /usr/include/bits/errno.h /usr/include/linux/errno.h
-AuLock.o: /usr/include/asm/errno.h
+AuLock.o: /usr/include/bits/pthreadtypes.h /usr/include/fcntl.h
+AuLock.o: /usr/include/bits/fcntl.h /usr/include/sys/stat.h
+AuLock.o: /usr/include/bits/stat.h /usr/include/unistd.h
+AuLock.o: /usr/include/bits/posix_opt.h /usr/include/bits/environments.h
+AuLock.o: /usr/include/bits/confname.h /usr/include/getopt.h
+AuLock.o: /usr/include/sys/time.h ../../exports/include/X11/Xarch.h
+AuLock.o: /usr/include/errno.h /usr/include/bits/errno.h
+AuLock.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
 AuRead.o: ../../exports/include/X11/Xauth.h
 AuRead.o: ../../exports/include/X11/Xfuncproto.h
 AuRead.o: ../../exports/include/X11/Xfuncs.h
 AuRead.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 AuRead.o: /usr/include/features.h /usr/include/sys/cdefs.h
-AuRead.o: /usr/include/gnu/stubs.h
-AuRead.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+AuRead.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
+AuRead.o: /usr/include/gnu/stubs-32.h
+AuRead.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 AuRead.o: /usr/include/xlocale.h /usr/include/stdio.h
-AuRead.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-AuRead.o: /usr/include/bits/typesizes.h /usr/include/libio.h
-AuRead.o: /usr/include/_G_config.h /usr/include/wchar.h
+AuRead.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+AuRead.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 AuRead.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-AuRead.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+AuRead.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 AuRead.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 AuRead.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 AuRead.o: /usr/include/bits/waitstatus.h /usr/include/endian.h
@@ -1307,45 +1306,44 @@ AuRead.o: /usr/include/bits/endian.h /usr/include/sys/types.h
 AuRead.o: /usr/include/time.h /usr/include/sys/select.h
 AuRead.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 AuRead.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-AuRead.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
-AuRead.o: /usr/include/alloca.h
+AuRead.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 AuUnlock.o: ../../exports/include/X11/Xauth.h
 AuUnlock.o: ../../exports/include/X11/Xfuncproto.h
 AuUnlock.o: ../../exports/include/X11/Xfuncs.h
 AuUnlock.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 AuUnlock.o: /usr/include/features.h /usr/include/sys/cdefs.h
-AuUnlock.o: /usr/include/gnu/stubs.h
-AuUnlock.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+AuUnlock.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
+AuUnlock.o: /usr/include/gnu/stubs-32.h
+AuUnlock.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 AuUnlock.o: /usr/include/xlocale.h /usr/include/stdio.h
-AuUnlock.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-AuUnlock.o: /usr/include/bits/typesizes.h /usr/include/libio.h
-AuUnlock.o: /usr/include/_G_config.h /usr/include/wchar.h
-AuUnlock.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-AuUnlock.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+AuUnlock.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+AuUnlock.o: /usr/include/libio.h /usr/include/_G_config.h
+AuUnlock.o: /usr/include/wchar.h /usr/include/bits/wchar.h
+AuUnlock.o: /usr/include/gconv.h
+AuUnlock.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 AuUnlock.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 AuUnlock.o: ../../exports/include/X11/Xos.h /usr/include/sys/types.h
 AuUnlock.o: /usr/include/time.h /usr/include/endian.h
 AuUnlock.o: /usr/include/bits/endian.h /usr/include/sys/select.h
 AuUnlock.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 AuUnlock.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-AuUnlock.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
-AuUnlock.o: /usr/include/fcntl.h /usr/include/bits/fcntl.h
-AuUnlock.o: /usr/include/sys/stat.h /usr/include/bits/stat.h
-AuUnlock.o: /usr/include/unistd.h /usr/include/bits/posix_opt.h
-AuUnlock.o: /usr/include/bits/environments.h /usr/include/bits/confname.h
-AuUnlock.o: /usr/include/getopt.h /usr/include/sys/time.h
-AuUnlock.o: ../../exports/include/X11/Xarch.h
+AuUnlock.o: /usr/include/bits/pthreadtypes.h /usr/include/fcntl.h
+AuUnlock.o: /usr/include/bits/fcntl.h /usr/include/sys/stat.h
+AuUnlock.o: /usr/include/bits/stat.h /usr/include/unistd.h
+AuUnlock.o: /usr/include/bits/posix_opt.h /usr/include/bits/environments.h
+AuUnlock.o: /usr/include/bits/confname.h /usr/include/getopt.h
+AuUnlock.o: /usr/include/sys/time.h ../../exports/include/X11/Xarch.h
 AuWrite.o: ../../exports/include/X11/Xauth.h
 AuWrite.o: ../../exports/include/X11/Xfuncproto.h
 AuWrite.o: ../../exports/include/X11/Xfuncs.h
 AuWrite.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 AuWrite.o: /usr/include/features.h /usr/include/sys/cdefs.h
-AuWrite.o: /usr/include/gnu/stubs.h
-AuWrite.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+AuWrite.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
+AuWrite.o: /usr/include/gnu/stubs-32.h
+AuWrite.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 AuWrite.o: /usr/include/xlocale.h /usr/include/stdio.h
-AuWrite.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-AuWrite.o: /usr/include/bits/typesizes.h /usr/include/libio.h
-AuWrite.o: /usr/include/_G_config.h /usr/include/wchar.h
+AuWrite.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+AuWrite.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 AuWrite.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-AuWrite.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+AuWrite.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 AuWrite.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h

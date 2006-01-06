@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
-# libc:	(6.3.3)
+# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# libc:	(6.3.5)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+      CDEBUGFLAGS = -O2 -fno-strength-reduce
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -942,7 +942,7 @@ ROOT_DEFINES = -DDFLT_XKB_CONFIG_ROOT=\"$(LIBDIR)/xkb\"
 
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 $(PROJECT_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+CDEBUGFLAGS = -O2 -fno-strength-reduce
 CLIBDEBUGFLAGS =
      CFLAGS = $(CDEBUGFLAGS) $(CLIBDEBUGFLAGS) $(CCOPTIONS) $(THREADS_CFLAGS) $(ALLDEFINES)
 
@@ -1094,12 +1094,12 @@ distclean::
 
 xkbtext.o: /usr/include/stdio.h /usr/include/features.h
 xkbtext.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-xkbtext.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-xkbtext.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-xkbtext.o: /usr/include/bits/typesizes.h /usr/include/libio.h
-xkbtext.o: /usr/include/_G_config.h /usr/include/wchar.h
+xkbtext.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
+xkbtext.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xkbtext.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+xkbtext.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 xkbtext.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-xkbtext.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+xkbtext.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 xkbtext.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 xkbtext.o: /usr/include/ctype.h /usr/include/endian.h
 xkbtext.o: /usr/include/bits/endian.h /usr/include/xlocale.h
@@ -1108,8 +1108,8 @@ xkbtext.o: /usr/include/bits/waitstatus.h /usr/include/sys/types.h
 xkbtext.o: /usr/include/time.h /usr/include/sys/select.h
 xkbtext.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 xkbtext.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-xkbtext.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
-xkbtext.o: /usr/include/alloca.h ../../exports/include/X11/Xos.h
+xkbtext.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
+xkbtext.o: ../../exports/include/X11/Xos.h
 xkbtext.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 xkbtext.o: /usr/include/fcntl.h /usr/include/bits/fcntl.h
 xkbtext.o: /usr/include/sys/stat.h /usr/include/bits/stat.h
@@ -1128,12 +1128,12 @@ xkbtext.o: ../../exports/include/X11/Xmd.h
 xkbtext.o: ../../exports/include/X11/extensions/XKM.h XKBfileInt.h XKBfile.h
 xkbdraw.o: /usr/include/stdio.h /usr/include/features.h
 xkbdraw.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-xkbdraw.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-xkbdraw.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-xkbdraw.o: /usr/include/bits/typesizes.h /usr/include/libio.h
-xkbdraw.o: /usr/include/_G_config.h /usr/include/wchar.h
+xkbdraw.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
+xkbdraw.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xkbdraw.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+xkbdraw.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 xkbdraw.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-xkbdraw.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+xkbdraw.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 xkbdraw.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 xkbdraw.o: /usr/include/ctype.h /usr/include/endian.h
 xkbdraw.o: /usr/include/bits/endian.h /usr/include/xlocale.h
@@ -1142,8 +1142,8 @@ xkbdraw.o: /usr/include/bits/waitstatus.h /usr/include/sys/types.h
 xkbdraw.o: /usr/include/time.h /usr/include/sys/select.h
 xkbdraw.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 xkbdraw.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-xkbdraw.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
-xkbdraw.o: /usr/include/alloca.h ../../exports/include/X11/Xos.h
+xkbdraw.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
+xkbdraw.o: ../../exports/include/X11/Xos.h
 xkbdraw.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 xkbdraw.o: /usr/include/fcntl.h /usr/include/bits/fcntl.h
 xkbdraw.o: /usr/include/sys/stat.h /usr/include/bits/stat.h
@@ -1165,12 +1165,12 @@ xkbdraw.o: ../../exports/include/X11/Xmd.h
 xkbdraw.o: ../../exports/include/X11/extensions/XKM.h XKBfileInt.h XKBfile.h
 xkbmisc.o: /usr/include/stdio.h /usr/include/features.h
 xkbmisc.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-xkbmisc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-xkbmisc.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-xkbmisc.o: /usr/include/bits/typesizes.h /usr/include/libio.h
-xkbmisc.o: /usr/include/_G_config.h /usr/include/wchar.h
+xkbmisc.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
+xkbmisc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xkbmisc.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+xkbmisc.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 xkbmisc.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-xkbmisc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+xkbmisc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 xkbmisc.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 xkbmisc.o: /usr/include/ctype.h /usr/include/endian.h
 xkbmisc.o: /usr/include/bits/endian.h /usr/include/xlocale.h
@@ -1179,8 +1179,8 @@ xkbmisc.o: /usr/include/bits/waitstatus.h /usr/include/sys/types.h
 xkbmisc.o: /usr/include/time.h /usr/include/sys/select.h
 xkbmisc.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 xkbmisc.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-xkbmisc.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
-xkbmisc.o: /usr/include/alloca.h ../../exports/include/X11/Xos.h
+xkbmisc.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
+xkbmisc.o: ../../exports/include/X11/Xos.h
 xkbmisc.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 xkbmisc.o: /usr/include/fcntl.h /usr/include/bits/fcntl.h
 xkbmisc.o: /usr/include/sys/stat.h /usr/include/bits/stat.h
@@ -1202,12 +1202,12 @@ xkbmisc.o: ../../exports/include/X11/Xmd.h
 xkbmisc.o: ../../exports/include/X11/extensions/XKM.h XKBfileInt.h XKBfile.h
 xkbatom.o: /usr/include/stdio.h /usr/include/features.h
 xkbatom.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-xkbatom.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-xkbatom.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-xkbatom.o: /usr/include/bits/typesizes.h /usr/include/libio.h
-xkbatom.o: /usr/include/_G_config.h /usr/include/wchar.h
+xkbatom.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
+xkbatom.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xkbatom.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+xkbatom.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 xkbatom.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-xkbatom.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+xkbatom.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 xkbatom.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 xkbatom.o: /usr/include/ctype.h /usr/include/endian.h
 xkbatom.o: /usr/include/bits/endian.h /usr/include/xlocale.h
@@ -1216,8 +1216,8 @@ xkbatom.o: /usr/include/bits/waitstatus.h /usr/include/sys/types.h
 xkbatom.o: /usr/include/time.h /usr/include/sys/select.h
 xkbatom.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 xkbatom.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-xkbatom.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
-xkbatom.o: /usr/include/alloca.h ../../exports/include/X11/Xos.h
+xkbatom.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
+xkbatom.o: ../../exports/include/X11/Xos.h
 xkbatom.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 xkbatom.o: /usr/include/fcntl.h /usr/include/bits/fcntl.h
 xkbatom.o: /usr/include/sys/stat.h /usr/include/bits/stat.h
@@ -1235,12 +1235,12 @@ xkbatom.o: ../../exports/include/X11/Xmd.h
 xkbatom.o: ../../exports/include/X11/extensions/XKM.h XKBfileInt.h XKBfile.h
 xkberrs.o: /usr/include/stdio.h /usr/include/features.h
 xkberrs.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-xkberrs.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-xkberrs.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-xkberrs.o: /usr/include/bits/typesizes.h /usr/include/libio.h
-xkberrs.o: /usr/include/_G_config.h /usr/include/wchar.h
+xkberrs.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
+xkberrs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xkberrs.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+xkberrs.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 xkberrs.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-xkberrs.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+xkberrs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 xkberrs.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 xkberrs.o: /usr/include/ctype.h /usr/include/endian.h
 xkberrs.o: /usr/include/bits/endian.h /usr/include/xlocale.h
@@ -1249,16 +1249,15 @@ xkberrs.o: /usr/include/bits/waitstatus.h /usr/include/sys/types.h
 xkberrs.o: /usr/include/time.h /usr/include/sys/select.h
 xkberrs.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 xkberrs.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-xkberrs.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
-xkberrs.o: /usr/include/alloca.h
+xkberrs.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 cout.o: /usr/include/stdio.h /usr/include/features.h /usr/include/sys/cdefs.h
-cout.o: /usr/include/gnu/stubs.h
-cout.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-cout.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-cout.o: /usr/include/bits/typesizes.h /usr/include/libio.h
-cout.o: /usr/include/_G_config.h /usr/include/wchar.h
+cout.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
+cout.o: /usr/include/gnu/stubs-32.h
+cout.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+cout.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+cout.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 cout.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-cout.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+cout.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 cout.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 cout.o: /usr/include/ctype.h /usr/include/endian.h /usr/include/bits/endian.h
 cout.o: /usr/include/xlocale.h /usr/include/stdlib.h
@@ -1267,9 +1266,9 @@ cout.o: /usr/include/sys/types.h /usr/include/time.h
 cout.o: /usr/include/sys/select.h /usr/include/bits/select.h
 cout.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 cout.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
-cout.o: /usr/include/bits/sched.h /usr/include/alloca.h
-cout.o: ../../exports/include/X11/Xos.h ../../exports/include/X11/Xosdefs.h
-cout.o: /usr/include/string.h /usr/include/fcntl.h /usr/include/bits/fcntl.h
+cout.o: /usr/include/alloca.h ../../exports/include/X11/Xos.h
+cout.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
+cout.o: /usr/include/fcntl.h /usr/include/bits/fcntl.h
 cout.o: /usr/include/sys/stat.h /usr/include/bits/stat.h
 cout.o: /usr/include/unistd.h /usr/include/bits/posix_opt.h
 cout.o: /usr/include/bits/environments.h /usr/include/bits/confname.h
@@ -1285,12 +1284,12 @@ cout.o: ../../exports/include/X11/Xmd.h
 cout.o: ../../exports/include/X11/extensions/XKM.h XKBfileInt.h XKBfile.h
 xkbout.o: /usr/include/stdio.h /usr/include/features.h
 xkbout.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-xkbout.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-xkbout.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-xkbout.o: /usr/include/bits/typesizes.h /usr/include/libio.h
-xkbout.o: /usr/include/_G_config.h /usr/include/wchar.h
+xkbout.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
+xkbout.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xkbout.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+xkbout.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 xkbout.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-xkbout.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+xkbout.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 xkbout.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 xkbout.o: /usr/include/ctype.h /usr/include/endian.h
 xkbout.o: /usr/include/bits/endian.h /usr/include/xlocale.h
@@ -1299,8 +1298,8 @@ xkbout.o: /usr/include/bits/waitstatus.h /usr/include/sys/types.h
 xkbout.o: /usr/include/time.h /usr/include/sys/select.h
 xkbout.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 xkbout.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-xkbout.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
-xkbout.o: /usr/include/alloca.h ../../exports/include/X11/Xfuncs.h
+xkbout.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
+xkbout.o: ../../exports/include/X11/Xfuncs.h
 xkbout.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 xkbout.o: /usr/X11R6/include/X11/Xlib.h ../../exports/include/X11/X.h
 xkbout.o: ../../exports/include/X11/Xfuncproto.h
@@ -1313,12 +1312,12 @@ xkbout.o: ../../exports/include/X11/Xmd.h
 xkbout.o: ../../exports/include/X11/extensions/XKM.h XKBfileInt.h XKBfile.h
 xkmout.o: /usr/include/stdio.h /usr/include/features.h
 xkmout.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-xkmout.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-xkmout.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-xkmout.o: /usr/include/bits/typesizes.h /usr/include/libio.h
-xkmout.o: /usr/include/_G_config.h /usr/include/wchar.h
+xkmout.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
+xkmout.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xkmout.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+xkmout.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 xkmout.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-xkmout.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+xkmout.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 xkmout.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 xkmout.o: /usr/include/ctype.h /usr/include/endian.h
 xkmout.o: /usr/include/bits/endian.h /usr/include/xlocale.h
@@ -1327,8 +1326,8 @@ xkmout.o: /usr/include/bits/waitstatus.h /usr/include/sys/types.h
 xkmout.o: /usr/include/time.h /usr/include/sys/select.h
 xkmout.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 xkmout.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-xkmout.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
-xkmout.o: /usr/include/alloca.h ../../exports/include/X11/Xfuncs.h
+xkmout.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
+xkmout.o: ../../exports/include/X11/Xfuncs.h
 xkmout.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 xkmout.o: /usr/X11R6/include/X11/Xlib.h ../../exports/include/X11/X.h
 xkmout.o: ../../exports/include/X11/Xfuncproto.h
@@ -1341,12 +1340,12 @@ xkmout.o: ../../exports/include/X11/Xmd.h
 xkmout.o: ../../exports/include/X11/extensions/XKM.h XKBfileInt.h XKBfile.h
 xkmread.o: /usr/include/stdio.h /usr/include/features.h
 xkmread.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-xkmread.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-xkmread.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-xkmread.o: /usr/include/bits/typesizes.h /usr/include/libio.h
-xkmread.o: /usr/include/_G_config.h /usr/include/wchar.h
+xkmread.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
+xkmread.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xkmread.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+xkmread.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 xkmread.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-xkmread.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+xkmread.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 xkmread.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 xkmread.o: ../../exports/include/X11/Xos.h
 xkmread.o: ../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
@@ -1354,8 +1353,8 @@ xkmread.o: /usr/include/time.h /usr/include/endian.h
 xkmread.o: /usr/include/bits/endian.h /usr/include/sys/select.h
 xkmread.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 xkmread.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-xkmread.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
-xkmread.o: /usr/include/string.h /usr/include/xlocale.h /usr/include/fcntl.h
+xkmread.o: /usr/include/bits/pthreadtypes.h /usr/include/string.h
+xkmread.o: /usr/include/xlocale.h /usr/include/fcntl.h
 xkmread.o: /usr/include/bits/fcntl.h /usr/include/sys/stat.h
 xkmread.o: /usr/include/bits/stat.h /usr/include/unistd.h
 xkmread.o: /usr/include/bits/posix_opt.h /usr/include/bits/environments.h
@@ -1377,12 +1376,12 @@ xkmread.o: ../../exports/include/X11/Xmd.h
 xkmread.o: ../../exports/include/X11/extensions/XKM.h XKBfileInt.h XKBfile.h
 srvmisc.o: /usr/include/stdio.h /usr/include/features.h
 srvmisc.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-srvmisc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-srvmisc.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-srvmisc.o: /usr/include/bits/typesizes.h /usr/include/libio.h
-srvmisc.o: /usr/include/_G_config.h /usr/include/wchar.h
+srvmisc.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
+srvmisc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+srvmisc.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+srvmisc.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 srvmisc.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-srvmisc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+srvmisc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 srvmisc.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 srvmisc.o: /usr/include/ctype.h /usr/include/endian.h
 srvmisc.o: /usr/include/bits/endian.h /usr/include/xlocale.h
@@ -1391,9 +1390,8 @@ srvmisc.o: /usr/include/bits/waitstatus.h /usr/include/sys/types.h
 srvmisc.o: /usr/include/time.h /usr/include/sys/select.h
 srvmisc.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 srvmisc.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-srvmisc.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
-srvmisc.o: /usr/include/alloca.h /usr/X11R6/include/X11/Xlib.h
-srvmisc.o: ../../exports/include/X11/X.h
+srvmisc.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
+srvmisc.o: /usr/X11R6/include/X11/Xlib.h ../../exports/include/X11/X.h
 srvmisc.o: ../../exports/include/X11/Xfuncproto.h
 srvmisc.o: ../../exports/include/X11/Xosdefs.h
 srvmisc.o: /usr/X11R6/include/X11/XKBlib.h
@@ -1405,12 +1403,13 @@ srvmisc.o: ../../exports/include/X11/Xmd.h
 srvmisc.o: ../../exports/include/X11/extensions/XKM.h XKBfileInt.h XKBfile.h
 xkbconfig.o: /usr/include/stdio.h /usr/include/features.h
 xkbconfig.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-xkbconfig.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-xkbconfig.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-xkbconfig.o: /usr/include/bits/typesizes.h /usr/include/libio.h
-xkbconfig.o: /usr/include/_G_config.h /usr/include/wchar.h
-xkbconfig.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-xkbconfig.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+xkbconfig.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
+xkbconfig.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xkbconfig.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+xkbconfig.o: /usr/include/libio.h /usr/include/_G_config.h
+xkbconfig.o: /usr/include/wchar.h /usr/include/bits/wchar.h
+xkbconfig.o: /usr/include/gconv.h
+xkbconfig.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 xkbconfig.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 xkbconfig.o: /usr/include/ctype.h /usr/include/endian.h
 xkbconfig.o: /usr/include/bits/endian.h /usr/include/xlocale.h
@@ -1419,8 +1418,8 @@ xkbconfig.o: /usr/include/bits/waitstatus.h /usr/include/sys/types.h
 xkbconfig.o: /usr/include/time.h /usr/include/sys/select.h
 xkbconfig.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 xkbconfig.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-xkbconfig.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
-xkbconfig.o: /usr/include/alloca.h ../../exports/include/X11/Xfuncs.h
+xkbconfig.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
+xkbconfig.o: ../../exports/include/X11/Xfuncs.h
 xkbconfig.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 xkbconfig.o: ../../exports/include/X11/Xos.h /usr/include/fcntl.h
 xkbconfig.o: /usr/include/bits/fcntl.h /usr/include/sys/stat.h
@@ -1438,15 +1437,15 @@ xkbconfig.o: ../../exports/include/X11/extensions/XKB.h XKBfileInt.h
 xkbconfig.o: XKBfile.h ../../exports/include/X11/extensions/XKBconfig.h
 xkbbells.o: /usr/X11R6/include/X11/Xlib.h /usr/include/sys/types.h
 xkbbells.o: /usr/include/features.h /usr/include/sys/cdefs.h
-xkbbells.o: /usr/include/gnu/stubs.h /usr/include/bits/types.h
-xkbbells.o: /usr/include/bits/wordsize.h
-xkbbells.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+xkbbells.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
+xkbbells.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
+xkbbells.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 xkbbells.o: /usr/include/bits/typesizes.h /usr/include/time.h
 xkbbells.o: /usr/include/endian.h /usr/include/bits/endian.h
 xkbbells.o: /usr/include/sys/select.h /usr/include/bits/select.h
 xkbbells.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 xkbbells.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
-xkbbells.o: /usr/include/bits/sched.h ../../exports/include/X11/X.h
+xkbbells.o: ../../exports/include/X11/X.h
 xkbbells.o: ../../exports/include/X11/Xfuncproto.h
 xkbbells.o: ../../exports/include/X11/Xosdefs.h
 xkbbells.o: /usr/X11R6/include/X11/XKBlib.h
@@ -1454,12 +1453,13 @@ xkbbells.o: ../../exports/include/X11/extensions/XKBstr.h
 xkbbells.o: ../../exports/include/X11/extensions/XKB.h XKBbells.h
 maprules.o: /usr/include/stdio.h /usr/include/features.h
 maprules.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-maprules.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-maprules.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-maprules.o: /usr/include/bits/typesizes.h /usr/include/libio.h
-maprules.o: /usr/include/_G_config.h /usr/include/wchar.h
-maprules.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-maprules.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+maprules.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
+maprules.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+maprules.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+maprules.o: /usr/include/libio.h /usr/include/_G_config.h
+maprules.o: /usr/include/wchar.h /usr/include/bits/wchar.h
+maprules.o: /usr/include/gconv.h
+maprules.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 maprules.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 maprules.o: /usr/include/ctype.h /usr/include/endian.h
 maprules.o: /usr/include/bits/endian.h /usr/include/xlocale.h
@@ -1468,9 +1468,8 @@ maprules.o: /usr/include/bits/waitstatus.h /usr/include/sys/types.h
 maprules.o: /usr/include/time.h /usr/include/sys/select.h
 maprules.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 maprules.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-maprules.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
-maprules.o: /usr/include/alloca.h ../../exports/include/X11/Xos_r.h
-maprules.o: ../../exports/include/X11/Xos.h
+maprules.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
+maprules.o: ../../exports/include/X11/Xos_r.h ../../exports/include/X11/Xos.h
 maprules.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 maprules.o: /usr/include/fcntl.h /usr/include/bits/fcntl.h
 maprules.o: /usr/include/sys/stat.h /usr/include/bits/stat.h
@@ -1479,7 +1478,7 @@ maprules.o: /usr/include/bits/environments.h /usr/include/bits/confname.h
 maprules.o: /usr/include/getopt.h /usr/include/sys/time.h
 maprules.o: ../../exports/include/X11/Xarch.h
 maprules.o: ../../exports/include/X11/Xfuncs.h /usr/include/limits.h
-maprules.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
+maprules.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
 maprules.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 maprules.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 maprules.o: /usr/include/bits/xopen_lim.h ../../exports/include/X11/Xproto.h

@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
-# libc:	(6.3.3)
+# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# libc:	(6.3.5)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+      CDEBUGFLAGS = -O2 -fno-strength-reduce
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -929,7 +929,7 @@ CXXPROJECT_DEFINES =
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 -DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP 	-DXCSECURITY -DTOGCUP  	-DXF86BIGFONT -DDPMSExtension 	  -DPANORAMIX 	 -DRENDER -DRANDR -DGCCUSESGAS -DAVOID_GLYPHBLT -DPIXPRIV -DSINGLEDEPTH 				-DXFreeXDGA -DXvExtension 				-DXFree86LOADER  -DXFree86Server 				-DXF86VIDMODE 				-DXvMCExtension 				-DSMART_SCHEDULE 				-DBUILDDEBUG -DXResExtension 				-DX_BYTE_ORDER=$(X_BYTE_ORDER) -DNDEBUG  $(SERVER_THREAD_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+CDEBUGFLAGS = -O2 -fno-strength-reduce
 EXT_DEFINES =  -DMITMISC -DXTEST -DXTRAP 	-DXSYNC -DXCMISC -DXRECORD 	-DMITSHM -DBIGREQS -DXF86VIDMODE 	-DXF86MISC -DDBE -DDPMSExtension -DEVI 	-DSCREENSAVER -DXV -DXVMC 	-DGLXEXT -DXF86DRI -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN -DGLX_USE_MESA  -DFONTCACHE          -DRES
 OS_DEFINES  = -DDDXOSINIT -DSERVER_LOCK -DDDXOSFATALERROR 				-DDDXOSVERRORF -DDDXTIME -DPART_NET
 
@@ -1169,7 +1169,7 @@ distclean::
 xm_api.o: ../../../../../../extras/Mesa/src/X/glxheader.h
 xm_api.o: ../../../../../../extras/Mesa/src/glheader.h
 xm_api.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-xm_api.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+xm_api.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 xm_api.o: ../../../../../../programs/Xserver/include/misc.h
 xm_api.o: ../../../../../../exports/include/X11/Xosdefs.h
 xm_api.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -1180,8 +1180,8 @@ xm_api.o: ../../../../../../programs/Xserver/include/os.h
 xm_api.o: ../../../../../../exports/include/X11/Xalloca.h
 xm_api.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 xm_api.o: ../../../../../../exports/include/X11/Xfuncs.h
-xm_api.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-xm_api.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/float.h
+xm_api.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xm_api.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/float.h
 xm_api.o: ../../../../../../exports/include/GL/gl.h
 xm_api.o: ../../../../../../exports/include/GL/glext.h
 xm_api.o: ../../../../../../lib/GL/include/GL/internal/glcore.h
@@ -1237,7 +1237,7 @@ xm_api.o: ../../../../../../extras/Mesa/src/tnl/tnl.h
 xm_dd.o: ../../../../../../extras/Mesa/src/X/glxheader.h
 xm_dd.o: ../../../../../../extras/Mesa/src/glheader.h
 xm_dd.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-xm_dd.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+xm_dd.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 xm_dd.o: ../../../../../../programs/Xserver/include/misc.h
 xm_dd.o: ../../../../../../exports/include/X11/Xosdefs.h
 xm_dd.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -1248,8 +1248,8 @@ xm_dd.o: ../../../../../../programs/Xserver/include/os.h
 xm_dd.o: ../../../../../../exports/include/X11/Xalloca.h
 xm_dd.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 xm_dd.o: ../../../../../../exports/include/X11/Xfuncs.h
-xm_dd.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-xm_dd.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/float.h
+xm_dd.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xm_dd.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/float.h
 xm_dd.o: ../../../../../../exports/include/GL/gl.h
 xm_dd.o: ../../../../../../exports/include/GL/glext.h
 xm_dd.o: ../../../../../../lib/GL/include/GL/internal/glcore.h
@@ -1316,7 +1316,7 @@ xm_dd.o: ../../../../../../extras/Mesa/src/tnl/t_context.h
 xm_line.o: ../../../../../../extras/Mesa/src/X/glxheader.h
 xm_line.o: ../../../../../../extras/Mesa/src/glheader.h
 xm_line.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-xm_line.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+xm_line.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 xm_line.o: ../../../../../../programs/Xserver/include/misc.h
 xm_line.o: ../../../../../../exports/include/X11/Xosdefs.h
 xm_line.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -1327,8 +1327,8 @@ xm_line.o: ../../../../../../programs/Xserver/include/os.h
 xm_line.o: ../../../../../../exports/include/X11/Xalloca.h
 xm_line.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 xm_line.o: ../../../../../../exports/include/X11/Xfuncs.h
-xm_line.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-xm_line.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/float.h
+xm_line.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xm_line.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/float.h
 xm_line.o: ../../../../../../exports/include/GL/gl.h
 xm_line.o: ../../../../../../exports/include/GL/glext.h
 xm_line.o: ../../../../../../lib/GL/include/GL/internal/glcore.h
@@ -1381,7 +1381,7 @@ xm_line.o: ../../../../../../extras/Mesa/src/swrast/s_linetemp.h
 xm_span.o: ../../../../../../extras/Mesa/src/X/glxheader.h
 xm_span.o: ../../../../../../extras/Mesa/src/glheader.h
 xm_span.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-xm_span.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+xm_span.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 xm_span.o: ../../../../../../programs/Xserver/include/misc.h
 xm_span.o: ../../../../../../exports/include/X11/Xosdefs.h
 xm_span.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -1392,8 +1392,8 @@ xm_span.o: ../../../../../../programs/Xserver/include/os.h
 xm_span.o: ../../../../../../exports/include/X11/Xalloca.h
 xm_span.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 xm_span.o: ../../../../../../exports/include/X11/Xfuncs.h
-xm_span.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-xm_span.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/float.h
+xm_span.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xm_span.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/float.h
 xm_span.o: ../../../../../../exports/include/GL/gl.h
 xm_span.o: ../../../../../../exports/include/GL/glext.h
 xm_span.o: ../../../../../../lib/GL/include/GL/internal/glcore.h
@@ -1447,7 +1447,7 @@ xm_span.o: ../../../../../../extras/Mesa/src/swrast/swrast.h
 xm_tri.o: ../../../../../../extras/Mesa/src/X/glxheader.h
 xm_tri.o: ../../../../../../extras/Mesa/src/glheader.h
 xm_tri.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-xm_tri.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+xm_tri.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 xm_tri.o: ../../../../../../programs/Xserver/include/misc.h
 xm_tri.o: ../../../../../../exports/include/X11/Xosdefs.h
 xm_tri.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -1458,8 +1458,8 @@ xm_tri.o: ../../../../../../programs/Xserver/include/os.h
 xm_tri.o: ../../../../../../exports/include/X11/Xalloca.h
 xm_tri.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 xm_tri.o: ../../../../../../exports/include/X11/Xfuncs.h
-xm_tri.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-xm_tri.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/float.h
+xm_tri.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xm_tri.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/float.h
 xm_tri.o: ../../../../../../exports/include/GL/gl.h
 xm_tri.o: ../../../../../../exports/include/GL/glext.h
 xm_tri.o: ../../../../../../lib/GL/include/GL/internal/glcore.h
@@ -1519,10 +1519,10 @@ xf86glx.o: ../../../../../../exports/include/X11/Xdefs.h
 xf86glx.o: ../../../../../../programs/Xserver/include/os.h
 xf86glx.o: ../../../../../../exports/include/X11/Xalloca.h
 xf86glx.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-xf86glx.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+xf86glx.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 xf86glx.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 xf86glx.o: ../../../../../../exports/include/X11/Xfuncs.h
-xf86glx.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+xf86glx.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 xf86glx.o: ../../../../../../exports/include/X11/Xprotostr.h
 xf86glx.o: ../../../../../../programs/Xserver/include/gc.h
 xf86glx.o: ../../../../../../exports/include/X11/Xdefs.h
@@ -1568,7 +1568,7 @@ xf86glx.o: ../../../../../../extras/Mesa/src/context.h
 xf86glx.o: ../../../../../../extras/Mesa/src/glapi.h
 xf86glx.o: ../../../../../../extras/Mesa/src/mtypes.h
 xf86glx.o: ../../../../../../extras/Mesa/src/glheader.h
-xf86glx.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/float.h
+xf86glx.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/float.h
 xf86glx.o: ../../../../../../extras/Mesa/src/glapitable.h
 xf86glx.o: ../../../../../../extras/Mesa/src/glthread.h
 xf86glx.o: ../../../../../../extras/Mesa/src/math/m_matrix.h
@@ -1591,10 +1591,10 @@ xf86glx_util.o: ../../../../../../exports/include/X11/Xdefs.h
 xf86glx_util.o: ../../../../../../programs/Xserver/include/os.h
 xf86glx_util.o: ../../../../../../exports/include/X11/Xalloca.h
 xf86glx_util.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-xf86glx_util.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+xf86glx_util.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 xf86glx_util.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 xf86glx_util.o: ../../../../../../exports/include/X11/Xfuncs.h
-xf86glx_util.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+xf86glx_util.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 xf86glx_util.o: ../../../../../../programs/Xserver/include/pixmap.h
 xf86glx_util.o: ../../../../../../programs/Xserver/include/regionstr.h
 xf86glx_util.o: ../../../../../../programs/Xserver/include/miscstruct.h

@@ -28,5 +28,5 @@ cp sharedAppVncServer/xc/programs/Xserver/hw/xfree86/vnc/vnc.so bin
 cp sharedAppVncServer/xc/programs/Xserver/Xvnc bin
 cp sharedAppVncControl/winshare/windowshare bin
 cp sharedAppVncControl/javactrl/javactrl.jar bin
-cp sharedAppVncControl/javactrl/javactrl bin
+cp sharedAppVncControl/javactrl/sharedAppController bin
 

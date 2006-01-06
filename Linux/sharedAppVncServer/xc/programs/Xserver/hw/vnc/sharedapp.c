@@ -122,6 +122,11 @@ void sharedapp_HandleRequest(rfbClientPtr cl, unsigned int command, unsigned int
     }
     break;
 
+  case rfbSharedAppRequestHideAll:
+    sharedapp_RemoveAllWindows(cl, &shapp->sharedAppList);
+    rfbLog("SHAREDAPP Hide All 0x%x\n", id);
+    break;
+
   case rfbSharedAppRequestIncludeDialogs:
     shapp->bIncludeDialogWindows = TRUE;
     break;
@@ -129,11 +134,6 @@ void sharedapp_HandleRequest(rfbClientPtr cl, unsigned int command, unsigned int
   case rfbSharedAppRequestExcludeDialogs:
     shapp->bIncludeDialogWindows = FALSE;
     sharedapp_RemoveDialogWindows(cl, &shapp->sharedAppList);
-    break;
-
-  case rfbSharedAppRequestHideAll:
-    sharedapp_RemoveAllWindows(cl, &shapp->sharedAppList);
-    rfbLog("SHAREDAPP Hide All 0x%x\n", id);
     break;
 
   case rfbSharedAppReverseConnection:
@@ -760,13 +760,10 @@ void sharedapp_RemoveAllWindows(rfbClientPtr cl, List *winlist)
   int sharedAppCount, i;
 
   sharedAppCount = List_Count(winlist);
-  for( i=0; i<sharedAppCount; i++)
+  for( i=sharedAppCount-1; i>=0; i-- )
   {
-    shwin = (SharedWindowPtr)List_Element(winlist, 0);
-    /*sharedapp_RfbSendWindowClose(cl, shwin->windowId, shwin->parentId);*/
+    shwin = (SharedWindowPtr)List_Element(winlist, i);
     List_Add(closeWindowList, shwin);
-    /*List_Remove_Data(winlist, shwin);*/
-    /*free(shwin);*/
   }
 }
 

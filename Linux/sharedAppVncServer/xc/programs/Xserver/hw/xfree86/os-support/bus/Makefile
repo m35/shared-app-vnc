@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
-# libc:	(6.3.3)
+# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# libc:	(6.3.5)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+      CDEBUGFLAGS = -O2 -fno-strength-reduce
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -931,7 +931,7 @@ CXXPROJECT_DEFINES =
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 -DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP 	-DXCSECURITY -DTOGCUP  	-DXF86BIGFONT -DDPMSExtension 	  -DPANORAMIX 	 -DRENDER -DRANDR -DGCCUSESGAS -DAVOID_GLYPHBLT -DPIXPRIV -DSINGLEDEPTH 				-DXFreeXDGA -DXvExtension 				-DXFree86LOADER  -DXFree86Server 				-DXF86VIDMODE 				-DXvMCExtension 				-DSMART_SCHEDULE 				-DBUILDDEBUG -DXResExtension 				-DX_BYTE_ORDER=$(X_BYTE_ORDER) -DNDEBUG  $(SERVER_THREAD_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+CDEBUGFLAGS = -O2 -fno-strength-reduce
 EXT_DEFINES =  -DMITMISC -DXTEST -DXTRAP 	-DXSYNC -DXCMISC -DXRECORD 	-DMITSHM -DBIGREQS -DXF86VIDMODE 	-DXF86MISC -DDBE -DDPMSExtension -DEVI 	-DSCREENSAVER -DXV -DXVMC 	-DGLXEXT -DXF86DRI -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN -DGLX_USE_MESA  -DFONTCACHE          -DRES
 OS_DEFINES  = -DDDXOSINIT -DSERVER_LOCK -DDDXOSFATALERROR 				-DDDXOSVERRORF -DDDXTIME -DPART_NET
 
@@ -1072,17 +1072,18 @@ distclean::
 # DO NOT DELETE
 
 Pci.o: /usr/include/errno.h /usr/include/features.h /usr/include/sys/cdefs.h
-Pci.o: /usr/include/gnu/stubs.h /usr/include/bits/errno.h
+Pci.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
+Pci.o: /usr/include/gnu/stubs-32.h /usr/include/bits/errno.h
 Pci.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
 Pci.o: /usr/include/signal.h /usr/include/bits/sigset.h
-Pci.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-Pci.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+Pci.o: /usr/include/bits/types.h
+Pci.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 Pci.o: /usr/include/bits/typesizes.h /usr/include/bits/signum.h
 Pci.o: /usr/include/time.h /usr/include/bits/siginfo.h
 Pci.o: /usr/include/bits/sigaction.h /usr/include/bits/sigcontext.h
 Pci.o: /usr/include/asm/sigcontext.h /usr/include/bits/sigstack.h
 Pci.o: /usr/include/sys/ucontext.h /usr/include/bits/pthreadtypes.h
-Pci.o: /usr/include/bits/sched.h /usr/include/bits/sigthread.h
+Pci.o: /usr/include/bits/sigthread.h
 Pci.o: ../../../../../../exports/include/X11/Xarch.h
 Pci.o: ../../../../../../programs/Xserver/hw/xfree86/common/compiler.h
 Pci.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
@@ -1095,7 +1096,7 @@ Pci.o: ../../../../../../exports/include/X11/X.h
 Pci.o: ../../../../../../exports/include/X11/Xdefs.h
 Pci.o: ../../../../../../programs/Xserver/include/os.h
 Pci.o: ../../../../../../exports/include/X11/Xalloca.h
-Pci.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+Pci.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 Pci.o: /usr/include/string.h /usr/include/xlocale.h
 Pci.o: ../../../../../../exports/include/X11/Xfuncs.h /usr/include/stdlib.h
 Pci.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
@@ -1104,7 +1105,7 @@ Pci.o: /usr/include/sys/types.h /usr/include/sys/select.h
 Pci.o: /usr/include/bits/select.h /usr/include/bits/time.h
 Pci.o: /usr/include/sys/sysmacros.h /usr/include/alloca.h
 Pci.o: /usr/include/limits.h
-Pci.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
+Pci.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
 Pci.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 Pci.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 Pci.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1150,12 +1151,12 @@ Pci.o: ../../../../../../programs/Xserver/include/globals.h Pci.h
 Pci.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 ix86Pci.o: /usr/include/stdio.h /usr/include/features.h
 ix86Pci.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-ix86Pci.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-ix86Pci.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-ix86Pci.o: /usr/include/bits/typesizes.h /usr/include/libio.h
-ix86Pci.o: /usr/include/_G_config.h /usr/include/wchar.h
+ix86Pci.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
+ix86Pci.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ix86Pci.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+ix86Pci.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 ix86Pci.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-ix86Pci.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+ix86Pci.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 ix86Pci.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 ix86Pci.o: ../../../../../../programs/Xserver/hw/xfree86/common/compiler.h
 ix86Pci.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
@@ -1176,9 +1177,9 @@ ix86Pci.o: /usr/include/bits/endian.h /usr/include/sys/types.h
 ix86Pci.o: /usr/include/time.h /usr/include/sys/select.h
 ix86Pci.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 ix86Pci.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-ix86Pci.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
-ix86Pci.o: /usr/include/alloca.h /usr/include/limits.h
-ix86Pci.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
+ix86Pci.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
+ix86Pci.o: /usr/include/limits.h
+ix86Pci.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
 ix86Pci.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 ix86Pci.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 ix86Pci.o: /usr/include/bits/xopen_lim.h /usr/include/math.h
@@ -1220,12 +1221,13 @@ ix86Pci.o: Pci.h
 ix86Pci.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 linuxPci.o: /usr/include/stdio.h /usr/include/features.h
 linuxPci.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-linuxPci.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-linuxPci.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
-linuxPci.o: /usr/include/bits/typesizes.h /usr/include/libio.h
-linuxPci.o: /usr/include/_G_config.h /usr/include/wchar.h
-linuxPci.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-linuxPci.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+linuxPci.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
+linuxPci.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+linuxPci.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
+linuxPci.o: /usr/include/libio.h /usr/include/_G_config.h
+linuxPci.o: /usr/include/wchar.h /usr/include/bits/wchar.h
+linuxPci.o: /usr/include/gconv.h
+linuxPci.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 linuxPci.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 linuxPci.o: ../../../../../../programs/Xserver/hw/xfree86/common/compiler.h
 linuxPci.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
@@ -1246,9 +1248,9 @@ linuxPci.o: /usr/include/bits/endian.h /usr/include/sys/types.h
 linuxPci.o: /usr/include/time.h /usr/include/sys/select.h
 linuxPci.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 linuxPci.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-linuxPci.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
-linuxPci.o: /usr/include/alloca.h /usr/include/limits.h
-linuxPci.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
+linuxPci.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
+linuxPci.o: /usr/include/limits.h
+linuxPci.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
 linuxPci.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 linuxPci.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 linuxPci.o: /usr/include/bits/xopen_lim.h /usr/include/math.h

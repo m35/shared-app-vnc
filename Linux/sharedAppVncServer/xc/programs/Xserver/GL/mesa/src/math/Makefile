@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
-# libc:	(6.3.3)
+# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# libc:	(6.3.5)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+      CDEBUGFLAGS = -O2 -fno-strength-reduce
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -929,7 +929,7 @@ CXXPROJECT_DEFINES =
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 -DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP 	-DXCSECURITY -DTOGCUP  	-DXF86BIGFONT -DDPMSExtension 	  -DPANORAMIX 	 -DRENDER -DRANDR -DGCCUSESGAS -DAVOID_GLYPHBLT -DPIXPRIV -DSINGLEDEPTH 				-DXFreeXDGA -DXvExtension 				-DXFree86LOADER  -DXFree86Server 				-DXF86VIDMODE 				-DXvMCExtension 				-DSMART_SCHEDULE 				-DBUILDDEBUG -DXResExtension 				-DX_BYTE_ORDER=$(X_BYTE_ORDER) -DNDEBUG  $(SERVER_THREAD_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+CDEBUGFLAGS = -O2 -fno-strength-reduce
 EXT_DEFINES =  -DMITMISC -DXTEST -DXTRAP 	-DXSYNC -DXCMISC -DXRECORD 	-DMITSHM -DBIGREQS -DXF86VIDMODE 	-DXF86MISC -DDBE -DDPMSExtension -DEVI 	-DSCREENSAVER -DXV -DXVMC 	-DGLXEXT -DXF86DRI -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN -DGLX_USE_MESA  -DFONTCACHE          -DRES
 OS_DEFINES  = -DDDXOSINIT -DSERVER_LOCK -DDDXOSFATALERROR 				-DDDXOSVERRORF -DDDXTIME -DPART_NET
 
@@ -1183,7 +1183,7 @@ distclean::
 
 m_debug_clip.o: ../../../../../../extras/Mesa/src/glheader.h
 m_debug_clip.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-m_debug_clip.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+m_debug_clip.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 m_debug_clip.o: ../../../../../../programs/Xserver/include/misc.h
 m_debug_clip.o: ../../../../../../exports/include/X11/Xosdefs.h
 m_debug_clip.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -1194,8 +1194,8 @@ m_debug_clip.o: ../../../../../../programs/Xserver/include/os.h
 m_debug_clip.o: ../../../../../../exports/include/X11/Xalloca.h
 m_debug_clip.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 m_debug_clip.o: ../../../../../../exports/include/X11/Xfuncs.h
-m_debug_clip.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-m_debug_clip.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/float.h
+m_debug_clip.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+m_debug_clip.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/float.h
 m_debug_clip.o: ../../../../../../extras/Mesa/include/GL/gl.h
 m_debug_clip.o: ../../../../../../extras/Mesa/include/GL/glext.h
 m_debug_clip.o: ../../../../../../lib/GL/include/GL/internal/glcore.h
@@ -1216,7 +1216,7 @@ m_debug_clip.o: ../../../../../../extras/Mesa/src/math/m_debug.h
 m_debug_clip.o: ../../../../../../extras/Mesa/src/math/m_debug_util.h
 m_debug_norm.o: ../../../../../../extras/Mesa/src/glheader.h
 m_debug_norm.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-m_debug_norm.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+m_debug_norm.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 m_debug_norm.o: ../../../../../../programs/Xserver/include/misc.h
 m_debug_norm.o: ../../../../../../exports/include/X11/Xosdefs.h
 m_debug_norm.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -1227,8 +1227,8 @@ m_debug_norm.o: ../../../../../../programs/Xserver/include/os.h
 m_debug_norm.o: ../../../../../../exports/include/X11/Xalloca.h
 m_debug_norm.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 m_debug_norm.o: ../../../../../../exports/include/X11/Xfuncs.h
-m_debug_norm.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-m_debug_norm.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/float.h
+m_debug_norm.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+m_debug_norm.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/float.h
 m_debug_norm.o: ../../../../../../extras/Mesa/include/GL/gl.h
 m_debug_norm.o: ../../../../../../extras/Mesa/include/GL/glext.h
 m_debug_norm.o: ../../../../../../lib/GL/include/GL/internal/glcore.h
@@ -1250,7 +1250,7 @@ m_debug_norm.o: ../../../../../../extras/Mesa/src/math/m_debug.h
 m_debug_norm.o: ../../../../../../extras/Mesa/src/math/m_debug_util.h
 m_debug_xform.o: ../../../../../../extras/Mesa/src/glheader.h
 m_debug_xform.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-m_debug_xform.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+m_debug_xform.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 m_debug_xform.o: ../../../../../../programs/Xserver/include/misc.h
 m_debug_xform.o: ../../../../../../exports/include/X11/Xosdefs.h
 m_debug_xform.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -1261,8 +1261,8 @@ m_debug_xform.o: ../../../../../../programs/Xserver/include/os.h
 m_debug_xform.o: ../../../../../../exports/include/X11/Xalloca.h
 m_debug_xform.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 m_debug_xform.o: ../../../../../../exports/include/X11/Xfuncs.h
-m_debug_xform.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-m_debug_xform.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/float.h
+m_debug_xform.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+m_debug_xform.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/float.h
 m_debug_xform.o: ../../../../../../extras/Mesa/include/GL/gl.h
 m_debug_xform.o: ../../../../../../extras/Mesa/include/GL/glext.h
 m_debug_xform.o: ../../../../../../lib/GL/include/GL/internal/glcore.h
@@ -1283,7 +1283,7 @@ m_debug_xform.o: ../../../../../../extras/Mesa/src/math/m_debug.h
 m_debug_xform.o: ../../../../../../extras/Mesa/src/math/m_debug_util.h
 m_eval.o: ../../../../../../extras/Mesa/src/glheader.h
 m_eval.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-m_eval.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+m_eval.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 m_eval.o: ../../../../../../programs/Xserver/include/misc.h
 m_eval.o: ../../../../../../exports/include/X11/Xosdefs.h
 m_eval.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -1294,8 +1294,8 @@ m_eval.o: ../../../../../../programs/Xserver/include/os.h
 m_eval.o: ../../../../../../exports/include/X11/Xalloca.h
 m_eval.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 m_eval.o: ../../../../../../exports/include/X11/Xfuncs.h
-m_eval.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-m_eval.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/float.h
+m_eval.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+m_eval.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/float.h
 m_eval.o: ../../../../../../extras/Mesa/include/GL/gl.h
 m_eval.o: ../../../../../../extras/Mesa/include/GL/glext.h
 m_eval.o: ../../../../../../lib/GL/include/GL/internal/glcore.h
@@ -1303,7 +1303,7 @@ m_eval.o: ../../../../../../extras/Mesa/src/config.h
 m_eval.o: ../../../../../../extras/Mesa/src/math/m_eval.h
 m_matrix.o: ../../../../../../extras/Mesa/src/glheader.h
 m_matrix.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-m_matrix.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+m_matrix.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 m_matrix.o: ../../../../../../programs/Xserver/include/misc.h
 m_matrix.o: ../../../../../../exports/include/X11/Xosdefs.h
 m_matrix.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -1314,8 +1314,8 @@ m_matrix.o: ../../../../../../programs/Xserver/include/os.h
 m_matrix.o: ../../../../../../exports/include/X11/Xalloca.h
 m_matrix.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 m_matrix.o: ../../../../../../exports/include/X11/Xfuncs.h
-m_matrix.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-m_matrix.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/float.h
+m_matrix.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+m_matrix.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/float.h
 m_matrix.o: ../../../../../../extras/Mesa/include/GL/gl.h
 m_matrix.o: ../../../../../../extras/Mesa/include/GL/glext.h
 m_matrix.o: ../../../../../../lib/GL/include/GL/internal/glcore.h
@@ -1325,7 +1325,7 @@ m_matrix.o: ../../../../../../extras/Mesa/src/mmath.h
 m_matrix.o: ../../../../../../extras/Mesa/src/math/m_matrix.h
 m_translate.o: ../../../../../../extras/Mesa/src/glheader.h
 m_translate.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-m_translate.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+m_translate.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 m_translate.o: ../../../../../../programs/Xserver/include/misc.h
 m_translate.o: ../../../../../../exports/include/X11/Xosdefs.h
 m_translate.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -1336,8 +1336,8 @@ m_translate.o: ../../../../../../programs/Xserver/include/os.h
 m_translate.o: ../../../../../../exports/include/X11/Xalloca.h
 m_translate.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 m_translate.o: ../../../../../../exports/include/X11/Xfuncs.h
-m_translate.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-m_translate.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/float.h
+m_translate.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+m_translate.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/float.h
 m_translate.o: ../../../../../../extras/Mesa/include/GL/gl.h
 m_translate.o: ../../../../../../extras/Mesa/include/GL/glext.h
 m_translate.o: ../../../../../../lib/GL/include/GL/internal/glcore.h
@@ -1355,7 +1355,7 @@ m_translate.o: ../../../../../../extras/Mesa/src/math/m_translate.h
 m_translate.o: ../../../../../../extras/Mesa/src/math/m_trans_tmp.h
 m_vector.o: ../../../../../../extras/Mesa/src/glheader.h
 m_vector.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-m_vector.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+m_vector.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 m_vector.o: ../../../../../../programs/Xserver/include/misc.h
 m_vector.o: ../../../../../../exports/include/X11/Xosdefs.h
 m_vector.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -1366,8 +1366,8 @@ m_vector.o: ../../../../../../programs/Xserver/include/os.h
 m_vector.o: ../../../../../../exports/include/X11/Xalloca.h
 m_vector.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 m_vector.o: ../../../../../../exports/include/X11/Xfuncs.h
-m_vector.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-m_vector.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/float.h
+m_vector.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+m_vector.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/float.h
 m_vector.o: ../../../../../../extras/Mesa/include/GL/gl.h
 m_vector.o: ../../../../../../extras/Mesa/include/GL/glext.h
 m_vector.o: ../../../../../../lib/GL/include/GL/internal/glcore.h
@@ -1382,7 +1382,7 @@ m_vector.o: ../../../../../../extras/Mesa/src/math/m_matrix.h
 m_vector.o: ../../../../../../extras/Mesa/src/dd.h
 m_xform.o: ../../../../../../extras/Mesa/src/glheader.h
 m_xform.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-m_xform.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+m_xform.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 m_xform.o: ../../../../../../programs/Xserver/include/misc.h
 m_xform.o: ../../../../../../exports/include/X11/Xosdefs.h
 m_xform.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -1393,8 +1393,8 @@ m_xform.o: ../../../../../../programs/Xserver/include/os.h
 m_xform.o: ../../../../../../exports/include/X11/Xalloca.h
 m_xform.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 m_xform.o: ../../../../../../exports/include/X11/Xfuncs.h
-m_xform.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
-m_xform.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/float.h
+m_xform.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+m_xform.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/float.h
 m_xform.o: ../../../../../../extras/Mesa/include/GL/gl.h
 m_xform.o: ../../../../../../extras/Mesa/include/GL/glext.h
 m_xform.o: ../../../../../../lib/GL/include/GL/internal/glcore.h

@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
-# libc:	(6.3.3)
+# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# libc:	(6.3.5)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+      CDEBUGFLAGS = -O2 -fno-strength-reduce
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -931,7 +931,7 @@ SUBDIRS = module
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 -DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP 	-DXCSECURITY -DTOGCUP  	-DXF86BIGFONT -DDPMSExtension 	  -DPANORAMIX 	 -DRENDER -DRANDR -DGCCUSESGAS -DAVOID_GLYPHBLT -DPIXPRIV -DSINGLEDEPTH 				-DXFreeXDGA -DXvExtension 				-DXFree86LOADER  -DXFree86Server 				-DXF86VIDMODE 				-DXvMCExtension 				-DSMART_SCHEDULE 				-DBUILDDEBUG -DXResExtension 				-DX_BYTE_ORDER=$(X_BYTE_ORDER) -DNDEBUG  $(SERVER_THREAD_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+CDEBUGFLAGS = -O2 -fno-strength-reduce
 EXT_DEFINES =  -DMITMISC -DXTEST -DXTRAP 	-DXSYNC -DXCMISC -DXRECORD 	-DMITSHM -DBIGREQS -DXF86VIDMODE 	-DXF86MISC -DDBE -DDPMSExtension -DEVI 	-DSCREENSAVER -DXV -DXVMC 	-DGLXEXT -DXF86DRI -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN -DGLX_USE_MESA  -DFONTCACHE          -DRES
 OS_DEFINES  = -DDDXOSINIT -DSERVER_LOCK -DDDXOSFATALERROR 				-DDDXOSVERRORF -DDDXTIME -DPART_NET
 
@@ -1253,21 +1253,21 @@ xf86ScanPci.o: ../../../../../exports/include/X11/Xfuncproto.h
 xf86ScanPci.o: ../../../../../exports/include/X11/Xmd.h
 xf86ScanPci.o: ../../../../../exports/include/X11/X.h
 xf86ScanPci.o: ../../../../../exports/include/X11/Xdefs.h
-xf86ScanPci.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+xf86ScanPci.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 xf86ScanPci.o: ../../../../../exports/include/X11/Xfuncs.h
 xf86ScanPci.o: /usr/include/string.h /usr/include/features.h
 xf86ScanPci.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+xf86ScanPci.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
 xf86ScanPci.o: /usr/include/xlocale.h /usr/include/stdlib.h
 xf86ScanPci.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 xf86ScanPci.o: /usr/include/endian.h /usr/include/bits/endian.h
 xf86ScanPci.o: /usr/include/sys/types.h /usr/include/bits/types.h
-xf86ScanPci.o: /usr/include/bits/wordsize.h /usr/include/bits/typesizes.h
-xf86ScanPci.o: /usr/include/time.h /usr/include/sys/select.h
-xf86ScanPci.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
-xf86ScanPci.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-xf86ScanPci.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
+xf86ScanPci.o: /usr/include/bits/typesizes.h /usr/include/time.h
+xf86ScanPci.o: /usr/include/sys/select.h /usr/include/bits/select.h
+xf86ScanPci.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
+xf86ScanPci.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
 xf86ScanPci.o: /usr/include/alloca.h /usr/include/limits.h
-xf86ScanPci.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
+xf86ScanPci.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
 xf86ScanPci.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 xf86ScanPci.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 xf86ScanPci.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1279,7 +1279,7 @@ xf86ScanPci.o: /usr/include/assert.h /usr/include/ctype.h
 xf86ScanPci.o: /usr/include/stdio.h /usr/include/libio.h
 xf86ScanPci.o: /usr/include/_G_config.h /usr/include/wchar.h
 xf86ScanPci.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-xf86ScanPci.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+xf86ScanPci.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 xf86ScanPci.o: /usr/include/bits/sys_errlist.h
 xf86ScanPci.o: ../../../../../exports/include/X11/Xalloca.h
 xf86ScanPci.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
@@ -1328,21 +1328,21 @@ xf86PciData.o: ../../../../../exports/include/X11/Xfuncproto.h
 xf86PciData.o: ../../../../../exports/include/X11/Xmd.h
 xf86PciData.o: ../../../../../exports/include/X11/X.h
 xf86PciData.o: ../../../../../exports/include/X11/Xdefs.h
-xf86PciData.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+xf86PciData.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 xf86PciData.o: ../../../../../exports/include/X11/Xfuncs.h
 xf86PciData.o: /usr/include/string.h /usr/include/features.h
 xf86PciData.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+xf86PciData.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
 xf86PciData.o: /usr/include/xlocale.h /usr/include/stdlib.h
 xf86PciData.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 xf86PciData.o: /usr/include/endian.h /usr/include/bits/endian.h
 xf86PciData.o: /usr/include/sys/types.h /usr/include/bits/types.h
-xf86PciData.o: /usr/include/bits/wordsize.h /usr/include/bits/typesizes.h
-xf86PciData.o: /usr/include/time.h /usr/include/sys/select.h
-xf86PciData.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
-xf86PciData.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-xf86PciData.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
+xf86PciData.o: /usr/include/bits/typesizes.h /usr/include/time.h
+xf86PciData.o: /usr/include/sys/select.h /usr/include/bits/select.h
+xf86PciData.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
+xf86PciData.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
 xf86PciData.o: /usr/include/alloca.h /usr/include/limits.h
-xf86PciData.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
+xf86PciData.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
 xf86PciData.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 xf86PciData.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 xf86PciData.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1354,7 +1354,7 @@ xf86PciData.o: /usr/include/assert.h /usr/include/ctype.h
 xf86PciData.o: /usr/include/stdio.h /usr/include/libio.h
 xf86PciData.o: /usr/include/_G_config.h /usr/include/wchar.h
 xf86PciData.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-xf86PciData.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+xf86PciData.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 xf86PciData.o: /usr/include/bits/sys_errlist.h
 xf86PciData.o: ../../../../../exports/include/X11/Xalloca.h
 xf86PciData.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h

@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
-# libc:	(6.3.3)
+# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# libc:	(6.3.5)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+      CDEBUGFLAGS = -O2 -fno-strength-reduce
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -929,7 +929,7 @@ CXXPROJECT_DEFINES =
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 -DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP 	-DXCSECURITY -DTOGCUP  	-DXF86BIGFONT -DDPMSExtension 	  -DPANORAMIX 	 -DRENDER -DRANDR -DGCCUSESGAS -DAVOID_GLYPHBLT -DPIXPRIV -DSINGLEDEPTH 				-DXFreeXDGA -DXvExtension 				-DXFree86LOADER  -DXFree86Server 				-DXF86VIDMODE 				-DXvMCExtension 				-DSMART_SCHEDULE 				-DBUILDDEBUG -DXResExtension 				-DX_BYTE_ORDER=$(X_BYTE_ORDER) -DNDEBUG  $(SERVER_THREAD_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
+CDEBUGFLAGS = -O2 -fno-strength-reduce
 EXT_DEFINES =  -DMITMISC -DXTEST -DXTRAP 	-DXSYNC -DXCMISC -DXRECORD 	-DMITSHM -DBIGREQS -DXF86VIDMODE 	-DXF86MISC -DDBE -DDPMSExtension -DEVI 	-DSCREENSAVER -DXV -DXVMC 	-DGLXEXT -DXF86DRI -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN -DGLX_USE_MESA  -DFONTCACHE          -DRES
 OS_DEFINES  = -DDDXOSINIT -DSERVER_LOCK -DDDXOSFATALERROR 				-DDDXOSVERRORF -DDDXTIME -DPART_NET
 
@@ -1101,10 +1101,10 @@ global.o: ../../../../exports/include/X11/Xdefs.h
 global.o: ../../../../programs/Xserver/include/os.h
 global.o: ../../../../exports/include/X11/Xalloca.h
 global.o: ../../../../programs/Xserver/include/xf86_ansic.h
-global.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+global.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 global.o: ../../../../programs/Xserver/include/xf86_libc.h
 global.o: ../../../../exports/include/X11/Xfuncs.h
-global.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+global.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 global.o: ../../../../programs/Xserver/include/dixstruct.h
 global.o: ../../../../programs/Xserver/include/dix.h
 global.o: ../../../../programs/Xserver/include/gc.h
@@ -1147,10 +1147,10 @@ glxbuf.o: ../../../../exports/include/X11/Xdefs.h
 glxbuf.o: ../../../../programs/Xserver/include/os.h
 glxbuf.o: ../../../../exports/include/X11/Xalloca.h
 glxbuf.o: ../../../../programs/Xserver/include/xf86_ansic.h
-glxbuf.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+glxbuf.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 glxbuf.o: ../../../../programs/Xserver/include/xf86_libc.h
 glxbuf.o: ../../../../exports/include/X11/Xfuncs.h
-glxbuf.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+glxbuf.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 glxbuf.o: ../../../../programs/Xserver/include/dixstruct.h
 glxbuf.o: ../../../../programs/Xserver/include/dix.h
 glxbuf.o: ../../../../programs/Xserver/include/gc.h
@@ -1194,10 +1194,10 @@ glxcmds.o: ../../../../exports/include/X11/Xdefs.h
 glxcmds.o: ../../../../programs/Xserver/include/os.h
 glxcmds.o: ../../../../exports/include/X11/Xalloca.h
 glxcmds.o: ../../../../programs/Xserver/include/xf86_ansic.h
-glxcmds.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+glxcmds.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 glxcmds.o: ../../../../programs/Xserver/include/xf86_libc.h
 glxcmds.o: ../../../../exports/include/X11/Xfuncs.h
-glxcmds.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+glxcmds.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 glxcmds.o: ../../../../programs/Xserver/include/dixstruct.h
 glxcmds.o: ../../../../programs/Xserver/include/dix.h
 glxcmds.o: ../../../../programs/Xserver/include/gc.h
@@ -1246,10 +1246,10 @@ glxcmdsswap.o: ../../../../exports/include/X11/Xdefs.h
 glxcmdsswap.o: ../../../../programs/Xserver/include/os.h
 glxcmdsswap.o: ../../../../exports/include/X11/Xalloca.h
 glxcmdsswap.o: ../../../../programs/Xserver/include/xf86_ansic.h
-glxcmdsswap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+glxcmdsswap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 glxcmdsswap.o: ../../../../programs/Xserver/include/xf86_libc.h
 glxcmdsswap.o: ../../../../exports/include/X11/Xfuncs.h
-glxcmdsswap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+glxcmdsswap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 glxcmdsswap.o: ../../../../programs/Xserver/include/dixstruct.h
 glxcmdsswap.o: ../../../../programs/Xserver/include/dix.h
 glxcmdsswap.o: ../../../../programs/Xserver/include/gc.h
@@ -1299,10 +1299,10 @@ glxext.o: ../../../../exports/include/X11/Xdefs.h
 glxext.o: ../../../../programs/Xserver/include/os.h
 glxext.o: ../../../../exports/include/X11/Xalloca.h
 glxext.o: ../../../../programs/Xserver/include/xf86_ansic.h
-glxext.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+glxext.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 glxext.o: ../../../../programs/Xserver/include/xf86_libc.h
 glxext.o: ../../../../exports/include/X11/Xfuncs.h
-glxext.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+glxext.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 glxext.o: ../../../../programs/Xserver/include/dixstruct.h
 glxext.o: ../../../../programs/Xserver/include/dix.h
 glxext.o: ../../../../programs/Xserver/include/gc.h
@@ -1353,10 +1353,10 @@ glxfb.o: ../../../../exports/include/X11/Xdefs.h
 glxfb.o: ../../../../programs/Xserver/include/os.h
 glxfb.o: ../../../../exports/include/X11/Xalloca.h
 glxfb.o: ../../../../programs/Xserver/include/xf86_ansic.h
-glxfb.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+glxfb.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 glxfb.o: ../../../../programs/Xserver/include/xf86_libc.h
 glxfb.o: ../../../../exports/include/X11/Xfuncs.h
-glxfb.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+glxfb.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 glxfb.o: ../../../../programs/Xserver/include/dixstruct.h
 glxfb.o: ../../../../programs/Xserver/include/dix.h
 glxfb.o: ../../../../programs/Xserver/include/gc.h
@@ -1399,10 +1399,10 @@ glximports.o: ../../../../exports/include/X11/Xdefs.h
 glximports.o: ../../../../programs/Xserver/include/os.h
 glximports.o: ../../../../exports/include/X11/Xalloca.h
 glximports.o: ../../../../programs/Xserver/include/xf86_ansic.h
-glximports.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+glximports.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 glximports.o: ../../../../programs/Xserver/include/xf86_libc.h
 glximports.o: ../../../../exports/include/X11/Xfuncs.h
-glximports.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+glximports.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 glximports.o: ../../../../programs/Xserver/include/dixstruct.h
 glximports.o: ../../../../programs/Xserver/include/dix.h
 glximports.o: ../../../../programs/Xserver/include/gc.h
@@ -1445,10 +1445,10 @@ glxmem.o: ../../../../exports/include/X11/Xdefs.h
 glxmem.o: ../../../../programs/Xserver/include/os.h
 glxmem.o: ../../../../exports/include/X11/Xalloca.h
 glxmem.o: ../../../../programs/Xserver/include/xf86_ansic.h
-glxmem.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+glxmem.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 glxmem.o: ../../../../programs/Xserver/include/xf86_libc.h
 glxmem.o: ../../../../exports/include/X11/Xfuncs.h
-glxmem.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+glxmem.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 glxmem.o: ../../../../programs/Xserver/include/dixstruct.h
 glxmem.o: ../../../../programs/Xserver/include/dix.h
 glxmem.o: ../../../../programs/Xserver/include/gc.h
@@ -1491,10 +1491,10 @@ glxpix.o: ../../../../exports/include/X11/Xdefs.h
 glxpix.o: ../../../../programs/Xserver/include/os.h
 glxpix.o: ../../../../exports/include/X11/Xalloca.h
 glxpix.o: ../../../../programs/Xserver/include/xf86_ansic.h
-glxpix.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+glxpix.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 glxpix.o: ../../../../programs/Xserver/include/xf86_libc.h
 glxpix.o: ../../../../exports/include/X11/Xfuncs.h
-glxpix.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+glxpix.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 glxpix.o: ../../../../programs/Xserver/include/dixstruct.h
 glxpix.o: ../../../../programs/Xserver/include/dix.h
 glxpix.o: ../../../../programs/Xserver/include/gc.h
@@ -1527,7 +1527,7 @@ glxpix.o: ../../../../exports/include/GL/glxint.h glxscreens.h
 glxpix.o: ../../../../lib/GL/include/GL/internal/glcore.h glxdrawable.h
 glxpix.o: glxcontext.h glxerror.h glxutil.h glxpix.h
 glxscreens.o: ../../../../programs/Xserver/include/xf86_ansic.h
-glxscreens.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+glxscreens.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 glxscreens.o: ../../../../programs/Xserver/include/misc.h
 glxscreens.o: ../../../../exports/include/X11/Xosdefs.h
 glxscreens.o: ../../../../exports/include/X11/Xfuncproto.h
@@ -1538,7 +1538,7 @@ glxscreens.o: ../../../../programs/Xserver/include/os.h
 glxscreens.o: ../../../../exports/include/X11/Xalloca.h
 glxscreens.o: ../../../../programs/Xserver/include/xf86_libc.h
 glxscreens.o: ../../../../exports/include/X11/Xfuncs.h
-glxscreens.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+glxscreens.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 glxscreens.o: ../../../../programs/Xserver/include/windowstr.h
 glxscreens.o: ../../../../programs/Xserver/include/window.h
 glxscreens.o: ../../../../programs/Xserver/include/region.h
@@ -1587,10 +1587,10 @@ glxutil.o: ../../../../exports/include/X11/Xdefs.h
 glxutil.o: ../../../../programs/Xserver/include/os.h
 glxutil.o: ../../../../exports/include/X11/Xalloca.h
 glxutil.o: ../../../../programs/Xserver/include/xf86_ansic.h
-glxutil.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+glxutil.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 glxutil.o: ../../../../programs/Xserver/include/xf86_libc.h
 glxutil.o: ../../../../exports/include/X11/Xfuncs.h
-glxutil.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+glxutil.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 glxutil.o: ../../../../programs/Xserver/include/dixstruct.h
 glxutil.o: ../../../../programs/Xserver/include/dix.h
 glxutil.o: ../../../../programs/Xserver/include/gc.h
@@ -1638,10 +1638,10 @@ render2.o: ../../../../exports/include/X11/Xdefs.h
 render2.o: ../../../../programs/Xserver/include/os.h
 render2.o: ../../../../exports/include/X11/Xalloca.h
 render2.o: ../../../../programs/Xserver/include/xf86_ansic.h
-render2.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+render2.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 render2.o: ../../../../programs/Xserver/include/xf86_libc.h
 render2.o: ../../../../exports/include/X11/Xfuncs.h
-render2.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+render2.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 render2.o: ../../../../programs/Xserver/include/dixstruct.h
 render2.o: ../../../../programs/Xserver/include/dix.h
 render2.o: ../../../../programs/Xserver/include/gc.h
@@ -1686,10 +1686,10 @@ render2swap.o: ../../../../exports/include/X11/Xdefs.h
 render2swap.o: ../../../../programs/Xserver/include/os.h
 render2swap.o: ../../../../exports/include/X11/Xalloca.h
 render2swap.o: ../../../../programs/Xserver/include/xf86_ansic.h
-render2swap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+render2swap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 render2swap.o: ../../../../programs/Xserver/include/xf86_libc.h
 render2swap.o: ../../../../exports/include/X11/Xfuncs.h
-render2swap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+render2swap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 render2swap.o: ../../../../programs/Xserver/include/dixstruct.h
 render2swap.o: ../../../../programs/Xserver/include/dix.h
 render2swap.o: ../../../../programs/Xserver/include/gc.h
@@ -1734,10 +1734,10 @@ renderpix.o: ../../../../exports/include/X11/Xdefs.h
 renderpix.o: ../../../../programs/Xserver/include/os.h
 renderpix.o: ../../../../exports/include/X11/Xalloca.h
 renderpix.o: ../../../../programs/Xserver/include/xf86_ansic.h
-renderpix.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+renderpix.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 renderpix.o: ../../../../programs/Xserver/include/xf86_libc.h
 renderpix.o: ../../../../exports/include/X11/Xfuncs.h
-renderpix.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+renderpix.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 renderpix.o: ../../../../programs/Xserver/include/dixstruct.h
 renderpix.o: ../../../../programs/Xserver/include/dix.h
 renderpix.o: ../../../../programs/Xserver/include/gc.h
@@ -1782,10 +1782,10 @@ renderpixswap.o: ../../../../exports/include/X11/Xdefs.h
 renderpixswap.o: ../../../../programs/Xserver/include/os.h
 renderpixswap.o: ../../../../exports/include/X11/Xalloca.h
 renderpixswap.o: ../../../../programs/Xserver/include/xf86_ansic.h
-renderpixswap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+renderpixswap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 renderpixswap.o: ../../../../programs/Xserver/include/xf86_libc.h
 renderpixswap.o: ../../../../exports/include/X11/Xfuncs.h
-renderpixswap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+renderpixswap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 renderpixswap.o: ../../../../programs/Xserver/include/dixstruct.h
 renderpixswap.o: ../../../../programs/Xserver/include/dix.h
 renderpixswap.o: ../../../../programs/Xserver/include/gc.h
@@ -1832,10 +1832,10 @@ rensize.o: ../../../../exports/include/X11/Xdefs.h
 rensize.o: ../../../../programs/Xserver/include/os.h
 rensize.o: ../../../../exports/include/X11/Xalloca.h
 rensize.o: ../../../../programs/Xserver/include/xf86_ansic.h
-rensize.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+rensize.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 rensize.o: ../../../../programs/Xserver/include/xf86_libc.h
 rensize.o: ../../../../exports/include/X11/Xfuncs.h
-rensize.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+rensize.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 rensize.o: ../../../../programs/Xserver/include/dixstruct.h
 rensize.o: ../../../../programs/Xserver/include/dix.h
 rensize.o: ../../../../programs/Xserver/include/gc.h
@@ -1877,10 +1877,10 @@ rensizetab.o: ../../../../exports/include/X11/Xdefs.h
 rensizetab.o: ../../../../programs/Xserver/include/os.h
 rensizetab.o: ../../../../exports/include/X11/Xalloca.h
 rensizetab.o: ../../../../programs/Xserver/include/xf86_ansic.h
-rensizetab.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+rensizetab.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 rensizetab.o: ../../../../programs/Xserver/include/xf86_libc.h
 rensizetab.o: ../../../../exports/include/X11/Xfuncs.h
-rensizetab.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+rensizetab.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 rensizetab.o: ../../../../programs/Xserver/include/dixstruct.h
 rensizetab.o: ../../../../programs/Xserver/include/dix.h
 rensizetab.o: ../../../../programs/Xserver/include/gc.h
@@ -1923,10 +1923,10 @@ single2.o: ../../../../exports/include/X11/Xdefs.h
 single2.o: ../../../../programs/Xserver/include/os.h
 single2.o: ../../../../exports/include/X11/Xalloca.h
 single2.o: ../../../../programs/Xserver/include/xf86_ansic.h
-single2.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+single2.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 single2.o: ../../../../programs/Xserver/include/xf86_libc.h
 single2.o: ../../../../exports/include/X11/Xfuncs.h
-single2.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+single2.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 single2.o: ../../../../programs/Xserver/include/dixstruct.h
 single2.o: ../../../../programs/Xserver/include/dix.h
 single2.o: ../../../../programs/Xserver/include/gc.h
@@ -1970,10 +1970,10 @@ single2swap.o: ../../../../exports/include/X11/Xdefs.h
 single2swap.o: ../../../../programs/Xserver/include/os.h
 single2swap.o: ../../../../exports/include/X11/Xalloca.h
 single2swap.o: ../../../../programs/Xserver/include/xf86_ansic.h
-single2swap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+single2swap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 single2swap.o: ../../../../programs/Xserver/include/xf86_libc.h
 single2swap.o: ../../../../exports/include/X11/Xfuncs.h
-single2swap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+single2swap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 single2swap.o: ../../../../programs/Xserver/include/dixstruct.h
 single2swap.o: ../../../../programs/Xserver/include/dix.h
 single2swap.o: ../../../../programs/Xserver/include/gc.h
@@ -2017,10 +2017,10 @@ singlepix.o: ../../../../exports/include/X11/Xdefs.h
 singlepix.o: ../../../../programs/Xserver/include/os.h
 singlepix.o: ../../../../exports/include/X11/Xalloca.h
 singlepix.o: ../../../../programs/Xserver/include/xf86_ansic.h
-singlepix.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+singlepix.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 singlepix.o: ../../../../programs/Xserver/include/xf86_libc.h
 singlepix.o: ../../../../exports/include/X11/Xfuncs.h
-singlepix.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+singlepix.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 singlepix.o: ../../../../programs/Xserver/include/dixstruct.h
 singlepix.o: ../../../../programs/Xserver/include/dix.h
 singlepix.o: ../../../../programs/Xserver/include/gc.h
@@ -2065,10 +2065,10 @@ singlepixswap.o: ../../../../exports/include/X11/Xdefs.h
 singlepixswap.o: ../../../../programs/Xserver/include/os.h
 singlepixswap.o: ../../../../exports/include/X11/Xalloca.h
 singlepixswap.o: ../../../../programs/Xserver/include/xf86_ansic.h
-singlepixswap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+singlepixswap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 singlepixswap.o: ../../../../programs/Xserver/include/xf86_libc.h
 singlepixswap.o: ../../../../exports/include/X11/Xfuncs.h
-singlepixswap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+singlepixswap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 singlepixswap.o: ../../../../programs/Xserver/include/dixstruct.h
 singlepixswap.o: ../../../../programs/Xserver/include/dix.h
 singlepixswap.o: ../../../../programs/Xserver/include/gc.h
@@ -2115,10 +2115,10 @@ singlesize.o: ../../../../exports/include/X11/Xdefs.h
 singlesize.o: ../../../../programs/Xserver/include/os.h
 singlesize.o: ../../../../exports/include/X11/Xalloca.h
 singlesize.o: ../../../../programs/Xserver/include/xf86_ansic.h
-singlesize.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+singlesize.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 singlesize.o: ../../../../programs/Xserver/include/xf86_libc.h
 singlesize.o: ../../../../exports/include/X11/Xfuncs.h
-singlesize.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+singlesize.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 singlesize.o: ../../../../programs/Xserver/include/dixstruct.h
 singlesize.o: ../../../../programs/Xserver/include/dix.h
 singlesize.o: ../../../../programs/Xserver/include/gc.h
@@ -2159,10 +2159,10 @@ xfont.o: ../../../../exports/include/X11/Xdefs.h
 xfont.o: ../../../../programs/Xserver/include/os.h
 xfont.o: ../../../../exports/include/X11/Xalloca.h
 xfont.o: ../../../../programs/Xserver/include/xf86_ansic.h
-xfont.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+xfont.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 xfont.o: ../../../../programs/Xserver/include/xf86_libc.h
 xfont.o: ../../../../exports/include/X11/Xfuncs.h
-xfont.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+xfont.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 xfont.o: ../../../../programs/Xserver/include/dixstruct.h
 xfont.o: ../../../../programs/Xserver/include/dix.h
 xfont.o: ../../../../programs/Xserver/include/gc.h
@@ -2217,10 +2217,10 @@ g_disptab.o: ../../../../exports/include/X11/Xdefs.h
 g_disptab.o: ../../../../programs/Xserver/include/os.h
 g_disptab.o: ../../../../exports/include/X11/Xalloca.h
 g_disptab.o: ../../../../programs/Xserver/include/xf86_ansic.h
-g_disptab.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+g_disptab.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 g_disptab.o: ../../../../programs/Xserver/include/xf86_libc.h
 g_disptab.o: ../../../../exports/include/X11/Xfuncs.h
-g_disptab.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+g_disptab.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 g_disptab.o: ../../../../programs/Xserver/include/dixstruct.h
 g_disptab.o: ../../../../programs/Xserver/include/dix.h
 g_disptab.o: ../../../../programs/Xserver/include/gc.h
@@ -2263,10 +2263,10 @@ g_disptab_EXT.o: ../../../../exports/include/X11/Xdefs.h
 g_disptab_EXT.o: ../../../../programs/Xserver/include/os.h
 g_disptab_EXT.o: ../../../../exports/include/X11/Xalloca.h
 g_disptab_EXT.o: ../../../../programs/Xserver/include/xf86_ansic.h
-g_disptab_EXT.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+g_disptab_EXT.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 g_disptab_EXT.o: ../../../../programs/Xserver/include/xf86_libc.h
 g_disptab_EXT.o: ../../../../exports/include/X11/Xfuncs.h
-g_disptab_EXT.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+g_disptab_EXT.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 g_disptab_EXT.o: ../../../../programs/Xserver/include/dixstruct.h
 g_disptab_EXT.o: ../../../../programs/Xserver/include/dix.h
 g_disptab_EXT.o: ../../../../programs/Xserver/include/gc.h
@@ -2310,10 +2310,10 @@ g_render.o: ../../../../exports/include/X11/Xdefs.h
 g_render.o: ../../../../programs/Xserver/include/os.h
 g_render.o: ../../../../exports/include/X11/Xalloca.h
 g_render.o: ../../../../programs/Xserver/include/xf86_ansic.h
-g_render.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+g_render.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 g_render.o: ../../../../programs/Xserver/include/xf86_libc.h
 g_render.o: ../../../../exports/include/X11/Xfuncs.h
-g_render.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+g_render.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 g_render.o: ../../../../programs/Xserver/include/dixstruct.h
 g_render.o: ../../../../programs/Xserver/include/dix.h
 g_render.o: ../../../../programs/Xserver/include/gc.h
@@ -2358,10 +2358,10 @@ g_renderswap.o: ../../../../exports/include/X11/Xdefs.h
 g_renderswap.o: ../../../../programs/Xserver/include/os.h
 g_renderswap.o: ../../../../exports/include/X11/Xalloca.h
 g_renderswap.o: ../../../../programs/Xserver/include/xf86_ansic.h
-g_renderswap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+g_renderswap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 g_renderswap.o: ../../../../programs/Xserver/include/xf86_libc.h
 g_renderswap.o: ../../../../exports/include/X11/Xfuncs.h
-g_renderswap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+g_renderswap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 g_renderswap.o: ../../../../programs/Xserver/include/dixstruct.h
 g_renderswap.o: ../../../../programs/Xserver/include/dix.h
 g_renderswap.o: ../../../../programs/Xserver/include/gc.h
@@ -2406,10 +2406,10 @@ g_single.o: ../../../../exports/include/X11/Xdefs.h
 g_single.o: ../../../../programs/Xserver/include/os.h
 g_single.o: ../../../../exports/include/X11/Xalloca.h
 g_single.o: ../../../../programs/Xserver/include/xf86_ansic.h
-g_single.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+g_single.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 g_single.o: ../../../../programs/Xserver/include/xf86_libc.h
 g_single.o: ../../../../exports/include/X11/Xfuncs.h
-g_single.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+g_single.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 g_single.o: ../../../../programs/Xserver/include/dixstruct.h
 g_single.o: ../../../../programs/Xserver/include/dix.h
 g_single.o: ../../../../programs/Xserver/include/gc.h
@@ -2454,10 +2454,10 @@ g_singleswap.o: ../../../../exports/include/X11/Xdefs.h
 g_singleswap.o: ../../../../programs/Xserver/include/os.h
 g_singleswap.o: ../../../../exports/include/X11/Xalloca.h
 g_singleswap.o: ../../../../programs/Xserver/include/xf86_ansic.h
-g_singleswap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
+g_singleswap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
 g_singleswap.o: ../../../../programs/Xserver/include/xf86_libc.h
 g_singleswap.o: ../../../../exports/include/X11/Xfuncs.h
-g_singleswap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+g_singleswap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
 g_singleswap.o: ../../../../programs/Xserver/include/dixstruct.h
 g_singleswap.o: ../../../../programs/Xserver/include/dix.h
 g_singleswap.o: ../../../../programs/Xserver/include/gc.h

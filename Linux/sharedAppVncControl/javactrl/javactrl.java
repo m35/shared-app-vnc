@@ -38,7 +38,6 @@ public class javactrl extends JFrame {
     }
     
     private void initComponents() {
-        GridBagConstraints gridBagConstraints;
 
         TitleLabel = new JLabel();
         ShareStateButtonGroup = new ButtonGroup();
@@ -46,9 +45,11 @@ public class javactrl extends JFrame {
         ShareDesktopButton = new JRadioButton();
         ShareModePanel = new JPanel();
         ShareWindowsButton = new JRadioButton();
-        AddRemovePanel = new JPanel();
+        AddRemovePanel = new JPanel(new GridBagLayout());
+        c = new GridBagConstraints();
         AddButton = new JButton();
         RemoveButton = new JButton();
+        RemoveAllButton = new JButton();
 
         getContentPane().setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
 
@@ -97,8 +98,8 @@ public class javactrl extends JFrame {
 
         ShareModePanel.setLayout(new BoxLayout(ShareModePanel, BoxLayout.Y_AXIS));
         ShareModePanel.setBorder(new TitledBorder("Share Mode"));
-        ShareModePanel.setMaximumSize(new Dimension(200, 170));
-        ShareModePanel.setMinimumSize(new Dimension(200, 170));
+        ShareModePanel.setMaximumSize(new Dimension(200, 190));
+        ShareModePanel.setMinimumSize(new Dimension(200, 190));
         ShareModePanel.setAlignmentX(Component.LEFT_ALIGNMENT);
         ShareModePanel.setName("");
         ShareModePanel.setEnabled(false);
@@ -136,29 +137,47 @@ public class javactrl extends JFrame {
         ShareModePanel.add(ShareWindowsButton);
 
         AddRemovePanel.setBorder(new TitledBorder("Add/Remove Shared Windows"));
-        AddRemovePanel.setMaximumSize(new Dimension(190, 70));
-        AddRemovePanel.setMinimumSize(new Dimension(190, 70));
+        //AddRemovePanel.setMaximumSize(new Dimension(190, 90));
+        //AddRemovePanel.setMinimumSize(new Dimension(190, 90));
         AddRemovePanel.setAlignmentX(Component.LEFT_ALIGNMENT);
+	c.fill = GridBagConstraints.HORIZONTAL;
+	c.insets = new Insets(2,5,2,5);
 
-        AddButton.setText("Add");
+	c.gridx = 0;
+	c.gridy = 0;
+        AddButton.setText("Share");
         AddButton.setEnabled(true);
         AddButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 AddButtonActionPerformed(evt);
             }
         });
-        AddRemovePanel.add(AddButton);
+        AddRemovePanel.add(AddButton, c);
 
-        RemoveButton.setText("Remove");
-        RemoveButton.setMargin(new Insets(2, 5, 2, 5));
+	c.gridx = 1;
+	c.gridy = 0;
+        RemoveButton.setText("Hide");
+        //RemoveButton.setMargin(new Insets(2, 5, 2, 5));
         RemoveButton.setEnabled(true);
         RemoveButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 RemoveButtonActionPerformed(evt);
             }
         });
+        AddRemovePanel.add(RemoveButton, c);
 
-        AddRemovePanel.add(RemoveButton);
+	c.gridx = 0;
+	c.gridy = 1;
+	c.gridwidth = 2;
+        RemoveAllButton.setText("Hide All");
+        //RemoveAllButton.setMargin(new Insets(2, 5, 2, 5));
+        RemoveAllButton.setEnabled(true);
+        RemoveAllButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                RemoveAllButtonActionPerformed(evt);
+            }
+        });
+        AddRemovePanel.add(RemoveAllButton, c);
 
         ShareModePanel.add(AddRemovePanel);
 
@@ -223,6 +242,7 @@ public class javactrl extends JFrame {
     private void enableAddRemoveButtons(boolean flag) {
         AddButton.setEnabled(flag);
         RemoveButton.setEnabled(flag);
+        RemoveAllButton.setEnabled(flag);
     }
     
     private void ShareWindowsButtonActionPerformed(ActionEvent evt) {
@@ -243,6 +263,11 @@ public class javactrl extends JFrame {
     private void RemoveButtonActionPerformed(ActionEvent evt) {
         
         execCommand("hide");
+    }
+
+    private void RemoveAllButtonActionPerformed(ActionEvent evt) {
+        
+        execCommand("hideall");
     }
 
     private void AddButtonActionPerformed(ActionEvent evt) {
@@ -333,8 +358,10 @@ public class javactrl extends JFrame {
     private JRadioButton ShareWindowsButton;
     private JButton AddButton;
     private JButton RemoveButton;
+    private JButton RemoveAllButton;
     private JPanel ShareModePanel;
     private JPanel AddRemovePanel;
+    private GridBagConstraints c;
     private Properties defaultValues;
     private static String displayName = ":0";
     private static String passwdFile = null; //"passwd";
