@@ -501,7 +501,7 @@ class Dispatcher extends Thread {
         break;
       case RfbProto.EncodingBlackOut:
         //System.out.println("BlackOut " + rx + " " + ry + " " + rw+ " "+  rh);
-        handleBlackOutRect(rx, ry, rw, rh);
+        if (rfb.options.getUseBlackOut() == true) handleBlackOutRect(rx, ry, rw, rh);
         break;
       default:
         throw new Exception("Unknown RFB rectangle encoding " +

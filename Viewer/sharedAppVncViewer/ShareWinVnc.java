@@ -88,7 +88,7 @@ class ShareWinVnc
       }
     } while(tries++ < 5);
 
-    System.out.println("listening on " + (5500+tries));
+    System.out.println("listening on port " + (5500+tries));
 
     
     while (true)
@@ -182,6 +182,9 @@ class ShareWinVnc
         } else if (argv[i].equals("-multicursor")) {
           if (i + 1 > argv.length) usage();
           options.setMultiCursor(Integer.parseInt(argv[++i]));
+        } else if (argv[i].equals("-enable-blackout")) {
+          System.out.println("Enabling blackout regions");
+          options.setUseBlackOut(true);
         }
 
       }
@@ -214,7 +217,7 @@ class ShareWinVnc
 
   private void usage()
   {
-    System.out.println("SharedWinVnc -host <HOST> -port <port> -xoff <xoffset> -yoff <yoffset> -multicursor <cursornum> [-normalVNC]");
+    System.out.println("SharedWinVnc -host <HOST> -port <port> -xoff <xoffset> -yoff <yoffset> -multicursor <cursornum> -enable-blackout [-normalVNC]");
   }
 
 
