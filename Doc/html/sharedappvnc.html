@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)http://www.cs.princeton.edu/~gwallace/shareappvnc/sharedappvnc.html -->
+<HTML><HEAD><TITLE>SharedAppVNC</TITLE>
+<META http-equiv=Content-Language content=en-us>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="Microsoft FrontPage 4.0" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId></HEAD>
+<BODY>
+<H2 align=left>SharedAppVNC</H2>
+<UL>
+  <LI><a href="#description">Description</a> 
+
+  <LI><a href="#screenshots">ScreenShots</a> 
+
+  <LI><a href="http://sourceforge.net/projects/shared-app-vnc/">Download</a> 
+
+  <LI>Platform Dependent Instructions
+  <UL>
+  <li><a href="sharedappvnc-linux.html">Instructions for Linux</a></li>
+  <li><a href="sharedappvnc-osx.html">Instructions for Mac OS X</a></li>
+  <li>Instructions for Windows - coming soon</li>
+  </UL>
+  <li><a href="#future">Future Work</a></li>
+  <li><a href="#acknowledgements">Acknowledgements</a></li>
+  <li><a href="#contact">Contact</a></li>
+</UL>
+<P>&nbsp;</P>
+<H3><a name="description">Description</a></H3>
+<P>SharedAppVnc is a remote collaboration tool. It allows application sharing
+between remote participants. In a typical usage scenario, two or more remote
+collaborators would run SharedAppVnc on their desktop computers while
+participating in a phone or conference call. After establishing SharedAppVnc
+connections, possibly through ssh-tunnels, they would be able to share
+(replicate) windows between the remote desktops. The shared windows could
+optionally be controlled by the remote viewers, or they could be set to
+view-only.</P>
+<P>SharedAppVNC is based on VNC (Virtual Network Computer), but with a modified
+VNC protocol that allows for window sharing. The main advantage of SharedAppVnc
+over traditional VNC is its ability to share individual windows rather than the
+entire desktop. Users typically have some applications which should remain 
+private, such as email, and some applications they would like to share. Normal 
+VNC is only able to share a user's entire desktop 
+and thus does not lend itself well to a combination of shared and private data.</P>
+<P>SharedAppVnc has two components: a server for sharing windows and a client
+for viewing windows. The
+SharedAppVnc Server runs on a collaborators desktop computer and allows them to select which windows
+from the desktop to share. Only windows they select will be visible to the other
+collaborators. The SharedAppVnc Viewer runs on the other collaborator's
+computers and allows them to receive the shared windows. Typically collaborators
+will run both the Server and Viewer so that they can share and receive windows.
+One nice feature of the SharedAppVnc Viewer is that it puts each received window
+in its own frame which can be resized or positioned independently of the size or 
+position of windows on the server or the other clients. Both the Server and
+Viewer can listen for or initiate connections.</P>
+<P>SharedAppVnc versions are currently available for&nbsp; Linux and Mac OS X
+platforms. We are in the process of adding support for Windows OS.</P>
+<h3><a name="screenshots">ScreenShots</a></h3>
+<P>Here is a screenshot of SharedAppVnc running on Mac OS X. It is sharing a
+Safari browser and Finder window. The second screenshot below is the viewer
+program running on Linux. It is showing the content shared from the Mac server.
+Notice that the viewer computer can rearrange the window positions regardless of
+the positions on the server.</P>
+<P align="center"><img border="0" src="images/osx-share.jpg" width="640" height="481"><br>
+<font face="Arial Narrow"><b>Fig 1: S</b></font><b><font face="Arial Narrow">haredAppVnc
+Server running on Mac OS X - Safari browser and Finder window are shared</font></b></P>
+<P align="center"><img border="0" src="images/linux-rcv.jpg" width="640" height="480"><br>
+<b><font face="Arial Narrow">Fig 2: SharedAppVnc Viewer running on Linux. It is
+receiving a Safari browser and Finder window from Mac OS X. Note: shared windows
+can be moved or sized as needed without affecting the server window size or
+position.</font></b></P>
+<h3>Downloads</h3>
+<P>SharedAppVnc source code and binaries can be downloaded from sourceforge.net at <a href="http://sourceforge.net/projects/shared-app-vnc/">http://sourceforge.net/projects/shared-app-vnc/</a>.</P>
+<h3>&nbsp;</h3>
+<h3>Platform Dependent Instructions</h3>
+<ul>
+  <li><a href="sharedappvnc-linux.html">Instructions for Linux</a></li>
+  <li><a href="sharedappvnc-osx.html">Instructions for Mac OS X</a></li>
+  <li>Instructions for Windows - coming soon.</li>
+</ul>
+<H3>&nbsp;</H3>
+<H3><a name="future">Future Work</a></H3>
+<ul>
+  <li>Porting SharedAppVncServer to Windows.</li>
+  <li>Better user interface.</li>
+  <li>Optimizing performance.</li>
+</ul>
+<P>&nbsp;</P>
+<h3><a name="acknowledgements">Acknowledgements</a></h3>
+<P>This project was developed by Kai Li's research group at <a href="http://www.cs.princeton.edu">Princeton
+University Computer Science Department</a> and funded by the <a href="http://www.fusiongrid.org/">SciDAC
+FusionGrid</a> project.</P>
+<P>Lead Developer: Grant Wallace <img border="0" src="images/email.jpg" width="200" height="24" Align="TOP"></P>
+<h3><a name="contact">Bugs and Requests</a>&nbsp;&nbsp;</h3>
+<p>Please use the Sourceforge &quot;Tracker&quot; functionality to report bugs
+or requests <a href="http://sourceforge.net/projects/shared-app-vnc/">http://sourceforge.net/projects/shared-app-vnc/</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P></BODY></HTML>
