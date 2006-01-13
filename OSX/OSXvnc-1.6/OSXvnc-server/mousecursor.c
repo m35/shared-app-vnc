@@ -107,7 +107,7 @@ void rfbCheckForCursorChange() {
     //rfbLog("Check For Cursor Change");
     // First Let's see if we have new info on the pasteboard - if so we'll send an update to each client
     if (lastCursorSeed != CGSCurrentCursorSeed() || !CGPointEqualToPoint(lastCursorPosition, cursorLoc)) {
-        rfbClientIteratorPtr iterator = rfbGetClientIterator();
+        rfbClientIteratorPtr iterator;
         rfbClientPtr cl;
 
         // Record first in case another change occurs after notifying clients
@@ -115,6 +115,7 @@ void rfbCheckForCursorChange() {
         lastCursorPosition = cursorLoc;
 
         // Notify each client
+		iterator = rfbGetClientIterator();
         while ((cl = rfbClientIteratorNext(iterator)) != NULL) {
             if (rfbShouldSendNewCursor(cl) || (rfbShouldSendNewPosition(cl)))
                 pthread_cond_signal(&cl->updateCond);

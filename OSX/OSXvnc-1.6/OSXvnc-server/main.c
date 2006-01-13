@@ -287,10 +287,13 @@ void rfbCheckForScreenResolutionChange() {
         iterator = rfbGetClientIterator();
         // Disconnect Existing Clients
         while ((cl = rfbClientIteratorNext(iterator))) {
-            pthread_mutex_lock(&cl->updateMutex);
+            pthread_mutex_lock(&cl->updateMutex); 
             // Keep locked until after screen change
         }
-        rfbReleaseClientIterator(iterator);
+		
+		// GRW - this is bad, release clientIterator while updateMutex is locked
+		// Another thread could grab the clientIterator and block on updateMutex causing deadlock
+        rfbReleaseClientIterator(iterator); 
 
         rfbScreenInit();
 
@@ -1158,7 +1161,11 @@ CG_EXTERN CGError CGSetLocalEventsFilterDuringSupressionState(CGEventFilterMask 
     // Presumable because it's running a Carbon Event loop
 	
 	// GRW SharedAppVnc - the loop below has been moved to a thread
+#if 0 // Don't use monitor thread - causes hang after sleep. We aren't using pasterboard
+	  // screenres change, or keyboard layout change. Cursor change is handled by clients.
 	pthread_create(&monitor_thread, NULL, monitorRun, NULL);
+#endif
+	
 	/* -- moved to a thread --
     if (1) {
         BOOL keepRunning = TRUE;
