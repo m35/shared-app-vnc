@@ -3,12 +3,19 @@
         {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
         {
             ACTIONS = {
+                actionCloseTunnel = id; 
                 actionConnectToClient = id; 
                 actionDisconnectClient = id; 
                 actionHideAll = id; 
                 actionHideSelected = id; 
                 actionSelectWindow = id; 
                 actionShowPreferencePanel = id; 
+                actionShowSshTunnelPanel = id; 
+                actionStartViewer = id; 
+                actionStopViewer = id; 
+                actionTunnelCancel = id; 
+                actionTunnelConnect = id; 
+                changeAutorunViewer = id; 
                 changeDimming = id; 
                 changeDisableRemoteEvents = id; 
                 changeLimitLocal = id; 
@@ -21,20 +28,30 @@
             CLASS = SharedApp; 
             LANGUAGE = ObjC; 
             OUTLETS = {
+                buttonAutorunViewer = NSButton; 
                 buttonDisableRemoteEvents = NSButton; 
                 buttonEnable = NSButton; 
                 buttonLimitToLocalConnections = NSButton; 
                 buttonPreventDimming = NSButton; 
                 buttonPreventSleeping = NSButton; 
+                buttonSSHGatewayOnly = NSButton; 
                 buttonSelectToShare = NSButton; 
                 buttonSwapMouseButtons = NSButton; 
                 buttonUnshare = NSButton; 
                 buttonUnshareAll = NSButton; 
                 comboboxConnectToClient = NSComboBox; 
                 preferencePanel = NSPanel; 
+                radioButtonTunnelType = NSMatrix; 
+                sshTunnelPanel = NSPanel; 
                 tableConnectedClients = NSTableView; 
                 tableSharedWindows = NSTableView; 
+                tableSshTunnels = NSTableView; 
+                textfieldHostString = NSTextField; 
+                textfieldLocalPort = NSTextField; 
                 textfieldPassword = NSTextField; 
+                textfieldRemotePort = NSTextField; 
+                textfieldUsername = NSTextField; 
+                textfieldViewerStatus = NSTextField; 
                 window = NSWindow; 
             }; 
             SUPERCLASS = NSObject; 

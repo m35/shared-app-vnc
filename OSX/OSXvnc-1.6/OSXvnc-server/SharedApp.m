@@ -24,9 +24,11 @@
 //  Copyright 2005 Princeton University. All rights reserved.
 //
 
+
 #include <pthread.h>
 #import "SharedApp.h"
 #import "SharedAppClient.h"
+#import "SharedAppTunnel.h"
 #include "CGS-Private.h"
 
 extern int CGSCurrentCursorSeed(void);
@@ -40,15 +42,20 @@ extern ScreenRec hackScreen;
 
 #define preferences [NSUserDefaults standardUserDefaults]
 
+//NSString *ViewerIdentifierTagEnvironmentKey = @"SharedAppViewerTag";
+
 NSString *DKenableSharedApp = @"EnableAppSharing";
 NSString *DKdisableRemoteEvents = @"DisableRemoteEvents";
 NSString *DKlimitToLocalConnections = @"LimitToLocalConnections";
 NSString *DKswapMouse = @"SwapMouseButtons23";
 NSString *DKpreventDimming = @"PreventDisplayDimming";
 NSString *DKpreventSleep = @"PreventComputerSleeping";
+NSString *DKautorunViewer = @"AutorunViewer";
 NSString *DKpasswordFile = @"PasswordFile";
 NSString *DKrecentClientsArray = @"RecentClients";
 NSString *DKautosaveName = @"SharedAppVncWindow";
+NSString *DKviewerLogFile = @"ViewerLogFile";
+
 
 @implementation SharedApp
 
@@ -63,11 +70,14 @@ NSString *DKautosaveName = @"SharedAppVncWindow";
 	[defaultPrefs setObject:[NSNumber numberWithBool:NO] forKey:DKswapMouse];
 	[defaultPrefs setObject:[NSNumber numberWithBool:NO] forKey:DKpreventDimming];
 	[defaultPrefs setObject:[NSNumber numberWithBool:NO] forKey:DKpreventSleep];
+	[defaultPrefs setObject:[NSNumber numberWithBool:YES] forKey:DKautorunViewer];
 	//[defaultPrefs setObject:[NSNumber numberWithBool:NO] forKey:DKpreventScreenSaver];
-    [defaultPrefs setObject:@"" forKey:@"PasswordFile"];
-    
+    [defaultPrefs setObject:@"" forKey:DKpasswordFile];
+	[defaultPrefs setObject:@"" forKey:DKviewerLogFile];
+		
 // register the dictionary of defaults
     [preferences registerDefaults: defaultPrefs];
+	
 }
 
 - (id)init
@@ -79,6 +89,7 @@ NSString *DKautosaveName = @"SharedAppVncWindow";
 	windowsToBeClosedArray = [[NSMutableArray alloc] init];
 	connectedClientsArray = [[NSMutableArray alloc] init];
 	prevClientsArray = [[NSMutableArray alloc] init];
+	tunnelArray = [[NSMutableArray alloc] init];
 	setShareApp(self);
 
 	return self;
@@ -86,6 +97,8 @@ NSString *DKautosaveName = @"SharedAppVncWindow";
 
 -(void)dealloc
 {
+	if (viewerTask) [viewerTask terminate];
+	[viewerTask release];
 	[window saveFrameUsingName:DKautosaveName];
 	[sharedWindowsArray removeAllObjects];
 	[sharedWindowsArray release];
@@ -98,17 +111,46 @@ NSString *DKautosaveName = @"SharedAppVncWindow";
 	[arrayLock release];
 	[pixelLock release];
 	[passwordFile release];
+	[viewerLogFile release];
 	[super dealloc];
 }
 
+
+- (void) applicationWillTerminate: (NSNotification *) notification {
+	NSLog(@"applicationWillTerminate");
+    [self actionStopViewer: self];
+	
+	// kill ssh tunnels
+	SharedAppTunnel* tunnel;
+	NSEnumerator *tunnelEnumerator = [tunnelArray objectEnumerator];
+    while (tunnel = [tunnelEnumerator nextObject]) 
+	{
+		if (tunnel != nil) {
+			NSTask *task = [tunnel task];
+			if (task) [task terminate];
+		}
+	}	
+}
 
 - (void)awakeFromNib
 {
 	[window setFrameAutosaveName:DKautosaveName];
 	[window setFrameUsingName:DKautosaveName];
-
-    [self loadUserDefaults:self];
-
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(applicationWillTerminate:)
+												 name:NSApplicationWillTerminateNotification
+											   object:NSApp];
+	[self loadUserDefaults:self];
+	
+	// Make this class the root one for AppleEvent calls
+    //[[ NSScriptExecutionContext sharedScriptExecutionContext] setTopLevelObject: self ];
+	
+	pathToAuthentifier = [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:
+		@"passwordDialog.app/Contents/MacOS/passwordDialog"] retain];
+		
+	if (pathToAuthentifier) NSLog(@"PATH TO AUTH: %@", pathToAuthentifier);
+	else NSLog(@"PathToAuth NIL");
 }
 
 - (void) loadUserDefaults: sender 
@@ -155,6 +197,28 @@ NSString *DKautosaveName = @"SharedAppVncWindow";
             break;
         }
 	}
+	
+	NSArray *viewerLogFiles = [NSArray arrayWithObjects:
+        [[NSUserDefaults standardUserDefaults] stringForKey:DKviewerLogFile],
+        @"/var/log/sharedAppVncViewer.log",
+		@"~/Library/Logs/sharedAppVncViewer.log",
+        [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"sharedAppVncViewer.log"],
+        @"/tmp/sharedAppVncViewer.log",
+        nil];
+    NSEnumerator *logEnumerators = [viewerLogFiles objectEnumerator];
+
+	
+    // Find first writable location for the log file
+    while (viewerLogFile = [logEnumerators nextObject]) {
+        viewerLogFile = [viewerLogFile stringByStandardizingPath];
+        if ([viewerLogFile length] && [self canWriteToFile:viewerLogFile]) {
+            [viewerLogFile retain];
+			[preferences setObject:viewerLogFile forKey:DKviewerLogFile];
+            break;
+        }
+    }
+	
+	[self setAutorunViewer:[preferences boolForKey:DKautorunViewer]];
 
 }
 
@@ -166,7 +230,7 @@ NSString *DKautosaveName = @"SharedAppVncWindow";
         return [[NSFileManager defaultManager] isWritableFileAtPath:[path stringByDeletingLastPathComponent]];
 }
 
-
+// Preferences Panel Functions
 - (IBAction) actionShowPreferencePanel:(id)sender
 {
 	NSPoint origin = [window frame].origin;
@@ -175,7 +239,6 @@ NSString *DKautosaveName = @"SharedAppVncWindow";
 	[preferencePanel setFrameOrigin:origin];
 	[preferencePanel orderFront:self];
 }
-
 
 
 -(IBAction) changePassword:(id)sender
@@ -200,6 +263,7 @@ NSString *DKautosaveName = @"SharedAppVncWindow";
     }
 }
 
+
 -(IBAction) changeDimming:(id)sender
 {
 	[self setNoDimming:[buttonPreventDimming state]];
@@ -222,6 +286,25 @@ NSString *DKautosaveName = @"SharedAppVncWindow";
 	[buttonPreventDimming setState:flag];
 	[preferences setBool:flag forKey:DKpreventDimming];
 	
+}
+
+-(IBAction) changeAutorunViewer:(id)sender
+{
+	BOOL flag = [buttonAutorunViewer state];
+	[preferences setBool:flag forKey:DKautorunViewer];
+	//[self setAutorunViewer:[buttonAutorunViewer state]];
+}
+
+-(void) setAutorunViewer:(BOOL)flag
+{
+	if (flag)
+	{
+		[self actionStartViewer:self];
+	} else {
+		[self actionStopViewer:self];
+	}
+	[buttonAutorunViewer setState:flag];
+	[preferences setBool:flag forKey:DKautorunViewer];
 }
 
 -(IBAction) changeSleep:(id)sender
@@ -370,6 +453,7 @@ NSString *DKautosaveName = @"SharedAppVncWindow";
 }
 
 
+// Main Window Functions
 - (IBAction) actionConnectToClient: (id)sender
 {
 	rfbClientPtr cl = nil;
@@ -443,6 +527,263 @@ NSString *DKautosaveName = @"SharedAppVncWindow";
 	[tableConnectedClients reloadData];
 }
 
+- (IBAction) actionStartViewer: (id)sender
+{
+    if (!viewerTask) 
+	{
+		NSString *executable = @"/usr/bin/java";
+        NSString *viewerPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"Contents/Resources/shareWinVncViewer.jar"];
+		NSMutableArray *argv = [[NSMutableArray alloc] init];
+		[argv addObject:@"-jar"];
+		[argv addObject:viewerPath];
+		
+		if (![[NSFileManager defaultManager] fileExistsAtPath:viewerLogFile]) {
+            [[NSFileManager defaultManager] createFileAtPath:viewerLogFile contents:nil attributes:nil];
+        }
+        else { // Clear it
+            serverOutput = [NSFileHandle fileHandleForUpdatingAtPath:viewerLogFile];
+            [serverOutput truncateFileAtOffset:0];
+            [serverOutput closeFile];
+        }
+        serverOutput = [[NSFileHandle fileHandleForUpdatingAtPath:viewerLogFile] retain];
+
+		NSLog(@"Starting viewer: %@ %@ %@", executable, [argv objectAtIndex:0], [argv objectAtIndex:1]);
+		NSLog(@"Viewer Logfile %@", viewerLogFile);
+        
+		viewerTask = [[NSTask alloc] init];
+        [viewerTask setLaunchPath:executable];
+        [viewerTask setArguments:argv];
+        [viewerTask setStandardOutput:serverOutput];
+        [viewerTask setStandardError:serverOutput];
+		
+		/*
+		NSMutableDictionary *environment = [NSMutableDictionary dictionaryWithDictionary:[viewerTask environment]];
+		[environment setObject:@"" forKey:ViewerIdentifierTagEnvironmentKey];
+		[viewerTask setEnvironment:environment];		
+		*/
+		
+        [viewerTask launch];
+        
+        [[NSNotificationCenter defaultCenter] addObserver: self
+                                                 selector: NSSelectorFromString(@"viewerStopped:")
+                                                     name: NSTaskDidTerminateNotification
+                                                   object: viewerTask];
+        
+		[textfieldViewerStatus setStringValue:@"Viewer Running"];
+
+    }
+	
+}
+
+
+- (IBAction) actionStopViewer: (id)sender
+{
+    if (viewerTask != nil) {
+        [viewerTask terminate];
+    } else {
+		[textfieldViewerStatus setStringValue:@"Viewer Stopped"];
+	}
+	
+	
+/*	
+	NSEnumerator *processEnumerator = [[AGProcess userProcesses] objectEnumerator];
+    AGProcess *process = nil;
+	NSLog(@"checking processes");
+    
+    while (process = [processEnumerator nextObject]) {
+		NSLog(@"compare to %@", [process command]);
+        if ([@"java" isEqualToString:[process command]]) {
+            NSDictionary *environment = [process environment];
+            
+            if ([environment valueForKey:ViewerIdentifierTagEnvironmentKey]) {
+                NSLog(@"Killing viewer with pid %i.", [process processIdentifier]);
+				
+                if ([process terminate]) {
+                    NSLog(@"Killed viewer.");
+                }
+                else {
+					NSLog(@"Failed to kill viewer.");
+                }
+            }
+        }
+    }
+*/
+}
+
+
+- (void) viewerStopped: (NSNotification *) aNotification {
+    [[NSNotificationCenter defaultCenter] removeObserver: self
+                                                    name: NSTaskDidTerminateNotification
+                                                  object: viewerTask];
+
+	[textfieldViewerStatus setStringValue:@"Viewer Stopped"];
+    
+    [viewerTask release];
+    viewerTask = nil;
+    [serverOutput closeFile];
+    [serverOutput release];
+    serverOutput = nil;
+	
+}
+
+
+// Ssh Tunnel Panel Functions
+- (IBAction) actionShowSshTunnelPanel:(id)sender
+{
+	NSPoint origin = [window frame].origin;
+	origin.x += 10;
+	origin.y += 10;
+	[sshTunnelPanel setFrameOrigin:origin];
+	[sshTunnelPanel orderFront:self];
+}
+
+- (IBAction) actionCloseTunnel: (id)sender
+{
+	int rowIndex = [tableSshTunnels selectedRow];
+	if (rowIndex == -1) return;
+	
+	SharedAppTunnel *tunnel = [tunnelArray objectAtIndex:rowIndex];
+	NSLog(@"Close Tunnel: %@", [tunnel name]);
+    NSTask *task = [tunnel task];
+	if (task) [task terminate];
+}
+
+
+- (IBAction) actionTunnelConnect: (id)sender
+{
+	NSString *host = [textfieldHostString stringValue];
+	NSArray *hostAr = [host componentsSeparatedByString:@":"];
+	NSString *username = [textfieldUsername stringValue];
+	int lport = [textfieldLocalPort intValue];
+	int rport = [textfieldRemotePort intValue];
+	BOOL bSshGatewayOnly = ([buttonSSHGatewayOnly state] == NSOffState) ? FALSE : TRUE;
+	BOOL bOutgoingTunnel = ([radioButtonTunnelType selectedColumn] == 0) ? TRUE : FALSE;
+	NSString *connDirection = ([radioButtonTunnelType selectedColumn] == 0) ? @"-L" : @"-R";
+	NSPoint origin = [window frame].origin;
+	NSString *tunnelId = @"12";
+	
+	NSString *connectString = @"";
+	NSString *executable = @"/usr/bin/ssh";
+	NSMutableArray *argv = [[NSMutableArray alloc] init];
+
+	int count = [hostAr count];
+	int i;
+	for (i=0; i<count; i++)
+	{
+		int port1, port2;
+		if (bOutgoingTunnel)
+		{ 
+			port1 = lport;
+			port2 = (i<count-1) ? lport : rport;
+		} else {
+			port1 = (i==0) ? lport : rport;
+			port2 = rport;
+		}
+		
+		if (i>0) [argv addObject:executable];
+		[argv addObject:@"-t"];
+		[argv addObject:connDirection];
+		[argv addObject:[NSString stringWithFormat:@"%d:localhost:%d", port1, port2]];
+		[argv addObject:[NSString stringWithFormat:@"%@@%@", username, [hostAr objectAtIndex:i]]];
+		//connectString = [connectString stringByAppendingFormat:@"-t %@ %d:localhost:%d %@@%@", 
+		//	connDirection, port1, port2, username, [hostAr objectAtIndex:i]];
+	}
+	
+	NSEnumerator *enumerator = [argv objectEnumerator];
+	NSString *arg;
+	while (arg = [enumerator nextObject]) 
+	{
+		connectString = [connectString stringByAppendingFormat:@"%@ ", arg];
+	}
+	
+	NSString *tunnelName = [NSString stringWithFormat:@"%d:...%@:%d", 
+			lport, [hostAr lastObject], rport];
+	
+	//NSLog(@"Starting an SSH Tunnel(%d): %d:%@:%d gonly(%d) username(%@)", 
+	//	  bOutgoingTunnel, lport, host, rport, bSshGatewayOnly, username);
+	
+
+	NSLog(@"SSH Tunnel: %@ %@", executable, connectString);
+	
+    NSMutableDictionary *environment = [ NSMutableDictionary dictionaryWithDictionary: [[ NSProcessInfo processInfo ] environment ]];
+	[ environment removeObjectForKey: @"SSH_AGENT_PID" ];
+	[ environment removeObjectForKey: @"SSH_AUTH_SOCK" ];
+	[ environment setObject: pathToAuthentifier forKey: @"SSH_ASKPASS" ];
+	[ environment setObject:@":0" forKey:@"DISPLAY" ];
+	[ environment setObject: tunnelName forKey: @"TUNNEL_NAME" ];
+	[ environment setObject: tunnelId forKey: @"TUNNEL_ID" ];
+	[ environment setObject: [NSString stringWithFormat:@"%f",origin.x] forKey: @"XOFFSET" ];
+	[ environment setObject: [NSString stringWithFormat:@"%f",origin.y] forKey: @"YOFFSET" ];
+	
+	NSTask *sshTunnelTask = [[NSTask alloc] init];
+	[sshTunnelTask setLaunchPath:executable];
+	[sshTunnelTask setArguments:argv];
+    [sshTunnelTask setEnvironment: environment];
+	[sshTunnelTask setStandardError: [[NSPipe alloc] init]];
+	[sshTunnelTask launch];
+	
+	// Add to table	
+	SharedAppTunnel *tunnel = [[SharedAppTunnel alloc] initWithTask:sshTunnelTask
+															   name:tunnelName 
+																tag:tunnelId
+														  direction:(bOutgoingTunnel)?@"OUT":@"IN"];
+	[arrayLock lock];
+	[tunnelArray addObject:tunnel];
+	[arrayLock unlock];
+	
+	[[NSNotificationCenter defaultCenter] addObserver: self
+											 selector: NSSelectorFromString(@"tunnelStopped:")
+												 name: NSTaskDidTerminateNotification
+											   object: sshTunnelTask];
+	
+	[sshTunnelPanel orderOut:self];
+	
+	[tableSshTunnels reloadData];
+}
+
+
+- (IBAction) actionTunnelCancel: (id)sender
+{
+	[sshTunnelPanel orderOut:self];
+}
+
+
+- (void) tunnelStopped: (NSNotification *) aNotification 
+{
+	NSTask *task = [aNotification object];
+	
+    [[NSNotificationCenter defaultCenter] removeObserver: self
+                                                    name: NSTaskDidTerminateNotification
+                                                  object: task];
+
+	SharedAppTunnel* tunnel;
+	NSEnumerator *enumerator = [[NSArray arrayWithArray:tunnelArray] objectEnumerator];
+	while (tunnel = [enumerator nextObject]) 
+	{
+		if ([tunnel task] == task)
+		{
+			[arrayLock lock];
+			[tunnelArray removeObject:tunnel];
+			[arrayLock unlock];
+			break;
+		}
+	}
+	
+	if (task)
+	{
+		NSFileHandle *ferr = [[task standardError] fileHandleForReading];
+		NSString *errStr = [[NSString alloc] initWithData:[ferr readDataToEndOfFile]
+												 encoding:NSASCIIStringEncoding];
+		
+		NSRunAlertPanel(@"SSH Tunnel Error!", @"%@", @"OK", nil, nil, errStr);
+		NSLog(@"Task Error Msg: %@", errStr);
+		
+		[task release];
+		task = nil;
+	}
+	
+	[tableSshTunnels reloadData];	
+}
 
 
 - (IBAction)actionSelectWindow:(id)sender {
@@ -587,6 +928,10 @@ NSString *DKautosaveName = @"SharedAppVncWindow";
 	{
 		return [connectedClientsArray count];
 	}
+	else if (table == tableSshTunnels)
+	{
+		return [tunnelArray count];
+	}
 	else return 0;
 }
 
@@ -600,7 +945,8 @@ NSString *DKautosaveName = @"SharedAppVncWindow";
 			
 	if (table == tableSharedWindows) dataSource = sharedWindowsArray;
 	else if (table == tableConnectedClients) dataSource = connectedClientsArray;
-			 
+	else if (table == tableSshTunnels) dataSource = tunnelArray;
+	
 	count = [dataSource count];
     if (count > 0)
     {
@@ -610,6 +956,7 @@ NSString *DKautosaveName = @"SharedAppVncWindow";
 
     return theValue;
 }
+
 
 -(void) resetClientRequestedArea
 {

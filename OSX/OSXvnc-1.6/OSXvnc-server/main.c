@@ -940,10 +940,13 @@ void rfbShutdown(void) {
 }
 
 static void rfbShutdownOnSignal(int signal) {
-    rfbLog("OSXvnc-server received signal: %d\n", signal);
-    rfbShutdown();
+	NSLog(@"Trapped Signal %d -- Terminating", signal);
+    [NSApp terminate:NSApp];
+	
+    //rfbLog("OSXvnc-server received signal: %d\n", signal);
+    //rfbShutdown();
 
-    exit (signal);
+    //exit (signal);
 }
 
 void daemonize( void ) {
@@ -1058,11 +1061,23 @@ int main(int argc, char *argv[]) {
 	// daemonize();
 
     // Let's not shutdown on a SIGHUP at some point perhaps we can use that to reload configuration
+	/*
     signal(SIGHUP, SIG_IGN);
     signal(SIGPIPE, SIG_IGN);
     signal(SIGTERM, rfbShutdownOnSignal);
     signal(SIGINT, rfbShutdownOnSignal);
     signal(SIGQUIT, rfbShutdownOnSignal);
+	*/
+	
+	signal(SIGHUP, SIG_IGN);
+    signal(SIGPIPE, SIG_IGN);
+    signal(SIGABRT, rfbShutdownOnSignal);
+    signal(SIGINT, rfbShutdownOnSignal);
+    signal(SIGQUIT, rfbShutdownOnSignal);
+    signal(SIGBUS, rfbShutdownOnSignal);
+    signal(SIGSEGV, rfbShutdownOnSignal);
+    signal(SIGTERM, rfbShutdownOnSignal);
+    signal(SIGTSTP, rfbShutdownOnSignal);
 
     // This fix should be in CGDirectDisplay.h
 #undef kCGDirectMainDisplay

@@ -38,55 +38,78 @@ extern Bool rfbDisableScreenSaver;
 @interface SharedApp : NSObject {
 	IBOutlet NSWindow *window;
 	IBOutlet NSPanel  *preferencePanel;
-    // actions
+	IBOutlet NSPanel  *sshTunnelPanel;
+    // Main window
 	IBOutlet NSButton *buttonUnshare;
 	IBOutlet NSButton *buttonUnshareAll;
 	IBOutlet NSButton *buttonSelectToShare;
 	IBOutlet NSTableView *tableSharedWindows;
 	IBOutlet NSTableView *tableConnectedClients;
 	IBOutlet NSComboBox *comboboxConnectToClient;
-	// preferences
+	// preferences panel
 	IBOutlet NSButton *buttonEnable;
 	IBOutlet NSButton *buttonPreventDimming;
     IBOutlet NSButton *buttonPreventSleeping;
-	//IBOutlet NSButton *buttonPreventScreenSaver;
+	IBOutlet NSButton *buttonAutorunViewer;
     IBOutlet NSButton *buttonSwapMouseButtons;
     IBOutlet NSButton *buttonDisableRemoteEvents;
     IBOutlet NSButton *buttonLimitToLocalConnections;
 	IBOutlet NSTextField *textfieldPassword;
-    //PreferenceController *preferenceController;
+	IBOutlet NSTextField *textfieldViewerStatus;
+    // ssh tunnel panel
+	IBOutlet NSMatrix *radioButtonTunnelType;
+	IBOutlet NSTextField *textfieldLocalPort;
+	IBOutlet NSTextField *textfieldRemotePort;
+	IBOutlet NSTextField *textfieldHostString;
+	IBOutlet NSTextField *textfieldUsername;
+	IBOutlet NSButton *buttonSSHGatewayOnly;
+	IBOutlet NSTableView *tableSshTunnels;
     // data
 	NSString *passwordFile;
+	NSString *viewerLogFile;
 	NSLock *arrayLock;
 	NSLock *pixelLock;
 	NSMutableArray *sharedWindowsArray;
 	NSMutableArray *windowsToBeClosedArray;
 	NSMutableArray *connectedClientsArray;
 	NSMutableArray *prevClientsArray;
+	NSMutableArray *tunnelArray;
+	NSTask *viewerTask;
+    NSFileHandle *serverOutput;
+    NSString *pathToAuthentifier;
 	DTFullScreenWindow	*cover_window;
 	BOOL enabled;
 }
 
 // actions
+// Main window
 - (IBAction) actionShowPreferencePanel:(id)sender;
+- (IBAction) actionShowSshTunnelPanel:(id)sender;
 - (IBAction) actionSelectWindow: (id)sender;
 - (IBAction) actionHideSelected: (id)sender;
 - (IBAction) actionHideAll: (id)sender;
 - (IBAction) actionConnectToClient: (id)sender;
 - (IBAction) actionDisconnectClient: (id)sender;
-
-// preferences
+- (IBAction) actionStartViewer: (id)sender;
+- (IBAction) actionStopViewer: (id)sender;
+- (IBAction) actionCloseTunnel: (id)sender;
+// preferences panel
 -(IBAction) changeSharing:(id)sender;
 -(IBAction) changePassword:(id)sender;
 -(IBAction) changeDimming:(id)sender;
 -(IBAction) changeSleep:(id)sender;
-//-(IBAction) changeScreenSaver:(id)sender;
+-(IBAction) changeAutorunViewer:(id)sender;
 -(IBAction) changeSwapMouse:(id)sender;
 -(IBAction) changeDisableRemoteEvents:(id)sender;
 -(IBAction) changeLimitLocal:(id)sender;
+// SSH tunnel panel
+- (IBAction) actionTunnelConnect: (id)sender;
+- (IBAction) actionTunnelCancel: (id)sender;
+
+// preferences panel - helper functions
 -(void) setNoSleep:(BOOL)flag;
 -(void) setNoDimming:(BOOL)flag;
-//-(void) setNoScreenSaver:(BOOL)flag;
+-(void) setAutorunViewer:(BOOL)flag;
 -(void) setLimitLocal:(BOOL) flag;
 -(void) setDisableRemoteEvents:(BOOL) flag;
 -(void) setSwapMouse:(BOOL) flag;
@@ -101,6 +124,9 @@ extern Bool rfbDisableScreenSaver;
 - (BOOL) enabled;
 
 // other
+- (void) applicationWillTerminate: (NSNotification *) notification;
+- (void) viewerStopped: (NSNotification *) aNotification;
+- (void) tunnelStopped: (NSNotification *) aNotification;
 - (void) loadUserDefaults: (id)sender;
 - (BOOL) canWriteToFile: (NSString *) path;
 - (void) finish_select:(CGPoint)loc;

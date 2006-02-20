@@ -84,6 +84,7 @@
 				51794CDE094F486B00A2D6F6,
 				51794CE1094F490E00A2D6F6,
 				51794CE4094F496300A2D6F6,
+				517D7491098AC25F0083AF19,
 			);
 		};
 		29B97314FDCFA39411CA2CEA = {
@@ -121,6 +122,8 @@
 		};
 		29B97317FDCFA39411CA2CEA = {
 			children = (
+				516B542D09A39C1C008D7212,
+				515CD001098E73DB00F98146,
 				096B69DC0097995A7F000001,
 				ABCCC8B203D9C60A00A80117,
 				ABD7FE7E07AFF8B4004D0B81,
@@ -265,6 +268,58 @@
 			target = 51794CE4094F496300A2D6F6;
 			targetProxy = 51075928094F4E1700DDD3AE;
 		};
+		512D88C9099A74A50033A79A = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = SharedAppTunnel.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		512D88CA099A74A50033A79A = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = SharedAppTunnel.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		512D88CB099A74A50033A79A = {
+			fileRef = 512D88C9099A74A50033A79A;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		512D88CC099A74A50033A79A = {
+			fileRef = 512D88CA099A74A50033A79A;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		515CCFAE098E6A7500F98146 = {
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				515CD007098E748E00F98146,
+			);
+			isa = PBXCopyFilesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		515CD001098E73DB00F98146 = {
+			isa = PBXFileReference;
+			lastKnownFileType = archive.jar;
+			name = ShareWinVncViewer.jar;
+			path = /Users/gwallace/src/cvscode/sharedAppVnc/Viewer/sharedAppVncViewer/ShareWinVncViewer.jar;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		515CD007098E748E00F98146 = {
+			fileRef = 515CD001098E73DB00F98146;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
 		516602E408EB38690095D50D = {
 			fileEncoding = 30;
 			isa = PBXFileReference;
@@ -312,6 +367,19 @@
 			path = VNCWinInfo.m;
 			refType = 4;
 			sourceTree = "<group>";
+		};
+		516B542D09A39C1C008D7212 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.application;
+			path = passwordDialog.app;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		516B542E09A39C1C008D7212 = {
+			fileRef = 516B542D09A39C1C008D7212;
+			isa = PBXBuildFile;
+			settings = {
+			};
 		};
 		5171C66408EB41AB00A4BA21 = {
 			fileRef = 516602E708EB38690095D50D;
@@ -386,6 +454,8 @@
 				5177D41C0907FB9600D92AE0,
 				5177D450090801D400D92AE0,
 				5177D64609083FEA00D92AE0,
+				512D88CB099A74A50033A79A,
+				516B542E09A39C1C008D7212,
 			);
 			isa = PBXResourcesBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +488,7 @@
 				5177D2B40907F4EC00D92AE0,
 				5177D2B50907F4EC00D92AE0,
 				5177D64709083FEA00D92AE0,
+				512D88CC099A74A50033A79A,
 			);
 			isa = PBXSourcesBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +513,7 @@
 				5177D2960907F4C200D92AE0,
 				5177D2970907F4C200D92AE0,
 				5177D2980907F4C200D92AE0,
+				515CCFAE098E6A7500F98146,
 			);
 			buildRules = (
 			);
@@ -464,6 +536,7 @@
 				51075925094F4E0D00DDD3AE,
 				51075927094F4E1200DDD3AE,
 				51075929094F4E1700DDD3AE,
+				517D74B8098ADA240083AF19,
 			);
 			isa = PBXNativeTarget;
 			name = SharedAppVnc;
@@ -825,6 +898,39 @@
 			name = libvncauth;
 			passBuildSettingsInEnvironment = 1;
 			productName = libvncauth;
+		};
+		517D7491098AC25F0083AF19 = {
+			buildArgumentsString = "$(ACTION)";
+			buildPhases = (
+			);
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Viewer;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+			};
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = sharedAppVncViewer;
+			dependencies = (
+			);
+			isa = PBXLegacyTarget;
+			name = Viewer;
+			passBuildSettingsInEnvironment = 0;
+			productName = Viewer;
+		};
+		517D74B7098ADA240083AF19 = {
+			containerPortal = 29B97313FDCFA39411CA2CEA;
+			isa = PBXContainerItemProxy;
+			proxyType = 1;
+			remoteGlobalIDString = 517D7491098AC25F0083AF19;
+			remoteInfo = Viewer;
+		};
+		517D74B8098ADA240083AF19 = {
+			isa = PBXTargetDependency;
+			target = 517D7491098AC25F0083AF19;
+			targetProxy = 517D74B7098ADA240083AF19;
 		};
 //510
 //511
@@ -1830,6 +1936,8 @@
 				51733CDB090551DC00F7E0FB,
 				5177D64409083FEA00D92AE0,
 				5177D64509083FEA00D92AE0,
+				512D88C9099A74A50033A79A,
+				512D88CA099A74A50033A79A,
 				F538E11702F9812C01A80186,
 				F538E11802F9812C01A80186,
 				F538E11902F9812C01A80186,
