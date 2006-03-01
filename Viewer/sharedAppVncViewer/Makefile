@@ -5,7 +5,7 @@
 CP = cp
 JC = javac
 JAR = jar
-ARCHIVE = ShareWinVncViewer.jar
+ARCHIVE = SharedAppViewer.jar
 MANIFEST = MANIFEST.MF
 INSTALL_DIR = /usr/local/vnc/classes
 
