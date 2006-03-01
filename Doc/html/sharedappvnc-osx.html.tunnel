@@ -117,6 +117,7 @@ connection. In this case it is necessary to set up a secure tunnel that will
 forward traffic intended for the client through the firewall. Such a connection
 can be made using SSH tunnels. To setup an SSH tunnel it is necessary to use a
 third computer (a portal) which both users have access to.</p>
+<p><b>Scenario 1: You have a user account on the portal computer</b></p>
 <p>If you have a user account on the portal computer, you can log onto the
 portal and reserve a port that will be used to direct network connections
 through the firewall and to a specified port on the client computer. There is a
@@ -144,7 +145,25 @@ When you now establish a connection to localhost:5501, that connection will be
 redirected to the remote client. The connection can be established as shown
 below.</p>
 <p><img border="0" src="images/osx-clients-tab.jpg" width="321" height="391"></p>
-<h3>&nbsp;</h3>
+<p>&nbsp;</p>
+<p><b>Scenario 2: The remote user has a user account on the portal computer, but
+you do not</b></p>
+<p>If you do not have an account on the portal computer, then the remote user
+will need to establish the connection. To do this from SharedAppVnc they will
+also open the &quot;New Tunnel&quot; dialog window. But instead of making an
+outgoing connection, they will make an incoming connection. To do this they will
+select the &quot;Incoming&quot; radio button. For the local port they will enter
+5500, this indicates that incoming traffic will be directed to port 5500 on
+their computer which is where the viewer is listening. For the remote port they
+can enter anything (i.e. 5502), but they will need to tell you the port chosen.
+In the remote host box they will just enter the name of the portal
+&quot;Portal&quot;. They will enter their username in the username box and click
+&quot;connect&quot;. It will ask them for their password to authenticate. Once
+they are authenticated they will see the incoming tunnel listed in the
+&quot;Tunnels&quot; dialog box. Once the tunnel is established they will tell
+you the remote port number they chose, in our case 5502. Then you will connect
+to &quot;Portal:5502&quot; and your connection will be redirected to their
+computer.</p>
 <h3><a name="sharing">Sharing Windows</a></h3>
 <p>From the &quot;Windows&quot; tab you can share or hide windows. To share a
 window, click on the &quot;Select Window to Share&quot; button and then move
