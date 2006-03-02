@@ -424,6 +424,13 @@ NSString *DKviewerLogFile = @"ViewerLogFile";
 		[buttonSelectToShare setEnabled:YES];
 		[tableSharedWindows setHidden:NO];
 		
+		VNCWinInfo *desktopWin = [[VNCWinInfo alloc] init];
+		[desktopWin setWindowId:0];
+		
+		[arrayLock lock];
+		[windowsToBeClosedArray addObject:desktopWin];
+		[arrayLock unlock];
+		
 		[self refreshAllWindows];
 	}
 	else 
@@ -532,7 +539,7 @@ NSString *DKviewerLogFile = @"ViewerLogFile";
     if (!viewerTask) 
 	{
 		NSString *executable = @"/usr/bin/java";
-        NSString *viewerPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"Contents/Resources/shareWinVncViewer.jar"];
+        NSString *viewerPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"Contents/Resources/sharedAppViewer.jar"];
 		NSMutableArray *argv = [[NSMutableArray alloc] init];
 		[argv addObject:@"-jar"];
 		[argv addObject:viewerPath];
@@ -656,18 +663,34 @@ NSString *DKviewerLogFile = @"ViewerLogFile";
 	NSString *username = [textfieldUsername stringValue];
 	int lport = [textfieldLocalPort intValue];
 	int rport = [textfieldRemotePort intValue];
-	BOOL bSshGatewayOnly = ([buttonSSHGatewayOnly state] == NSOffState) ? FALSE : TRUE;
+	//BOOL bSshGatewayOnly = ([buttonSSHGatewayOnly state] == NSOffState) ? FALSE : TRUE;
+	NSString *finalHost = @"localhost";
 	BOOL bOutgoingTunnel = ([radioButtonTunnelType selectedColumn] == 0) ? TRUE : FALSE;
 	NSString *connDirection = ([radioButtonTunnelType selectedColumn] == 0) ? @"-L" : @"-R";
 	NSPoint origin = [window frame].origin;
-	NSString *tunnelId = @"12";
+	NSString *tunnelId = @"2";
 	
 	NSString *connectString = @"";
 	NSString *executable = @"/usr/bin/ssh";
 	NSMutableArray *argv = [[NSMutableArray alloc] init];
 
+	// note: unfortuantely the password method doesn't work for multiple ssh hops
+	// one future method might be to execute bash and then read and write from pipes.
+	// or possibly have the password function write out the password n times - one per connection
 	int count = [hostAr count];
 	int i;
+	
+	if (count < 1 || count > 2)
+	{
+		NSString *errStr = @"Incorrect host specification, expecting gateway:host or host";
+		NSRunAlertPanel(@"SSH Tunnel Error!", @"%@", @"OK", nil, nil, errStr);
+		[sshTunnelPanel orderOut:self];
+		return;
+	} else if (count == 2) {
+		finalHost = [hostAr objectAtIndex:1];
+		count--;
+	} 
+		
 	for (i=0; i<count; i++)
 	{
 		int port1, port2;
@@ -676,17 +699,17 @@ NSString *DKviewerLogFile = @"ViewerLogFile";
 			port1 = lport;
 			port2 = (i<count-1) ? lport : rport;
 		} else {
-			port1 = (i==0) ? lport : rport;
-			port2 = rport;
+			port1 = rport;
+			port2 = (i==0) ? lport : rport;
 		}
 		
 		if (i>0) [argv addObject:executable];
+		if (!bOutgoingTunnel) [argv addObject:@"-g"];
+		[argv addObject:@"-t"];
 		[argv addObject:@"-t"];
 		[argv addObject:connDirection];
-		[argv addObject:[NSString stringWithFormat:@"%d:localhost:%d", port1, port2]];
+		[argv addObject:[NSString stringWithFormat:@"%d:%@:%d", port1, finalHost, port2]];
 		[argv addObject:[NSString stringWithFormat:@"%@@%@", username, [hostAr objectAtIndex:i]]];
-		//connectString = [connectString stringByAppendingFormat:@"-t %@ %d:localhost:%d %@@%@", 
-		//	connDirection, port1, port2, username, [hostAr objectAtIndex:i]];
 	}
 	
 	NSEnumerator *enumerator = [argv objectEnumerator];
@@ -696,14 +719,21 @@ NSString *DKviewerLogFile = @"ViewerLogFile";
 		connectString = [connectString stringByAppendingFormat:@"%@ ", arg];
 	}
 	
-	NSString *tunnelName = [NSString stringWithFormat:@"%d:...%@:%d", 
-			lport, [hostAr lastObject], rport];
+	NSString *remoteHostAbr = [[[hostAr lastObject] componentsSeparatedByString:@"."] objectAtIndex:0];
+	NSString *tunnelName;
+	if (bOutgoingTunnel)
+	{
+		tunnelName = [NSString stringWithFormat:@"%d-->%@:%d", lport, remoteHostAbr, rport];
+	} else {
+		tunnelName = [NSString stringWithFormat:@"%d<--%@:%d", lport, remoteHostAbr, rport];
+	}
 	
 	//NSLog(@"Starting an SSH Tunnel(%d): %d:%@:%d gonly(%d) username(%@)", 
 	//	  bOutgoingTunnel, lport, host, rport, bSshGatewayOnly, username);
 	
 
 	NSLog(@"SSH Tunnel: %@ %@", executable, connectString);
+	//NSRunAlertPanel(@"SSH Tunnel", @"%@", @"OK", nil, nil, connectString);
 	
     NSMutableDictionary *environment = [ NSMutableDictionary dictionaryWithDictionary: [[ NSProcessInfo processInfo ] environment ]];
 	[ environment removeObjectForKey: @"SSH_AGENT_PID" ];
@@ -781,6 +811,8 @@ NSString *DKviewerLogFile = @"ViewerLogFile";
 		[task release];
 		task = nil;
 	}
+	
+	NSLog(@"Tunnel Removed: Count %d", [tunnelArray count]);
 	
 	[tableSshTunnels reloadData];	
 }
@@ -930,6 +962,7 @@ NSString *DKviewerLogFile = @"ViewerLogFile";
 	}
 	else if (table == tableSshTunnels)
 	{
+		NSLog(@"numberOfRowsInTableView: Count %d", [tunnelArray count]);
 		return [tunnelArray count];
 	}
 	else return 0;
@@ -948,11 +981,14 @@ NSString *DKviewerLogFile = @"ViewerLogFile";
 	else if (table == tableSshTunnels) dataSource = tunnelArray;
 	
 	count = [dataSource count];
-    if (count > 0)
+	//NSLog(@"tableView: Count %d, Row %d", [dataSource count], rowIndex);
+    if (count > rowIndex)
     {
         theObject = [dataSource objectAtIndex: rowIndex];
         theValue = [theObject valueForKey: identifier];
-    }
+    } else {
+		theValue = nil;
+	}
 
     return theValue;
 }

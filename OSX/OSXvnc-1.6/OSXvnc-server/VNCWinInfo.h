@@ -68,6 +68,8 @@
 -(BOOL) isTopWindow;
 -(void) getVisibleRegion:(RegionRec*)visibleRegionPtr;
 
+-(void) setWindowId: (CGSWindow)winid;
+
 
 /*
 -(void) setWindowId: (CGSWindow) wid;

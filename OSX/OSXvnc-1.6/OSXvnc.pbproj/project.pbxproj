@@ -122,8 +122,9 @@
 		};
 		29B97317FDCFA39411CA2CEA = {
 			children = (
-				516B542D09A39C1C008D7212,
-				515CD001098E73DB00F98146,
+				519CFB1E09B64EC9007CD47C,
+				519CFAE609B64BAA007CD47C,
+				5167894909ABB5CF0029C1CF,
 				096B69DC0097995A7F000001,
 				ABCCC8B203D9C60A00A80117,
 				ABD7FE7E07AFF8B4004D0B81,
@@ -284,12 +285,6 @@
 			refType = 4;
 			sourceTree = "<group>";
 		};
-		512D88CB099A74A50033A79A = {
-			fileRef = 512D88C9099A74A50033A79A;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
 		512D88CC099A74A50033A79A = {
 			fileRef = 512D88CA099A74A50033A79A;
 			isa = PBXBuildFile;
@@ -301,24 +296,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				515CD007098E748E00F98146,
 			);
 			isa = PBXCopyFilesBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
-		};
-		515CD001098E73DB00F98146 = {
-			isa = PBXFileReference;
-			lastKnownFileType = archive.jar;
-			name = ShareWinVncViewer.jar;
-			path = /Users/gwallace/src/cvscode/sharedAppVnc/Viewer/sharedAppVncViewer/ShareWinVncViewer.jar;
-			refType = 0;
-			sourceTree = "<absolute>";
-		};
-		515CD007098E748E00F98146 = {
-			fileRef = 515CD001098E73DB00F98146;
-			isa = PBXBuildFile;
-			settings = {
-			};
 		};
 		516602E408EB38690095D50D = {
 			fileEncoding = 30;
@@ -368,15 +348,15 @@
 			refType = 4;
 			sourceTree = "<group>";
 		};
-		516B542D09A39C1C008D7212 = {
+		5167894909ABB5CF0029C1CF = {
 			isa = PBXFileReference;
 			lastKnownFileType = wrapper.application;
 			path = passwordDialog.app;
 			refType = 4;
 			sourceTree = "<group>";
 		};
-		516B542E09A39C1C008D7212 = {
-			fileRef = 516B542D09A39C1C008D7212;
+		5167894A09ABB5CF0029C1CF = {
+			fileRef = 5167894909ABB5CF0029C1CF;
 			isa = PBXBuildFile;
 			settings = {
 			};
@@ -451,11 +431,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5177D29D0907F4DF00D92AE0,
+				519CFB3B09B65160007CD47C,
 				5177D41C0907FB9600D92AE0,
 				5177D450090801D400D92AE0,
-				5177D64609083FEA00D92AE0,
-				512D88CB099A74A50033A79A,
-				516B542E09A39C1C008D7212,
+				5167894A09ABB5CF0029C1CF,
+				519CFAFB09B64BAA007CD47C,
 			);
 			isa = PBXResourcesBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,6 +484,7 @@
 				5177D3E70907F51600D92AE0,
 				5177D3E80907F51600D92AE0,
 				5177D3E90907F51600D92AE0,
+				519CFB1F09B64EC9007CD47C,
 			);
 			isa = PBXFrameworksBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -824,12 +805,6 @@
 			refType = 4;
 			sourceTree = "<group>";
 		};
-		5177D64609083FEA00D92AE0 = {
-			fileRef = 5177D64409083FEA00D92AE0;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
 		5177D64709083FEA00D92AE0 = {
 			fileRef = 5177D64509083FEA00D92AE0;
 			isa = PBXBuildFile;
@@ -931,6 +906,39 @@
 			isa = PBXTargetDependency;
 			target = 517D7491098AC25F0083AF19;
 			targetProxy = 517D74B7098ADA240083AF19;
+		};
+		519CFAE609B64BAA007CD47C = {
+			isa = PBXFileReference;
+			lastKnownFileType = folder;
+			path = "sharedAppVnc-help";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		519CFAFB09B64BAA007CD47C = {
+			fileRef = 519CFAE609B64BAA007CD47C;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		519CFB1E09B64EC9007CD47C = {
+			isa = PBXFileReference;
+			lastKnownFileType = archive.jar;
+			name = SharedAppViewer.jar;
+			path = /Users/gwallace/src/cvscode/sharedAppVnc/Viewer/sharedAppVncViewer/SharedAppViewer.jar;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		519CFB1F09B64EC9007CD47C = {
+			fileRef = 519CFB1E09B64EC9007CD47C;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		519CFB3B09B65160007CD47C = {
+			fileRef = 519CFB1E09B64EC9007CD47C;
+			isa = PBXBuildFile;
+			settings = {
+			};
 		};
 //510
 //511

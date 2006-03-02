@@ -80,6 +80,13 @@
 -(int) bytesPerRow { return bytesPerRow; }
 -(NSString*) processName { return processName; }
 
+-(void) setWindowId: (CGSWindow)winid
+{
+	windowId = winid;
+	
+}
+
+
 -(NSString*) lookupProcessName{
 	ProcessSerialNumber psn;
 	ProcessInfoRec		p_info;
