@@ -287,13 +287,10 @@ void rfbCheckForScreenResolutionChange() {
         iterator = rfbGetClientIterator();
         // Disconnect Existing Clients
         while ((cl = rfbClientIteratorNext(iterator))) {
-            pthread_mutex_lock(&cl->updateMutex); 
+            pthread_mutex_lock(&cl->updateMutex);
             // Keep locked until after screen change
         }
-		
-		// GRW - this is bad, release clientIterator while updateMutex is locked
-		// Another thread could grab the clientIterator and block on updateMutex causing deadlock
-        rfbReleaseClientIterator(iterator); 
+        rfbReleaseClientIterator(iterator);
 
         rfbScreenInit();
 
@@ -940,13 +937,10 @@ void rfbShutdown(void) {
 }
 
 static void rfbShutdownOnSignal(int signal) {
-	NSLog(@"Trapped Signal %d -- Terminating", signal);
-    [NSApp terminate:NSApp];
-	
-    //rfbLog("OSXvnc-server received signal: %d\n", signal);
-    //rfbShutdown();
+    rfbLog("OSXvnc-server received signal: %d\n", signal);
+    rfbShutdown();
 
-    //exit (signal);
+    exit (signal);
 }
 
 void daemonize( void ) {
@@ -1061,23 +1055,11 @@ int main(int argc, char *argv[]) {
 	// daemonize();
 
     // Let's not shutdown on a SIGHUP at some point perhaps we can use that to reload configuration
-	/*
     signal(SIGHUP, SIG_IGN);
     signal(SIGPIPE, SIG_IGN);
     signal(SIGTERM, rfbShutdownOnSignal);
     signal(SIGINT, rfbShutdownOnSignal);
     signal(SIGQUIT, rfbShutdownOnSignal);
-	*/
-	
-	signal(SIGHUP, SIG_IGN);
-    signal(SIGPIPE, SIG_IGN);
-    signal(SIGABRT, rfbShutdownOnSignal);
-    signal(SIGINT, rfbShutdownOnSignal);
-    signal(SIGQUIT, rfbShutdownOnSignal);
-    signal(SIGBUS, rfbShutdownOnSignal);
-    signal(SIGSEGV, rfbShutdownOnSignal);
-    signal(SIGTERM, rfbShutdownOnSignal);
-    signal(SIGTSTP, rfbShutdownOnSignal);
 
     // This fix should be in CGDirectDisplay.h
 #undef kCGDirectMainDisplay
@@ -1176,11 +1158,7 @@ CG_EXTERN CGError CGSetLocalEventsFilterDuringSupressionState(CGEventFilterMask 
     // Presumable because it's running a Carbon Event loop
 	
 	// GRW SharedAppVnc - the loop below has been moved to a thread
-#if 0 // Don't use monitor thread - causes hang after sleep. We aren't using pasterboard
-	  // screenres change, or keyboard layout change. Cursor change is handled by clients.
 	pthread_create(&monitor_thread, NULL, monitorRun, NULL);
-#endif
-	
 	/* -- moved to a thread --
     if (1) {
         BOOL keepRunning = TRUE;

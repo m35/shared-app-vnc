@@ -106,7 +106,7 @@ void rfbCheckForPasteboardChange() {
 	// First Let's see if we have new info on the pasteboard - if so we'll send an update to each client
 	if (pasteBoardLastChangeCount != [[NSPasteboard generalPasteboard] changeCount]) {
 		rfbClientPtr cl;
-
+		rfbClientIteratorPtr iterator = rfbGetClientIterator();
 		
 		// Record first in case another event comes in after notifying clients
 		pasteBoardLastChangeCount = [[NSPasteboard generalPasteboard] changeCount];
@@ -120,7 +120,6 @@ void rfbCheckForPasteboardChange() {
 		//NSLog(@"New PB notify clients to send %d", [[NSPasteboard generalPasteboard] changeCount]);
 		
 		// Notify each client
-		rfbClientIteratorPtr iterator = rfbGetClientIterator();
 		while ((cl = rfbClientIteratorNext(iterator)) != NULL) {
 			pthread_cond_signal(&cl->updateCond);
 		}

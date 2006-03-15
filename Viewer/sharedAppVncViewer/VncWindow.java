@@ -124,18 +124,6 @@ class VncWindow extends JComponent
     return new Dimension(rect.width, rect.height);
   }
 
-  public Dimension getSize() {
-    return new Dimension(rect.width, rect.height);
-  }
-
-  public int getWidth() {
-    return rect.width;
-  }
-
-  public int getHeight() {
-    return rect.height;
-  }
-
 
   void updateWindowSize(int width, int height, int bPixel) 
   {
@@ -182,12 +170,8 @@ class VncWindow extends JComponent
 
     // Update the size of desktop containers.
     scrollPane.setSize(width, height);
-    winframe.setSize(width, height);
     winframe.pack();
     winframe.setVisible(true);
-    System.out.println("image size: " + width + " " + height);
-    System.out.println("scrollpane size: " + scrollPane.getWidth() + " " + scrollPane.getHeight());
-    System.out.println("frame size: " + winframe.getWidth() + " " + winframe.getHeight());
   }
 
 

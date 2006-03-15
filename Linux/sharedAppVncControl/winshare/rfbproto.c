@@ -341,7 +341,7 @@ AuthenticateVNC(void)
       return False;
     }
   } else {
-    passwd = getpass("VncServer Password: ");
+    passwd = getpass("Password: ");
   }
 
   if (!passwd || strlen(passwd) == 0) {
@@ -432,7 +432,7 @@ ReadCapabilityList(CapsContainer *caps, int count)
       vendor[4] = '\0';
       strncpy(name, msginfo.nameSignature, 8);
       name[8] = '\0';
-      fprintf(stderr,"Caps: code=%Xh, vendor=%s, name=%s\n", msginfo.code, vendor, name);
+      printf("Caps: code=%Xh, vendor=%s, name=%s\n", msginfo.code, vendor, name);
     }
   }
 
@@ -519,7 +519,7 @@ SendWindowShare(CARD16 command, CARD32 id, char* rcHost)
   sap.id = Swap32IfLE(id);
 
 
-  fprintf(stderr,"Sending windowCommand %x windowId %x\n", sap.command, sap.id);
+  printf("Sending windowCommand %x windowId %x\n", sap.command, sap.id);
 
   ret = WriteExact(rfbsock, (char *)&sap, sz_rfbSharedAppRequestMsg);
   if (ret && (command == rfbSharedAppReverseConnection))

@@ -38,6 +38,7 @@ public class javactrl extends JFrame {
     }
     
     private void initComponents() {
+        GridBagConstraints gridBagConstraints;
 
         TitleLabel = new JLabel();
         ShareStateButtonGroup = new ButtonGroup();
@@ -45,11 +46,9 @@ public class javactrl extends JFrame {
         ShareDesktopButton = new JRadioButton();
         ShareModePanel = new JPanel();
         ShareWindowsButton = new JRadioButton();
-        AddRemovePanel = new JPanel(new GridBagLayout());
-        c = new GridBagConstraints();
+        AddRemovePanel = new JPanel();
         AddButton = new JButton();
         RemoveButton = new JButton();
-        RemoveAllButton = new JButton();
 
         getContentPane().setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
 
@@ -59,7 +58,7 @@ public class javactrl extends JFrame {
             }
         });
 
-        setTitle("SharedAppVnc Sharing Controller");
+        setTitle("SharedAppVnc Shareing Control");
 
         JMenuBar menuBar = new JMenuBar();
         JMenu menu = new JMenu("Client");
@@ -98,8 +97,8 @@ public class javactrl extends JFrame {
 
         ShareModePanel.setLayout(new BoxLayout(ShareModePanel, BoxLayout.Y_AXIS));
         ShareModePanel.setBorder(new TitledBorder("Share Mode"));
-        ShareModePanel.setMaximumSize(new Dimension(200, 190));
-        ShareModePanel.setMinimumSize(new Dimension(200, 190));
+        ShareModePanel.setMaximumSize(new Dimension(200, 170));
+        ShareModePanel.setMinimumSize(new Dimension(200, 170));
         ShareModePanel.setAlignmentX(Component.LEFT_ALIGNMENT);
         ShareModePanel.setName("");
         ShareModePanel.setEnabled(false);
@@ -137,56 +136,35 @@ public class javactrl extends JFrame {
         ShareModePanel.add(ShareWindowsButton);
 
         AddRemovePanel.setBorder(new TitledBorder("Add/Remove Shared Windows"));
-        //AddRemovePanel.setMaximumSize(new Dimension(190, 90));
-        //AddRemovePanel.setMinimumSize(new Dimension(190, 90));
+        AddRemovePanel.setMaximumSize(new Dimension(190, 70));
+        AddRemovePanel.setMinimumSize(new Dimension(190, 70));
         AddRemovePanel.setAlignmentX(Component.LEFT_ALIGNMENT);
-	c.fill = GridBagConstraints.HORIZONTAL;
-	c.insets = new Insets(2,5,2,5);
 
-	c.gridx = 0;
-	c.gridy = 0;
-        AddButton.setText("Share");
+        AddButton.setText("Add");
         AddButton.setEnabled(true);
         AddButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 AddButtonActionPerformed(evt);
             }
         });
-        AddRemovePanel.add(AddButton, c);
+        AddRemovePanel.add(AddButton);
 
-	c.gridx = 1;
-	c.gridy = 0;
-        RemoveButton.setText("Hide");
-        //RemoveButton.setMargin(new Insets(2, 5, 2, 5));
+        RemoveButton.setText("Remove");
+        RemoveButton.setMargin(new Insets(2, 5, 2, 5));
         RemoveButton.setEnabled(true);
         RemoveButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 RemoveButtonActionPerformed(evt);
             }
         });
-        AddRemovePanel.add(RemoveButton, c);
 
-	c.gridx = 0;
-	c.gridy = 1;
-	c.gridwidth = 2;
-        RemoveAllButton.setText("Hide All");
-        //RemoveAllButton.setMargin(new Insets(2, 5, 2, 5));
-        RemoveAllButton.setEnabled(true);
-        RemoveAllButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                RemoveAllButtonActionPerformed(evt);
-            }
-        });
-        AddRemovePanel.add(RemoveAllButton, c);
+        AddRemovePanel.add(RemoveButton);
 
         ShareModePanel.add(AddRemovePanel);
 
         getContentPane().add(ShareModePanel);
 
         pack();
-
-        execCommand("hideall");
-        System.out.println("Connected to server successfully");
 
         defaultValues = new Properties();
         try
@@ -195,7 +173,7 @@ public class javactrl extends JFrame {
           defaultValues.load(in);
           in.close();
         } catch (Exception e) {
-          if (debug) System.out.println("INFO: User defaults file not found: " + defaultsFile);
+          System.out.println("INFO: User defaults file not found: " + defaultsFile);
         }
     }
 
@@ -212,7 +190,7 @@ public class javactrl extends JFrame {
       String str;
 
         try {
-            if (debug) System.out.println(basecmd + cmd);
+            System.out.println(basecmd + cmd);
             Process p = Runtime.getRuntime().exec(basecmd + cmd);
             //DataInputStream in = new DataInputStream(p.getInputStream());
             //DataInputStream err = new DataInputStream(p.getErrorStream());
@@ -222,17 +200,9 @@ public class javactrl extends JFrame {
               System.out.println(str); 
             }
             while ( (str = err.readLine()) != null) {
-              if (debug) System.out.println(str); 
+              System.out.println(str); 
             }
             p.waitFor();
-            if (p.exitValue() != 0)
-	    {
-	      System.out.println("**Failed to connect to server**");
-	      System.out.println("Verify server is running. Check password file and path. Restart controller with -debug option.");
-              usage();
-              System.exit(1);
-	    }
-
         } catch (Exception e) {
             System.err.println(e);
             System.exit(1);
@@ -242,7 +212,6 @@ public class javactrl extends JFrame {
     private void enableAddRemoveButtons(boolean flag) {
         AddButton.setEnabled(flag);
         RemoveButton.setEnabled(flag);
-        RemoveAllButton.setEnabled(flag);
     }
     
     private void ShareWindowsButtonActionPerformed(ActionEvent evt) {
@@ -263,11 +232,6 @@ public class javactrl extends JFrame {
     private void RemoveButtonActionPerformed(ActionEvent evt) {
         
         execCommand("hide");
-    }
-
-    private void RemoveAllButtonActionPerformed(ActionEvent evt) {
-        
-        execCommand("hideall");
     }
 
     private void AddButtonActionPerformed(ActionEvent evt) {
@@ -312,7 +276,7 @@ public class javactrl extends JFrame {
           port = port + 5500;
         }
         client = "connect " + clientParams[0] + ":" + port;
-        if (debug) System.out.println("Connect to " + client);
+        System.out.println("Connect to " + client);
         execCommand(client);
       }
     }
@@ -335,8 +299,6 @@ public class javactrl extends JFrame {
           } else if (args[i].equals("-passwd")) {
             if (i + 1 > args.length) usage();
             passwdFile = args[++i];
-          } else if (args[i].equals("-debug")) {
-	    debug = true;
           }
         }
       }
@@ -346,7 +308,7 @@ public class javactrl extends JFrame {
 
     private static void usage()
     {
-      System.out.println("javactrl [-display <DPY>] [-passwd <pwdfile>] [-debug]");
+      System.out.println("javactrl [-display <DPY>] [-passwd <pwdfile>]");
     }
     
     // Variables declaration
@@ -358,15 +320,12 @@ public class javactrl extends JFrame {
     private JRadioButton ShareWindowsButton;
     private JButton AddButton;
     private JButton RemoveButton;
-    private JButton RemoveAllButton;
     private JPanel ShareModePanel;
     private JPanel AddRemovePanel;
-    private GridBagConstraints c;
     private Properties defaultValues;
     private static String displayName = ":0";
     private static String passwdFile = null; //"passwd";
     private static String defaultsFile = System.getProperty("user.home") + "/.collab/javactrl.cfg";
-    private static boolean debug = false;
     // End of variables declaration
     
 }

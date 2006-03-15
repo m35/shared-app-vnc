@@ -20,7 +20,6 @@
   </ul>
   <ul>
   <li><a href="#connecting">Connecting to clients</a></li>
-  <li><a href="#ssh-tunnel">Connecting through firewalls (SSH Tunnels)</a></li>
   <li><a href="#sharing">Sharing windows</a></li>
   </ul>
   <li><a href="#config">Configuration</a></li>
@@ -29,13 +28,13 @@
 </ul>
 <H3>&nbsp;</H3>
 <H3><a name="usage">Usage</a></H3>
-<p>The Mac OS X version of SharedAppVnc incorporates two pieces of software, a
+<p>The Mac OS X version of SharedAppVnc requires two pieces of software, a
 server and client. The server, which
 allows windows to be shared, is a Cocoa application called SharedAppVnc.app. It
 can be started by double-clicking on the SharedAppVnc icon from Finder. The
-viewer is a java application called sharedAppViewer which can be started from
-the SharedAppVnc dialog box or invoked from the
-command line. The viewer receives and displays shared windows from remote servers.</p>
+viewer is a java application called sharedAppViewer which is invoked from the
+command line. It
+receives and displays shared windows from remote servers.</p>
 <h3><a name="screenshot">ScreenShot</a></h3>
 <P>Screenshot of the sharedAppVnc application (lower-right corner) being used to
 share windows.</P>
@@ -46,37 +45,35 @@ share windows.</P>
 <blockquote>
   <p>Start the server by clicking on the SharedAppVnc icon in the Finder window
   where the binary was downloaded.</p>
-  <p>It will open the dialog window interface. The dialog window has three
-  tabs:&nbsp;</p>
-  <ul>
-    <li>&quot;Windows&quot; for managing which windows are shared.</li>
-    <li>&quot;Clients&quot; for establishing connections to remote viewer
-      clients.</li>
-    <li>&quot;Tools&quot; for starting the viewer process and setting up ssh
-      tunnels.</li>
-  </ul>
+  <p>It will open the dialog window interface. The dialog window has two tabs,
+  one for managing client connections and one for managing which windows are
+  shared.</p>
+  <p><img border="0" src="images/osx-windows-tab.jpg" width="280" height="343">&nbsp;&nbsp;&nbsp;
+  <img border="0" src="images/osx-clients-tab.jpg" width="280" height="342"><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </blockquote>
-  <table border="0" width="100%">
-    <tr>
-      <td width="33%"><img border="0" src="images/osx-windows-tab.jpg" width="243" height="294"></td>
-      <td width="33%"><img border="0" src="images/osx-clients-tab.jpg" width="240" height="292"></td>
-      <td width="34%"><img border="0" src="images/osx-tools.jpg" width="246" height="291"></td>
-    </tr>
-  </table>
-<p>&nbsp;</p>
 <p><B><i>Viewer</i>:</B></p>
 <BLOCKQUOTE>
-  <P>By default a Viewer process is also started when the SharedAppVnc
-  application is opened. This allows for recieving shared windows as well as
-  sending shared windows. From the &quot;Tools&quot; tab of the dialog box the
-  viewer process can be started or stopped. By default is listens for
-  connections on port 5500.</P>
-  <P>The viewer can also be started as a command line process. See SharedAppVnc
-  Linux instructions for details.</P>
-  <P>&nbsp;</P></BLOCKQUOTE>
+  <P>Start the viewer from a command prompt:</P>
+  <P>The simplest way to start it is in listening mode. It will it wait for
+  server connections.<br>
+  <b>&gt;sharedAppViewer</b></P>
+  <P>The viewer can also initiate a server connection on startup. Typically the
+  SharedAppVnc server is listening on port 5900+displaynum. So for display :0
+  the port will be 5900.<br>
+  <B>&gt;sharedAppViewer -host &lt;sharedappvnc-server&gt; -port 
+  &lt;port&gt;</B></P>
+  <P>Regardless of whether a host is specified, the viewer automatically listens 
+  for incoming connections on port <b>5500</b>. When a new connection is received it 
+  starts a new thread to handle that connection.</P>
+  <P> When sucessfully started the viewer should report...<br>
+<font face="Fixedsys">&gt;Determining Screen Resolution....<br>
+&gt;Display Resolution: 0,0:1024X768<br>
+&gt;listening on port 5500</font></P><P><i>Note: previous command
+  was <b>runviewer</b></i></P><P>&nbsp;</P></BLOCKQUOTE>
 <H3><a name="connecting">Connecting to Clients</a></H3>
 <p>Typically the server initiates a connection to the client. This can be done
-through the SharedAppVnc &quot;Clients&quot; tab in the dialog window. Enter the
+through the sharedAppVnc &quot;Clients&quot; tab in the dialog window. Enter the
 client you want to connect to such as &quot;viewerhost:5500&quot;. The default
 port for the viewer client is 5500. After clicking &quot;Connect&quot; the
 client will show up in the &quot;connected clients&quot; list box if the
@@ -111,40 +108,6 @@ click &quot;Disconnect Client&quot;.</p>
   </tr>
 </table>
 <p>&nbsp;</p>
-<h3><b><a name="ssh-tunnel">Using SSH Tunnels to connect through a firewall</a></b></h3>
-<p>When a client is behind a firewall, it is not possible to establish a direct
-connection. In this case it is necessary to set up a secure tunnel that will
-forward traffic intended for the client through the firewall. Such a connection
-can be made using SSH tunnels. To setup an SSH tunnel it is necessary to use a
-third computer (a portal) which both users have access to.</p>
-<p>If you have a user account on the portal computer, you can log onto the
-portal and reserve a port that will be used to direct network connections
-through the firewall and to a specified port on the client computer. There is a
-dialog window in SharedAppVnc that can help you set up this SSH Tunnel.</p>
-<p>To establish the SSH Tunnel, click on &quot;New Tunnel&quot; from the
-&quot;Tools&quot; dialog pane. This will open a new SSH Tunnel dialog window.
-Select &quot;Outgoing Tunnel&quot; and enter a local and remote port. The remote
-port needs to be 5500 because that is the port the viewer client listens on. The
-local port can be anything, it is just the port you will be redirecting traffic
-through on the portal computer (in our example we'll choose 5501). Then enter
-the pathway to the remote computer. If the portal computer is named
-&quot;Portal&quot; and the client computer is &quot;RemoteViewer&quot;, then we
-would enter &quot;Portal:RemoteViewer&quot;. Then enter your user name on the
-portal computer and click &quot;connect&quot;. A dialog window will open asking
-for your password on the portal computer. After successfully authenticating and
-connecting, you will see your tunnel added to the list box on the
-&quot;Tools&quot; dialog pane. Note that the &quot;RemoteViewer&quot; client has
-to allow incoming connections to port 5500 (i.e. it's local firewall rules must
-allow this traffic in).</p>
-<p><img border="0" src="images/osx-tunnel-dialog.jpg" width="363" height="365"></p>
-<p>Once the SSH tunnel is established, you will have a redirection path that
-goes from<br>
-<b><i>localhost:5501--&gt;portal:5501--&gt;remotehost:5500</i></b><br>
-When you now establish a connection to localhost:5501, that connection will be
-redirected to the remote client. The connection can be established as shown
-below.</p>
-<p><img border="0" src="images/osx-clients-tab.jpg" width="321" height="391"></p>
-<h3>&nbsp;</h3>
 <h3><a name="sharing">Sharing Windows</a></h3>
 <p>From the &quot;Windows&quot; tab you can share or hide windows. To share a
 window, click on the &quot;Select Window to Share&quot; button and then move
@@ -234,10 +197,6 @@ FusionGrid</a> project.</P>
 <p>Please use the Sourceforge &quot;Tracker&quot; functionality to report bugs
 or requests <a href="http://sourceforge.net/projects/shared-app-vnc/">http://sourceforge.net/projects/shared-app-vnc/</a></p>
 <p>&nbsp;</p>
-
-<p><a href="http://sourceforge.net"><img 
-src="http://sflogo.sourceforge.net/sflogo.php?group_id=154034&amp;type=1" 
-width="88" height="31" border="0" alt="SourceForge.net Logo"/></a> <i>Hosted by Sourceforge.net</i></p>
 
 </body>
 

@@ -22,9 +22,5 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
-	<key>CFBundleHelpBookFolder</key>
-	<string>sharedAppVnc-help</string>
-	<key>CFBundleHelpBookName</key>
-	<string>sharedAppVnc-help</string>
 </dict>
 </plist>

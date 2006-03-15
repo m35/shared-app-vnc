@@ -72,7 +72,6 @@ class Options {
 
   private boolean useSharedApp;
   private int multiCursor;
-  private boolean useBlackOut;
 
 
   Options() {
@@ -87,7 +86,6 @@ class Options {
     ignoreCursorUpdates = false;
     useCopyRect = true;
     useSharedApp = true;
-    useBlackOut = false;
 
     eightBitColors = false;
     reverseMouseButtons2And3 = false;
@@ -163,7 +161,7 @@ class Options {
 
     if (useSharedApp)
     {
-      //System.out.println("adding useSharedApp to encodings");
+      System.out.println("adding useSharedApp to encodings");
       encodings[nEncodings++] = RfbProto.EncodingSharedApp;
     }
 
@@ -294,14 +292,6 @@ class Options {
   public void setUseSharedApp(boolean flag) {
     useSharedApp = flag;
     setEncodings();
-  }
-
-  public void setUseBlackOut(boolean flag) {
-    useBlackOut = flag;
-  }
-
-  public boolean getUseBlackOut() {
-    return useBlackOut;
   }
 
   public void setMultiCursor(int c) {
