@@ -28,7 +28,7 @@
 
 #include "stdhdrs.h"
 #include "resource.h"
-#include "sharedapp.h"
+//#include "sharedapp.h"
 
 // Application specific messages
 

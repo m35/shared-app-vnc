@@ -1088,7 +1088,7 @@ vncClient::TriggerUpdate()
 			// Now send the update
 			if (m_server->m_shapp->bEnabled) // SHAREDAPPVNC - GRW
 			{
-				m_updatewanted = !m_server->m_shapp->SendUpdate();
+				m_updatewanted = !m_server->m_shapp->SendUpdates(this);
 			} else {
 				m_updatewanted = !SendUpdate();
 			}

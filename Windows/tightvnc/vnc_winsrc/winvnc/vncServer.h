@@ -252,6 +252,8 @@ public:
 	virtual void EnableRemoveWallpaper(const BOOL enable) {m_remove_wallpaper = enable;};
 	virtual BOOL RemoveWallpaperEnabled() {return m_remove_wallpaper;};
 
+	
+
 	// Internal stuffs
 protected:
 	// Connection servers
@@ -261,9 +263,6 @@ protected:
 
 	// The desktop handler
 	vncDesktop			*m_desktop;
-
-	// SHAREDAPPVNC -- GRW
-	SharedAppVnc        *m_shapp;
 
 	// General preferences
 	UINT				m_port;
@@ -331,6 +330,11 @@ protected:
 
 	// Set of windows to send notifications to
 	vncNotifyList		m_notifyList;
+
+public:
+	// SHAREDAPPVNC -- GRW
+	SharedAppVnc        *m_shapp;
+
 };
 
 #endif

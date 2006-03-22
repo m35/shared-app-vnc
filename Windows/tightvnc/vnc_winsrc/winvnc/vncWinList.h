@@ -14,6 +14,7 @@ class vncWinList;
 
 // Includes
 #include "stdhdrs.h"
+#include "sharedapp.h"
 
 // The vncWinList class itself
 class vncWinList

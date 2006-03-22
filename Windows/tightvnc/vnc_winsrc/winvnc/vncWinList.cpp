@@ -11,7 +11,7 @@
 #include "vncWinList.h"
 
 // Constructor/destructor
-vncWinList::vncWinList(ShareAppVnc *_shapp)
+vncWinList::vncWinList(SharedAppVnc *_shapp)
 {
 	m_dlgvisible = FALSE;
 	m_shapp = _shapp;
@@ -128,15 +128,15 @@ vncWinList::DialogProc(HWND hwnd,
 		break;
 
 		case IDC_RADIO_NOSHARING:
-			m_shapp->bEnabled = TRUE;
-			m_shapp->bOn = FALSE;
+			_this->m_shapp->bEnabled = TRUE;
+			_this->m_shapp->bOn = FALSE;
 			return TRUE;
 		case IDC_RADIO_DESKTOP:
-			m_shapp->bEnabled = FALSE;
+			_this->m_shapp->bEnabled = FALSE;
 			return TRUE;
 		case IDC_RADIO_WINDOWS:
-			m_shapp->bEnabled = TRUE;
-			m_shapp-bOn = TRUE;
+			_this->m_shapp->bEnabled = TRUE;
+			_this->m_shapp->bOn = TRUE;
 			return TRUE;
 
 		case ID_SHARE_WIN:
@@ -149,7 +149,7 @@ vncWinList::DialogProc(HWND hwnd,
 					OpenIcon(sel_hwnd);
 				BringWindowToTop(sel_hwnd);
 				//shared_window = sel_hwnd;
-				m_shapp->AddWindow(sel_hwnd);
+				_this->m_shapp->AddWindow(sel_hwnd, 0);
 			}
 			// Close the dialog
 			//EndDialog(hwnd, TRUE);
@@ -162,7 +162,7 @@ vncWinList::DialogProc(HWND hwnd,
 			hList = GetDlgItem(hwnd, IDC_WIN_LIST);
 			if ((curr_item = SendMessage(hList, LB_GETCURSEL, 0, 0)) != LB_ERR) {
 				sel_hwnd = (HWND) SendMessage(hList, LB_GETITEMDATA, curr_item, 0);
-				m_shapp->RemoveWindow(sel_hwnd);
+				_this->m_shapp->RemoveWindow(sel_hwnd);
 			}
 			return TRUE;
 		}

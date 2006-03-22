@@ -482,7 +482,7 @@ LRESULT CALLBACK vncMenu::WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lP
 
 		case ID_SELECT_WIN:
 			// Show the window selection listbox
-			_this->m_winlist.Show(TRUE);
+			_this->m_winlist->Show(TRUE);
 			// Update the window list
 			break;
 

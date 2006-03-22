@@ -19,28 +19,34 @@
  *  USA.
  */
 
-#ifndef _SHAREDAPP_H_
-#define _SHAREDAPP_H_
+#if (!defined(_SHAREDAPP_H))
+#define _SHAREDAPP_H
 
 #include <list>
+class vncClient;
 
 typedef std::list<HWND> SharedAppList;
 
+
 class SharedAppVnc
 { 
-private:
+public:
+	SharedAppVnc();
+	~SharedAppVnc();
+	BOOL SendUpdates(vncClient *client);
+	BOOL RfbSendWindowClose(vncClient* client, HWND winHwnd );
+	void AddWindow(HWND	winHwnd, HWND parentHwnd);
+	void RemoveWindow( HWND	winHwnd	);
+	void RemoveAllWindows();
+
 	boolean bEnabled;
 	boolean bOn;
+
+private:
 	boolean bIncludeDialogWindows;
 	SharedAppList sharedAppList;
 	char* reverseConnectionHost;
 
-public:
-	void SendUpdates();
-	void AddWindow(HWND winHwnd, HWND parentHwnd);
-	void RemoveWindow( HWND winHwnd );
-	void RemoveAllWindows();
-	bool RfbSendWindowClose( HWND winHwnd );
 };
 
 #endif

@@ -57,10 +57,14 @@ typedef std::list<vncClientId> vncClientList;
 #include "vncBuffer.h"
 #include "vncKeymap.h"
 
+class SharedAppVnc;
+
 // The vncClient class itself
 
 class vncClient
 {
+
+
 public:
 	// Constructor/destructor
 	vncClient();
@@ -68,6 +72,8 @@ public:
 
 	// Allow the client thread to see inside the client object
 	friend class vncClientThread;
+	// GRW - SHAREDAPPVNC
+	friend class SharedAppVnc;
 
 	// Init
 	virtual BOOL Init(vncServer *server,
@@ -109,6 +115,7 @@ public:
 	// Update routines
 protected:
 	BOOL SendUpdate();
+
 	BOOL SendRFBMsg(CARD8 type, BYTE *buffer, int buflen);
 	void CheckRects(vncRegion &rgn, rectlist &rects);
 	void ClearRects(vncRegion &rgn, rectlist &rects);
@@ -120,7 +127,6 @@ protected:
 	BOOL SendCursorPosUpdate();
 	BOOL SendLastRect();
 	BOOL SendPalette();
-
 	void PollWindow(HWND hwnd);
 
 	// Internal stuffs
