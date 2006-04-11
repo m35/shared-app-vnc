@@ -1,2 +1,6 @@
 Viewer:
 Resize bug - When source window was made smaller, the frame wouldn't reduce when run on Linux. Fix was to add getWidth, getHeight, and getSize commands to VncWindow.java. Note how VncWindow.java is structured - it is a JComponent and the image data is written directly to its root pane. VncWindow contains JFrame and JScrollPane objects that surround it's content (JScrollPane(this)). Essentially the JComponent was reporting the wrong size (previous size) and so JScrollPane wasn't resizing appropriately - It was JScrollPane that wasn't resizing and thus JFrame was sizing acording to the ScrollPane.
+
+Server:
+Changed the way SharedAppVncEncoding gets recognized. Now the client sends it as an encoding it supports and when the server sends it's first sharedAppVnc message, then the client knows the server supports that also.
+Added SharedAppPointerEvent and SharedAppKeyboardEvent to distinguish from the normal keyboard/pointer events which don't contain windowId.
