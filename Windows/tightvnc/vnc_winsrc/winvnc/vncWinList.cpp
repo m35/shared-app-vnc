@@ -21,10 +21,13 @@ vncWinList::~vncWinList()
 {
 }
 
+
 // Initialisation
 BOOL
 vncWinList::Init()
 {
+
+
 	return TRUE;
 }
 
@@ -101,6 +104,10 @@ vncWinList::DialogProc(HWND hwnd,
 			SetWindowLong(hwnd, GWL_USERDATA, lParam);
 			_this = (vncWinList *) lParam;
 
+			// check appropriat button
+			CheckDlgButton(hwnd, IDC_RADIO_WINDOWS,
+				(_this->m_shapp->bEnabled)	? BST_CHECKED :	BST_UNCHECKED);
+
 			// Show the dialog
 			SetForegroundWindow(hwnd);
 
@@ -133,10 +140,12 @@ vncWinList::DialogProc(HWND hwnd,
 			return TRUE;
 		case IDC_RADIO_DESKTOP:
 			_this->m_shapp->bEnabled = FALSE;
+			_this->m_shapp->SetClientsNeedUpdate(TRUE);
 			return TRUE;
 		case IDC_RADIO_WINDOWS:
 			_this->m_shapp->bEnabled = TRUE;
 			_this->m_shapp->bOn = TRUE;
+			_this->m_shapp->SetClientsNeedUpdate(TRUE);
 			return TRUE;
 
 		case ID_SHARE_WIN:
@@ -150,6 +159,7 @@ vncWinList::DialogProc(HWND hwnd,
 				BringWindowToTop(sel_hwnd);
 				//shared_window = sel_hwnd;
 				_this->m_shapp->AddWindow(sel_hwnd, 0);
+				vnclog.Print(1, "Share Window %x\n", sel_hwnd);
 			}
 			// Close the dialog
 			//EndDialog(hwnd, TRUE);

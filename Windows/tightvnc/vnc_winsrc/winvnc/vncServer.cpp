@@ -43,6 +43,9 @@
 #include "vncClient.h"
 #include "vncService.h"
 
+
+int nTrace;
+
 // Constructor/destructor
 vncServer::vncServer()
 {
@@ -104,7 +107,8 @@ vncServer::vncServer()
 	m_clients_disabled = FALSE;
 
 	// SHAREDAPPVNC - GRW
-	m_shapp = new SharedAppVnc();
+	m_shapp = new SharedAppVnc(this);
+	nTrace=0;
 }
 
 vncServer::~vncServer()

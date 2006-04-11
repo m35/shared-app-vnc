@@ -555,6 +555,7 @@ vncClientThread::run(void *arg)
 			m_client->m_buffer->EnableRichCursor(FALSE);
 			m_client->m_buffer->EnableLastRect(FALSE);
 			m_client->m_use_PointerPos = FALSE;
+			m_client->m_supports_SharedApp = FALSE; // SHAREDAPP
 
 			m_client->m_cursor_update_pending = FALSE;
 			m_client->m_cursor_update_sent = FALSE;
@@ -643,6 +644,12 @@ vncClientThread::run(void *arg)
 						continue;
 					}
 
+					// Is this a SharedApp encoding request? SHAREDAPP
+					if (Swap32IfLE(encoding) == rfbEncodingSharedApp) {
+						m_client->m_supports_SharedApp = TRUE;
+						continue;
+					}
+
 					// Have we already found a suitable encoding?
 					if (!encoding_set)
 					{	// omni_mutex_lock l(m_client->m_regionLock);
@@ -699,6 +706,7 @@ vncClientThread::run(void *arg)
 
 				{	omni_mutex_lock l(m_client->m_regionLock);
 
+//					vnclog.Print(1, "Set m_updatewanted = TRUE\n");
 					// Set the update-wanted flag to true
 					m_client->m_updatewanted = TRUE;
 
@@ -728,8 +736,14 @@ vncClientThread::run(void *arg)
 			break;
 
 		case rfbKeyEvent:
+		case sharedAppKeyEvent:
+			/* SHAREDAPP - distinguish between two message sizes */
+			int keReadSize;
+			if (msg.type == sharedAppKeyEvent) keReadSize = sz_sharedAppKeyEventMsg-1;
+			else keReadSize = sz_rfbKeyEventMsg-1;
+
 			// Read the rest of the message:
-			if (m_socket->ReadExact(((char *) &msg)+1, sz_rfbKeyEventMsg-1))
+			if (m_socket->ReadExact(((char *) &msg)+1, keReadSize))
 			{				
 				if (m_client->m_keyboardenabled)
 				{
@@ -744,14 +758,25 @@ vncClientThread::run(void *arg)
 			break;
 
 		case rfbPointerEvent:
+		case sharedAppPointerEvent:
+			/* SHAREDAPP - distinguish between two message sizes */
+			int peReadSize;
+			if (msg.type == sharedAppPointerEvent) peReadSize = sz_sharedAppPointerEventMsg-1;
+			else peReadSize = sz_rfbPointerEventMsg-1;
+
 			// Read the rest of the message:
-			if (m_socket->ReadExact(((char *) &msg)+1, sz_rfbPointerEventMsg-1))
+			if (m_socket->ReadExact(((char *) &msg)+1, peReadSize))
 			{
+
 				if (m_client->m_pointerenabled)
 				{
 					// Convert the coords to Big Endian
 					msg.pe.x = Swap16IfLE(msg.pe.x);
 					msg.pe.y = Swap16IfLE(msg.pe.y);
+					msg.pe.windowId = Swap32IfLE(msg.pe.windowId);
+
+					vnclog.Print(1, "Trace Pointer(%d): x(%d) y(%d) button(%x) winId(%x) pad(%x)\n",
+						nTrace++, msg.pe.x, msg.pe.y, msg.pe.buttonMask, msg.pe.windowId, msg.pe.pad);
 
 					// Remember cursor position for this client
 					m_client->m_cursor_pos.x = msg.pe.x;
@@ -785,6 +810,8 @@ vncClientThread::run(void *arg)
 						flags |= (msg.pe.buttonMask & rfbButton3Mask) 
 						    ? MOUSEEVENTF_RIGHTDOWN : MOUSEEVENTF_RIGHTUP;
 					}
+
+					//vnclog.Print(1, "buttonMask %x flags %x\n", msg.pe.buttonMask, flags);
 
 					// Treat buttons 4 and 5 presses as mouse wheel events
 					DWORD wheel_movement = 0;
@@ -1027,6 +1054,7 @@ vncClient::TriggerUpdate()
 	omni_mutex_lock l(m_regionLock);
 	if (!m_protocol_ready) return;
 
+	//vnclog.Print(1, "vncClient TriggerUpdate m_updatewanted(%d)\n", m_updatewanted);
 	if (m_updatewanted)
 	{
 		// Handle the three polling modes
@@ -1088,8 +1116,10 @@ vncClient::TriggerUpdate()
 			// Now send the update
 			if (m_server->m_shapp->bEnabled) // SHAREDAPPVNC - GRW
 			{
+//				vnclog.Print(0, "SHAREDAPP SendUpdates\n");
 				m_updatewanted = !m_server->m_shapp->SendUpdates(this);
 			} else {
+//				vnclog.Print(0, "VNC SendUpdate\n");
 				m_updatewanted = !SendUpdate();
 			}
 		}
@@ -1224,6 +1254,8 @@ vncClient::UpdateClipText(LPSTR text)
 
 	rfbServerCutTextMsg message;
 	message.length = Swap32IfLE(strlen(text));
+
+	SHAREDAPP_TRACE1("trace(%d), Message %d\n", nTrace++, rfbServerCutText);
 	if (!SendRFBMsg(rfbServerCutText, (BYTE *) &message, sizeof(message)))
 	{
 		Kill();
@@ -1497,6 +1529,8 @@ vncClient::SendUpdate()
 	// Otherwise, send <number of rectangles> header
 	rfbFramebufferUpdateMsg header;
 	header.nRects = Swap16IfLE(numrects);
+
+	SHAREDAPP_TRACE1("trace(%d), Message %d\n", nTrace++, rfbFramebufferUpdate); 
 	if (!SendRFBMsg(rfbFramebufferUpdate, (BYTE *) &header, sz_rfbFramebufferUpdateMsg))
 		return TRUE;
 
@@ -1582,6 +1616,8 @@ vncClient::SendCopyRect(RECT &dest, POINT &source)
 	copyrectbody.srcX = Swap16IfLE(source.x);
 	copyrectbody.srcY = Swap16IfLE(source.y);
 
+	SHAREDAPP_TRACE1("trace(%d), RectEnc %x\n", nTrace++, rfbEncodingCopyRect);
+
 	// Now send the message;
 	if (!m_socket->SendQueued((char *)&copyrecthdr, sizeof(copyrecthdr)))
 		return FALSE;
@@ -1603,6 +1639,7 @@ vncClient::SendLastRect()
 	hdr.r.h = 0;
 	hdr.encoding = Swap32IfLE(rfbEncodingLastRect);
 
+	SHAREDAPP_TRACE1("trace(%d), RectEnc %x\n", nTrace++, rfbEncodingLastRect);
 	// Now send the message;
 	if (!m_socket->SendQueued((char *)&hdr, sizeof(hdr)))
 		return FALSE;
@@ -1692,6 +1729,9 @@ vncClient::SendCursorPosUpdate()
 	hdr.r.y = Swap16IfLE(m_cursor_pos.y);
 	hdr.r.w = Swap16IfLE(0);
 	hdr.r.h = Swap16IfLE(0);
+
+	SHAREDAPP_TRACE1("trace(%d), RectEnc %x\n", nTrace++, rfbEncodingPointerPos);
+	//vnclog.Print(1,"xcursor x(%d) y(%d) w(%d) h(%d)\n", m_cursor_pos.x, m_cursor_pos.y, 0, 0); 
 
 	return m_socket->SendQueued((char *)&hdr, sizeof(hdr));
 }

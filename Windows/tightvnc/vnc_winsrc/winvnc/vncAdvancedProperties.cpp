@@ -289,7 +289,10 @@ vncAdvancedProperties::DialogProc(HWND hwnd,
 				_this->m_server->SetLoopbackOk(IsDlgButtonChecked(hwnd, IDALLOWLOOPBACK));
 				_this->m_server->SetLoopbackOnly(IsDlgButtonChecked(hwnd, IDONLYLOOPBACK));
 
+#ifndef SHAREDAPP_TRACE1
+				/*
 				if (IsDlgButtonChecked(hwnd, IDLOG))
+
 					vnclog.SetMode(2);
 				else
 					vnclog.SetMode(0);
@@ -298,6 +301,8 @@ vncAdvancedProperties::DialogProc(HWND hwnd,
 					vnclog.SetLevel(10);
 				else
 					vnclog.SetLevel(2);
+				*/
+#endif
 
 				// And to the registry
 				_this->Save();
@@ -481,9 +486,11 @@ vncAdvancedProperties::Load(BOOL usersettings)
 	// LOAD THE MACHINE-LEVEL PREFS
 
 	// Logging/debugging prefs
+#ifndef SHAREDAPP_DEBUG
 	vnclog.Print(LL_INTINFO, VNCLOG("loading local-only settings\n"));
 	vnclog.SetMode(LoadInt(hkLocal, "DebugMode", 0));
 	vnclog.SetLevel(LoadInt(hkLocal, "DebugLevel", 0));
+#endif
 
 	// Authentication required, httpd enabled, loopback allowed, loopbackOnly
 	m_server->SetHttpdEnabled(LoadInt(hkLocal, "EnableHTTPDaemon", true),

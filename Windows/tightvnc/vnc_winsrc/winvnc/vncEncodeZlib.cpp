@@ -191,6 +191,8 @@ vncEncodeZlib::EncodeOneRect(BYTE *source, BYTE *dest, const RECT &rect)
 	surh->r.h = Swap16IfLE(surh->r.h);
 	surh->encoding = Swap32IfLE(rfbEncodingZlib);
 
+	SHAREDAPP_TRACE1("trace(%d), RectEnc %x\n", nTrace++, rfbEncodingZlib);
+
 	dataSize += ( rectW * rectH * m_remoteformat.bitsPerPixel) / 8;
 	rectangleOverhead += sz_rfbFramebufferUpdateRectHeader;
 	

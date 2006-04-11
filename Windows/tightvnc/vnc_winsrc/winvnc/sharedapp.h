@@ -24,6 +24,8 @@
 
 #include <list>
 class vncClient;
+class vncServer;
+class vncRegion;
 
 typedef std::list<HWND> SharedAppList;
 
@@ -31,13 +33,16 @@ typedef std::list<HWND> SharedAppList;
 class SharedAppVnc
 { 
 public:
-	SharedAppVnc();
+	SharedAppVnc(vncServer* _server);
 	~SharedAppVnc();
 	BOOL SendUpdates(vncClient *client);
 	BOOL RfbSendWindowClose(vncClient* client, HWND winHwnd );
 	void AddWindow(HWND	winHwnd, HWND parentHwnd);
-	void RemoveWindow( HWND	winHwnd	);
+	void RemoveWindow(HWND winHwnd);
 	void RemoveAllWindows();
+	void GetVisibleRegion(HWND winHwnd, vncRegion& visibleRegionPtr);
+
+	void SetClientsNeedUpdate(BOOL bUpdateNeeded);
 
 	boolean bEnabled;
 	boolean bOn;
@@ -46,6 +51,7 @@ private:
 	boolean bIncludeDialogWindows;
 	SharedAppList sharedAppList;
 	char* reverseConnectionHost;
+	vncServer *server;
 
 };
 

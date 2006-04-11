@@ -836,9 +836,11 @@ vncProperties::Load(BOOL usersettings)
 	// LOAD THE MACHINE-LEVEL PREFS
 
 	// Logging/debugging prefs
+#ifndef SHAREDAPP_DEBUG
 	vnclog.Print(LL_INTINFO, VNCLOG("loading local-only settings\n"));
 	vnclog.SetMode(LoadInt(hkLocal, "DebugMode", 0));
 	vnclog.SetLevel(LoadInt(hkLocal, "DebugLevel", 0));
+#endif
 
 	// Disable Tray Icon
 	m_server->SetDisableTrayIcon(LoadInt(hkLocal, "DisableTrayIcon", false));

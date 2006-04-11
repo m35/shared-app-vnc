@@ -535,7 +535,7 @@ vncDesktop::InitBitmap()
 
 		vnclog.Print(LL_INTERR, VNCLOG("DirectX started OK.\n"));
 	} catch (const char *str) {
-		vnclog.Print(LL_INTERR, VNCLOG("%s\n"), str);
+		vnclog.Print(LL_INTERR, VNCLOG("vncDesktopDX %s\n"), str);
 		return FALSE;
 	};
 

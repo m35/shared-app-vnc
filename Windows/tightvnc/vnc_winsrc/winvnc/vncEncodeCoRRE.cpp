@@ -301,6 +301,8 @@ vncEncodeCoRRE::EncodeSmallRect(BYTE *source, BYTE *dest, const RECT &rect)
 	surh->r.h = Swap16IfLE(surh->r.h);
 	surh->encoding = Swap32IfLE(rfbEncodingCoRRE);
 
+	SHAREDAPP_TRACE1("trace(%d), RectEnc %x\n", nTrace++, rfbEncodingCoRRE);
+
 	// create a space big enough for the CoRRE encoded pixels
 
 	size_t rectSize = rectW * rectH * (m_remoteformat.bitsPerPixel / 8);

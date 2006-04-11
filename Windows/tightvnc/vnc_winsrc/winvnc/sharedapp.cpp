@@ -46,11 +46,12 @@
 #include "vncClient.h"
 
 
-SharedAppVnc::SharedAppVnc()
+SharedAppVnc::SharedAppVnc(vncServer *_server)
 {
   bEnabled = TRUE;
   bOn = TRUE;
   bIncludeDialogWindows = TRUE;
+  server=_server;
 }
 
 
@@ -59,10 +60,123 @@ SharedAppVnc::~SharedAppVnc()
 }
 
 
+void SharedAppVnc::SetClientsNeedUpdate(BOOL bUpdateNeeded)
+{
+	vncClientList::iterator i;
+	vncClientList clients = server->ClientList();
+
+	vnclog.Print(1, "SetClientsNeedUpdate\n");
+	// Post this update to all the connected clients
+	for (i = clients.begin(); i != clients.end(); i++)
+	{
+		//vnclog.Print(1, "Set m_updatewanted = %d\n", bUpdateNeeded);
+		// Post the update
+		server->GetClient(*i)->m_updatewanted = bUpdateNeeded;
+	}
+}
+
+void SharedAppVnc::AddWindow(HWND winHwnd, HWND parentHwnd)
+{
+	SharedAppList::iterator sharedAppIter;
+
+	// Check if this window is already added
+	for (sharedAppIter = sharedAppList.begin(); sharedAppIter != sharedAppList.end(); sharedAppIter++)
+	{
+		if (*sharedAppIter == winHwnd)
+		{
+			// already here
+			return;
+		}
+	}
+	sharedAppList.push_back(winHwnd);
+	SetClientsNeedUpdate(TRUE);
+	return;
+}
+
+
+void SharedAppVnc::RemoveWindow( HWND winHwnd )
+{
+	vncClientList::iterator i;
+	vncClientList clients = server->ClientList();
+
+	// Post this update to all the connected clients
+	for (i = clients.begin(); i != clients.end(); i++)
+	{
+		// Post the update
+		RfbSendWindowClose(server->GetClient(*i), winHwnd);
+	}
+
+	sharedAppList.remove(winHwnd);
+	// Note if winHwnd has children, must remove them also
+	// send window close message
+	return;
+}
+
+
+void SharedAppVnc::RemoveAllWindows() 
+{
+
+	sharedAppList.clear();
+}
+
+
+void SharedAppVnc::GetVisibleRegion(HWND winHwnd, vncRegion& visibleRegionPtr)
+{
+	// loop through all windows - union the screen locations of windows that  are above this window
+	// subtract union from this window's screen space.
+	vncRegion unionRegion;
+	int windowCount;
+	HWND iterHwnd;
+
+	unionRegion.Clear();
+	iterHwnd = GetForegroundWindow();
+	while(iterHwnd)
+	{
+		RECT winRect;
+		HWND tempHwnd;
+
+		GetWindowRect(iterHwnd, &winRect);
+		//vnclog.Print(1, "winRect (%d %d %d %d)\n", winRect.left, winRect.top, winRect.right, winRect.bottom);
+
+		if (iterHwnd != winHwnd)
+		{
+			// union all higher z-order windows
+			unionRegion.AddRect(winRect);
+		} else {
+			// Result is winRegion minus higher z-order windows
+			visibleRegionPtr.Clear();
+			visibleRegionPtr.AddRect(winRect);
+			visibleRegionPtr.Subtract(unionRegion);
+			break;
+		}
+
+		tempHwnd = GetNextWindow(iterHwnd, GW_HWNDNEXT);
+		// just-in-case: MSDN mentions potential infinite loops when z-order is changing
+		if (tempHwnd == iterHwnd) break;
+		else iterHwnd = tempHwnd;
+	}
+
+	return;
+}
+
+
+
+BOOL SharedAppVnc::RfbSendWindowClose( vncClient* client, HWND winHwnd )
+{
+	rfbSharedAppUpdateMsg header;
+
+	memset( &header, 0, sz_rfbSharedAppUpdateMsg);
+	header.win_id = Swap32IfLE((int)winHwnd);
+
+	SHAREDAPP_TRACE1("trace(%d), Message %d\n", nTrace++, rfbSharedAppUpdate);
+
+	return client->SendRFBMsg(rfbSharedAppUpdate, (BYTE *) &header, sz_rfbSharedAppUpdateMsg);
+}
+
 /*
- * sharedapp_RfbSendUpdates - send the currently pending window updates to
- * the RFB client.
- */
+* sharedapp_RfbSendUpdates - send the currently pending window updates to
+* the RFB client.
+*/
 
 BOOL SharedAppVnc::SendUpdates(vncClient* client)
 {
@@ -93,7 +207,7 @@ BOOL SharedAppVnc::SendUpdates(vncClient* client)
 		!client->m_copyrect_set &&
 		!client->m_cursor_update_pending &&
 		!client->m_cursor_pos_changed)
-		return FALSE;
+		return TRUE;
 
 	// We currently don't handle copyrect with shared app
 	// So combine copyrect area into changed region.
@@ -166,7 +280,14 @@ BOOL SharedAppVnc::SendUpdates(vncClient* client)
 		}
 
 		GetWindowRect(winHwnd, &winRect);
+
+#ifdef DONT_OCCLUDE
+		winRegion.Clear();
 		winRegion.AddRect(winRect);
+#else
+		GetVisibleRegion(winHwnd, winRegion);
+#endif
+
 		winRegion.Intersect(toBeSent);
 
 		if (!client->m_cursor_update_sent && !client->m_cursor_update_pending) {
@@ -227,13 +348,18 @@ BOOL SharedAppVnc::SendUpdates(vncClient* client)
 
 		// Otherwise, send <number of rectangles> header
 		rfbSharedAppUpdateMsg header;
+		header.type = rfbSharedAppUpdate;
 		header.win_id = Swap32IfLE((int)winHwnd);
         header.parent_id = Swap32IfLE(NULL);
         header.win_rect.x = Swap16IfLE(winRect.left);
         header.win_rect.y = Swap16IfLE(winRect.top);
         header.win_rect.w = Swap16IfLE(winRect.right-winRect.left);
         header.win_rect.h = Swap16IfLE(winRect.bottom-winRect.top);
+		header.cursorOffsetX = Swap16IfLE(winRect.left);
+		header.cursorOffsetY = Swap16IfLE(winRect.top);
 		header.nRects = Swap16IfLE(numrects);
+
+		SHAREDAPP_TRACE2("TRACE(%d): Message %d   nRects %x\n", nTrace++, rfbSharedAppUpdate, numrects);
 		if (!client->SendRFBMsg(rfbSharedAppUpdate, (BYTE *) &header, sz_rfbSharedAppUpdateMsg))
 			return TRUE;
 
@@ -274,49 +400,7 @@ BOOL SharedAppVnc::SendUpdates(vncClient* client)
 }
 
 
-void SharedAppVnc::AddWindow(HWND winHwnd, HWND parentHwnd)
-{
-	SharedAppList::iterator sharedAppIter;
 
-	// Check if this window is already added
-	for (sharedAppIter = sharedAppList.begin(); sharedAppIter != sharedAppList.end(); sharedAppIter++)
-	{
-		if (*sharedAppIter == winHwnd)
-		{
-			// already here
-			return;
-		}
-	}
-	sharedAppList.push_back(winHwnd);
-	return;
-}
-
-
-void SharedAppVnc::RemoveWindow( HWND winHwnd )
-{
-	sharedAppList.remove(winHwnd);
-	// Note if winHwnd has children, must remove them also
-	// send window close message
-	return;
-}
-
-
-void SharedAppVnc::RemoveAllWindows() 
-{
-
-	sharedAppList.clear();
-}
-
-
-BOOL SharedAppVnc::RfbSendWindowClose( vncClient* client, HWND winHwnd )
-{
-  rfbSharedAppUpdateMsg header;
-
-  memset( &header, 0, sz_rfbSharedAppUpdateMsg);
-  header.win_id = Swap32IfLE((int)winHwnd);
-
-  return client->SendRFBMsg(rfbSharedAppUpdate, (BYTE *) &header, sz_rfbSharedAppUpdateMsg);
-}
 
 
 //void sharedapp_InitReverseConnection(ScreenPtr pScreen)

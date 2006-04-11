@@ -156,6 +156,8 @@ vncEncoder::EncodeRect(BYTE *source, BYTE *dest, const RECT &rect)
 	surh->r.h = Swap16IfLE(surh->r.h);
 	surh->encoding = Swap32IfLE(rfbEncodingRaw);
 
+	SHAREDAPP_TRACE1("trace(%d), RectEnc %x\n", nTrace++, rfbEncodingRaw);
+
 	// Update raw encoding statistics
 	rectangleOverhead += sz_rfbFramebufferUpdateRectHeader;
 	dataSize += ( rectW * rectH * m_remoteformat.bitsPerPixel) / 8;
@@ -457,6 +459,8 @@ vncEncoder::SendEmptyCursorShape(VSocket *outConn)
 		hdr.encoding = Swap32IfLE(rfbEncodingRichCursor);
 	}
 
+	SHAREDAPP_TRACE1("trace(%d), RectEnc %x\n", nTrace++, rfbEncodingRichCursor);
+
 	return outConn->SendQueued((char *)&hdr, sizeof(hdr));
 }
 
@@ -570,6 +574,9 @@ vncEncoder::SendXCursorShape(VSocket *outConn, BYTE *mask,
 	hdr.r.h = Swap16IfLE(height);
 	hdr.encoding = Swap32IfLE(rfbEncodingXCursor);
 
+	SHAREDAPP_TRACE1("trace(%d), RectEnc %x\n", nTrace++, rfbEncodingXCursor);
+	//vnclog.Print(1,"xcursor x(%d) y(%d) w(%d) h(%d)\n", xhot, yhot, width, height); 
+
 	BYTE colors[6] = { 0, 0, 0, 0xFF, 0xFF, 0xFF };
 	int maskRowSize = (width + 7) / 8;
 	int maskSize = maskRowSize * height;
@@ -593,6 +600,8 @@ vncEncoder::SendRichCursorShape(VSocket *outConn, BYTE *mbits, BYTE *cbits,
 	hdr.r.w = Swap16IfLE(width);
 	hdr.r.h = Swap16IfLE(height);
 	hdr.encoding = Swap32IfLE(rfbEncodingRichCursor);
+
+	SHAREDAPP_TRACE1("trace(%d), RectEnc %x\n", nTrace++, rfbEncodingRichCursor);
 
 	// Cet cursor image in local pixel format
 	int srcbuf_rowsize = width * (m_localformat.bitsPerPixel / 8);

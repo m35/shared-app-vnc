@@ -271,6 +271,8 @@ vncEncodeRRE::EncodeRect(BYTE *source, BYTE *dest, const RECT &rect)
 	surh->r.h = Swap16IfLE(surh->r.h);
 	surh->encoding = Swap32IfLE(rfbEncodingRRE);
 
+	SHAREDAPP_TRACE1("trace(%d), RectEnc %x\n", nTrace++, rfbEncodingRRE);
+
 	// create a space big enough for the RRE encoded pixels
 	size_t rectSize = rectW * rectH * (m_remoteformat.bitsPerPixel / 8);
 	if (m_bufflen < rectSize)

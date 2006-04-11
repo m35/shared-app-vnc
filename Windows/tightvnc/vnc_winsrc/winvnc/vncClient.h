@@ -59,6 +59,7 @@ typedef std::list<vncClientId> vncClientList;
 
 class SharedAppVnc;
 
+
 // The vncClient class itself
 
 class vncClient
@@ -193,6 +194,8 @@ protected:
 	BOOL			m_remoteevent;
 
 	BOOL			m_use_PointerPos;
+	BOOL			m_supports_SharedApp;
+
 };
 
 #endif

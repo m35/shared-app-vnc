@@ -26,6 +26,9 @@ Log::Log(int mode, int level, LPSTR filename, bool append)
     m_tofile = false;
     SetFile(filename, append);
     SetMode(mode);
+	SetLevel(level); // GRW - added for logging
+
+	Print(0, "Log initiated level(%d)\n\n", m_level);
 }
 
 void Log::SetMode(int mode) {
@@ -108,6 +111,7 @@ void Log::OpenFile()
 	}
 
     // If filename is NULL or invalid we should throw an exception here
+	Print(0, "Creating log file %s\n\n", m_filename);
     hlogfile = CreateFile(
         m_filename,  GENERIC_WRITE, FILE_SHARE_READ, NULL,
         OPEN_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL  );

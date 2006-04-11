@@ -97,6 +97,8 @@ vncEncodeHexT::EncodeRect(BYTE *source, BYTE *dest, const RECT &rect)
 	surh->r.h = Swap16IfLE(surh->r.h);
 	surh->encoding = Swap32IfLE(rfbEncodingHextile);
 
+	SHAREDAPP_TRACE1("trace(%d), RectEnc %x\n", nTrace++, rfbEncodingHextile);
+
 	rectangleOverhead += sz_rfbFramebufferUpdateRectHeader;
 	dataSize += ( rectW * rectH * m_remoteformat.bitsPerPixel) / 8;
 

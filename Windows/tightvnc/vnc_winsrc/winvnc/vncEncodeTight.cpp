@@ -521,6 +521,8 @@ vncEncodeTight::SendTightHeader(int x, int y, int w, int h)
 	rect.r.h = Swap16IfLE(h);
 	rect.encoding = Swap32IfLE(rfbEncodingTight);
 
+	SHAREDAPP_TRACE1("trace(%d), RectEnc %x\n", nTrace++, rfbEncodingTight);
+
 	dataSize += w * h * (m_remoteformat.bitsPerPixel / 8);
 	rectangleOverhead += sz_rfbFramebufferUpdateRectHeader;
 

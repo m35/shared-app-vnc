@@ -129,6 +129,8 @@ vncEncodeZlibHex::EncodeRect(BYTE *source, VSocket *outConn, BYTE *dest, const R
 	surh->r.h = Swap16IfLE(surh->r.h);
 	surh->encoding = Swap32IfLE(rfbEncodingZlibHex);
 
+	SHAREDAPP_TRACE1("trace(%d), RectEnc %x\n", nTrace++, rfbEncodingZlibHex);
+
 	rectangleOverhead += sz_rfbFramebufferUpdateRectHeader;
 	dataSize += ( rectW * rectH * m_remoteformat.bitsPerPixel) / 8;
 

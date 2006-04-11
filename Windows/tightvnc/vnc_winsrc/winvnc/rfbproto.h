@@ -265,9 +265,7 @@ typedef struct _rfbServerInitMsg {
 #define rfbSetColourMapEntries 1
 #define rfbBell 2
 #define rfbServerCutText 3
-
-/* SharedApp extensions -- SHAREDAPP */
-#define rfbSharedAppUpdate 48
+#define rfbSharedAppUpdate 48 /* SharedApp extensions -- SHAREDAPP */
 
 /* client -> server */
 
@@ -278,6 +276,8 @@ typedef struct _rfbServerInitMsg {
 #define rfbKeyEvent 4
 #define rfbPointerEvent 5
 #define rfbClientCutText 6
+#define sharedAppKeyEvent 40
+#define sharedAppPointerEvent 41
 
 /*****************************************************************************
  *
@@ -320,6 +320,7 @@ typedef struct _rfbServerInitMsg {
 #define rfbEncodingPointerPos      0xFFFFFF18
 
 #define rfbEncodingLastRect        0xFFFFFF20
+#define rfbEncodingSharedApp       0xFFFFFF30
 
 #define rfbEncodingQualityLevel0   0xFFFFFFE0
 #define rfbEncodingQualityLevel1   0xFFFFFFE1
@@ -370,10 +371,12 @@ typedef struct _rfbSharedAppUpdateMsg {
   CARD32 win_id;
   CARD32 parent_id; /* indicates logical parent window - i.e. relation of dialog box to main app*/
   rfbRectangle win_rect; /* gives the window location on server - used for translation */
+  CARD16 cursorOffsetX; /* for Mac OS X server cursor */
+  CARD16 cursorOffsetY;
   /* followed by nRects rectangles */
 } rfbSharedAppUpdateMsg;
 
-#define sz_rfbSharedAppUpdateMsg (12 + sz_rfbRectangle)
+#define sz_rfbSharedAppUpdateMsg (16 + sz_rfbRectangle)
 
 
 /*
@@ -885,6 +888,15 @@ typedef struct _rfbKeyEventMsg {
 
 #define sz_rfbKeyEventMsg 8
 
+typedef struct _sharedAppKeyEventMsg {
+    CARD8 type;			/* always rfbKeyEvent */
+    CARD8 down;			/* true if down (press), false if up */
+    CARD16 pad;
+    CARD32 key;			/* key is specified as an X keysym */
+	CARD32 windowId;  /* SharedApp extensions -- SHAREDAPP */
+} sharedAppKeyEventMsg;
+
+#define sz_sharedAppKeyEventMsg 12
 
 /*-----------------------------------------------------------------------------
  * PointerEvent - mouse/pen move and/or button press.
@@ -905,9 +917,18 @@ typedef struct _rfbPointerEventMsg {
 #define rfbButton4Mask 8
 #define rfbButton5Mask 16
 
-#define sz_rfbPointerEventMsg 12
+#define sz_rfbPointerEventMsg 8
 
+typedef struct _sharedAppPointerEventMsg {
+    CARD8 type;			/* always rfbPointerEvent */
+    CARD8 buttonMask;		/* bits 0-7 are buttons 1-8, 0=up, 1=down */
+    CARD16 x;
+    CARD16 y;
+	CARD16 pad;
+    CARD32 windowId; /* SharedApp extensions -- SHAREDAPP */
+} sharedAppPointerEventMsg;
 
+#define sz_sharedAppPointerEventMsg 12
 
 /*-----------------------------------------------------------------------------
  * ClientCutText - the client has new text in its cut buffer.
@@ -937,5 +958,7 @@ typedef union _rfbClientToServerMsg {
     rfbFramebufferUpdateRequestMsg fur;
     rfbKeyEventMsg ke;
     rfbPointerEventMsg pe;
+	sharedAppKeyEventMsg ske; // SHAREDAPP - extends previous key event type
+	sharedAppPointerEventMsg spe; //SHAREDAPP - extends previous pointer event type
     rfbClientCutTextMsg cct;
 } rfbClientToServerMsg;

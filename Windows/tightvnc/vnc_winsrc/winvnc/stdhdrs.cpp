@@ -26,4 +26,4 @@
 #include "stdhdrs.h"
 
 // Create the main log object
-Log vnclog(0, 1, "WinVNC.log", false);
+Log vnclog(Log::ToConsole | Log::ToFile, LL_CLIENTS+1, "WinVNC.log", false);
