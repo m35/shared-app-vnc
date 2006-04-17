@@ -107,7 +107,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/MACHINE:I386"
-				AdditionalDependencies="wsock32.lib"
+				AdditionalDependencies="wsock32.lib comctl32.lib"
 				OutputFile=".\Debug/WinVNC.exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="TRUE"
@@ -166,6 +166,9 @@
 			</File>
 			<File
 				RelativePath=".\sharedapp.cpp">
+			</File>
+			<File
+				RelativePath=".\sharedAppTabCtrl.cpp">
 			</File>
 			<File
 				RelativePath=".\stdhdrs.cpp">
@@ -237,9 +240,6 @@
 				RelativePath=".\vncClient.cpp">
 			</File>
 			<File
-				RelativePath=".\vncConnDialog.cpp">
-			</File>
-			<File
 				RelativePath=".\vncDesktop.cpp">
 			</File>
 			<File
@@ -309,9 +309,6 @@
 				RelativePath=".\vncTimedMsgBox.cpp">
 			</File>
 			<File
-				RelativePath=".\vncWinList.cpp">
-			</File>
-			<File
 				RelativePath=".\VSocket.cpp">
 			</File>
 			<File
@@ -364,6 +361,9 @@
 				RelativePath=".\sharedapp.h">
 			</File>
 			<File
+				RelativePath=".\sharedAppTabCtrl.h">
+			</File>
+			<File
 				RelativePath=".\stdhdrs.h">
 			</File>
 			<File
@@ -403,9 +403,6 @@
 			</File>
 			<File
 				RelativePath=".\vncClient.h">
-			</File>
-			<File
-				RelativePath=".\vncConnDialog.h">
 			</File>
 			<File
 				RelativePath=".\vncCorbaConnect.h">
@@ -466,9 +463,6 @@
 			</File>
 			<File
 				RelativePath=".\vncTimedMsgBox.h">
-			</File>
-			<File
-				RelativePath=".\vncWinList.h">
 			</File>
 			<File
 				RelativePath=".\VSocket.h">

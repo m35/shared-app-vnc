@@ -38,7 +38,8 @@ class vncMenu;
 #include "vncServer.h"
 #include "vncProperties.h"
 #include "vncAbout.h"
-#include "vncWinList.h"
+//#include "vncWinList.h"
+#include "sharedAppTabCtrl.h"
 
 // Constants
 extern const UINT MENU_PROPERTIES_SHOW;
@@ -80,7 +81,8 @@ protected:
 	vncAbout		m_about;
 
 	// Window selection list
-	vncWinList		*m_winlist;
+	//vncWinList		*m_winlist;
+	sharedAppTabCtrl *m_sharedAppTabCtrl;
 
 	HWND			m_hwnd;
 	HMENU			m_hmenu;

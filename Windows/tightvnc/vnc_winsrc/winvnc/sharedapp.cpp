@@ -42,7 +42,7 @@
 #include "vncRegion.h"
 #include "rectlist.h"
 #include "sharedapp.h"
-#include "vncWinList.h"
+//#include "vncWinList.h"
 #include "vncClient.h"
 
 

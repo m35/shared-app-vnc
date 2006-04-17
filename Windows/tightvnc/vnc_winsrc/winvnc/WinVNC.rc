@@ -110,15 +110,14 @@ BEGIN
                     IDC_STATIC,134,36,185,29
 END
 
-IDD_OUTGOING_CONN DIALOG  0, 0, 246, 65
+IDD_OUTGOING_CONN DIALOGEX 0, 0, 246, 65
 STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | 
     WS_CAPTION | WS_SYSMENU
 CAPTION "Initiate Outgoing Connection (Add New Client)"
-FONT 8, "MS Sans Serif"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
 BEGIN
     EDITTEXT        IDC_HOSTNAME_EDIT,55,6,130,14,ES_AUTOHSCROLL
-    DEFPUSHBUTTON   "OK",IDOK,192,6,47,14
-    PUSHBUTTON      "Cancel",IDCANCEL,192,25,47,14
+    DEFPUSHBUTTON   "Connect",ID_CONN,192,6,47,14
     LTEXT           "Host name:",IDC_HOSTNAME_STATIC,7,6,43,14,
                     SS_CENTERIMAGE | NOT WS_GROUP
     LTEXT           "Formats host:display and host::port are supported.\nThe default is to use display 0 or port 5500.",
@@ -447,7 +446,7 @@ BEGIN
                     LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
     DEFPUSHBUTTON   "Share",ID_SHARE_WIN,15,166,49,14
     PUSHBUTTON      "Hide",ID_HIDE_WIN,68,166,49,14
-    PUSHBUTTON      "Cancel",IDCANCEL,122,166,49,14
+    PUSHBUTTON      "Hide All",ID_HIDE_ALL,122,166,49,14
     GROUPBOX        "Sharing Mode",IDC_MODEGROUP,7,3,161,51,WS_GROUP
     GROUPBOX        "Window Selector",IDC_STATIC,7,62,195,124
     LTEXT           "Select window to share/hide:",IDC_STATIC,13,71,146,12

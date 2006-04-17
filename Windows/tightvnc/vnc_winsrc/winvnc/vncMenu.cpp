@@ -34,7 +34,7 @@
 #include "stdhdrs.h"
 #include "WinVNC.h"
 #include "vncService.h"
-#include "vncConnDialog.h"
+//#include "vncConnDialog.h" //Integrated into SharedAppTabCtrl
 #include <lmcons.h>
 #include <wininet.h>
 #include <shlobj.h>
@@ -166,7 +166,8 @@ vncMenu::vncMenu(vncServer *server)
 	m_server = server;
 
 	// SHAREDAPPVNC - GRW
-	m_winlist = new vncWinList(m_server->m_shapp);
+	//m_winlist = new vncWinList(m_server->m_shapp);
+	m_sharedAppTabCtrl = new sharedAppTabCtrl(m_server->m_shapp);
 
 	// Set the initial user name to something sensible...
 	vncService::CurrentUser((char *)&m_username, sizeof(m_username));
@@ -246,7 +247,8 @@ vncMenu::~vncMenu()
 		DestroyMenu(m_hmenu);
 
 	// SHAREDAPPVNC - GRW
-	delete m_winlist;
+	//delete m_winlist;
+	delete m_sharedAppTabCtrl;
 
 	// Tell the server to stop notifying us!
 	if (m_server != NULL)
@@ -441,7 +443,7 @@ LRESULT CALLBACK vncMenu::WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lP
 			_this->m_properties.Show(TRUE, TRUE);
 			_this->FlashTrayIcon(_this->m_server->AuthClientCount() != 0);
 			break;
-		
+		/* // integrated into SharedAppTabCtrl
 		case ID_OUTGOING_CONN:
 			// Connect out to a listening VNC viewer
 			{
@@ -450,7 +452,7 @@ LRESULT CALLBACK vncMenu::WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lP
 					newconn->DoDialog();
 			}
 			break;
-
+		*/
 		case ID_KILLCLIENTS:
 			// Disconnect all currently connected clients
 			_this->m_server->KillAuthClients();
@@ -482,7 +484,8 @@ LRESULT CALLBACK vncMenu::WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lP
 
 		case ID_SELECT_WIN:
 			// Show the window selection listbox
-			_this->m_winlist->Show(TRUE);
+			//_this->m_winlist->Show(TRUE);
+			_this->m_sharedAppTabCtrl->Show(TRUE);
 			// Update the window list
 			break;
 
@@ -670,8 +673,12 @@ LRESULT CALLBACK vncMenu::WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lP
 
 			// If there is no IP address then show the connection dialog
 			if (!lParam) {
+				_this->m_sharedAppTabCtrl->Show(TRUE);
+				_this->m_sharedAppTabCtrl->SetTab(SHAP_TAB_CLIENTS);
+				/*
 				vncConnDialog *newconn = new vncConnDialog(_this->m_server);
 				if (newconn) newconn->DoDialog();
+				*/
 				return 0;
 			}
 

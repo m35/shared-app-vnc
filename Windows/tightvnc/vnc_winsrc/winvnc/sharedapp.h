@@ -33,6 +33,7 @@ typedef std::list<HWND> SharedAppList;
 class SharedAppVnc
 { 
 public:
+	friend class sharedAppTabCtrl;
 	SharedAppVnc(vncServer* _server);
 	~SharedAppVnc();
 	BOOL SendUpdates(vncClient *client);
