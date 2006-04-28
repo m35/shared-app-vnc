@@ -89,9 +89,12 @@
 #define IDC_RADIO3                      1086
 #define IDC_RADIO_WINDOWS               1086
 #define IDC_MODEGROUP                   1087
-#define IDC_HIDEALL                     1089
 #define ID_HIDE_ALL                     1089
 #define ID_CONN                         1090
+#define IDC_LIST_CLIENTS                1092
+#define IDC_DISCONNECT_CLIENT           1094
+#define IDC_DISCONN_CLIENT              1094
+#define IDC_BUTTON_DISCONNECT_ALL       1095
 #define ID_PROPERTIES                   40001
 #define ID_CLOSE                        40002
 #define ID_KILLCLIENTS                  40003
@@ -111,7 +114,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        143
 #define _APS_NEXT_COMMAND_VALUE         40014
-#define _APS_NEXT_CONTROL_VALUE         1091
+#define _APS_NEXT_CONTROL_VALUE         1096
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif
