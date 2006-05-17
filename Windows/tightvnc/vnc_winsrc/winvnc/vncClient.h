@@ -112,6 +112,8 @@ public:
 	virtual int GetCapability() {return m_capability;};
 	virtual const char *GetClientName();
 	virtual vncClientId GetClientId() {return m_id;};
+	virtual const char *GetClientPrettyName();
+	virtual void SetClientPrettyName(const char * name);
 
 	// Update routines
 protected:
@@ -149,6 +151,7 @@ protected:
 	// The socket
 	VSocket			*m_socket;
 	char			*m_client_name;
+	char			*m_client_pretty_name; // SharedApp
 
 	// The client thread
 	omni_thread		*m_thread;

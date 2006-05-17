@@ -60,6 +60,7 @@ public:
 	}
 	void Combine(vncRegion &rgn);			// Combine with another region
 	void Intersect(vncRegion &rgn);			// Intersect with another region
+	void Intersect_orig(vncRegion &rgn);
 	void Subtract(vncRegion &rgn);			// Subtract another region from this one
 
 	// Rectangle retrieval routines - return FALSE if no rects returned!

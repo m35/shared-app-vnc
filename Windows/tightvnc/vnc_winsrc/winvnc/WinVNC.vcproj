@@ -107,7 +107,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/MACHINE:I386"
-				AdditionalDependencies="wsock32.lib comctl32.lib"
+				AdditionalDependencies="wsock32.lib comctl32.lib psapi.lib"
 				OutputFile=".\Debug/WinVNC.exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="TRUE"
@@ -540,7 +540,19 @@
 			RelativePath=".\res\ico00001.ico">
 		</File>
 		<File
+			RelativePath=".\res\ico00002.ico">
+		</File>
+		<File
+			RelativePath=".\res\ico00003.ico">
+		</File>
+		<File
+			RelativePath=".\res\ico00004.ico">
+		</File>
+		<File
 			RelativePath=".\res\ReloginPanel.class">
+		</File>
+		<File
+			RelativePath=".\res\SharedAppViewer.jar">
 		</File>
 		<File
 			RelativePath=".\res\SocketFactory.class">

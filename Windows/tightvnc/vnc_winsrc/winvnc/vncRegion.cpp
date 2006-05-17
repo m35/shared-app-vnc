@@ -122,9 +122,25 @@ vncRegion::Combine(vncRegion &rgn)
 void
 vncRegion::Intersect(vncRegion &rgn)
 {
-	if (rgn.region == NULL)
-		return;
 	if (region == NULL)
+		return;
+	if (rgn.region == NULL) // SHAREDAPP - bug fix
+	{
+		Clear();
+		return;
+	}
+
+	// Otherwise, intersect the two
+	if (CombineRgn(region, region, rgn.region, RGN_AND) == NULLREGION)
+		Clear();
+}
+
+void
+vncRegion::Intersect_orig(vncRegion &rgn)
+{
+	if (region == NULL)
+		return;
+	if (rgn.region == NULL)
 		return;
 
 	// Otherwise, intersect the two
@@ -182,6 +198,7 @@ BOOL vncRegion::Rectangles(rectlist &rects)
 	return !rects.empty();
 }
 
+
 // Return rectangles clipped to a certain area
 BOOL vncRegion::Rectangles(rectlist &rects, RECT &cliprect)
 {
@@ -195,3 +212,4 @@ BOOL vncRegion::Rectangles(rectlist &rects, RECT &cliprect)
 
 	return cliprgn.Rectangles(rects);
 }
+

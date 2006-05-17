@@ -23,11 +23,12 @@
 #define _SHAREDAPP_H
 
 #include <list>
+#include <omnithread.h>
 class vncClient;
 class vncServer;
 class vncRegion;
 
-typedef std::list<HWND> SharedAppList;
+typedef std::list<HWND> WindowList;
 
 
 class SharedAppVnc
@@ -39,20 +40,34 @@ public:
 	BOOL SendUpdates(vncClient *client);
 	BOOL RfbSendWindowClose(vncClient* client, HWND winHwnd );
 	void AddWindow(HWND	winHwnd, HWND parentHwnd);
-	void RemoveWindow(HWND winHwnd);
-	void RemoveAllWindows();
+	void RemoveWindow(HWND winHwnd, bool bUpdateList);
+	void RemoveAllWindows(bool bUpdateList);
 	void GetVisibleRegion(HWND winHwnd, vncRegion& visibleRegionPtr);
 
-	void SetClientsNeedUpdate(BOOL bUpdateNeeded);
+	void SetClientsNeedUpdate();
+
+	char* GetLastClient();
+	void SetLastClient(char *);
+
+	bool StartViewer();
+	bool StopViewer();
+
+	char *GetViewerCommand();
+
+	WindowList SharedAppList() { return sharedAppList; }
 
 	boolean bEnabled;
-	boolean bOn;
+	omni_mutex	m_sharedAppLock;
 
 private:
 	boolean bIncludeDialogWindows;
-	SharedAppList sharedAppList;
+	WindowList sharedAppList;
 	char* reverseConnectionHost;
+	char* lastClient;
+	//char* exePath;
 	vncServer *server;
+	HANDLE hViewerProcess;
+
 
 };
 

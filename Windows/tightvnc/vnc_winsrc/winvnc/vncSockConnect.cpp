@@ -84,6 +84,7 @@ void *vncSockConnectThread::run_undetached(void * arg)
 
 		// Successful accept - start the client unauthenticated
 		m_server->AddClient(new_socket, FALSE, FALSE);
+
 	}
 	vnclog.Print(LL_STATE, VNCLOG("quitting socket connection thread\n"));
 

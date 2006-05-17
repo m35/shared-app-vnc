@@ -998,6 +998,11 @@ vncProperties::LoadUserPrefs(HKEY appkey)
 	m_pref_PollFullScreen=LoadInt(appkey, "PollFullScreen", m_pref_PollFullScreen);
 	m_pref_PollConsoleOnly=LoadInt(appkey, "OnlyPollConsole", m_pref_PollConsoleOnly);
 	m_pref_PollOnEventOnly=LoadInt(appkey, "OnlyPollOnEvent", m_pref_PollOnEventOnly);
+
+	//SHAREDAPP
+	char *client = LoadString(appkey, "LastClient");
+	m_server->m_shapp->SetLastClient(client);
+	free(client);
 }
 
 void
@@ -1063,6 +1068,12 @@ void
 vncProperties::SavePassword(HKEY key, const char *buffer, const char *entry_name)
 {
 	RegSetValueEx(key, entry_name, 0, REG_BINARY, (LPBYTE) buffer, MAXPWLEN);
+}
+
+void
+vncProperties::SaveString(HKEY key, LPCSTR valname, const char *buffer)
+{
+	RegSetValueEx(key, valname, 0, REG_SZ, (LPBYTE) buffer, strlen(buffer)+1);
 }
 
 void
@@ -1173,4 +1184,7 @@ vncProperties::SaveUserPrefs(HKEY appkey)
 
 	SaveInt(appkey, "OnlyPollConsole", m_server->PollConsoleOnly());
 	SaveInt(appkey, "OnlyPollOnEvent", m_server->PollOnEventOnly());
+
+	// Save recent clients list
+	SaveString(appkey, "LastClient", m_server->m_shapp->GetLastClient());
 }

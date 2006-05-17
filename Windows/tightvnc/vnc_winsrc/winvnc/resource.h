@@ -23,12 +23,20 @@
 #define IDR_DESCIPHER_CLASS             133
 #define IDI_FLASH                       134
 #define IDD_OUTGOING_CONN               135
+#define IDD_CLIENTS                     135
 #define IDD_ACCEPT_CONN                 136
 #define IDD_ADVPROPERTIES               137
 #define IDI_DISABLED                    138
 #define IDR_HTTPCONNSOCKFACTORY_CLASS   139
 #define IDR_HTTPCONNSOCK_CLASS          140
 #define IDD_SELECT_WIN                  141
+#define IDD_SHARED_WINDOWS              141
+#define IDD_MODE                        143
+#define IDI_UP_ARROW                    145
+#define IDI_DOWN_ARROW                  146
+#define IDI_UPALL_ARROW                 147
+#define IDR_JAVAARCHIVE1                148
+#define IDR_SHAREDAPP_VIEWER_JAR        148
 #define IDC_CONNECT_BORDER              1003
 #define IDC_CONNECT_SOCK                1004
 #define IDC_CONNECT_CORBA               1005
@@ -93,8 +101,13 @@
 #define ID_CONN                         1090
 #define IDC_CLIENT_LIST                 1092
 #define IDC_DISCONNECT_CLIENT           1094
-#define IDC_BUTTON_DISCONNECT_ALL       1095
 #define IDC_DISCONNECT_ALL              1095
+#define IDC_SHARED_LIST                 1096
+#define IDC_START_VIEWER                1097
+#define IDC_STOP_VIEWER                 1098
+#define IDC_STATIC_VS                   1099
+#define IDC_VIEWER_STATUS               1100
+#define IDC_DISABLE_INCOMING            1101
 #define ID_PROPERTIES                   40001
 #define ID_CLOSE                        40002
 #define ID_KILLCLIENTS                  40003
@@ -112,9 +125,9 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        143
+#define _APS_NEXT_RESOURCE_VALUE        149
 #define _APS_NEXT_COMMAND_VALUE         40014
-#define _APS_NEXT_CONTROL_VALUE         1096
+#define _APS_NEXT_CONTROL_VALUE         1102
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

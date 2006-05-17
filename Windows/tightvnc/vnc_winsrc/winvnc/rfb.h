@@ -33,7 +33,7 @@
 #define RFB_H__
 
 #define SHAREDAPP_DEBUG 1
-#if 0
+#if 1
 #define SHAREDAPP_TRACE1(a1, a2, a3) vnclog.Print(LL_CLIENTS, a1, a2, a3)
 #define SHAREDAPP_TRACE2(a1, a2, a3, a4) vnclog.Print(LL_CLIENTS, a1, a2, a3, a4)
 #else

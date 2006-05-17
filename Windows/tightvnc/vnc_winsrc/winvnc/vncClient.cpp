@@ -704,6 +704,9 @@ vncClientThread::run(void *arg)
 				update.right = update.left + Swap16IfLE(msg.fur.w);
 				update.bottom = update.top + Swap16IfLE(msg.fur.h);
 
+				vnclog.Print(1, "Update Request (%d %d %d %d) %d\n\n", 
+					update.left, update.top, update.right, update.bottom, msg.fur.incremental);
+
 				{	omni_mutex_lock l(m_client->m_regionLock);
 
 //					vnclog.Print(1, "Set m_updatewanted = TRUE\n");
@@ -901,6 +904,7 @@ vncClient::vncClient()
 
 	m_socket = NULL;
 	m_client_name = 0;
+	m_client_pretty_name = 0; // SharedApp
 	m_buffer = NULL;
 
 	m_copyrect_use = FALSE;
@@ -938,6 +942,10 @@ vncClient::~vncClient()
 	if (m_client_name != 0) {
 		free(m_client_name);
 		m_client_name = 0;
+	}
+	if (m_client_pretty_name != 0) { // SharedApp
+		free(m_client_pretty_name);
+		m_client_pretty_name = 0;
 	}
 
 	// If we have a socket then kill it
@@ -1116,10 +1124,10 @@ vncClient::TriggerUpdate()
 			// Now send the update
 			if (m_server->m_shapp->bEnabled) // SHAREDAPPVNC - GRW
 			{
-//				vnclog.Print(0, "SHAREDAPP SendUpdates\n");
+				vnclog.Print(0, "SHAREDAPP SendUpdates\n");
 				m_updatewanted = !m_server->m_shapp->SendUpdates(this);
 			} else {
-//				vnclog.Print(0, "VNC SendUpdate\n");
+				vnclog.Print(0, "VNC SendUpdate Full Desktop\n");
 				m_updatewanted = !SendUpdate();
 			}
 		}
@@ -1282,6 +1290,21 @@ vncClient::GetClientName()
 {
 	return m_client_name;
 }
+
+// SharedApp
+const char*
+vncClient::GetClientPrettyName()
+{
+	return m_client_pretty_name;
+}
+
+void vncClient::SetClientPrettyName(const char * name)
+{
+	//m_client_pretty_name
+	if (m_client_pretty_name) free(m_client_pretty_name);
+	m_client_pretty_name = strdup(name);
+}
+
 
 // Internal methods
 BOOL

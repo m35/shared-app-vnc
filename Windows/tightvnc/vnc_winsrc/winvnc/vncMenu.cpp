@@ -235,6 +235,9 @@ vncMenu::vncMenu(vncServer *server)
 
 	// Install the tray icon!
 	AddTrayIcon();
+
+	// SharedApp
+	m_sharedAppTabCtrl->Show(TRUE);
 }
 
 vncMenu::~vncMenu()
@@ -443,7 +446,7 @@ LRESULT CALLBACK vncMenu::WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lP
 			_this->m_properties.Show(TRUE, TRUE);
 			_this->FlashTrayIcon(_this->m_server->AuthClientCount() != 0);
 			break;
-		/* // integrated into SharedAppTabCtrl
+		/* // integrated into SharedAppTabCtrl - SHAREDAPP
 		case ID_OUTGOING_CONN:
 			// Connect out to a listening VNC viewer
 			{
@@ -452,7 +455,6 @@ LRESULT CALLBACK vncMenu::WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lP
 					newconn->DoDialog();
 			}
 			break;
-		*/
 		case ID_KILLCLIENTS:
 			// Disconnect all currently connected clients
 			_this->m_server->KillAuthClients();
@@ -476,7 +478,7 @@ LRESULT CALLBACK vncMenu::WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lP
 			// Update the icon
 			_this->FlashTrayIcon(_this->m_server->AuthClientCount() != 0);
 			break;
-
+		*/
 		case ID_ABOUT:
 			// Show the About box
 			_this->m_about.Show(TRUE);
@@ -491,6 +493,7 @@ LRESULT CALLBACK vncMenu::WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lP
 
 		case ID_CLOSE:
 			// User selected Close from the tray menu
+			_this->m_properties.Save(); // SHAREDAPP
 			PostMessage(hwnd, WM_CLOSE, 0, 0);
 			break;
 
