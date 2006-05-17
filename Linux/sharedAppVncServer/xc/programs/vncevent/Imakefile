@@ -1,7 +1,0 @@
-        DEPLIBS = $(DEPVNCEXTLIB) $(DEPXEXTLIB) $(DEPXLIB)
-LOCAL_LIBRARIES = $(VNCEXTLIB) $(XEXTLIB) $(XLIB)
-
-SRCS = vncevent.c
-OBJS = vncevent.o
-
-ComplexProgramTarget(vncevent)
