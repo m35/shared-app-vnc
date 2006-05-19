@@ -347,6 +347,7 @@ class VncWindow extends JComponent
         }
       } else {
         // Input enabled.
+
         synchronized(rfb) {
           try {
             rfb.writeKeyEvent(windowId, evt);
@@ -355,6 +356,7 @@ class VncWindow extends JComponent
           }
           rfb.notify();
         }
+
       }
     }
     // Don't ever pass keyboard events to AWT for default processing. 
@@ -365,15 +367,16 @@ class VncWindow extends JComponent
   public void processLocalMouseEvent(MouseEvent evt, boolean moved) {
     if (rfb != null && rfb.inNormalProtocol) 
     {
-//      evt.translatePoint(rect.x, rect.y);
+////      evt.translatePoint(rect.x, rect.y);
       evt.translatePoint(cursorOffset.x, cursorOffset.y);
 
-      //System.out.println("pointer move: " + evt.getX() + " " + evt.getY() + " : " + 
-      //    cursorOffset.x + " " + cursorOffset.y + " " + windowId);
+//      System.out.println("pointer move: " + evt.getX() + " " + evt.getY() + " : " + 
+//          cursorOffset.x + " " + cursorOffset.y + " " + windowId);
 
       if (moved) {
         dispatcher.softCursorMove(evt.getX(), evt.getY(), this);
       }
+
 
       synchronized(rfb) {
         try {
@@ -383,6 +386,7 @@ class VncWindow extends JComponent
         }
         rfb.notify();
       }
+
     }
   }
 

@@ -45,7 +45,8 @@ class RfbProto {
   // client -> server
   final int SetPixelFormat = 0, FixColourMapEntries = 1, SetEncodings = 2,
     FramebufferUpdateRequest = 3, KeyboardEvent = 4, PointerEvent = 5,
-    ClientCutText = 6, MultiCursor = 49;
+    ClientCutText = 6, SharedAppKeyboardEvent = 40, SharedAppPointerEvent = 41,
+    MultiCursor = 49;
 
   final static int
     EncodingRaw            = 0,
@@ -93,6 +94,8 @@ class RfbProto {
   Options options;
   int bytesPixel;
   boolean bServerSupportsSharedApp = false;
+
+  int tmsgCount = 0;
 
   Rectangle updateRect;
   Point cursorOffset;
@@ -173,6 +176,8 @@ class RfbProto {
 
     serverMajor = (b[4] - '0') * 100 + (b[5] - '0') * 10 + (b[6] - '0');
     serverMinor = (b[8] - '0') * 100 + (b[9] - '0') * 10 + (b[10] - '0');
+
+/* deprecated way of identifying server
     if (serverMinor == 30)
     {
       // this is a SharedAppServer
@@ -180,6 +185,7 @@ class RfbProto {
     } else {
       bServerSupportsSharedApp = false;
     }
+*/
   }
 
 
@@ -336,6 +342,10 @@ class RfbProto {
   int windowId, parentId;
 
   boolean readSharedAppUpdate() throws IOException {
+    // The first time we see such a message we will know the server
+    // supports sharedApp extension
+    bServerSupportsSharedApp = true; 
+
     is.readByte();
     updateNRects = is.readUnsignedShort();
     windowId = is.readInt();
@@ -364,6 +374,8 @@ class RfbProto {
     updateRectW = is.readUnsignedShort();
     updateRectH = is.readUnsignedShort();
     updateRectEncoding = is.readInt();
+
+//    System.out.println("framebufferRectHdr (" + Integer.toHexString(updateRectEncoding) + "): " + updateRectX + ", " + updateRectY + ", " + updateRectW + ", " + updateRectH );
 
     if (updateRectEncoding == EncodingZlib ||
         updateRectEncoding == EncodingTight)
@@ -453,8 +465,8 @@ class RfbProto {
 
     os.write(b);
 
-    //System.out.println("writeFramebufferUpdateRequest: " +x+", "+y+", "+w+", "+h);
-    //System.out.println();
+    System.out.println("writeFramebufferUpdateRequest: " +x+", "+y+", "+w+", "+h + ", " + incremental);
+    System.out.println();
 
   }
 
@@ -654,7 +666,12 @@ class RfbProto {
     if (x < 0) x = 0;
     if (y < 0) y = 0;
 
-    eventBuf[eventBufLen++] = (byte) PointerEvent;
+    if (bServerSupportsSharedApp)
+    {
+      eventBuf[eventBufLen++] = (byte) SharedAppPointerEvent;
+    } else {
+      eventBuf[eventBufLen++] = (byte) PointerEvent;
+    }
     eventBuf[eventBufLen++] = (byte) pointerMask;
     eventBuf[eventBufLen++] = (byte) ((x >> 8) & 0xff);
     eventBuf[eventBufLen++] = (byte) (x & 0xff);
@@ -669,7 +686,23 @@ class RfbProto {
       eventBuf[eventBufLen++] = (byte) ((winId >> 8) & 0xff);
       eventBuf[eventBufLen++] = (byte) (winId & 0xff);
     }
-
+/*
+    eventBuf[eventBufLen++] = (byte)  (0xad); //padpointerMask;
+    eventBuf[eventBufLen++] = (byte)  (0xad); //pad((x >> 8) & 0xff);
+    eventBuf[eventBufLen++] = (byte)  (0xad); //pad(x & 0xff);
+    eventBuf[eventBufLen++] = (byte)  (0xad); //pad((y >> 8) & 0xff);
+    eventBuf[eventBufLen++] = (byte)  (0xad); //pad(y & 0xff);
+    if (bServerSupportsSharedApp)
+    {
+      eventBuf[eventBufLen++] = (byte) (0xad); //pad
+      eventBuf[eventBufLen++] = (byte) (0xad); //pad
+      eventBuf[eventBufLen++] = (byte)  (0xad); //pad((winId >> 24) & 0xff);
+      eventBuf[eventBufLen++] = (byte)  (0xad); //pad((winId >> 16) & 0xff);
+      eventBuf[eventBufLen++] = (byte)  (0xad); //pad((winId >> 8) & 0xff);
+      eventBuf[eventBufLen++] = (byte)  (0xad); //pad(winId & 0xff);
+    }
+System.out.println("Trace Pointer(" + tmsgCount++ + "): x(" + x + ") y(" + y + ") button(" + Integer.toHexString(pointerMask) + ") winId(" + Integer.toHexString(winId) + ")");
+*/
 
 //    System.out.println("P: " + eventBuf);
 //    System.out.println("P: " + Integer.toHexString((winId >> 24) & 0xff) +  " "
@@ -832,7 +865,12 @@ class RfbProto {
   //
 
   void writeKeyEvent(int winId, int keysym, boolean down) {
-    eventBuf[eventBufLen++] = (byte) KeyboardEvent;
+    if (bServerSupportsSharedApp)
+    {
+      eventBuf[eventBufLen++] = (byte) SharedAppKeyboardEvent;
+    } else {
+      eventBuf[eventBufLen++] = (byte) KeyboardEvent;
+    }
     eventBuf[eventBufLen++] = (byte) (down ? 1 : 0);
     eventBuf[eventBufLen++] = (byte) 0;
     eventBuf[eventBufLen++] = (byte) 0;
