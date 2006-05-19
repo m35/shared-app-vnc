@@ -778,6 +778,12 @@ vncClientThread::run(void *arg)
 					msg.pe.y = Swap16IfLE(msg.pe.y);
 					msg.pe.windowId = Swap32IfLE(msg.pe.windowId);
 
+					if (msg.type == sharedAppPointerEvent)
+					{
+						POINT pt = {msg.pe.x, msg.pe.y};
+						if (!m_server->m_shapp->CheckPointer(pt, (HWND)msg.pe.windowId)) break;
+					}
+
 					vnclog.Print(1, "Trace Pointer(%d): x(%d) y(%d) button(%x) winId(%x) pad(%x)\n",
 						nTrace++, msg.pe.x, msg.pe.y, msg.pe.buttonMask, msg.pe.windowId, msg.pe.pad);
 
@@ -1145,6 +1151,7 @@ vncClient::UpdateMouse()
 
 		m_mousemoved = TRUE;
 	} else if (m_use_PointerPos) {
+		vnclog.Print(1, "set m_cursor_pos_changed = TRUE\n");
 		m_cursor_pos_changed = TRUE;
 	}
 }
@@ -1448,7 +1455,7 @@ vncClient::SendUpdate()
 		toBeDone.Clear();
 		toBeDone.Combine(m_incr_rgn);
 		toBeDone.Subtract(m_full_rgn);
-		toBeDone.Intersect(m_changed_rgn);
+		toBeDone.Intersect_orig(m_changed_rgn);
 
 		// Get the region to grab
 		vncRegion toBeGrabbed;
@@ -1498,7 +1505,7 @@ vncClient::SendUpdate()
 			if (!m_mousemoved) {
 				vncRegion tmpMouseRgn;
 				tmpMouseRgn.AddRect(m_oldmousepos);
-				tmpMouseRgn.Intersect(toBeSent);
+				tmpMouseRgn.Intersect_orig(toBeSent);
 				if (!tmpMouseRgn.IsEmpty()) {
 					m_mousemoved = true;
 				}

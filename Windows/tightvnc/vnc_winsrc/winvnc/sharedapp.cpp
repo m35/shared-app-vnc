@@ -40,6 +40,17 @@
  * If a client pointer is passed as a parameter it is assumed m_regionLock is locked
  */
 
+/* Some notes on buffers
+ *  m_backbuff holds the changed pixels to send to the client
+ *  m_mainbuff is a copy of the screen pixels
+ *  GrabRects and GrabRegion moves the pixels from the screen to the m_mainbuff
+ *  ClearRects and CheckRects moves the pixels from the m_mainbuff to the m_backbuff
+ *  ClearRects moves all pixels in the rect, CheckRects only moves pixels if some in the rect have changed.
+ *  Encode and send works from the m_backbuff to the client socket buffer.
+ *  CopyRect copies from one area of the backbuff to another and then fills in the source rect in the backbuff
+ *
+ */
+
 
 #include "stdhdrs.h"
 #include "vncRegion.h"
@@ -373,10 +384,6 @@ BOOL SharedAppVnc::RfbSendWindowClose( vncClient* client, HWND winHwnd )
 
 int SharedAppVnc::SendUpdates(vncClient* client)
 {
-	vncRegion toBeSent;			// Region to actually be sent
-	rectlist toBeSentList;		// List of rectangles to actually send
-	vncRegion toBeDone;			// Region to check
-	vncRegion winRegion;
 	WindowList closedWindowList;
 	WindowList::iterator windowIter;
 	int numUpdatesSent = 0;
@@ -384,7 +391,6 @@ int SharedAppVnc::SendUpdates(vncClient* client)
 	if (sharedAppList.empty()) return FALSE;
 
 	// Prepare to send cursor position update if necessary
-	
 	if (client->m_cursor_pos_changed) {
 		POINT cursor_pos;
 		if (!GetCursorPos(&cursor_pos)) {
@@ -394,6 +400,13 @@ int SharedAppVnc::SendUpdates(vncClient* client)
 		if (cursor_pos.x == client->m_cursor_pos.x && cursor_pos.y == client->m_cursor_pos.y) {
 			client->m_cursor_pos_changed = FALSE;
 		} else {
+			RECT mouseRect = {
+				client->m_cursor_pos.x, client->m_cursor_pos.y, 
+				client->m_cursor_pos.x + 32, //GetSystemMetrics(SM_CXCURSOR),
+				client->m_cursor_pos.y + 32 }; //GetSystemMetrics(SM_CYCURSOR) };
+			
+			client->m_oldMouseRegions.AddRect(mouseRect);
+
 			client->m_cursor_pos.x = cursor_pos.x;
 			client->m_cursor_pos.y = cursor_pos.y;
 		}
@@ -423,70 +436,20 @@ int SharedAppVnc::SendUpdates(vncClient* client)
 		client->m_copyrect_set = FALSE;
 	}
 
-	/***/
-	// GRAB THE SCREEN DATA
 
-	// Get the region to be scanned and potentially sent
-	toBeDone.Clear();
-	toBeDone.Combine(client->m_incr_rgn);
-	toBeDone.Subtract(client->m_full_rgn);
-	toBeDone.Intersect(client->m_changed_rgn);
-
-	// Get the region to grab
-	vncRegion toBeGrabbed;
-	toBeGrabbed.Clear();
-	toBeGrabbed.Combine(client->m_full_rgn);
-	toBeGrabbed.Combine(toBeDone);
-	client->GrabRegion(toBeGrabbed);
-
-	// CLEAR REGIONS THAT WON'T BE SCANNED
-
-	// Get the region to definitely be sent
-	toBeSent.Clear();
-	if (!client->m_full_rgn.IsEmpty())
-	{
-		rectlist rectsToClear;
-
-		// Retrieve and clear the rectangles
-		if (client->m_full_rgn.Rectangles(rectsToClear))
-			client->ClearRects(toBeSent, rectsToClear);
-	}
-
-	// SCAN INCREMENTAL REGIONS FOR CHANGES
-
-	if (!toBeDone.IsEmpty())
-	{
-		rectlist rectsToScan;
-
-		// Retrieve and scan the rectangles
-		if (toBeDone.Rectangles(rectsToScan))
-			client->CheckRects(toBeSent, rectsToScan);
-	}
-
-	// CLEAN UP THE MAIN REGIONS
-
-	// Clear the bits we're about to deal with from the changed region
-	client->m_changed_rgn.Subtract(client->m_incr_rgn);
-	client->m_changed_rgn.Subtract(client->m_full_rgn);
-
-	// Clear the full & incremental regions, since we've dealt with them
-	if (!toBeSent.IsEmpty())
-	{
-		client->m_full_rgn.Clear();
-		client->m_incr_rgn.Clear();
-	}
-
-
-	/***/
-
-	{ 	omni_mutex_lock l(m_sharedAppLock);
+	{ 	
+		omni_mutex_lock l(m_sharedAppLock);
 
 		// Loop through shared windows sending updates
 		for (windowIter = sharedAppList.begin(); windowIter != sharedAppList.end(); windowIter++)
 		{
 			HWND winHwnd = *windowIter;
-			vncRegion fullScreenRegion;	
-			vncRegion winToBeSent;
+			vncRegion fullScreenRegion;
+			vncRegion winRegion;
+			vncRegion mouseRegion;
+			vncRegion grabRegion;
+			vncRegion toBeSent;			// Region to actually be sent
+			rectlist toBeSentList;		// List of rectangles to actually send	
 			RECT winRect;
 			BOOL bCursorInWindow;
 
@@ -512,46 +475,63 @@ int SharedAppVnc::SendUpdates(vncClient* client)
 			fullScreenRegion.Clear();
 			fullScreenRegion.AddRect(client->m_fullscreen);
 			winRegion.Intersect(fullScreenRegion);
+			if (winRegion.IsEmpty()) continue;
 
-			bCursorInWindow = PtInRect(&winRect, client->m_cursor_pos);
+			//bCursorInWindow = PtInRect(&winRect, client->m_cursor_pos);
+			bCursorInWindow = winRegion.ContainsPoint(client->m_cursor_pos);
 
+			mouseRegion.Clear();
+			mouseRegion.Combine(client->m_oldMouseRegions);
+			mouseRegion.Intersect(winRegion);
 
-			//winToBeSent.Clear();
-			//winToBeSent.Combine(winRegion);
-			//winToBeSent.Intersect(toBeSent);
-
-			if (!client->m_cursor_update_sent && !client->m_cursor_update_pending) {
-				if (!client->m_mousemoved) {
-					vncRegion tmpMouseRgn;
-					tmpMouseRgn.AddRect(client->m_oldmousepos);
-					//tmpMouseRgn.Intersect(toBeSent);
-					tmpMouseRgn.Intersect(winRegion);
-					if (!tmpMouseRgn.IsEmpty()) {
-						client->m_mousemoved = true;
-					}
-				}
-				if (client->m_mousemoved)
-				{
-					// Grab the mouse
-					client->m_oldmousepos = client->m_buffer->GrabMouse();
-					//if (IntersectRect(&client->m_oldmousepos, &client->m_oldmousepos, &client->m_fullscreen))
-					if (IntersectRect(&client->m_oldmousepos, &client->m_oldmousepos, &winRect))
-						client->m_buffer->GetChangedRegion(toBeSent, client->m_oldmousepos);
-
-					client->m_mousemoved = FALSE;
-				}
+			// First we need to grab the pixels from the screen to the mainbuff
+			grabRegion.Clear();
+            if (!client->m_full_rgn.IsEmpty())
+			{
+				grabRegion.Combine(client->m_full_rgn);
+				grabRegion.Intersect(winRegion);
+			} else {
+				grabRegion.Combine(client->m_incr_rgn);
+				grabRegion.Intersect(client->m_changed_rgn);
+				grabRegion.Intersect(winRegion);
 			}
+			grabRegion.Combine(mouseRegion);
 
+			if (grabRegion.IsEmpty()) continue;
 
-			winToBeSent.Clear();
-			winToBeSent.Combine(winRegion);
-			winToBeSent.Intersect_orig(toBeSent);
+			// This is where the pixels get copied from the screen to the main buffer (GrabRegion GrabRect)
+			client->GrabRegion(grabRegion);
 
+			// Then we need to copy the requested pixels to the backbuff to be sent
+			toBeSent.Clear();
+			if (!client->m_full_rgn.IsEmpty())
+			{
+				// SEND WHOLE REGION
+				rectlist rectsToClear;
+
+				// Retrieve and clear the rectangles
+				if (grabRegion.Rectangles(rectsToClear))
+					client->ClearRects(toBeSent, rectsToClear);
+			} else {
+				// SCAN INCREMENTAL REGIONS FOR CHANGES
+				rectlist rectsToScan;
+
+				// Retrieve and scan the rectangles
+				if (grabRegion.Rectangles(rectsToScan))
+					client->CheckRects(toBeSent, rectsToScan);
+
+				// Retrieve and clear the mouse region rectangles
+				if (mouseRegion.Rectangles(rectsToScan))
+					client->ClearRects(toBeSent, rectsToScan);
+			}
+			
+			// Clear the bits we're about to deal with from the changed region
+			client->m_changed_rgn.Subtract(toBeSent);
+			client->m_oldMouseRegions.Subtract(mouseRegion);
 
 			// Get the list of changed rectangles!
 			int numrects = 0;
-			//if (winRegion.Rectangles(toBeSentList))
-			if (winToBeSent.Rectangles(toBeSentList))
+			if (toBeSent.Rectangles(toBeSentList))
 			{
 				// Find out how many rectangles this update will contain
 				rectlist::iterator i;
@@ -575,13 +555,11 @@ int SharedAppVnc::SendUpdates(vncClient* client)
 					numrects++;
 				if (client->m_cursor_pos_changed && bCursorInWindow)
 					numrects++;
-				// Count the copyrect region
-				//if (client->m_copyrect_set)
-				//	numrects++;
 				// If there are no rectangles then continue
 				if (numrects == 0)
 					continue; //return FALSE;
 			}
+
 
 
 			// Otherwise, send <number of rectangles> header
@@ -607,7 +585,7 @@ int SharedAppVnc::SendUpdates(vncClient* client)
 			}
 
 			// Send mouse cursor shape update
-			if (client->m_cursor_update_pending && bCursorInWindow) {
+			if (bCursorInWindow && client->m_cursor_update_pending) {
 				if (!client->SendCursorShapeUpdate())
 				{
 					vnclog.Print(0, "FAILURE SendUpdates: SendCursorShapeUpdate Failed.\n");
@@ -616,25 +594,13 @@ int SharedAppVnc::SendUpdates(vncClient* client)
 			}
 
 			// Send cursor position update
-			if (client->m_cursor_pos_changed && bCursorInWindow) {
+			if (bCursorInWindow && client->m_cursor_pos_changed) {
 				if (!client->SendCursorPosUpdate())
 				{
 					vnclog.Print(0, "FAILURE SendUpdates: SendCursorPosUpdate Failed.\n");
 					break; // return TRUE;
 				}
 			}
-
-			/*
-			// Encode & send the copyrect
-			if (client->m_copyrect_set) {
-				client->m_copyrect_set = FALSE;
-				if(!client->SendCopyRect(client->m_copyrect_rect, client->m_copyrect_src))
-				{
-					vnclog.Print(0, "FAILURE SendUpdates: SendCopyRect Failed.\n");
-					break; // return TRUE;
-				}
-			}
-			*/
 
 			// Encode & send the actual rectangles
 			if (!client->SendRectangles(toBeSentList))
@@ -662,13 +628,39 @@ int SharedAppVnc::SendUpdates(vncClient* client)
 		HWND winHwnd = *windowIter;
 		RemoveWindow(winHwnd, true);
 	}
-	//closedWindowList.clear();
 
 	if (numUpdatesSent > 0)
 	{
+		client->m_full_rgn.Clear();
+		client->m_incr_rgn.Clear();
+		
 		return TRUE;
 	}
 	
+	return FALSE;
+}
+
+BOOL SharedAppVnc::CheckPointer(POINT pt, HWND pointerWindow)
+{
+	WindowList::iterator windowIter;
+
+	omni_mutex_lock l(m_sharedAppLock);
+
+	// Loop through shared windows sending updates
+	for (windowIter = sharedAppList.begin(); windowIter != sharedAppList.end(); windowIter++)
+	{
+		HWND win = *windowIter;
+
+		if (win == pointerWindow)
+		{
+			vncRegion winRegion;
+			winRegion.Clear();
+			GetVisibleRegion(win, winRegion);
+			if (winRegion.ContainsPoint(pt)) return TRUE;
+			else return FALSE;
+		}
+	}
+
 	return FALSE;
 }
 
@@ -702,53 +694,5 @@ int SharedAppVnc::SendUpdates(vncClient* client)
 
 
 
-//Bool sharedapp_CheckPointer(rfbClientPtr cl, rfbPointerEventMsg *pe)
-//{
-//  VNCSCREENPTR(cl->pScreen);
-//  SharedAppVnc *shapp = &pVNC->sharedApp;
-//  SharedWindowPtr shwin;
-//  unsigned int winId;
-//  BoxRec box;
-//  int listIndex;
-//  int x,y;
-//
-//  /* Remove This */
-//  if (!cl->supportsSharedAppEncoding) return TRUE;
-//
-//  winId = Swap32IfLE (pe->windowId);
-//  x = (int) Swap16IfLE (pe->x);
-//  y = (int) Swap16IfLE (pe->y);
-//
-//  /*rfbLog("CheckPointer looking for window 0x%x\n", winId);*/
-//
-//  for( listIndex=0;
-//       (shwin=(SharedWindowPtr)List_Element(&shapp->sharedAppList, listIndex)) != NULL;
-//       listIndex++)
-//  {
-//    if (shwin->windowId == winId)
-//    {
-//      if (!POINT_IN_REGION(cl->pScreen, &shwin->blackOutRegion, x, y, &box))
-//      {
-//        if (shwin->windowPtr)
-//        {
-//          if (POINT_IN_REGION(cl->pScreen, &shwin->windowPtr->winSize, x, y, &box))
-//          {
-//            /*rfbLog("Pointer in region");*/
-//            return TRUE;
-//          } else {
-//            /*rfbLog("Pointer NOT in region");*/
-//          }
-//        } else {
-//          /*rfbLog("Pointer no winPtr");*/
-//          return TRUE;
-//        }
-//      } else {
-//        /*rfbLog("Pointer in blackout");*/
-//      }
-//    }
-//  }
-//
-//  /*rfbLog("CheckPointer FALSE");*/
-//  return FALSE;
-//}
+
 

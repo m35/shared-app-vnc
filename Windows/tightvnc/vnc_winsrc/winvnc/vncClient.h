@@ -112,7 +112,7 @@ public:
 	virtual int GetCapability() {return m_capability;};
 	virtual const char *GetClientName();
 	virtual vncClientId GetClientId() {return m_id;};
-	virtual const char *GetClientPrettyName();
+	virtual const char *GetClientPrettyName();  // SHAREDAPP
 	virtual void SetClientPrettyName(const char * name);
 
 	// Update routines
@@ -197,7 +197,8 @@ protected:
 	BOOL			m_remoteevent;
 
 	BOOL			m_use_PointerPos;
-	BOOL			m_supports_SharedApp;
+	BOOL			m_supports_SharedApp; // SHAREDAPP
+	vncRegion		m_oldMouseRegions; // SHAREDAPP
 
 };
 

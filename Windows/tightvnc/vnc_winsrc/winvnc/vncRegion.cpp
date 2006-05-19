@@ -161,7 +161,21 @@ vncRegion::Subtract(vncRegion &rgn)
 		Clear();
 }
 
+BOOL vncRegion::ContainsPoint(POINT point)  // SHAREDAPP
+{
+	rectlist rects;
+	rectlist::iterator i;
 
+	Rectangles(rects);
+			
+	for (i=rects.begin(); i != rects.end(); i++)
+	{
+		RECT rect = *i;
+		if (PtInRect(&rect, point)) return TRUE;
+	}
+
+	return FALSE;
+}
 
 // Return all the rectangles
 BOOL vncRegion::Rectangles(rectlist &rects)

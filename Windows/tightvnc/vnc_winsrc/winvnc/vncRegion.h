@@ -62,6 +62,7 @@ public:
 	void Intersect(vncRegion &rgn);			// Intersect with another region
 	void Intersect_orig(vncRegion &rgn);
 	void Subtract(vncRegion &rgn);			// Subtract another region from this one
+	BOOL ContainsPoint(POINT point);  // SHAREDAPP
 
 	// Rectangle retrieval routines - return FALSE if no rects returned!
 	// Note that these routines ADD rectangles to existing lists...

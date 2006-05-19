@@ -43,6 +43,7 @@ public:
 	void RemoveWindow(HWND winHwnd, bool bUpdateList);
 	void RemoveAllWindows(bool bUpdateList);
 	void GetVisibleRegion(HWND winHwnd, vncRegion& visibleRegionPtr);
+	BOOL CheckPointer(POINT pt, HWND pointerWindow);
 
 	void SetClientsNeedUpdate();
 
