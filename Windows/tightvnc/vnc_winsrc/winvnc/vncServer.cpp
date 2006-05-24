@@ -94,7 +94,7 @@ vncServer::vncServer()
 	m_connect_pri = 0;
 
 	// Set the input options
-	m_enable_remote_inputs = TRUE;
+	m_enable_remote_inputs = FALSE; // TRUE;  SHAREDAPP
 	m_disable_local_inputs = FALSE;
 
 	// Clear the client mapping table
@@ -898,6 +898,18 @@ void
 vncServer::EnableRemoteInputs(BOOL enable)
 {
 	m_enable_remote_inputs = enable;
+
+	// SHAREDAPP - want to be able to enable/disable dynamically
+	vncClientList::iterator i;
+	omni_mutex_lock l(m_clientsLock);
+
+	// Post this update to all the connected clients
+	for (i = m_authClients.begin(); i != m_authClients.end(); i++)
+	{
+		// Post the update
+		GetClient(*i)->EnableKeyboard(m_enable_remote_inputs);
+		GetClient(*i)->EnablePointer(m_enable_remote_inputs);
+	}
 }
 
 BOOL vncServer::RemoteInputsEnabled()

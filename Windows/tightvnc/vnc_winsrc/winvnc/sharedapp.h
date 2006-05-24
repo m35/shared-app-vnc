@@ -39,6 +39,7 @@ public:
 	~SharedAppVnc();
 	BOOL SendUpdates(vncClient *client);
 	BOOL RfbSendWindowClose(vncClient* client, HWND winHwnd );
+	BOOL RfbSendWindowOpen( vncClient* client, HWND winHwnd );
 	void AddWindow(HWND	winHwnd, HWND parentHwnd);
 	void RemoveWindow(HWND winHwnd, bool bUpdateList);
 	void RemoveAllWindows(bool bUpdateList);

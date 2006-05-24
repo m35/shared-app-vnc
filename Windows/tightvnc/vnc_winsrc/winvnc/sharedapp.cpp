@@ -110,7 +110,7 @@ bool SharedAppVnc::StartViewer()
 			{ 
 				hViewerProcess = procinfo.hProcess;
 				//CloseHandle(procinfo.hThread);
-				vnclog.Print(1, "Viewer Started\n"); 
+				vnclog.Print(LL_SHAREDAPP, "Viewer Started\n"); 
 				result = true;
 			}
 		}
@@ -168,9 +168,9 @@ char* SharedAppVnc::GetViewerCommand()
 		{
 			if (GetLastError() == 32)
 			{
-				vnclog.Print(1, "SharedAppViewer is already running in the background\n");
+				vnclog.Print(LL_SHAREDAPP, "SharedAppViewer is already running in the background\n");
 			} else {
-				vnclog.Print(0, "CreateFile Failed %d\n", GetLastError());
+				vnclog.Print(0, "GetViewer: CreateFile Failed %d\n", GetLastError());
 			}
 			return NULL;
 		}
@@ -236,8 +236,6 @@ void SharedAppVnc::SetClientsNeedUpdate()
 	vncClientList::iterator i;
 	vncClientList clients = server->ClientList();
 
-	vnclog.Print(1, "SetClientsNeedUpdate\n");
-
 	// Post this update to all the connected clients
 	for (i = clients.begin(); i != clients.end(); i++)
 	{
@@ -266,6 +264,21 @@ void SharedAppVnc::AddWindow(HWND winHwnd, HWND parentHwnd)
 		}
 		sharedAppList.push_back(winHwnd);
 	}
+
+	// Notify clients - in case a window is off the main screen. 
+	// Note we'd also need to notify when a client first connects.
+	/*
+	vncClientList::iterator i;
+	vncClientList clients = server->ClientList();
+	// Post this update to all the connected clients
+	for (i = clients.begin(); i != clients.end(); i++)
+	{
+		// Post the update
+		vncClient *client = server->GetClient(*i);
+		omni_mutex_lock l(client->m_regionLock);
+		RfbSendWindowOpen(client, winHwnd);
+	}
+	*/
 
 	SetClientsNeedUpdate();
 	return;
@@ -340,7 +353,6 @@ void SharedAppVnc::GetVisibleRegion(HWND winHwnd, vncRegion& visibleRegionPtr)
 		HWND tempHwnd;
 
 		GetWindowRect(iterHwnd, &winRect);
-		//vnclog.Print(1, "winRect (%d %d %d %d)\n", winRect.left, winRect.top, winRect.right, winRect.bottom);
 
 		if (iterHwnd != winHwnd)
 		{
@@ -376,6 +388,40 @@ BOOL SharedAppVnc::RfbSendWindowClose( vncClient* client, HWND winHwnd )
 
 	return client->SendRFBMsg(rfbSharedAppUpdate, (BYTE *) &header, sz_rfbSharedAppUpdateMsg);
 }
+
+
+BOOL SharedAppVnc::RfbSendWindowOpen( vncClient* client, HWND winHwnd )
+{
+	rfbSharedAppUpdateMsg header;
+	RECT winRect;
+				
+	GetWindowRect(winHwnd, &winRect);
+	if (winRect.left < 0) winRect.left=0;
+	if (winRect.top < 0) winRect.top=0;
+	if (winRect.bottom < 0) winRect.bottom=0;
+	if (winRect.right < 0) winRect.right=0;
+
+	header.type = rfbSharedAppUpdate;
+	header.win_id = Swap32IfLE((int)winHwnd);
+	header.parent_id = Swap32IfLE(NULL);
+	header.win_rect.x = Swap16IfLE(winRect.left);
+	header.win_rect.y = Swap16IfLE(winRect.top);
+	header.win_rect.w = Swap16IfLE(winRect.right-winRect.left);
+	header.win_rect.h = Swap16IfLE(winRect.bottom-winRect.top);
+	header.cursorOffsetX = Swap16IfLE(winRect.left);
+	header.cursorOffsetY = Swap16IfLE(winRect.top);
+	header.nRects = Swap16IfLE(0);
+
+	SHAREDAPP_TRACE2("TRACE(%d): Message %d   nRects %x\n", nTrace++, rfbSharedAppUpdate, 0);
+	if (!client->SendRFBMsg(rfbSharedAppUpdate, (BYTE *) &header, sz_rfbSharedAppUpdateMsg))
+	{
+		vnclog.Print(0, "FAILURE SendUpdates: SendRFBMsg Failed.\n");
+		return FALSE;
+	}
+
+	return TRUE;
+}
+
 
 /*
 * sharedapp_RfbSendUpdates - send the currently pending window updates to

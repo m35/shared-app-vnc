@@ -50,6 +50,8 @@ extern Log vnclog;
 #define LL_SOCKERR	4
 // Log internal errors
 #define LL_INTERR	0
+// SHAREDAPP Logging
+#define LL_SHAREDAPP 3
 
 // Log internal warnings
 #define LL_INTWARN	8

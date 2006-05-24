@@ -86,9 +86,9 @@ BOOL appHookedOK = FALSE;							// Did InitInstance succeed?
 const UINT VNC_DEFERRED_UPDATE = RegisterWindowMessage("VNCHooks.Deferred.UpdateMessage");
 
 // Atoms
-const char *VNC_WINDOWPOS_ATOMNAME = "VNCHooks.CopyRect.WindowPos";
+static const char *VNC_WINDOWPOS_ATOMNAME = "VNCHooks.CopyRect.WindowPos";
 const char *VNC_POPUPSELN_ATOMNAME = "VNCHooks.PopUpMenu.Selected";
-ATOM VNC_WINDOWPOS_ATOM = NULL;
+static ATOM VNC_WINDOWPOS_ATOM = NULL;
 ATOM VNC_POPUPSELN_ATOM = NULL;
 
 /////////////////////////////////////////////////////////////////////////////

@@ -2,7 +2,7 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="7.10"
-	Name="WinVNC"
+	Name="SharedAppVnc"
 	SccProjectName="&quot;$/WinVNC&quot;, IABAAAAA"
 	SccLocalPath=".">
 	<Platforms>
@@ -43,8 +43,8 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/MACHINE:I386"
-				AdditionalDependencies="wsock32.lib"
-				OutputFile=".\Release/WinVNC.exe"
+				AdditionalDependencies="wsock32.lib comctl32.lib psapi.lib"
+				OutputFile=".\Release/SharedAppVnc.exe"
 				LinkIncremental="1"
 				SuppressStartupBanner="TRUE"
 				IgnoreDefaultLibraryNames="LIBC"
@@ -108,7 +108,7 @@
 				Name="VCLinkerTool"
 				AdditionalOptions="/MACHINE:I386"
 				AdditionalDependencies="wsock32.lib comctl32.lib psapi.lib"
-				OutputFile=".\Debug/WinVNC.exe"
+				OutputFile=".\Debug/SharedAppVnc.exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="TRUE"
 				AdditionalLibraryDirectories=""
@@ -549,10 +549,19 @@
 			RelativePath=".\res\ico00004.ico">
 		</File>
 		<File
+			RelativePath=".\res\ico00005.ico">
+		</File>
+		<File
 			RelativePath=".\res\ReloginPanel.class">
 		</File>
 		<File
 			RelativePath=".\res\SharedAppViewer.jar">
+		</File>
+		<File
+			RelativePath=".\res\SharedAppVnc.bmp">
+		</File>
+		<File
+			RelativePath=".\res\sharedAppVnc32.ico">
 		</File>
 		<File
 			RelativePath=".\res\SocketFactory.class">

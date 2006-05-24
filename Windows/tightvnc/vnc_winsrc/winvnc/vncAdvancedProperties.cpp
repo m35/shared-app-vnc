@@ -290,7 +290,7 @@ vncAdvancedProperties::DialogProc(HWND hwnd,
 				_this->m_server->SetLoopbackOnly(IsDlgButtonChecked(hwnd, IDONLYLOOPBACK));
 
 #ifndef SHAREDAPP_TRACE1
-				/*
+				
 				if (IsDlgButtonChecked(hwnd, IDLOG))
 
 					vnclog.SetMode(2);
@@ -301,7 +301,7 @@ vncAdvancedProperties::DialogProc(HWND hwnd,
 					vnclog.SetLevel(10);
 				else
 					vnclog.SetLevel(2);
-				*/
+				
 #endif
 
 				// And to the registry

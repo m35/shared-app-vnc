@@ -47,8 +47,8 @@ const UINT RFB_MOUSE_UPDATE = RegisterWindowMessage("WinVNC.Update.Mouse");
 const char szDesktopSink[] = "WinVNC desktop sink";
 
 // Atoms
-const char *VNC_WINDOWPOS_ATOMNAME = "VNCHooks.CopyRect.WindowPos";
-ATOM VNC_WINDOWPOS_ATOM = NULL;
+static const char *VNC_WINDOWPOS_ATOMNAME = "VNCHooks.CopyRect.WindowPos";
+static ATOM VNC_WINDOWPOS_ATOM = NULL;
 
 // The desktop handler thread
 // This handles the messages posted by RFBLib to the vncDesktop window
@@ -257,7 +257,10 @@ vncDesktopThread::run_undetached(void *arg)
 		}
 
 		if (unhandled)
+		{
+			m_desktop->m_cursormoved = TRUE; // SHAREDAPP - sometimes RFB_MOUSE_UPDATE never gets called
 			DispatchMessage(&msg);
+		}
 	}
 
 	m_desktop->SetClipboardActive(FALSE);

@@ -889,7 +889,7 @@ typedef struct _rfbKeyEventMsg {
 #define sz_rfbKeyEventMsg 8
 
 typedef struct _sharedAppKeyEventMsg {
-    CARD8 type;			/* always rfbKeyEvent */
+    CARD8 type;			/* always sharedAppKeyEvent */
     CARD8 down;			/* true if down (press), false if up */
     CARD16 pad;
     CARD32 key;			/* key is specified as an X keysym */
@@ -908,7 +908,6 @@ typedef struct _rfbPointerEventMsg {
     CARD16 x;
     CARD16 y;
 	CARD16 pad;
-    CARD32 windowId; /* SharedApp extensions -- SHAREDAPP */
 } rfbPointerEventMsg;
 
 #define rfbButton1Mask 1
@@ -920,7 +919,7 @@ typedef struct _rfbPointerEventMsg {
 #define sz_rfbPointerEventMsg 8
 
 typedef struct _sharedAppPointerEventMsg {
-    CARD8 type;			/* always rfbPointerEvent */
+    CARD8 type;			/* always sharedAppPointerEvent */
     CARD8 buttonMask;		/* bits 0-7 are buttons 1-8, 0=up, 1=down */
     CARD16 x;
     CARD16 y;

@@ -887,7 +887,7 @@ vncProperties::Load(BOOL usersettings)
 	m_pref_QueryAccept=FALSE;
 	m_pref_QueryAllowNoPass=FALSE;
 	m_pref_IdleTimeout=0;
-	m_pref_EnableRemoteInputs=TRUE;
+	m_pref_EnableRemoteInputs=FALSE; // SHAREDAPP
 	m_pref_DisableLocalInputs=FALSE;
 	m_pref_LockSettings=-1;
 	m_pref_PollUnderCursor=FALSE;
@@ -1067,13 +1067,19 @@ vncProperties::SaveInt(HKEY key, LPCSTR valname, LONG val)
 void
 vncProperties::SavePassword(HKEY key, const char *buffer, const char *entry_name)
 {
-	RegSetValueEx(key, entry_name, 0, REG_BINARY, (LPBYTE) buffer, MAXPWLEN);
+	if (buffer)
+	{
+		RegSetValueEx(key, entry_name, 0, REG_BINARY, (LPBYTE) buffer, MAXPWLEN);
+	}
 }
 
 void
 vncProperties::SaveString(HKEY key, LPCSTR valname, const char *buffer)
 {
-	RegSetValueEx(key, valname, 0, REG_SZ, (LPBYTE) buffer, strlen(buffer)+1);
+	if (buffer)
+	{
+		RegSetValueEx(key, valname, 0, REG_SZ, (LPBYTE) buffer, strlen(buffer)+1);
+	}
 }
 
 void

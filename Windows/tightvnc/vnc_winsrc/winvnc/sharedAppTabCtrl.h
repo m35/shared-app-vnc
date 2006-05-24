@@ -36,6 +36,7 @@ public:
 	HWND CreatePropertySheet(HWND hwndOwner);
 	void Show(BOOL show);
 	void SetTab(int tab);
+	void refreshWindowList(HWND hDlg);
 
 	// Implementation
 	BOOL m_dlgvisible;

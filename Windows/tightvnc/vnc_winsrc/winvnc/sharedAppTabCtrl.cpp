@@ -123,6 +123,39 @@ BOOL CALLBACK EnumWindowsProc(HWND hwnd, LPARAM hDlg)
 }
 
 
+
+void sharedAppTabCtrl::refreshWindowList(HWND hDlg)
+{
+	HWND hList, hShared;
+	char name[1024];
+	WindowList::iterator iter;
+	WindowList sharedAppList = m_shapp->SharedAppList();
+
+	hList = GetDlgItem(hDlg, IDC_WIN_LIST);
+	SendMessage(hList, LB_RESETCONTENT, 0, 0);
+
+	hShared = GetDlgItem(hDlg, IDC_SHARED_LIST);
+	SendMessage(hShared, LB_RESETCONTENT, 0, 0);
+
+	// Add the shared window listings
+	{	omni_mutex_lock l(m_shapp->m_sharedAppLock);
+	for (iter = sharedAppList.begin(); iter != sharedAppList.end(); iter++)
+	{
+		HWND winHwnd = *iter;
+		if (GetProcessName(winHwnd, name, sizeof(name)))
+		{
+			int listitem = SendMessage(hShared, LB_ADDSTRING, 0, (LPARAM)(LPCTSTR) name);
+			SendMessage(hShared, LB_SETITEMDATA, (WPARAM) listitem, (LPARAM) winHwnd);
+		}
+	}
+	}
+
+	// Fill in list box with the desktop's windows' names
+	EnumDesktopWindows(NULL, EnumWindowsProc, (long)hDlg);
+}
+
+
+
 BOOL CALLBACK
 sharedAppTabCtrl::winListDlgProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam )
 {
@@ -163,6 +196,10 @@ sharedAppTabCtrl::winListDlgProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lPa
 			hIcon = LoadIcon(hAppInstance, MAKEINTRESOURCE(IDI_UPALL_ARROW));
 			SendMessage(hButton, BM_SETIMAGE, IMAGE_ICON, (LPARAM) (DWORD) hIcon);
 
+			hButton = GetDlgItem(hDlg, ID_WIN_REFRESH);
+			hIcon = LoadIcon(hAppInstance, MAKEINTRESOURCE(IDI_REFRESH));
+			SendMessage(hButton, BM_SETIMAGE, IMAGE_ICON, (LPARAM) (DWORD) hIcon);
+
 			// Show the dialog
 			SetForegroundWindow(hDlg);
 
@@ -175,32 +212,7 @@ sharedAppTabCtrl::winListDlgProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lPa
 
 		case PSN_SETACTIVE:
 			// initialize the controls
-			{
-				WindowList::iterator iter;
-				WindowList sharedAppList = _this->m_shapp->SharedAppList();
-
-				hList = GetDlgItem(hDlg, IDC_WIN_LIST);
-				SendMessage(hList, LB_RESETCONTENT, 0, 0);
-
-				hShared = GetDlgItem(hDlg, IDC_SHARED_LIST);
-				SendMessage(hShared, LB_RESETCONTENT, 0, 0);
-
-				// Add the shared window listings
-				{	omni_mutex_lock l(_this->m_shapp->m_sharedAppLock);
-					for (iter = sharedAppList.begin(); iter != sharedAppList.end(); iter++)
-					{
-						HWND winHwnd = *iter;
-						if (GetProcessName(winHwnd, name, sizeof(name)))
-						{
-							int listitem = SendMessage(hShared, LB_ADDSTRING, 0, (LPARAM)(LPCTSTR) name);
-							SendMessage(hShared, LB_SETITEMDATA, (WPARAM) listitem, (LPARAM) winHwnd);
-						}
-					}
-				}
-
-				// Fill in list box with the desktop's windows' names
-				EnumDesktopWindows(NULL, EnumWindowsProc, (long)hDlg);
-			}
+			_this->refreshWindowList(hDlg);			
 			break;
 
 		case PSN_KILLACTIVE:
@@ -247,7 +259,7 @@ sharedAppTabCtrl::winListDlgProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lPa
 				BringWindowToTop(sel_hwnd);
 				//shared_window = sel_hwnd;
 				_this->m_shapp->AddWindow(sel_hwnd, 0);
-				vnclog.Print(1, "Share Window %x\n", sel_hwnd);
+				vnclog.Print(LL_SHAREDAPP, "Share Window %x\n", sel_hwnd);
 			}
 			return TRUE;
 
@@ -294,6 +306,9 @@ sharedAppTabCtrl::winListDlgProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lPa
 			//_this->m_shapp->RemoveAllWindows();
 
 			return TRUE;
+		case ID_WIN_REFRESH:
+			_this->refreshWindowList(hDlg);
+			return TRUE;
 		}
 		break;
 	}
@@ -322,12 +337,10 @@ BOOL CALLBACK sharedAppTabCtrl::connDlgProc(HWND hDlg, UINT uMsg, WPARAM wParam,
 		{
 			// Save the lParam into our user data so that subsequent calls have
 			// access to the parent C++ object
-			vnclog.Print(1, "conn Init\n");
 			PROPSHEETPAGE *ps = (PROPSHEETPAGE *)lParam;
 			SetWindowLong(hDlg, GWL_USERDATA, ps->lParam);
 			_this = (sharedAppTabCtrl *) ps->lParam;
 
-			//vnclog.Print(1, "client tab %x\n", hDlg);
 			_this->hClientDlg = hDlg;
 			_this->hPropSht = GetParent(hDlg);
 			
@@ -345,7 +358,6 @@ BOOL CALLBACK sharedAppTabCtrl::connDlgProc(HWND hDlg, UINT uMsg, WPARAM wParam,
 
 		case PSN_SETACTIVE:
 			// initialize the controls
-			//vnclog.Print(1, "conn Set Active\n");
 
 			// add any new incoming clients to the list box
 			{
@@ -487,12 +499,10 @@ sharedAppTabCtrl::modeDlgProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam
 		{
 			// Save the lParam into our user data so that subsequent calls have
 			// access to the parent C++ object
-			vnclog.Print(1, "conn Init\n");
 			PROPSHEETPAGE *ps = (PROPSHEETPAGE *)lParam;
 			SetWindowLong(hDlg, GWL_USERDATA, ps->lParam);
 			_this = (sharedAppTabCtrl *) ps->lParam;
 
-			//vnclog.Print(1, "client tab %x\n", hDlg);
 			_this->hClientDlg = hDlg;
 			_this->hPropSht = GetParent(hDlg);
 
@@ -509,7 +519,6 @@ sharedAppTabCtrl::modeDlgProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam
 
 		case PSN_SETACTIVE:
 			// initialize the controls
-			//vnclog.Print(1, "mode Set Active\n");
 			//InvalidateRect(hDlg, NULL, FALSE);
 			break;
 

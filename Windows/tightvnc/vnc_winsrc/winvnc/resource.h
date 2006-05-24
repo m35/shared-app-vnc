@@ -35,8 +35,11 @@
 #define IDI_UP_ARROW                    145
 #define IDI_DOWN_ARROW                  146
 #define IDI_UPALL_ARROW                 147
-#define IDR_JAVAARCHIVE1                148
 #define IDR_SHAREDAPP_VIEWER_JAR        148
+#define IDI_REFRESH                     149
+#define IDB_SHAREDAPP                   151
+#define IDI_ICON4                       158
+#define IDI_SHAREDAPP                   158
 #define IDC_CONNECT_BORDER              1003
 #define IDC_CONNECT_SOCK                1004
 #define IDC_CONNECT_CORBA               1005
@@ -92,6 +95,7 @@
 #define IDC_LOCKSETTING_LOCK            1078
 #define IDC_LOCKSETTING_LOGOFF          1079
 #define ID_SHARE_WIN                    1080
+#define ID_WIN_REFRESH                  1082
 #define IDC_RADIO_NOSHARING             1084
 #define IDC_RADIO_DESKTOP               1085
 #define IDC_RADIO3                      1086
@@ -125,7 +129,7 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        149
+#define _APS_NEXT_RESOURCE_VALUE        159
 #define _APS_NEXT_COMMAND_VALUE         40014
 #define _APS_NEXT_CONTROL_VALUE         1102
 #define _APS_NEXT_SYMED_VALUE           101

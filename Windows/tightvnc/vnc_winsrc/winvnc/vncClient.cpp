@@ -751,6 +751,14 @@ vncClientThread::run(void *arg)
 				if (m_client->m_keyboardenabled)
 				{
 					msg.ke.key = Swap32IfLE(msg.ke.key);
+		
+					if (msg.type == sharedAppKeyEvent)
+					{
+						// Make sure this window is on top
+						HWND windowId = (HWND) Swap32IfLE(msg.ske.windowId);
+						HWND topWindow = GetForegroundWindow();
+						if (topWindow != windowId) break;
+					}					
 
 					// Get the keymapper to do the work
 					vncKeymap::keyEvent(msg.ke.key, msg.ke.down != 0);
@@ -776,16 +784,17 @@ vncClientThread::run(void *arg)
 					// Convert the coords to Big Endian
 					msg.pe.x = Swap16IfLE(msg.pe.x);
 					msg.pe.y = Swap16IfLE(msg.pe.y);
-					msg.pe.windowId = Swap32IfLE(msg.pe.windowId);
+					
 
 					if (msg.type == sharedAppPointerEvent)
 					{
 						POINT pt = {msg.pe.x, msg.pe.y};
-						if (!m_server->m_shapp->CheckPointer(pt, (HWND)msg.pe.windowId)) break;
+						HWND windowId = (HWND) Swap32IfLE(msg.spe.windowId);
+						if (!m_server->m_shapp->CheckPointer(pt, windowId)) break;
 					}
 
-					vnclog.Print(1, "Trace Pointer(%d): x(%d) y(%d) button(%x) winId(%x) pad(%x)\n",
-						nTrace++, msg.pe.x, msg.pe.y, msg.pe.buttonMask, msg.pe.windowId, msg.pe.pad);
+					vnclog.Print(1, "Trace Pointer(%d): x(%d) y(%d) button(%x) spad(%x)\n",
+						nTrace++, msg.pe.x, msg.pe.y, msg.pe.buttonMask, msg.pe.pad);
 
 					// Remember cursor position for this client
 					m_client->m_cursor_pos.x = msg.pe.x;
