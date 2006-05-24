@@ -124,18 +124,6 @@ class VncWindow extends JComponent
     return new Dimension(rect.width, rect.height);
   }
 
-  public Dimension getSize() {
-    return new Dimension(rect.width, rect.height);
-  }
-
-  public int getWidth() {
-    return rect.width;
-  }
-
-  public int getHeight() {
-    return rect.height;
-  }
-
 
   void updateWindowSize(int width, int height, int bPixel) 
   {
@@ -182,12 +170,8 @@ class VncWindow extends JComponent
 
     // Update the size of desktop containers.
     scrollPane.setSize(width, height);
-    winframe.setSize(width, height);
     winframe.pack();
     winframe.setVisible(true);
-    System.out.println("image size: " + width + " " + height);
-    System.out.println("scrollpane size: " + scrollPane.getWidth() + " " + scrollPane.getHeight());
-    System.out.println("frame size: " + winframe.getWidth() + " " + winframe.getHeight());
   }
 
 
@@ -347,7 +331,6 @@ class VncWindow extends JComponent
         }
       } else {
         // Input enabled.
-
         synchronized(rfb) {
           try {
             rfb.writeKeyEvent(windowId, evt);
@@ -356,7 +339,6 @@ class VncWindow extends JComponent
           }
           rfb.notify();
         }
-
       }
     }
     // Don't ever pass keyboard events to AWT for default processing. 
@@ -367,16 +349,15 @@ class VncWindow extends JComponent
   public void processLocalMouseEvent(MouseEvent evt, boolean moved) {
     if (rfb != null && rfb.inNormalProtocol) 
     {
-////      evt.translatePoint(rect.x, rect.y);
+//      evt.translatePoint(rect.x, rect.y);
       evt.translatePoint(cursorOffset.x, cursorOffset.y);
 
-//      System.out.println("pointer move: " + evt.getX() + " " + evt.getY() + " : " + 
-//          cursorOffset.x + " " + cursorOffset.y + " " + windowId);
+      //System.out.println("pointer move: " + evt.getX() + " " + evt.getY() + " : " + 
+      //    cursorOffset.x + " " + cursorOffset.y + " " + windowId);
 
       if (moved) {
         dispatcher.softCursorMove(evt.getX(), evt.getY(), this);
       }
-
 
       synchronized(rfb) {
         try {
@@ -386,7 +367,6 @@ class VncWindow extends JComponent
         }
         rfb.notify();
       }
-
     }
   }
 

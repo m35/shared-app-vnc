@@ -122,11 +122,6 @@ void sharedapp_HandleRequest(rfbClientPtr cl, unsigned int command, unsigned int
     }
     break;
 
-  case rfbSharedAppRequestHideAll:
-    sharedapp_RemoveAllWindows(cl, &shapp->sharedAppList);
-    rfbLog("SHAREDAPP Hide All 0x%x\n", id);
-    break;
-
   case rfbSharedAppRequestIncludeDialogs:
     shapp->bIncludeDialogWindows = TRUE;
     break;
@@ -134,6 +129,11 @@ void sharedapp_HandleRequest(rfbClientPtr cl, unsigned int command, unsigned int
   case rfbSharedAppRequestExcludeDialogs:
     shapp->bIncludeDialogWindows = FALSE;
     sharedapp_RemoveDialogWindows(cl, &shapp->sharedAppList);
+    break;
+
+  case rfbSharedAppRequestHideAll:
+    sharedapp_RemoveAllWindows(cl, &shapp->sharedAppList);
+    rfbLog("SHAREDAPP Hide All 0x%x\n", id);
     break;
 
   case rfbSharedAppReverseConnection:
@@ -760,10 +760,13 @@ void sharedapp_RemoveAllWindows(rfbClientPtr cl, List *winlist)
   int sharedAppCount, i;
 
   sharedAppCount = List_Count(winlist);
-  for( i=sharedAppCount-1; i>=0; i-- )
+  for( i=0; i<sharedAppCount; i++)
   {
-    shwin = (SharedWindowPtr)List_Element(winlist, i);
+    shwin = (SharedWindowPtr)List_Element(winlist, 0);
+    /*sharedapp_RfbSendWindowClose(cl, shwin->windowId, shwin->parentId);*/
     List_Add(closeWindowList, shwin);
+    /*List_Remove_Data(winlist, shwin);*/
+    /*free(shwin);*/
   }
 }
 
@@ -918,7 +921,7 @@ void sharedapp_GetMenuWindows(ScreenPtr pScreen, SharedWindowPtr shwin, RegionPt
 }
 
 
-Bool sharedapp_CheckPointer(rfbClientPtr cl, sharedAppPointerEventMsg *spe)
+Bool sharedapp_CheckPointer(rfbClientPtr cl, rfbPointerEventMsg *pe)
 {
   VNCSCREENPTR(cl->pScreen);
   SharedAppVnc *shapp = &pVNC->sharedApp;
@@ -931,9 +934,9 @@ Bool sharedapp_CheckPointer(rfbClientPtr cl, sharedAppPointerEventMsg *spe)
   /* Remove This */
   if (!cl->supportsSharedAppEncoding) return TRUE;
 
-  winId = Swap32IfLE (spe->windowId);
-  x = (int) Swap16IfLE (spe->x);
-  y = (int) Swap16IfLE (spe->y);
+  winId = Swap32IfLE (pe->windowId);
+  x = (int) Swap16IfLE (pe->x);
+  y = (int) Swap16IfLE (pe->y);
 
   /*rfbLog("CheckPointer looking for window 0x%x\n", winId);*/
 

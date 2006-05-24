@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
-# libc:	(6.3.5)
+# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
+# libc:	(6.3.3)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce
+      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -932,7 +932,7 @@ CXXPROJECT_DEFINES =
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 -DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP 	-DXCSECURITY -DTOGCUP  	-DXF86BIGFONT -DDPMSExtension 	  -DPANORAMIX 	 -DRENDER -DRANDR -DGCCUSESGAS -DAVOID_GLYPHBLT -DPIXPRIV -DSINGLEDEPTH 				-DXFreeXDGA -DXvExtension 				-DXFree86LOADER  -DXFree86Server 				-DXF86VIDMODE 				-DXvMCExtension 				-DSMART_SCHEDULE 				-DBUILDDEBUG -DXResExtension 				-DX_BYTE_ORDER=$(X_BYTE_ORDER) -DNDEBUG  $(SERVER_THREAD_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce
+CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 EXT_DEFINES =  -DMITMISC -DXTEST -DXTRAP 	-DXSYNC -DXCMISC -DXRECORD 	-DMITSHM -DBIGREQS -DXF86VIDMODE 	-DXF86MISC -DDBE -DDPMSExtension -DEVI 	-DSCREENSAVER -DXV -DXVMC 	-DGLXEXT -DXF86DRI -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN -DGLX_USE_MESA  -DFONTCACHE          -DRES
 OS_DEFINES  = -DDDXOSINIT -DSERVER_LOCK -DDDXOSFATALERROR 				-DDDXOSVERRORF -DDDXTIME -DPART_NET
 
@@ -1546,10 +1546,10 @@ nv_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 nv_driver.o: ../../../../../../programs/Xserver/include/os.h
 nv_driver.o: ../../../../../../exports/include/X11/Xalloca.h
 nv_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-nv_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+nv_driver.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 nv_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 nv_driver.o: ../../../../../../exports/include/X11/Xfuncs.h
-nv_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+nv_driver.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 nv_driver.o: ../../../../../../programs/Xserver/include/input.h
 nv_driver.o: ../../../../../../programs/Xserver/include/screenint.h
 nv_driver.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1640,10 +1640,10 @@ nv_dac.o: ../../../../../../exports/include/X11/Xdefs.h
 nv_dac.o: ../../../../../../programs/Xserver/include/os.h
 nv_dac.o: ../../../../../../exports/include/X11/Xalloca.h
 nv_dac.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-nv_dac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+nv_dac.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 nv_dac.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 nv_dac.o: ../../../../../../exports/include/X11/Xfuncs.h
-nv_dac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+nv_dac.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 nv_dac.o: ../../../../../../programs/Xserver/include/input.h
 nv_dac.o: ../../../../../../programs/Xserver/include/screenint.h
 nv_dac.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1733,10 +1733,10 @@ nv_setup.o: ../../../../../../exports/include/X11/Xdefs.h
 nv_setup.o: ../../../../../../programs/Xserver/include/os.h
 nv_setup.o: ../../../../../../exports/include/X11/Xalloca.h
 nv_setup.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-nv_setup.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+nv_setup.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 nv_setup.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 nv_setup.o: ../../../../../../exports/include/X11/Xfuncs.h
-nv_setup.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+nv_setup.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 nv_setup.o: ../../../../../../programs/Xserver/include/input.h
 nv_setup.o: ../../../../../../programs/Xserver/include/screenint.h
 nv_setup.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1826,10 +1826,10 @@ nv_cursor.o: ../../../../../../exports/include/X11/Xdefs.h
 nv_cursor.o: ../../../../../../programs/Xserver/include/os.h
 nv_cursor.o: ../../../../../../exports/include/X11/Xalloca.h
 nv_cursor.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-nv_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+nv_cursor.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 nv_cursor.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 nv_cursor.o: ../../../../../../exports/include/X11/Xfuncs.h
-nv_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+nv_cursor.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 nv_cursor.o: ../../../../../../programs/Xserver/include/input.h
 nv_cursor.o: ../../../../../../programs/Xserver/include/screenint.h
 nv_cursor.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1921,10 +1921,10 @@ nv_xaa.o: ../../../../../../exports/include/X11/Xdefs.h
 nv_xaa.o: ../../../../../../programs/Xserver/include/os.h
 nv_xaa.o: ../../../../../../exports/include/X11/Xalloca.h
 nv_xaa.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-nv_xaa.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+nv_xaa.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 nv_xaa.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 nv_xaa.o: ../../../../../../exports/include/X11/Xfuncs.h
-nv_xaa.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+nv_xaa.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 nv_xaa.o: ../../../../../../programs/Xserver/include/input.h
 nv_xaa.o: ../../../../../../programs/Xserver/include/screenint.h
 nv_xaa.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2005,7 +2005,7 @@ nv_xaa.o: nv_local.h nv_type.h nv_proto.h
 nv_xaa.o: ../../../../../../programs/Xserver/hw/xfree86/xaa/xaalocal.h
 nv_xaa.o: ../../../../../../programs/Xserver/mi/miline.h nv_dma.h
 nv_dga.o: nv_local.h ../../../../../../programs/Xserver/include/xf86_ansic.h
-nv_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+nv_dga.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 nv_dga.o: ../../../../../../programs/Xserver/include/misc.h
 nv_dga.o: ../../../../../../exports/include/X11/Xosdefs.h
 nv_dga.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -2016,7 +2016,7 @@ nv_dga.o: ../../../../../../programs/Xserver/include/os.h
 nv_dga.o: ../../../../../../exports/include/X11/Xalloca.h
 nv_dga.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 nv_dga.o: ../../../../../../exports/include/X11/Xfuncs.h
-nv_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+nv_dga.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 nv_dga.o: ../../../../../../programs/Xserver/hw/xfree86/common/compiler.h
 nv_dga.o: ../../../../../../programs/Xserver/hw/xfree86/os-support/xf86_OSproc.h
 nv_dga.o: ../../../../../../programs/Xserver/include/opaque.h
@@ -2101,7 +2101,7 @@ nv_dga.o: ../../../../../../programs/Xserver/Xext/dgaproc.h
 nv_dga.o: ../../../../../../exports/include/X11/Xproto.h
 nv_shadow.o: nv_local.h
 nv_shadow.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-nv_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+nv_shadow.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 nv_shadow.o: ../../../../../../programs/Xserver/include/misc.h
 nv_shadow.o: ../../../../../../exports/include/X11/Xosdefs.h
 nv_shadow.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -2112,7 +2112,7 @@ nv_shadow.o: ../../../../../../programs/Xserver/include/os.h
 nv_shadow.o: ../../../../../../exports/include/X11/Xalloca.h
 nv_shadow.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 nv_shadow.o: ../../../../../../exports/include/X11/Xfuncs.h
-nv_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+nv_shadow.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 nv_shadow.o: ../../../../../../programs/Xserver/hw/xfree86/common/compiler.h
 nv_shadow.o: ../../../../../../programs/Xserver/hw/xfree86/os-support/xf86_OSproc.h
 nv_shadow.o: ../../../../../../programs/Xserver/include/opaque.h
@@ -2194,7 +2194,7 @@ nv_shadow.o: ../../../../../../exports/include/X11/extensions/dpms.h
 nv_shadow.o: ../../../../../../programs/Xserver/hw/xfree86/ramdac/xf86Cursor.h
 nv_shadow.o: nv_type.h nv_proto.h
 nv_hw.o: nv_local.h ../../../../../../programs/Xserver/include/xf86_ansic.h
-nv_hw.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+nv_hw.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 nv_hw.o: ../../../../../../programs/Xserver/include/misc.h
 nv_hw.o: ../../../../../../exports/include/X11/Xosdefs.h
 nv_hw.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -2205,7 +2205,7 @@ nv_hw.o: ../../../../../../programs/Xserver/include/os.h
 nv_hw.o: ../../../../../../exports/include/X11/Xalloca.h
 nv_hw.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 nv_hw.o: ../../../../../../exports/include/X11/Xfuncs.h
-nv_hw.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+nv_hw.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 nv_hw.o: ../../../../../../programs/Xserver/hw/xfree86/common/compiler.h
 nv_hw.o: ../../../../../../programs/Xserver/hw/xfree86/os-support/xf86_OSproc.h
 nv_hw.o: ../../../../../../programs/Xserver/include/opaque.h
@@ -2296,10 +2296,10 @@ nv_video.o: ../../../../../../exports/include/X11/Xdefs.h
 nv_video.o: ../../../../../../programs/Xserver/include/os.h
 nv_video.o: ../../../../../../exports/include/X11/Xalloca.h
 nv_video.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-nv_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+nv_video.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 nv_video.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 nv_video.o: ../../../../../../exports/include/X11/Xfuncs.h
-nv_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+nv_video.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 nv_video.o: ../../../../../../programs/Xserver/include/input.h
 nv_video.o: ../../../../../../programs/Xserver/include/screenint.h
 nv_video.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2391,10 +2391,10 @@ riva_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 riva_driver.o: ../../../../../../programs/Xserver/include/os.h
 riva_driver.o: ../../../../../../exports/include/X11/Xalloca.h
 riva_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-riva_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+riva_driver.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 riva_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 riva_driver.o: ../../../../../../exports/include/X11/Xfuncs.h
-riva_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+riva_driver.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 riva_driver.o: ../../../../../../programs/Xserver/include/input.h
 riva_driver.o: ../../../../../../programs/Xserver/include/screenint.h
 riva_driver.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2485,10 +2485,10 @@ riva_dac.o: ../../../../../../exports/include/X11/Xdefs.h
 riva_dac.o: ../../../../../../programs/Xserver/include/os.h
 riva_dac.o: ../../../../../../exports/include/X11/Xalloca.h
 riva_dac.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-riva_dac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+riva_dac.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 riva_dac.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 riva_dac.o: ../../../../../../exports/include/X11/Xfuncs.h
-riva_dac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+riva_dac.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 riva_dac.o: ../../../../../../programs/Xserver/include/input.h
 riva_dac.o: ../../../../../../programs/Xserver/include/screenint.h
 riva_dac.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2579,10 +2579,10 @@ riva_setup.o: ../../../../../../exports/include/X11/Xdefs.h
 riva_setup.o: ../../../../../../programs/Xserver/include/os.h
 riva_setup.o: ../../../../../../exports/include/X11/Xalloca.h
 riva_setup.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-riva_setup.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+riva_setup.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 riva_setup.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 riva_setup.o: ../../../../../../exports/include/X11/Xfuncs.h
-riva_setup.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+riva_setup.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 riva_setup.o: ../../../../../../programs/Xserver/include/input.h
 riva_setup.o: ../../../../../../programs/Xserver/include/screenint.h
 riva_setup.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2673,10 +2673,10 @@ riva_cursor.o: ../../../../../../exports/include/X11/Xdefs.h
 riva_cursor.o: ../../../../../../programs/Xserver/include/os.h
 riva_cursor.o: ../../../../../../exports/include/X11/Xalloca.h
 riva_cursor.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-riva_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+riva_cursor.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 riva_cursor.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 riva_cursor.o: ../../../../../../exports/include/X11/Xfuncs.h
-riva_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+riva_cursor.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 riva_cursor.o: ../../../../../../programs/Xserver/include/input.h
 riva_cursor.o: ../../../../../../programs/Xserver/include/screenint.h
 riva_cursor.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2768,10 +2768,10 @@ riva_xaa.o: ../../../../../../exports/include/X11/Xdefs.h
 riva_xaa.o: ../../../../../../programs/Xserver/include/os.h
 riva_xaa.o: ../../../../../../exports/include/X11/Xalloca.h
 riva_xaa.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-riva_xaa.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+riva_xaa.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 riva_xaa.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 riva_xaa.o: ../../../../../../exports/include/X11/Xfuncs.h
-riva_xaa.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+riva_xaa.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 riva_xaa.o: ../../../../../../programs/Xserver/include/input.h
 riva_xaa.o: ../../../../../../programs/Xserver/include/screenint.h
 riva_xaa.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2855,7 +2855,7 @@ riva_xaa.o: ../../../../../../programs/Xserver/hw/xfree86/xaa/xaarop.h
 riva_xaa.o: ../../../../../../programs/Xserver/mi/miline.h
 riva_dga.o: riva_local.h
 riva_dga.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-riva_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+riva_dga.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 riva_dga.o: ../../../../../../programs/Xserver/include/misc.h
 riva_dga.o: ../../../../../../exports/include/X11/Xosdefs.h
 riva_dga.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -2866,7 +2866,7 @@ riva_dga.o: ../../../../../../programs/Xserver/include/os.h
 riva_dga.o: ../../../../../../exports/include/X11/Xalloca.h
 riva_dga.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 riva_dga.o: ../../../../../../exports/include/X11/Xfuncs.h
-riva_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+riva_dga.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 riva_dga.o: ../../../../../../programs/Xserver/hw/xfree86/common/compiler.h
 riva_dga.o: ../../../../../../programs/Xserver/hw/xfree86/os-support/xf86_OSproc.h
 riva_dga.o: ../../../../../../programs/Xserver/include/opaque.h
@@ -2953,7 +2953,7 @@ riva_dga.o: ../../../../../../programs/Xserver/Xext/dgaproc.h
 riva_dga.o: ../../../../../../exports/include/X11/Xproto.h
 riva_shadow.o: riva_local.h
 riva_shadow.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-riva_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+riva_shadow.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 riva_shadow.o: ../../../../../../programs/Xserver/include/misc.h
 riva_shadow.o: ../../../../../../exports/include/X11/Xosdefs.h
 riva_shadow.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -2964,7 +2964,7 @@ riva_shadow.o: ../../../../../../programs/Xserver/include/os.h
 riva_shadow.o: ../../../../../../exports/include/X11/Xalloca.h
 riva_shadow.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 riva_shadow.o: ../../../../../../exports/include/X11/Xfuncs.h
-riva_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+riva_shadow.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 riva_shadow.o: ../../../../../../programs/Xserver/hw/xfree86/common/compiler.h
 riva_shadow.o: ../../../../../../programs/Xserver/hw/xfree86/os-support/xf86_OSproc.h
 riva_shadow.o: ../../../../../../programs/Xserver/include/opaque.h
@@ -3048,7 +3048,7 @@ riva_shadow.o: ../../../../../../programs/Xserver/hw/xfree86/ramdac/xf86Cursor.h
 riva_shadow.o: riva_type.h riva_hw.h riva_proto.h
 riva_hw.o: riva_local.h
 riva_hw.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-riva_hw.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+riva_hw.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 riva_hw.o: ../../../../../../programs/Xserver/include/misc.h
 riva_hw.o: ../../../../../../exports/include/X11/Xosdefs.h
 riva_hw.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -3059,7 +3059,7 @@ riva_hw.o: ../../../../../../programs/Xserver/include/os.h
 riva_hw.o: ../../../../../../exports/include/X11/Xalloca.h
 riva_hw.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 riva_hw.o: ../../../../../../exports/include/X11/Xfuncs.h
-riva_hw.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+riva_hw.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 riva_hw.o: ../../../../../../programs/Xserver/hw/xfree86/common/compiler.h
 riva_hw.o: ../../../../../../programs/Xserver/hw/xfree86/os-support/xf86_OSproc.h
 riva_hw.o: ../../../../../../programs/Xserver/include/opaque.h

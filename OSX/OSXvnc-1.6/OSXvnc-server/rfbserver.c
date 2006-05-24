@@ -781,17 +781,12 @@ void rfbProcessClientNormalMessage(rfbClientPtr cl) {
         }
 
         case rfbKeyEvent:
-		case sharedAppKeyEvent:
 		{
-			int keReadSize;
-			
             if (!cl->disableRemoteEvents)
                 cl->rfbKeyEventsRcvd++;
-			
-			if (msg.type == sharedAppKeyEvent) keReadSize = sz_sharedAppKeyEventMsg-1;
-			else keReadSize = sz_rfbKeyEventMsg-1;
 
-            if ((n = ReadExact(cl, ((char *)&msg) + 1, keReadSize)) <= 0)
+            if ((n = ReadExact(cl, ((char *)&msg) + 1,
+                               sz_rfbKeyEventMsg - 1)) <= 0)
 			{
                 if (n != 0)
                     rfbLogPerror("rfbProcessClientNormalMessage: read");
@@ -800,13 +795,13 @@ void rfbProcessClientNormalMessage(rfbClientPtr cl) {
             }
 
 #ifdef SHAREDAPP
-			if (msg.type==sharedAppKeyEvent && [sharedApp enabled])
+			if ([sharedApp enabled])
 			{
 				VNCWinInfo *win;
 				int windowId;
 				NSAutoreleasePool *tempPool = [[NSAutoreleasePool alloc] init];		
 				
-				windowId = Swap32IfLE(msg.spe.windowId);	
+				windowId = Swap32IfLE(msg.pe.windowId);	
 				win = [sharedApp getWindowWithId:windowId];
 				
 				[tempPool release];
@@ -821,18 +816,11 @@ void rfbProcessClientNormalMessage(rfbClientPtr cl) {
 
                 return;
 		}
-        case rfbPointerEvent: 
-		case sharedAppPointerEvent:
-		{
-			int keReadSize;
-			
+        case rfbPointerEvent: {
             if (!cl->disableRemoteEvents)
                 cl->rfbPointerEventsRcvd++;
 
-			if (msg.type == sharedAppPointerEvent) keReadSize = sz_sharedAppPointerEventMsg-1;
-			else keReadSize = sz_rfbPointerEventMsg-1;
-			
-            if ((n = ReadExact(cl, ((char *)&msg) + 1, keReadSize)) <= 0) {
+            if ((n = ReadExact(cl, ((char *)&msg) + 1, sz_rfbPointerEventMsg - 1)) <= 0) {
                 if (n != 0)
                     rfbLogPerror("rfbProcessClientNormalMessage: read");
                 rfbCloseClient(cl);
@@ -845,7 +833,7 @@ void rfbProcessClientNormalMessage(rfbClientPtr cl) {
                 return;
 			
 #ifdef SHAREDAPP
-			if (msg.type == sharedAppPointerEvent && [sharedApp enabled])
+			if ([sharedApp enabled])
 			{
 				RegionRec visibleRegion;
 				BoxRec resbox;
@@ -857,9 +845,9 @@ void rfbProcessClientNormalMessage(rfbClientPtr cl) {
 				
 				REGION_INIT(&hackScreen, &visibleRegion, NullBox, 0);
 				
-				x = Swap16IfLE(msg.spe.x);
-				y = Swap16IfLE(msg.spe.y);
-				windowId = Swap32IfLE(msg.spe.windowId);
+				x = Swap16IfLE(msg.pe.x);
+				y = Swap16IfLE(msg.pe.y);
+				windowId = Swap32IfLE(msg.pe.windowId);
 				win = [sharedApp getWindowWithId:windowId];
 
 				if (win)

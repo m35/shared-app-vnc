@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
-# libc:	(6.3.5)
+# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
+# libc:	(6.3.3)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce
+      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -931,7 +931,7 @@ CXXPROJECT_DEFINES =
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 -DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP 	-DXCSECURITY -DTOGCUP  	-DXF86BIGFONT -DDPMSExtension 	  -DPANORAMIX 	 -DRENDER -DRANDR -DGCCUSESGAS -DAVOID_GLYPHBLT -DPIXPRIV -DSINGLEDEPTH 				-DXFreeXDGA -DXvExtension 				-DXFree86LOADER  -DXFree86Server 				-DXF86VIDMODE 				-DXvMCExtension 				-DSMART_SCHEDULE 				-DBUILDDEBUG -DXResExtension 				-DX_BYTE_ORDER=$(X_BYTE_ORDER) -DNDEBUG  $(SERVER_THREAD_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce
+CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 EXT_DEFINES =  -DMITMISC -DXTEST -DXTRAP 	-DXSYNC -DXCMISC -DXRECORD 	-DMITSHM -DBIGREQS -DXF86VIDMODE 	-DXF86MISC -DDBE -DDPMSExtension -DEVI 	-DSCREENSAVER -DXV -DXVMC 	-DGLXEXT -DXF86DRI -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN -DGLX_USE_MESA  -DFONTCACHE          -DRES
 OS_DEFINES  = -DDDXOSINIT -DSERVER_LOCK -DDDXOSFATALERROR 				-DDDXOSVERRORF -DDDXTIME -DPART_NET
 
@@ -1220,23 +1220,23 @@ record.o: ../../../exports/include/X11/Xprotostr.h ../include/screenint.h
 record.o: ../include/misc.h ../../../exports/include/X11/Xosdefs.h
 record.o: ../../../exports/include/X11/Xfuncproto.h
 record.o: ../../../exports/include/X11/Xdefs.h
-record.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+record.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 record.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-record.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+record.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 record.o: /usr/include/string.h /usr/include/features.h
 record.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-record.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
 record.o: /usr/include/xlocale.h ../../../exports/include/X11/Xfuncs.h
 record.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 record.o: /usr/include/bits/waitstatus.h /usr/include/endian.h
 record.o: /usr/include/bits/endian.h /usr/include/sys/types.h
-record.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
-record.o: /usr/include/time.h /usr/include/sys/select.h
-record.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
-record.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-record.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
+record.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
+record.o: /usr/include/bits/typesizes.h /usr/include/time.h
+record.o: /usr/include/sys/select.h /usr/include/bits/select.h
+record.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
+record.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
+record.o: /usr/include/bits/sched.h /usr/include/alloca.h
 record.o: /usr/include/limits.h
-record.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
+record.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
 record.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 record.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 record.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1263,22 +1263,22 @@ set.o: ../include/misc.h ../../../exports/include/X11/Xosdefs.h
 set.o: ../../../exports/include/X11/Xfuncproto.h
 set.o: ../../../exports/include/X11/Xmd.h ../../../exports/include/X11/X.h
 set.o: ../../../exports/include/X11/Xdefs.h
-set.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h ../include/os.h
+set.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h ../include/os.h
 set.o: ../../../exports/include/X11/Xalloca.h
-set.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+set.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 set.o: /usr/include/string.h /usr/include/features.h /usr/include/sys/cdefs.h
-set.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
-set.o: /usr/include/gnu/stubs-32.h /usr/include/xlocale.h
+set.o: /usr/include/gnu/stubs.h /usr/include/xlocale.h
 set.o: ../../../exports/include/X11/Xfuncs.h /usr/include/stdlib.h
 set.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 set.o: /usr/include/endian.h /usr/include/bits/endian.h
 set.o: /usr/include/sys/types.h /usr/include/bits/types.h
-set.o: /usr/include/bits/typesizes.h /usr/include/time.h
-set.o: /usr/include/sys/select.h /usr/include/bits/select.h
-set.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
-set.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
+set.o: /usr/include/bits/wordsize.h /usr/include/bits/typesizes.h
+set.o: /usr/include/time.h /usr/include/sys/select.h
+set.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
+set.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
+set.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
 set.o: /usr/include/alloca.h /usr/include/limits.h
-set.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
+set.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
 set.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 set.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 set.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h

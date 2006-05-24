@@ -1280,18 +1280,11 @@ rfbProcessClientNormalMessage (cl)
   }
 
   case rfbKeyEvent:
-  case sharedAppKeyEvent:
-  {
-    int readSize;
 
     cl->rfbKeyEventsRcvd++;
 
-    if (msg.type == sharedAppKeyEvent) 
-      readSize = sz_sharedAppKeyEventMsg-1;
-    else readSize = sz_rfbKeyEventMsg-1;
-
     if ((n = ReadExact (cl->sock, ((char *) &msg) + 1,
-                        readSize)) <= 0)
+                        sz_rfbKeyEventMsg - 1)) <= 0)
     {
       if (n != 0)
         rfbLogPerror ("rfbProcessClientNormalMessage: read");
@@ -1309,21 +1302,14 @@ rfbProcessClientNormalMessage (cl)
       KbdAddEvent (msg.ke.down, (KeySym) Swap32IfLE (msg.ke.key), cl);
     }
     return;
-  }
+
 
   case rfbPointerEvent:
-  case sharedAppPointerEvent:
-  {
-    int readSize;
 
     cl->rfbPointerEventsRcvd++;
 
-    if (msg.type == sharedAppPointerEvent) 
-      readSize = sz_sharedAppPointerEventMsg-1;
-    else readSize = sz_rfbPointerEventMsg-1;
-
     if ((n = ReadExact (cl->sock, ((char *) &msg) + 1,
-                        readSize)) <= 0)
+                        sz_rfbPointerEventMsg - 1)) <= 0)
     {
       if (n != 0)
         rfbLogPerror ("rfbProcessClientNormalMessage: read");
@@ -1348,7 +1334,7 @@ rfbProcessClientNormalMessage (cl)
     if (!pVNC->rfbViewOnly && !cl->viewOnly)
     {
 #ifdef SHAREDAPP
-      if (!pVNC->sharedApp.bEnabled || sharedapp_CheckPointer(cl, &msg.spe))
+      if (!pVNC->sharedApp.bEnabled || sharedapp_CheckPointer(cl, &msg.pe))
 #endif
       {
         cl->cursorX = (int) Swap16IfLE (msg.pe.x);
@@ -1357,7 +1343,6 @@ rfbProcessClientNormalMessage (cl)
       }
     }
     return;
-  }
 
 
   case rfbClientCutText:
@@ -2489,19 +2474,6 @@ rfbProcessUDPInput (ScreenPtr pScreen, int sock)
       KbdAddEvent (msg.ke.down, (KeySym) Swap32IfLE (msg.ke.key), 0);
     }
     break;
-  case sharedAppKeyEvent:
-    if (n != sz_sharedAppKeyEventMsg)
-    {
-      rfbLog ("rfbProcessUDPInput: sharedapp key event incorrect length\n");
-      rfbDisconnectUDPSock (pScreen);
-      return;
-    }
-    if (!pVNC->rfbViewOnly)
-    {
-      if (!pVNC->sharedApp.bEnabled ) 
-        KbdAddEvent (msg.ske.down, (KeySym) Swap32IfLE (msg.ske.key), 0);
-    }
-    break;
 
   case rfbPointerEvent:
     if (n != sz_rfbPointerEventMsg)
@@ -2513,23 +2485,7 @@ rfbProcessUDPInput (ScreenPtr pScreen, int sock)
     if (!pVNC->rfbViewOnly)
     {
       PtrAddEvent (msg.pe.buttonMask,
-        Swap16IfLE (msg.pe.x), Swap16IfLE (msg.pe.y), 0);
-    }
-    break;
-  case sharedAppPointerEvent:
-    if (n != sz_sharedAppPointerEventMsg)
-    {
-      rfbLog ("rfbProcessUDPInput: sharedapp ptr event incorrect length\n");
-      rfbDisconnectUDPSock (pScreen);
-      return;
-    }
-    if (!pVNC->rfbViewOnly)
-    {
-      if (!pVNC->sharedApp.bEnabled ) 
-      {
-        PtrAddEvent (msg.spe.buttonMask,
-          Swap16IfLE (msg.spe.x), Swap16IfLE (msg.spe.y), 0);
-      }
+                   Swap16IfLE (msg.pe.x), Swap16IfLE (msg.pe.y), 0);
     }
     break;
 

@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
-# libc:	(6.3.5)
+# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
+# libc:	(6.3.3)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce
+      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -928,7 +928,7 @@ CXXPROJECT_DEFINES =
 
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 $(PROJECT_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce
+CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CLIBDEBUGFLAGS =
      CFLAGS = $(CDEBUGFLAGS) $(CLIBDEBUGFLAGS) $(CCOPTIONS) $(THREADS_CFLAGS) $(ALLDEFINES)
 
@@ -1065,21 +1065,21 @@ lbxdelta.o: ../../../exports/include/X11/Xosdefs.h
 lbxdelta.o: ../../../exports/include/X11/Xfuncproto.h
 lbxdelta.o: ../../../exports/include/X11/X.h
 lbxdelta.o: ../../../exports/include/X11/Xdefs.h
-lbxdelta.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+lbxdelta.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 lbxdelta.o: ../../../exports/include/X11/Xfuncs.h /usr/include/string.h
 lbxdelta.o: /usr/include/features.h /usr/include/sys/cdefs.h
-lbxdelta.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
-lbxdelta.o: /usr/include/gnu/stubs-32.h /usr/include/xlocale.h
+lbxdelta.o: /usr/include/gnu/stubs.h /usr/include/xlocale.h
 lbxdelta.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 lbxdelta.o: /usr/include/bits/waitstatus.h /usr/include/endian.h
 lbxdelta.o: /usr/include/bits/endian.h /usr/include/sys/types.h
-lbxdelta.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
-lbxdelta.o: /usr/include/time.h /usr/include/sys/select.h
-lbxdelta.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
-lbxdelta.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-lbxdelta.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
+lbxdelta.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
+lbxdelta.o: /usr/include/bits/typesizes.h /usr/include/time.h
+lbxdelta.o: /usr/include/sys/select.h /usr/include/bits/select.h
+lbxdelta.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
+lbxdelta.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
+lbxdelta.o: /usr/include/bits/sched.h /usr/include/alloca.h
 lbxdelta.o: /usr/include/limits.h
-lbxdelta.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
+lbxdelta.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
 lbxdelta.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 lbxdelta.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 lbxdelta.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1091,7 +1091,7 @@ lbxdelta.o: /usr/include/assert.h /usr/include/ctype.h /usr/include/stdio.h
 lbxdelta.o: /usr/include/libio.h /usr/include/_G_config.h
 lbxdelta.o: /usr/include/wchar.h /usr/include/bits/wchar.h
 lbxdelta.o: /usr/include/gconv.h
-lbxdelta.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+lbxdelta.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 lbxdelta.o: /usr/include/bits/sys_errlist.h
 lbxdelta.o: ../../../exports/include/X11/Xalloca.h
 lbxdelta.o: ../../../include/extensions/lbxstr.h

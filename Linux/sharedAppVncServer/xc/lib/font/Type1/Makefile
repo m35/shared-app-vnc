@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
-# libc:	(6.3.5)
+# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
+# libc:	(6.3.3)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce
+      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -945,7 +945,7 @@ OBJS =                 arith.o                curves.o               fontfcn.o  
 
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 $(PROJECT_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce
+CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CLIBDEBUGFLAGS =
      CFLAGS = $(CDEBUGFLAGS) $(CLIBDEBUGFLAGS) $(CCOPTIONS) $(THREADS_CFLAGS) $(ALLDEFINES)
 
@@ -1228,21 +1228,21 @@ arith.o: ../../../exports/include/X11/Xosdefs.h
 arith.o: ../../../exports/include/X11/Xfuncproto.h
 arith.o: ../../../exports/include/X11/Xmd.h ../../../exports/include/X11/X.h
 arith.o: ../../../exports/include/X11/Xdefs.h
-arith.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+arith.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 arith.o: ../../../exports/include/X11/Xfuncs.h /usr/include/string.h
 arith.o: /usr/include/features.h /usr/include/sys/cdefs.h
-arith.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
-arith.o: /usr/include/gnu/stubs-32.h /usr/include/xlocale.h
+arith.o: /usr/include/gnu/stubs.h /usr/include/xlocale.h
 arith.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 arith.o: /usr/include/bits/waitstatus.h /usr/include/endian.h
 arith.o: /usr/include/bits/endian.h /usr/include/sys/types.h
-arith.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
-arith.o: /usr/include/time.h /usr/include/sys/select.h
-arith.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
-arith.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-arith.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
+arith.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
+arith.o: /usr/include/bits/typesizes.h /usr/include/time.h
+arith.o: /usr/include/sys/select.h /usr/include/bits/select.h
+arith.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
+arith.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
+arith.o: /usr/include/bits/sched.h /usr/include/alloca.h
 arith.o: /usr/include/limits.h
-arith.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
+arith.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
 arith.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 arith.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 arith.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1253,7 +1253,7 @@ arith.o: /usr/include/bits/mathdef.h /usr/include/bits/mathcalls.h
 arith.o: /usr/include/assert.h /usr/include/ctype.h /usr/include/stdio.h
 arith.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 arith.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-arith.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+arith.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 arith.o: /usr/include/bits/sys_errlist.h
 arith.o: ../../../exports/include/X11/Xalloca.h objects.h
 arith.o: ../../../exports/include/X11/Xdefs.h
@@ -1264,21 +1264,21 @@ curves.o: ../../../exports/include/X11/Xosdefs.h
 curves.o: ../../../exports/include/X11/Xfuncproto.h
 curves.o: ../../../exports/include/X11/Xmd.h ../../../exports/include/X11/X.h
 curves.o: ../../../exports/include/X11/Xdefs.h
-curves.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+curves.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 curves.o: ../../../exports/include/X11/Xfuncs.h /usr/include/string.h
 curves.o: /usr/include/features.h /usr/include/sys/cdefs.h
-curves.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
-curves.o: /usr/include/gnu/stubs-32.h /usr/include/xlocale.h
+curves.o: /usr/include/gnu/stubs.h /usr/include/xlocale.h
 curves.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 curves.o: /usr/include/bits/waitstatus.h /usr/include/endian.h
 curves.o: /usr/include/bits/endian.h /usr/include/sys/types.h
-curves.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
-curves.o: /usr/include/time.h /usr/include/sys/select.h
-curves.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
-curves.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-curves.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
+curves.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
+curves.o: /usr/include/bits/typesizes.h /usr/include/time.h
+curves.o: /usr/include/sys/select.h /usr/include/bits/select.h
+curves.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
+curves.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
+curves.o: /usr/include/bits/sched.h /usr/include/alloca.h
 curves.o: /usr/include/limits.h
-curves.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
+curves.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
 curves.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 curves.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 curves.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1289,7 +1289,7 @@ curves.o: /usr/include/bits/mathdef.h /usr/include/bits/mathcalls.h
 curves.o: /usr/include/assert.h /usr/include/ctype.h /usr/include/stdio.h
 curves.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 curves.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-curves.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+curves.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 curves.o: /usr/include/bits/sys_errlist.h
 curves.o: ../../../exports/include/X11/Xalloca.h objects.h
 curves.o: ../../../exports/include/X11/Xdefs.h
@@ -1297,12 +1297,12 @@ curves.o: ../../../exports/include/X11/Xfuncproto.h spaces.h paths.h
 curves.o: regions.h curves.h lines.h arith.h
 fontfcn.o: /usr/include/stdio.h /usr/include/features.h
 fontfcn.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-fontfcn.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
-fontfcn.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
-fontfcn.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
-fontfcn.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
+fontfcn.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+fontfcn.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
+fontfcn.o: /usr/include/bits/typesizes.h /usr/include/libio.h
+fontfcn.o: /usr/include/_G_config.h /usr/include/wchar.h
 fontfcn.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-fontfcn.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+fontfcn.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 fontfcn.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 fontfcn.o: /usr/include/string.h /usr/include/xlocale.h t1imager.h objects.h
 fontfcn.o: ../../../exports/include/X11/Xdefs.h
@@ -1313,9 +1313,9 @@ fontfcn.o: /usr/include/sys/types.h /usr/include/time.h
 fontfcn.o: /usr/include/sys/select.h /usr/include/bits/select.h
 fontfcn.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 fontfcn.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
-fontfcn.o: /usr/include/alloca.h spaces.h paths.h regions.h
-fontfcn.o: /usr/include/limits.h
-fontfcn.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
+fontfcn.o: /usr/include/bits/sched.h /usr/include/alloca.h spaces.h paths.h
+fontfcn.o: regions.h /usr/include/limits.h
+fontfcn.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
 fontfcn.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 fontfcn.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 fontfcn.o: /usr/include/bits/xopen_lim.h util.h range.h ../include/fntfilst.h
@@ -1345,21 +1345,21 @@ hints.o: ../../../exports/include/X11/Xosdefs.h
 hints.o: ../../../exports/include/X11/Xfuncproto.h
 hints.o: ../../../exports/include/X11/Xmd.h ../../../exports/include/X11/X.h
 hints.o: ../../../exports/include/X11/Xdefs.h
-hints.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+hints.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 hints.o: ../../../exports/include/X11/Xfuncs.h /usr/include/string.h
 hints.o: /usr/include/features.h /usr/include/sys/cdefs.h
-hints.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
-hints.o: /usr/include/gnu/stubs-32.h /usr/include/xlocale.h
+hints.o: /usr/include/gnu/stubs.h /usr/include/xlocale.h
 hints.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 hints.o: /usr/include/bits/waitstatus.h /usr/include/endian.h
 hints.o: /usr/include/bits/endian.h /usr/include/sys/types.h
-hints.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
-hints.o: /usr/include/time.h /usr/include/sys/select.h
-hints.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
-hints.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-hints.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
+hints.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
+hints.o: /usr/include/bits/typesizes.h /usr/include/time.h
+hints.o: /usr/include/sys/select.h /usr/include/bits/select.h
+hints.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
+hints.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
+hints.o: /usr/include/bits/sched.h /usr/include/alloca.h
 hints.o: /usr/include/limits.h
-hints.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
+hints.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
 hints.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 hints.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 hints.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1370,7 +1370,7 @@ hints.o: /usr/include/bits/mathdef.h /usr/include/bits/mathcalls.h
 hints.o: /usr/include/assert.h /usr/include/ctype.h /usr/include/stdio.h
 hints.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 hints.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-hints.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+hints.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 hints.o: /usr/include/bits/sys_errlist.h
 hints.o: ../../../exports/include/X11/Xalloca.h objects.h
 hints.o: ../../../exports/include/X11/Xdefs.h
@@ -1379,30 +1379,30 @@ hints.o: hints.h
 lines.o: objects.h ../../../exports/include/X11/Xdefs.h
 lines.o: ../../../exports/include/X11/Xfuncproto.h /usr/include/stdlib.h
 lines.o: /usr/include/features.h /usr/include/sys/cdefs.h
-lines.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
-lines.o: /usr/include/gnu/stubs-32.h
-lines.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+lines.o: /usr/include/gnu/stubs.h
+lines.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 lines.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 lines.o: /usr/include/endian.h /usr/include/bits/endian.h
 lines.o: /usr/include/xlocale.h /usr/include/sys/types.h
-lines.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
-lines.o: /usr/include/time.h /usr/include/sys/select.h
-lines.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
-lines.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-lines.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h spaces.h
-lines.o: paths.h regions.h /usr/include/limits.h
-lines.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
+lines.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
+lines.o: /usr/include/bits/typesizes.h /usr/include/time.h
+lines.o: /usr/include/sys/select.h /usr/include/bits/select.h
+lines.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
+lines.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
+lines.o: /usr/include/bits/sched.h /usr/include/alloca.h spaces.h paths.h
+lines.o: regions.h /usr/include/limits.h
+lines.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
 lines.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 lines.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 lines.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h lines.h
 objects.o: /usr/include/string.h /usr/include/features.h
 objects.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-objects.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
-objects.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+objects.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 objects.o: /usr/include/xlocale.h /usr/include/ctype.h
-objects.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
-objects.o: /usr/include/endian.h /usr/include/bits/endian.h
-objects.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+objects.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
+objects.o: /usr/include/bits/typesizes.h /usr/include/endian.h
+objects.o: /usr/include/bits/endian.h
+objects.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 objects.o: ../../../programs/Xserver/include/os.h
 objects.o: ../../../programs/Xserver/include/misc.h
 objects.o: ../../../exports/include/X11/Xosdefs.h
@@ -1416,8 +1416,9 @@ objects.o: /usr/include/sys/types.h /usr/include/time.h
 objects.o: /usr/include/sys/select.h /usr/include/bits/select.h
 objects.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 objects.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
-objects.o: /usr/include/alloca.h /usr/include/limits.h
-objects.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
+objects.o: /usr/include/bits/sched.h /usr/include/alloca.h
+objects.o: /usr/include/limits.h
+objects.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
 objects.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 objects.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 objects.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1439,21 +1440,21 @@ paths.o: ../../../exports/include/X11/Xosdefs.h
 paths.o: ../../../exports/include/X11/Xfuncproto.h
 paths.o: ../../../exports/include/X11/Xmd.h ../../../exports/include/X11/X.h
 paths.o: ../../../exports/include/X11/Xdefs.h
-paths.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+paths.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 paths.o: ../../../exports/include/X11/Xfuncs.h /usr/include/string.h
 paths.o: /usr/include/features.h /usr/include/sys/cdefs.h
-paths.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
-paths.o: /usr/include/gnu/stubs-32.h /usr/include/xlocale.h
+paths.o: /usr/include/gnu/stubs.h /usr/include/xlocale.h
 paths.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 paths.o: /usr/include/bits/waitstatus.h /usr/include/endian.h
 paths.o: /usr/include/bits/endian.h /usr/include/sys/types.h
-paths.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
-paths.o: /usr/include/time.h /usr/include/sys/select.h
-paths.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
-paths.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-paths.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
+paths.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
+paths.o: /usr/include/bits/typesizes.h /usr/include/time.h
+paths.o: /usr/include/sys/select.h /usr/include/bits/select.h
+paths.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
+paths.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
+paths.o: /usr/include/bits/sched.h /usr/include/alloca.h
 paths.o: /usr/include/limits.h
-paths.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
+paths.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
 paths.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 paths.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 paths.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1464,7 +1465,7 @@ paths.o: /usr/include/bits/mathdef.h /usr/include/bits/mathcalls.h
 paths.o: /usr/include/assert.h /usr/include/ctype.h /usr/include/stdio.h
 paths.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 paths.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-paths.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+paths.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 paths.o: /usr/include/bits/sys_errlist.h
 paths.o: ../../../exports/include/X11/Xalloca.h objects.h
 paths.o: ../../../exports/include/X11/Xdefs.h
@@ -1477,21 +1478,21 @@ regions.o: ../../../exports/include/X11/Xfuncproto.h
 regions.o: ../../../exports/include/X11/Xmd.h
 regions.o: ../../../exports/include/X11/X.h
 regions.o: ../../../exports/include/X11/Xdefs.h
-regions.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+regions.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 regions.o: ../../../exports/include/X11/Xfuncs.h /usr/include/string.h
 regions.o: /usr/include/features.h /usr/include/sys/cdefs.h
-regions.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
-regions.o: /usr/include/gnu/stubs-32.h /usr/include/xlocale.h
+regions.o: /usr/include/gnu/stubs.h /usr/include/xlocale.h
 regions.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 regions.o: /usr/include/bits/waitstatus.h /usr/include/endian.h
 regions.o: /usr/include/bits/endian.h /usr/include/sys/types.h
-regions.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
-regions.o: /usr/include/time.h /usr/include/sys/select.h
-regions.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
-regions.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-regions.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
+regions.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
+regions.o: /usr/include/bits/typesizes.h /usr/include/time.h
+regions.o: /usr/include/sys/select.h /usr/include/bits/select.h
+regions.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
+regions.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
+regions.o: /usr/include/bits/sched.h /usr/include/alloca.h
 regions.o: /usr/include/limits.h
-regions.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
+regions.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
 regions.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 regions.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 regions.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1502,7 +1503,7 @@ regions.o: /usr/include/bits/mathdef.h /usr/include/bits/mathcalls.h
 regions.o: /usr/include/assert.h /usr/include/ctype.h /usr/include/stdio.h
 regions.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 regions.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-regions.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+regions.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 regions.o: /usr/include/bits/sys_errlist.h
 regions.o: ../../../exports/include/X11/Xalloca.h objects.h
 regions.o: ../../../exports/include/X11/Xdefs.h
@@ -1510,31 +1511,32 @@ regions.o: ../../../exports/include/X11/Xfuncproto.h spaces.h paths.h
 regions.o: regions.h curves.h lines.h pictures.h fonts.h hints.h strokes.h
 scanfont.o: /usr/include/string.h /usr/include/features.h
 scanfont.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-scanfont.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
-scanfont.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+scanfont.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 scanfont.o: /usr/include/xlocale.h t1stdio.h util.h token.h range.h objects.h
 scanfont.o: ../../../exports/include/X11/Xdefs.h
 scanfont.o: ../../../exports/include/X11/Xfuncproto.h /usr/include/stdlib.h
 scanfont.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 scanfont.o: /usr/include/endian.h /usr/include/bits/endian.h
 scanfont.o: /usr/include/sys/types.h /usr/include/bits/types.h
-scanfont.o: /usr/include/bits/typesizes.h /usr/include/time.h
-scanfont.o: /usr/include/sys/select.h /usr/include/bits/select.h
-scanfont.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
-scanfont.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
+scanfont.o: /usr/include/bits/wordsize.h /usr/include/bits/typesizes.h
+scanfont.o: /usr/include/time.h /usr/include/sys/select.h
+scanfont.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
+scanfont.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
+scanfont.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
 scanfont.o: /usr/include/alloca.h spaces.h fontfcn.h blues.h
 spaces.o: ../../../exports/include/X11/Xos.h
 spaces.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 spaces.o: /usr/include/features.h /usr/include/sys/cdefs.h
-spaces.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
-spaces.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-spaces.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+spaces.o: /usr/include/gnu/stubs.h /usr/include/bits/types.h
+spaces.o: /usr/include/bits/wordsize.h
+spaces.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 spaces.o: /usr/include/bits/typesizes.h /usr/include/time.h
 spaces.o: /usr/include/endian.h /usr/include/bits/endian.h
 spaces.o: /usr/include/sys/select.h /usr/include/bits/select.h
 spaces.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 spaces.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
-spaces.o: /usr/include/string.h /usr/include/xlocale.h /usr/include/fcntl.h
+spaces.o: /usr/include/bits/sched.h /usr/include/string.h
+spaces.o: /usr/include/xlocale.h /usr/include/fcntl.h
 spaces.o: /usr/include/bits/fcntl.h /usr/include/sys/stat.h
 spaces.o: /usr/include/bits/stat.h /usr/include/unistd.h
 spaces.o: /usr/include/bits/posix_opt.h /usr/include/bits/environments.h
@@ -1548,7 +1550,7 @@ spaces.o: ../../../exports/include/X11/Xdefs.h
 spaces.o: ../../../exports/include/X11/Xfuncs.h /usr/include/stdlib.h
 spaces.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 spaces.o: /usr/include/alloca.h /usr/include/limits.h
-spaces.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
+spaces.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
 spaces.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 spaces.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 spaces.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1559,7 +1561,7 @@ spaces.o: /usr/include/bits/mathdef.h /usr/include/bits/mathcalls.h
 spaces.o: /usr/include/assert.h /usr/include/ctype.h /usr/include/stdio.h
 spaces.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 spaces.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-spaces.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+spaces.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 spaces.o: /usr/include/bits/sys_errlist.h
 spaces.o: ../../../exports/include/X11/Xalloca.h objects.h
 spaces.o: ../../../exports/include/X11/Xdefs.h
@@ -1567,16 +1569,16 @@ spaces.o: ../../../exports/include/X11/Xfuncproto.h spaces.h paths.h
 spaces.o: pictures.h fonts.h arith.h trig.h
 t1funcs.o: /usr/include/string.h /usr/include/features.h
 t1funcs.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-t1funcs.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
-t1funcs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+t1funcs.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 t1funcs.o: /usr/include/xlocale.h /usr/include/stdlib.h
 t1funcs.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 t1funcs.o: /usr/include/endian.h /usr/include/bits/endian.h
 t1funcs.o: /usr/include/sys/types.h /usr/include/bits/types.h
-t1funcs.o: /usr/include/bits/typesizes.h /usr/include/time.h
-t1funcs.o: /usr/include/sys/select.h /usr/include/bits/select.h
-t1funcs.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
-t1funcs.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
+t1funcs.o: /usr/include/bits/wordsize.h /usr/include/bits/typesizes.h
+t1funcs.o: /usr/include/time.h /usr/include/sys/select.h
+t1funcs.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
+t1funcs.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
+t1funcs.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
 t1funcs.o: /usr/include/alloca.h /usr/include/dirent.h
 t1funcs.o: /usr/include/bits/dirent.h /usr/include/bits/posix1_lim.h
 t1funcs.o: /usr/include/bits/local_lim.h /usr/include/linux/limits.h
@@ -1592,13 +1594,13 @@ t1funcs.o: ../../../exports/include/X11/Xfuncproto.h
 t1funcs.o: ../../../exports/include/X11/Xmd.h
 t1funcs.o: ../../../exports/include/X11/X.h
 t1funcs.o: ../../../exports/include/X11/Xdefs.h /usr/include/limits.h
-t1funcs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
+t1funcs.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
 t1funcs.o: /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h
 t1funcs.o: /usr/include/bits/stdio_lim.h /usr/include/assert.h
 t1funcs.o: /usr/include/ctype.h /usr/include/stdio.h /usr/include/libio.h
 t1funcs.o: /usr/include/_G_config.h /usr/include/wchar.h
 t1funcs.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-t1funcs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+t1funcs.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 t1funcs.o: /usr/include/bits/sys_errlist.h
 t1funcs.o: ../../../exports/include/X11/Xalloca.h ../include/fntfilst.h
 t1funcs.o: ../../../exports/include/X11/Xos.h /usr/include/fcntl.h
@@ -1622,15 +1624,16 @@ t1funcs.o: regions.h t1stdio.h util.h fontfcn.h t1intf.h AFM.h
 t1info.o: ../include/fntfilst.h ../../../exports/include/X11/Xos.h
 t1info.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 t1info.o: /usr/include/features.h /usr/include/sys/cdefs.h
-t1info.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
-t1info.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-t1info.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+t1info.o: /usr/include/gnu/stubs.h /usr/include/bits/types.h
+t1info.o: /usr/include/bits/wordsize.h
+t1info.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 t1info.o: /usr/include/bits/typesizes.h /usr/include/time.h
 t1info.o: /usr/include/endian.h /usr/include/bits/endian.h
 t1info.o: /usr/include/sys/select.h /usr/include/bits/select.h
 t1info.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 t1info.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
-t1info.o: /usr/include/string.h /usr/include/xlocale.h /usr/include/fcntl.h
+t1info.o: /usr/include/bits/sched.h /usr/include/string.h
+t1info.o: /usr/include/xlocale.h /usr/include/fcntl.h
 t1info.o: /usr/include/bits/fcntl.h /usr/include/sys/stat.h
 t1info.o: /usr/include/bits/stat.h /usr/include/unistd.h
 t1info.o: /usr/include/bits/posix_opt.h /usr/include/bits/environments.h
@@ -1641,7 +1644,7 @@ t1info.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 t1info.o: /usr/include/bits/waitstatus.h /usr/include/alloca.h
 t1info.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
 t1info.o: /usr/include/wchar.h /usr/include/bits/wchar.h /usr/include/gconv.h
-t1info.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+t1info.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 t1info.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 t1info.o: ../../../exports/include/X11/Xdefs.h
 t1info.o: ../../../include/fonts/fontstruct.h
@@ -1663,20 +1666,20 @@ t1info.o: ../../../exports/include/X11/Xdefs.h
 t1info.o: ../../../exports/include/X11/Xfuncproto.h spaces.h range.h util.h
 t1info.o: fontfcn.h t1intf.h AFM.h
 t1io.o: /usr/include/fcntl.h /usr/include/features.h /usr/include/sys/cdefs.h
-t1io.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
-t1io.o: /usr/include/gnu/stubs-32.h /usr/include/bits/fcntl.h
+t1io.o: /usr/include/gnu/stubs.h /usr/include/bits/fcntl.h
 t1io.o: /usr/include/sys/types.h /usr/include/bits/types.h
-t1io.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+t1io.o: /usr/include/bits/wordsize.h
+t1io.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 t1io.o: /usr/include/bits/typesizes.h /usr/include/time.h
 t1io.o: /usr/include/endian.h /usr/include/bits/endian.h
 t1io.o: /usr/include/sys/select.h /usr/include/bits/select.h
 t1io.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 t1io.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
-t1io.o: /usr/include/sys/stat.h /usr/include/bits/stat.h
-t1io.o: /usr/include/unistd.h /usr/include/bits/posix_opt.h
-t1io.o: /usr/include/bits/environments.h /usr/include/bits/confname.h
-t1io.o: /usr/include/getopt.h t1stdio.h t1hdigit.h
-t1io.o: ../../../exports/include/X11/Xdefs.h
+t1io.o: /usr/include/bits/sched.h /usr/include/sys/stat.h
+t1io.o: /usr/include/bits/stat.h /usr/include/unistd.h
+t1io.o: /usr/include/bits/posix_opt.h /usr/include/bits/environments.h
+t1io.o: /usr/include/bits/confname.h /usr/include/getopt.h t1stdio.h
+t1io.o: t1hdigit.h ../../../exports/include/X11/Xdefs.h
 t1malloc.o: ../../../programs/Xserver/include/os.h
 t1malloc.o: ../../../programs/Xserver/include/misc.h
 t1malloc.o: ../../../exports/include/X11/Xosdefs.h
@@ -1684,21 +1687,21 @@ t1malloc.o: ../../../exports/include/X11/Xfuncproto.h
 t1malloc.o: ../../../exports/include/X11/Xmd.h
 t1malloc.o: ../../../exports/include/X11/X.h
 t1malloc.o: ../../../exports/include/X11/Xdefs.h
-t1malloc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+t1malloc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 t1malloc.o: ../../../exports/include/X11/Xfuncs.h /usr/include/string.h
 t1malloc.o: /usr/include/features.h /usr/include/sys/cdefs.h
-t1malloc.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
-t1malloc.o: /usr/include/gnu/stubs-32.h /usr/include/xlocale.h
+t1malloc.o: /usr/include/gnu/stubs.h /usr/include/xlocale.h
 t1malloc.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 t1malloc.o: /usr/include/bits/waitstatus.h /usr/include/endian.h
 t1malloc.o: /usr/include/bits/endian.h /usr/include/sys/types.h
-t1malloc.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
-t1malloc.o: /usr/include/time.h /usr/include/sys/select.h
-t1malloc.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
-t1malloc.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-t1malloc.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
+t1malloc.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
+t1malloc.o: /usr/include/bits/typesizes.h /usr/include/time.h
+t1malloc.o: /usr/include/sys/select.h /usr/include/bits/select.h
+t1malloc.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
+t1malloc.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
+t1malloc.o: /usr/include/bits/sched.h /usr/include/alloca.h
 t1malloc.o: /usr/include/limits.h
-t1malloc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
+t1malloc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
 t1malloc.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 t1malloc.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 t1malloc.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1710,7 +1713,7 @@ t1malloc.o: /usr/include/assert.h /usr/include/ctype.h /usr/include/stdio.h
 t1malloc.o: /usr/include/libio.h /usr/include/_G_config.h
 t1malloc.o: /usr/include/wchar.h /usr/include/bits/wchar.h
 t1malloc.o: /usr/include/gconv.h
-t1malloc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+t1malloc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 t1malloc.o: /usr/include/bits/sys_errlist.h
 t1malloc.o: ../../../exports/include/X11/Xalloca.h objects.h
 t1malloc.o: ../../../exports/include/X11/Xdefs.h
@@ -1718,26 +1721,26 @@ t1malloc.o: ../../../exports/include/X11/Xfuncproto.h
 t1snap.o: objects.h ../../../exports/include/X11/Xdefs.h
 t1snap.o: ../../../exports/include/X11/Xfuncproto.h /usr/include/stdlib.h
 t1snap.o: /usr/include/features.h /usr/include/sys/cdefs.h
-t1snap.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
-t1snap.o: /usr/include/gnu/stubs-32.h
-t1snap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+t1snap.o: /usr/include/gnu/stubs.h
+t1snap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 t1snap.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 t1snap.o: /usr/include/endian.h /usr/include/bits/endian.h
 t1snap.o: /usr/include/xlocale.h /usr/include/sys/types.h
-t1snap.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
-t1snap.o: /usr/include/time.h /usr/include/sys/select.h
-t1snap.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
-t1snap.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-t1snap.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h spaces.h
-t1snap.o: paths.h pictures.h
+t1snap.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
+t1snap.o: /usr/include/bits/typesizes.h /usr/include/time.h
+t1snap.o: /usr/include/sys/select.h /usr/include/bits/select.h
+t1snap.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
+t1snap.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
+t1snap.o: /usr/include/bits/sched.h /usr/include/alloca.h spaces.h paths.h
+t1snap.o: pictures.h
 t1stub.o: /usr/include/stdio.h /usr/include/features.h
 t1stub.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-t1stub.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
-t1stub.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
-t1stub.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
-t1stub.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
+t1stub.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+t1stub.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
+t1stub.o: /usr/include/bits/typesizes.h /usr/include/libio.h
+t1stub.o: /usr/include/_G_config.h /usr/include/wchar.h
 t1stub.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-t1stub.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+t1stub.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 t1stub.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 t1stub.o: ../../../programs/Xserver/include/os.h
 t1stub.o: ../../../programs/Xserver/include/misc.h
@@ -1753,8 +1756,9 @@ t1stub.o: /usr/include/sys/types.h /usr/include/time.h
 t1stub.o: /usr/include/sys/select.h /usr/include/bits/select.h
 t1stub.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 t1stub.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
-t1stub.o: /usr/include/alloca.h /usr/include/limits.h
-t1stub.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
+t1stub.o: /usr/include/bits/sched.h /usr/include/alloca.h
+t1stub.o: /usr/include/limits.h
+t1stub.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
 t1stub.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 t1stub.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 t1stub.o: /usr/include/bits/xopen_lim.h /usr/include/math.h
@@ -1768,12 +1772,12 @@ t1stub.o: ../../../exports/include/X11/Xfuncproto.h
 token.o: t1stdio.h util.h digit.h token.h tokst.h hdigit.h
 type1.o: /usr/include/stdio.h /usr/include/features.h
 type1.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-type1.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
-type1.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
-type1.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
-type1.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
+type1.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+type1.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
+type1.o: /usr/include/bits/typesizes.h /usr/include/libio.h
+type1.o: /usr/include/_G_config.h /usr/include/wchar.h
 type1.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-type1.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+type1.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 type1.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 type1.o: /usr/include/math.h /usr/include/bits/huge_val.h
 type1.o: /usr/include/bits/huge_valf.h /usr/include/bits/huge_vall.h
@@ -1787,16 +1791,16 @@ type1.o: /usr/include/xlocale.h /usr/include/sys/types.h /usr/include/time.h
 type1.o: /usr/include/sys/select.h /usr/include/bits/select.h
 type1.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 type1.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
-type1.o: /usr/include/alloca.h spaces.h paths.h fonts.h pictures.h range.h
-type1.o: util.h fontfcn.h blues.h
+type1.o: /usr/include/bits/sched.h /usr/include/alloca.h spaces.h paths.h
+type1.o: fonts.h pictures.h range.h util.h fontfcn.h blues.h
 util.o: /usr/include/stdio.h /usr/include/features.h /usr/include/sys/cdefs.h
-util.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
-util.o: /usr/include/gnu/stubs-32.h
-util.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
-util.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
-util.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
+util.o: /usr/include/gnu/stubs.h
+util.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+util.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
+util.o: /usr/include/bits/typesizes.h /usr/include/libio.h
+util.o: /usr/include/_G_config.h /usr/include/wchar.h
 util.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-util.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+util.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 util.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h util.h
 util.o: ../include/fontmisc.h ../../../exports/include/X11/Xfuncs.h
 util.o: ../../../exports/include/X11/Xosdefs.h /usr/include/string.h
@@ -1807,18 +1811,18 @@ util.o: /usr/include/sys/types.h /usr/include/time.h
 util.o: /usr/include/sys/select.h /usr/include/bits/select.h
 util.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 util.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
-util.o: /usr/include/alloca.h /usr/include/unistd.h
+util.o: /usr/include/bits/sched.h /usr/include/alloca.h /usr/include/unistd.h
 util.o: /usr/include/bits/posix_opt.h /usr/include/bits/environments.h
 util.o: /usr/include/bits/confname.h /usr/include/getopt.h
 util.o: ../../../exports/include/X11/Xdefs.h
 cidchar.o: /usr/include/stdio.h /usr/include/features.h
 cidchar.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-cidchar.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
-cidchar.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
-cidchar.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
-cidchar.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
+cidchar.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+cidchar.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
+cidchar.o: /usr/include/bits/typesizes.h /usr/include/libio.h
+cidchar.o: /usr/include/_G_config.h /usr/include/wchar.h
 cidchar.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-cidchar.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cidchar.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cidchar.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 cidchar.o: /usr/include/string.h /usr/include/xlocale.h
 cidchar.o: /usr/include/sys/stat.h /usr/include/time.h
@@ -1834,14 +1838,15 @@ cidchar.o: /usr/include/endian.h /usr/include/bits/endian.h
 cidchar.o: /usr/include/sys/select.h /usr/include/bits/select.h
 cidchar.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 cidchar.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
-cidchar.o: /usr/include/fcntl.h /usr/include/bits/fcntl.h
-cidchar.o: /usr/include/unistd.h /usr/include/bits/posix_opt.h
-cidchar.o: /usr/include/bits/environments.h /usr/include/bits/confname.h
-cidchar.o: /usr/include/getopt.h /usr/include/sys/time.h
-cidchar.o: ../../../exports/include/X11/Xarch.h ../include/fontmisc.h
-cidchar.o: ../../../exports/include/X11/Xfuncs.h /usr/include/stdlib.h
-cidchar.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
-cidchar.o: /usr/include/alloca.h ../../../exports/include/X11/Xdefs.h
+cidchar.o: /usr/include/bits/sched.h /usr/include/fcntl.h
+cidchar.o: /usr/include/bits/fcntl.h /usr/include/unistd.h
+cidchar.o: /usr/include/bits/posix_opt.h /usr/include/bits/environments.h
+cidchar.o: /usr/include/bits/confname.h /usr/include/getopt.h
+cidchar.o: /usr/include/sys/time.h ../../../exports/include/X11/Xarch.h
+cidchar.o: ../include/fontmisc.h ../../../exports/include/X11/Xfuncs.h
+cidchar.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
+cidchar.o: /usr/include/bits/waitstatus.h /usr/include/alloca.h
+cidchar.o: ../../../exports/include/X11/Xdefs.h
 cidchar.o: ../../../include/fonts/fontstruct.h
 cidchar.o: ../../../exports/include/X11/Xproto.h
 cidchar.o: ../../../exports/include/X11/Xmd.h
@@ -1856,13 +1861,13 @@ cidchar.o: objects.h ../../../exports/include/X11/Xdefs.h
 cidchar.o: ../../../exports/include/X11/Xfuncproto.h spaces.h range.h util.h
 cidchar.o: fontfcn.h blues.h AFM.h t1intf.h
 afm.o: /usr/include/stdio.h /usr/include/features.h /usr/include/sys/cdefs.h
-afm.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
-afm.o: /usr/include/gnu/stubs-32.h
-afm.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
-afm.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
-afm.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
+afm.o: /usr/include/gnu/stubs.h
+afm.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
+afm.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
+afm.o: /usr/include/bits/typesizes.h /usr/include/libio.h
+afm.o: /usr/include/_G_config.h /usr/include/wchar.h
 afm.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-afm.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+afm.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 afm.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 afm.o: /usr/include/string.h /usr/include/xlocale.h /usr/include/stdlib.h
 afm.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
@@ -1870,8 +1875,9 @@ afm.o: /usr/include/endian.h /usr/include/bits/endian.h
 afm.o: /usr/include/sys/types.h /usr/include/time.h /usr/include/sys/select.h
 afm.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 afm.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
-afm.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
-afm.o: ../include/fontmisc.h ../../../exports/include/X11/Xfuncs.h
+afm.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
+afm.o: /usr/include/alloca.h ../include/fontmisc.h
+afm.o: ../../../exports/include/X11/Xfuncs.h
 afm.o: ../../../exports/include/X11/Xosdefs.h /usr/include/unistd.h
 afm.o: /usr/include/bits/posix_opt.h /usr/include/bits/environments.h
 afm.o: /usr/include/bits/confname.h /usr/include/getopt.h

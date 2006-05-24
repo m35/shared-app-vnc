@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
-# libc:	(6.3.5)
+# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
+# libc:	(6.3.3)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce
+      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -929,7 +929,7 @@ CXXPROJECT_DEFINES =
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 -DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP 	-DXCSECURITY -DTOGCUP  	-DXF86BIGFONT -DDPMSExtension 	  -DPANORAMIX 	 -DRENDER -DRANDR -DGCCUSESGAS -DAVOID_GLYPHBLT -DPIXPRIV -DSINGLEDEPTH 				-DXFreeXDGA -DXvExtension 				-DXFree86LOADER  -DXFree86Server 				-DXF86VIDMODE 				-DXvMCExtension 				-DSMART_SCHEDULE 				-DBUILDDEBUG -DXResExtension 				-DX_BYTE_ORDER=$(X_BYTE_ORDER) -DNDEBUG  $(SERVER_THREAD_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce
+CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 EXT_DEFINES =  -DMITMISC -DXTEST -DXTRAP 	-DXSYNC -DXCMISC -DXRECORD 	-DMITSHM -DBIGREQS -DXF86VIDMODE 	-DXF86MISC -DDBE -DDPMSExtension -DEVI 	-DSCREENSAVER -DXV -DXVMC 	-DGLXEXT -DXF86DRI -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN -DGLX_USE_MESA  -DFONTCACHE          -DRES
 OS_DEFINES  = -DDDXOSINIT -DSERVER_LOCK -DDDXOSFATALERROR 				-DDDXOSVERRORF -DDDXTIME -DPART_NET
 
@@ -1096,15 +1096,16 @@ distclean::
 ffcheck.o: ../../include/fntfilst.h ../../../../exports/include/X11/Xos.h
 ffcheck.o: ../../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 ffcheck.o: /usr/include/features.h /usr/include/sys/cdefs.h
-ffcheck.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
-ffcheck.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-ffcheck.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+ffcheck.o: /usr/include/gnu/stubs.h /usr/include/bits/types.h
+ffcheck.o: /usr/include/bits/wordsize.h
+ffcheck.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 ffcheck.o: /usr/include/bits/typesizes.h /usr/include/time.h
 ffcheck.o: /usr/include/endian.h /usr/include/bits/endian.h
 ffcheck.o: /usr/include/sys/select.h /usr/include/bits/select.h
 ffcheck.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 ffcheck.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
-ffcheck.o: /usr/include/string.h /usr/include/xlocale.h /usr/include/fcntl.h
+ffcheck.o: /usr/include/bits/sched.h /usr/include/string.h
+ffcheck.o: /usr/include/xlocale.h /usr/include/fcntl.h
 ffcheck.o: /usr/include/bits/fcntl.h /usr/include/sys/stat.h
 ffcheck.o: /usr/include/bits/stat.h /usr/include/unistd.h
 ffcheck.o: /usr/include/bits/posix_opt.h /usr/include/bits/environments.h
@@ -1116,7 +1117,7 @@ ffcheck.o: /usr/include/bits/waitstatus.h /usr/include/alloca.h
 ffcheck.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
 ffcheck.o: /usr/include/wchar.h /usr/include/bits/wchar.h
 ffcheck.o: /usr/include/gconv.h
-ffcheck.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+ffcheck.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 ffcheck.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 ffcheck.o: ../../../../exports/include/X11/Xdefs.h
 ffcheck.o: ../../../../include/fonts/fontstruct.h
@@ -1136,21 +1137,21 @@ ffcheck.o: ../../include/fontmod.h
 register.o: ../../include/fontmisc.h ../../../../exports/include/X11/Xfuncs.h
 register.o: ../../../../exports/include/X11/Xosdefs.h /usr/include/string.h
 register.o: /usr/include/features.h /usr/include/sys/cdefs.h
-register.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
-register.o: /usr/include/gnu/stubs-32.h
-register.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+register.o: /usr/include/gnu/stubs.h
+register.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 register.o: /usr/include/xlocale.h /usr/include/stdlib.h
 register.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 register.o: /usr/include/endian.h /usr/include/bits/endian.h
 register.o: /usr/include/sys/types.h /usr/include/bits/types.h
-register.o: /usr/include/bits/typesizes.h /usr/include/time.h
-register.o: /usr/include/sys/select.h /usr/include/bits/select.h
-register.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
-register.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
+register.o: /usr/include/bits/wordsize.h /usr/include/bits/typesizes.h
+register.o: /usr/include/time.h /usr/include/sys/select.h
+register.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
+register.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
+register.o: /usr/include/bits/pthreadtypes.h /usr/include/bits/sched.h
 register.o: /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h
 register.o: /usr/include/_G_config.h /usr/include/wchar.h
 register.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-register.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+register.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 register.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 register.o: /usr/include/unistd.h /usr/include/bits/posix_opt.h
 register.o: /usr/include/bits/environments.h /usr/include/bits/confname.h

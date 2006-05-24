@@ -294,8 +294,6 @@ typedef struct {
 #define rfbSetScaleFactorULTRA 8
 #define rfbSetScaleFactor 0xF
 /* SharedApp extensions -- SHAREDAPP */
-#define sharedAppKeyEvent 40
-#define sharedAppPointerEvent 41
 #define rfbSharedAppRequest 48
 #define rfbMultiCursor 49
 
@@ -800,19 +798,10 @@ typedef struct {
     CARD8 down;                 /* true if down (press), false if up */
     CARD16 pad;
     CARD32 key;                 /* key is specified as an X keysym */
+	CARD32 windowId;   /* SharedApp extensions -- SHAREDAPP */
 } rfbKeyEventMsg;
 
-#define sz_rfbKeyEventMsg 8
-
-typedef struct {
-    CARD8 type;                 /* always sharedAppKeyEvent */
-    CARD8 down;                 /* true if down (press), false if up */
-    CARD16 pad;
-    CARD32 key;                 /* key is specified as an X keysym */
-	CARD32 windowId;   /* SharedApp extensions -- SHAREDAPP */
-} sharedAppKeyEventMsg;
-
-#define sz_sharedAppKeyEventMsg 12
+#define sz_rfbKeyEventMsg 12
 
 
 /*-----------------------------------------------------------------------------
@@ -825,6 +814,7 @@ typedef struct {
     CARD16 x;
     CARD16 y;
 	CARD16 pad;
+    CARD32 windowId; /* SharedApp extensions -- SHAREDAPP */
 } rfbPointerEventMsg;
 
 #define rfbButton1Mask 1
@@ -836,18 +826,7 @@ typedef struct {
 #define rfbWheelDownMask rfbButton5Mask
 #define rfbWheelMask (rfbWheelUpMask | rfbWheelDownMask)
 
-#define sz_rfbPointerEventMsg 8
-
-typedef struct {
-    CARD8 type;                 /* always sharedAppPointerEvent */
-    CARD8 buttonMask;           /* bits 0-7 are buttons 1-8, 0=up, 1=down */
-    CARD16 x;
-    CARD16 y;
-	CARD16 pad;
-    CARD32 windowId; /* SharedApp extensions -- SHAREDAPP */
-} sharedAppPointerEventMsg;
-
-#define sz_sharedAppPointerEventMsg 12
+#define sz_rfbPointerEventMsg 12
 
 
 /* MultiCursor: set cursor number */
@@ -889,8 +868,6 @@ typedef union {
     rfbFramebufferUpdateRequestMsg fur;
     rfbKeyEventMsg ke;
     rfbPointerEventMsg pe;
-	sharedAppKeyEventMsg ske;
-    sharedAppPointerEventMsg spe;
     rfbClientCutTextMsg cct;
 	rfbMultiCursorMsg mc;
 } rfbClientToServerMsg;

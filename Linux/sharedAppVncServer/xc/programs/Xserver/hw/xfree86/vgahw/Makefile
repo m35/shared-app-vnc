@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
-# libc:	(6.3.5)
+# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
+# libc:	(6.3.3)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce
+      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -931,7 +931,7 @@ CXXPROJECT_DEFINES =
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 -DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP 	-DXCSECURITY -DTOGCUP  	-DXF86BIGFONT -DDPMSExtension 	  -DPANORAMIX 	 -DRENDER -DRANDR -DGCCUSESGAS -DAVOID_GLYPHBLT -DPIXPRIV -DSINGLEDEPTH 				-DXFreeXDGA -DXvExtension 				-DXFree86LOADER  -DXFree86Server 				-DXF86VIDMODE 				-DXvMCExtension 				-DSMART_SCHEDULE 				-DBUILDDEBUG -DXResExtension 				-DX_BYTE_ORDER=$(X_BYTE_ORDER) -DNDEBUG  $(SERVER_THREAD_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce
+CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 EXT_DEFINES =  -DMITMISC -DXTEST -DXTRAP 	-DXSYNC -DXCMISC -DXRECORD 	-DMITSHM -DBIGREQS -DXF86VIDMODE 	-DXF86MISC -DDBE -DDPMSExtension -DEVI 	-DSCREENSAVER -DXV -DXVMC 	-DGLXEXT -DXF86DRI -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN -DGLX_USE_MESA  -DFONTCACHE          -DRES
 OS_DEFINES  = -DDDXOSINIT -DSERVER_LOCK -DDDXOSFATALERROR 				-DDDXOSVERRORF -DDDXTIME -DPART_NET
 
@@ -1137,10 +1137,10 @@ vgaHW.o: ../../../../../exports/include/X11/Xdefs.h
 vgaHW.o: ../../../../../programs/Xserver/include/os.h
 vgaHW.o: ../../../../../exports/include/X11/Xalloca.h
 vgaHW.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-vgaHW.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+vgaHW.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 vgaHW.o: ../../../../../programs/Xserver/include/xf86_libc.h
 vgaHW.o: ../../../../../exports/include/X11/Xfuncs.h
-vgaHW.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+vgaHW.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 vgaHW.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 vgaHW.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 vgaHW.o: ../../../../../programs/Xserver/include/input.h
@@ -1192,8 +1192,8 @@ vgaHWmodule.o: ../../../../../exports/include/X11/Xdefs.h
 vgaHWmodule.o: ../../../../../programs/Xserver/include/os.h
 vgaHWmodule.o: ../../../../../exports/include/X11/Xalloca.h
 vgaHWmodule.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-vgaHWmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+vgaHWmodule.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 vgaHWmodule.o: ../../../../../programs/Xserver/include/xf86_libc.h
 vgaHWmodule.o: ../../../../../exports/include/X11/Xfuncs.h
-vgaHWmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+vgaHWmodule.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 vgaHWmodule.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86Version.h

@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
-# libc:	(6.3.5)
+# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
+# libc:	(6.3.3)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce
+      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -933,7 +933,7 @@ CXXPROJECT_DEFINES =
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 -DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP 	-DXCSECURITY -DTOGCUP  	-DXF86BIGFONT -DDPMSExtension 	  -DPANORAMIX 	 -DRENDER -DRANDR -DGCCUSESGAS -DAVOID_GLYPHBLT -DPIXPRIV -DSINGLEDEPTH 				-DXFreeXDGA -DXvExtension 				-DXFree86LOADER  -DXFree86Server 				-DXF86VIDMODE 				-DXvMCExtension 				-DSMART_SCHEDULE 				-DBUILDDEBUG -DXResExtension 				-DX_BYTE_ORDER=$(X_BYTE_ORDER) -DNDEBUG  $(SERVER_THREAD_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce
+CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 EXT_DEFINES =  -DMITMISC -DXTEST -DXTRAP 	-DXSYNC -DXCMISC -DXRECORD 	-DMITSHM -DBIGREQS -DXF86VIDMODE 	-DXF86MISC -DDBE -DDPMSExtension -DEVI 	-DSCREENSAVER -DXV -DXVMC 	-DGLXEXT -DXF86DRI -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN -DGLX_USE_MESA  -DFONTCACHE          -DRES
 OS_DEFINES  = -DDDXOSINIT -DSERVER_LOCK -DDDXOSFATALERROR 				-DDDXOSVERRORF -DDDXTIME -DPART_NET
 
@@ -2163,10 +2163,10 @@ cfbgc.o: ../../../exports/include/X11/Xdefs.h
 cfbgc.o: ../../../programs/Xserver/include/os.h
 cfbgc.o: ../../../exports/include/X11/Xalloca.h
 cfbgc.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbgc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbgc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbgc.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbgc.o: ../../../exports/include/X11/Xfuncs.h
-cfbgc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbgc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbgc.o: ../../../programs/Xserver/include/region.h
 cfbgc.o: ../../../programs/Xserver/include/regionstr.h
 cfbgc.o: ../../../programs/Xserver/include/miscstruct.h
@@ -2222,10 +2222,10 @@ cfbrrop.o: ../../../exports/include/X11/Xdefs.h
 cfbrrop.o: ../../../programs/Xserver/include/os.h
 cfbrrop.o: ../../../exports/include/X11/Xalloca.h
 cfbrrop.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbrrop.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbrrop.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbrrop.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbrrop.o: ../../../exports/include/X11/Xfuncs.h
-cfbrrop.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbrrop.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbrrop.o: ../../../programs/Xserver/include/region.h
 cfbrrop.o: ../../../programs/Xserver/include/regionstr.h
 cfbrrop.o: ../../../programs/Xserver/include/miscstruct.h
@@ -2262,10 +2262,10 @@ cfbwindow.o: ../../../exports/include/X11/Xdefs.h
 cfbwindow.o: ../../../programs/Xserver/include/os.h
 cfbwindow.o: ../../../exports/include/X11/Xalloca.h
 cfbwindow.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbwindow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbwindow.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbwindow.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbwindow.o: ../../../exports/include/X11/Xfuncs.h
-cfbwindow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbwindow.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbwindow.o: ../../../programs/Xserver/include/regionstr.h
 cfbwindow.o: ../../../programs/Xserver/include/miscstruct.h
 cfbwindow.o: ../../../exports/include/X11/Xprotostr.h
@@ -2312,10 +2312,10 @@ cfbpntwin.o: ../../../exports/include/X11/Xdefs.h
 cfbpntwin.o: ../../../programs/Xserver/include/os.h
 cfbpntwin.o: ../../../exports/include/X11/Xalloca.h
 cfbpntwin.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbpntwin.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbpntwin.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbpntwin.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbpntwin.o: ../../../exports/include/X11/Xfuncs.h
-cfbpntwin.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbpntwin.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbpntwin.o: ../../../programs/Xserver/include/region.h
 cfbpntwin.o: ../../../programs/Xserver/include/regionstr.h
 cfbpntwin.o: ../../../programs/Xserver/include/miscstruct.h
@@ -2370,10 +2370,10 @@ cfbmskbits.o: ../../../exports/include/X11/Xdefs.h
 cfbmskbits.o: ../../../programs/Xserver/include/os.h
 cfbmskbits.o: ../../../exports/include/X11/Xalloca.h
 cfbmskbits.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbmskbits.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbmskbits.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbmskbits.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbmskbits.o: ../../../exports/include/X11/Xfuncs.h
-cfbmskbits.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbmskbits.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbmskbits.o: ../../../programs/Xserver/include/region.h
 cfbmskbits.o: ../../../programs/Xserver/include/regionstr.h
 cfbmskbits.o: ../../../programs/Xserver/include/miscstruct.h
@@ -2411,10 +2411,10 @@ cfbpixmap.o: ../../../exports/include/X11/Xdefs.h
 cfbpixmap.o: ../../../programs/Xserver/include/os.h
 cfbpixmap.o: ../../../exports/include/X11/Xalloca.h
 cfbpixmap.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbpixmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbpixmap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbpixmap.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbpixmap.o: ../../../exports/include/X11/Xfuncs.h
-cfbpixmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbpixmap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbpixmap.o: ../../../programs/Xserver/include/regionstr.h
 cfbpixmap.o: ../../../programs/Xserver/include/miscstruct.h
 cfbpixmap.o: ../../../exports/include/X11/Xprotostr.h
@@ -2465,10 +2465,10 @@ cfbbitblt.o: ../../../exports/include/X11/Xdefs.h
 cfbbitblt.o: ../../../programs/Xserver/include/os.h
 cfbbitblt.o: ../../../exports/include/X11/Xalloca.h
 cfbbitblt.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbbitblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbbitblt.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbbitblt.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbbitblt.o: ../../../exports/include/X11/Xfuncs.h
-cfbbitblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbbitblt.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbbitblt.o: ../../../programs/Xserver/include/pixmap.h
 cfbbitblt.o: ../../../programs/Xserver/include/regionstr.h
 cfbbitblt.o: ../../../programs/Xserver/include/miscstruct.h
@@ -2519,10 +2519,10 @@ cfbfillsp.o: ../../../exports/include/X11/Xdefs.h
 cfbfillsp.o: ../../../programs/Xserver/include/os.h
 cfbfillsp.o: ../../../exports/include/X11/Xalloca.h
 cfbfillsp.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbfillsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbfillsp.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbfillsp.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbfillsp.o: ../../../exports/include/X11/Xfuncs.h
-cfbfillsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbfillsp.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbfillsp.o: ../../../programs/Xserver/include/pixmap.h
 cfbfillsp.o: ../../../programs/Xserver/include/regionstr.h
 cfbfillsp.o: ../../../programs/Xserver/include/miscstruct.h
@@ -2568,10 +2568,10 @@ cfbsetsp.o: ../../../exports/include/X11/Xdefs.h
 cfbsetsp.o: ../../../programs/Xserver/include/os.h
 cfbsetsp.o: ../../../exports/include/X11/Xalloca.h
 cfbsetsp.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbsetsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbsetsp.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbsetsp.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbsetsp.o: ../../../exports/include/X11/Xfuncs.h
-cfbsetsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbsetsp.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbsetsp.o: ../../../programs/Xserver/include/regionstr.h
 cfbsetsp.o: ../../../programs/Xserver/include/miscstruct.h
 cfbsetsp.o: ../../../exports/include/X11/Xprotostr.h
@@ -2620,10 +2620,10 @@ cfbscrinit.o: ../../../exports/include/X11/Xdefs.h
 cfbscrinit.o: ../../../programs/Xserver/include/os.h
 cfbscrinit.o: ../../../exports/include/X11/Xalloca.h
 cfbscrinit.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbscrinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbscrinit.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbscrinit.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbscrinit.o: ../../../exports/include/X11/Xfuncs.h
-cfbscrinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbscrinit.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbscrinit.o: ../../../programs/Xserver/include/regionstr.h
 cfbscrinit.o: ../../../programs/Xserver/include/miscstruct.h
 cfbscrinit.o: ../../../exports/include/X11/Xprotostr.h
@@ -2671,10 +2671,10 @@ cfballpriv.o: ../../../exports/include/X11/Xdefs.h
 cfballpriv.o: ../../../programs/Xserver/include/os.h
 cfballpriv.o: ../../../exports/include/X11/Xalloca.h
 cfballpriv.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfballpriv.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfballpriv.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfballpriv.o: ../../../programs/Xserver/include/xf86_libc.h
 cfballpriv.o: ../../../exports/include/X11/Xfuncs.h
-cfballpriv.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfballpriv.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfballpriv.o: ../../../programs/Xserver/include/regionstr.h
 cfballpriv.o: ../../../programs/Xserver/include/miscstruct.h
 cfballpriv.o: ../../../exports/include/X11/Xprotostr.h
@@ -2720,10 +2720,10 @@ cfbgetsp.o: ../../../exports/include/X11/Xdefs.h
 cfbgetsp.o: ../../../programs/Xserver/include/os.h
 cfbgetsp.o: ../../../exports/include/X11/Xalloca.h
 cfbgetsp.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbgetsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbgetsp.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbgetsp.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbgetsp.o: ../../../exports/include/X11/Xfuncs.h
-cfbgetsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbgetsp.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbgetsp.o: ../../../programs/Xserver/include/region.h
 cfbgetsp.o: ../../../programs/Xserver/include/regionstr.h
 cfbgetsp.o: ../../../programs/Xserver/include/miscstruct.h
@@ -2772,10 +2772,10 @@ cfbfillrct.o: ../../../exports/include/X11/Xdefs.h
 cfbfillrct.o: ../../../programs/Xserver/include/os.h
 cfbfillrct.o: ../../../exports/include/X11/Xalloca.h
 cfbfillrct.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbfillrct.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbfillrct.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbfillrct.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbfillrct.o: ../../../exports/include/X11/Xfuncs.h
-cfbfillrct.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbfillrct.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbfillrct.o: ../../../programs/Xserver/include/pixmap.h
 cfbfillrct.o: ../../../programs/Xserver/include/regionstr.h
 cfbfillrct.o: ../../../programs/Xserver/include/miscstruct.h
@@ -2824,10 +2824,10 @@ cfbsolidC.o: ../../../exports/include/X11/Xdefs.h
 cfbsolidC.o: ../../../programs/Xserver/include/os.h
 cfbsolidC.o: ../../../exports/include/X11/Xalloca.h
 cfbsolidC.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbsolidC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbsolidC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbsolidC.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbsolidC.o: ../../../exports/include/X11/Xfuncs.h
-cfbsolidC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbsolidC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbsolidC.o: ../../../programs/Xserver/include/pixmap.h
 cfbsolidC.o: ../../../programs/Xserver/include/regionstr.h
 cfbsolidC.o: ../../../programs/Xserver/include/miscstruct.h
@@ -2877,10 +2877,10 @@ cfbsolidX.o: ../../../exports/include/X11/Xdefs.h
 cfbsolidX.o: ../../../programs/Xserver/include/os.h
 cfbsolidX.o: ../../../exports/include/X11/Xalloca.h
 cfbsolidX.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbsolidX.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbsolidX.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbsolidX.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbsolidX.o: ../../../exports/include/X11/Xfuncs.h
-cfbsolidX.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbsolidX.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbsolidX.o: ../../../programs/Xserver/include/pixmap.h
 cfbsolidX.o: ../../../programs/Xserver/include/regionstr.h
 cfbsolidX.o: ../../../programs/Xserver/include/miscstruct.h
@@ -2930,10 +2930,10 @@ cfbsolidG.o: ../../../exports/include/X11/Xdefs.h
 cfbsolidG.o: ../../../programs/Xserver/include/os.h
 cfbsolidG.o: ../../../exports/include/X11/Xalloca.h
 cfbsolidG.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbsolidG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbsolidG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbsolidG.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbsolidG.o: ../../../exports/include/X11/Xfuncs.h
-cfbsolidG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbsolidG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbsolidG.o: ../../../programs/Xserver/include/pixmap.h
 cfbsolidG.o: ../../../programs/Xserver/include/regionstr.h
 cfbsolidG.o: ../../../programs/Xserver/include/miscstruct.h
@@ -2983,10 +2983,10 @@ cfbtileoddC.o: ../../../exports/include/X11/Xdefs.h
 cfbtileoddC.o: ../../../programs/Xserver/include/os.h
 cfbtileoddC.o: ../../../exports/include/X11/Xalloca.h
 cfbtileoddC.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbtileoddC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbtileoddC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbtileoddC.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbtileoddC.o: ../../../exports/include/X11/Xfuncs.h
-cfbtileoddC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbtileoddC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbtileoddC.o: ../../../programs/Xserver/include/pixmap.h
 cfbtileoddC.o: ../../../programs/Xserver/include/regionstr.h
 cfbtileoddC.o: ../../../programs/Xserver/include/miscstruct.h
@@ -3035,10 +3035,10 @@ cfbtileoddG.o: ../../../exports/include/X11/Xdefs.h
 cfbtileoddG.o: ../../../programs/Xserver/include/os.h
 cfbtileoddG.o: ../../../exports/include/X11/Xalloca.h
 cfbtileoddG.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbtileoddG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbtileoddG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbtileoddG.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbtileoddG.o: ../../../exports/include/X11/Xfuncs.h
-cfbtileoddG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbtileoddG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbtileoddG.o: ../../../programs/Xserver/include/pixmap.h
 cfbtileoddG.o: ../../../programs/Xserver/include/regionstr.h
 cfbtileoddG.o: ../../../programs/Xserver/include/miscstruct.h
@@ -3087,10 +3087,10 @@ cfbtile32C.o: ../../../exports/include/X11/Xdefs.h
 cfbtile32C.o: ../../../programs/Xserver/include/os.h
 cfbtile32C.o: ../../../exports/include/X11/Xalloca.h
 cfbtile32C.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbtile32C.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbtile32C.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbtile32C.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbtile32C.o: ../../../exports/include/X11/Xfuncs.h
-cfbtile32C.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbtile32C.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbtile32C.o: ../../../programs/Xserver/include/pixmap.h
 cfbtile32C.o: ../../../programs/Xserver/include/regionstr.h
 cfbtile32C.o: ../../../programs/Xserver/include/miscstruct.h
@@ -3141,10 +3141,10 @@ cfbtile32G.o: ../../../exports/include/X11/Xdefs.h
 cfbtile32G.o: ../../../programs/Xserver/include/os.h
 cfbtile32G.o: ../../../exports/include/X11/Xalloca.h
 cfbtile32G.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbtile32G.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbtile32G.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbtile32G.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbtile32G.o: ../../../exports/include/X11/Xfuncs.h
-cfbtile32G.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbtile32G.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbtile32G.o: ../../../programs/Xserver/include/pixmap.h
 cfbtile32G.o: ../../../programs/Xserver/include/regionstr.h
 cfbtile32G.o: ../../../programs/Xserver/include/miscstruct.h
@@ -3192,10 +3192,10 @@ cfbcmap.o: ../../../exports/include/X11/Xdefs.h
 cfbcmap.o: ../../../programs/Xserver/include/os.h
 cfbcmap.o: ../../../exports/include/X11/Xalloca.h
 cfbcmap.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbcmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbcmap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbcmap.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbcmap.o: ../../../exports/include/X11/Xfuncs.h
-cfbcmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbcmap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbcmap.o: ../../../programs/Xserver/include/regionstr.h
 cfbcmap.o: ../../../programs/Xserver/include/miscstruct.h
 cfbcmap.o: ../../../programs/Xserver/include/gc.h
@@ -3238,10 +3238,10 @@ cfbzerarcC.o: ../../../exports/include/X11/Xdefs.h
 cfbzerarcC.o: ../../../programs/Xserver/include/os.h
 cfbzerarcC.o: ../../../exports/include/X11/Xalloca.h
 cfbzerarcC.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbzerarcC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbzerarcC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbzerarcC.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbzerarcC.o: ../../../exports/include/X11/Xfuncs.h
-cfbzerarcC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbzerarcC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbzerarcC.o: ../../../exports/include/X11/Xprotostr.h
 cfbzerarcC.o: ../../../programs/Xserver/include/gc.h
 cfbzerarcC.o: ../../../exports/include/X11/Xdefs.h
@@ -3291,10 +3291,10 @@ cfbzerarcX.o: ../../../exports/include/X11/Xdefs.h
 cfbzerarcX.o: ../../../programs/Xserver/include/os.h
 cfbzerarcX.o: ../../../exports/include/X11/Xalloca.h
 cfbzerarcX.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbzerarcX.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbzerarcX.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbzerarcX.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbzerarcX.o: ../../../exports/include/X11/Xfuncs.h
-cfbzerarcX.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbzerarcX.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbzerarcX.o: ../../../exports/include/X11/Xprotostr.h
 cfbzerarcX.o: ../../../programs/Xserver/include/gc.h
 cfbzerarcX.o: ../../../exports/include/X11/Xdefs.h
@@ -3344,10 +3344,10 @@ cfbzerarcG.o: ../../../exports/include/X11/Xdefs.h
 cfbzerarcG.o: ../../../programs/Xserver/include/os.h
 cfbzerarcG.o: ../../../exports/include/X11/Xalloca.h
 cfbzerarcG.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbzerarcG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbzerarcG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbzerarcG.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbzerarcG.o: ../../../exports/include/X11/Xfuncs.h
-cfbzerarcG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbzerarcG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbzerarcG.o: ../../../exports/include/X11/Xprotostr.h
 cfbzerarcG.o: ../../../programs/Xserver/include/gc.h
 cfbzerarcG.o: ../../../exports/include/X11/Xdefs.h
@@ -3397,10 +3397,10 @@ cfbfillarcC.o: ../../../exports/include/X11/Xdefs.h
 cfbfillarcC.o: ../../../programs/Xserver/include/os.h
 cfbfillarcC.o: ../../../exports/include/X11/Xalloca.h
 cfbfillarcC.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbfillarcC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbfillarcC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbfillarcC.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbfillarcC.o: ../../../exports/include/X11/Xfuncs.h
-cfbfillarcC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbfillarcC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbfillarcC.o: ../../../exports/include/X11/Xprotostr.h
 cfbfillarcC.o: ../../../programs/Xserver/include/gc.h
 cfbfillarcC.o: ../../../exports/include/X11/Xdefs.h
@@ -3450,10 +3450,10 @@ cfbfillarcG.o: ../../../exports/include/X11/Xdefs.h
 cfbfillarcG.o: ../../../programs/Xserver/include/os.h
 cfbfillarcG.o: ../../../exports/include/X11/Xalloca.h
 cfbfillarcG.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbfillarcG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbfillarcG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbfillarcG.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbfillarcG.o: ../../../exports/include/X11/Xfuncs.h
-cfbfillarcG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbfillarcG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbfillarcG.o: ../../../exports/include/X11/Xprotostr.h
 cfbfillarcG.o: ../../../programs/Xserver/include/gc.h
 cfbfillarcG.o: ../../../exports/include/X11/Xdefs.h
@@ -3507,10 +3507,10 @@ cfbigblt8.o: ../../../exports/include/X11/Xdefs.h
 cfbigblt8.o: ../../../programs/Xserver/include/os.h
 cfbigblt8.o: ../../../exports/include/X11/Xalloca.h
 cfbigblt8.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbigblt8.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbigblt8.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbigblt8.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbigblt8.o: ../../../exports/include/X11/Xfuncs.h
-cfbigblt8.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbigblt8.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbigblt8.o: ../../../programs/Xserver/include/gc.h
 cfbigblt8.o: ../../../exports/include/X11/Xdefs.h
 cfbigblt8.o: ../../../exports/include/X11/Xproto.h
@@ -3564,10 +3564,10 @@ cfbglblt8.o: ../../../exports/include/X11/Xdefs.h
 cfbglblt8.o: ../../../programs/Xserver/include/os.h
 cfbglblt8.o: ../../../exports/include/X11/Xalloca.h
 cfbglblt8.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbglblt8.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbglblt8.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbglblt8.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbglblt8.o: ../../../exports/include/X11/Xfuncs.h
-cfbglblt8.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbglblt8.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbglblt8.o: ../../../programs/Xserver/include/region.h
 cfbglblt8.o: ../../../programs/Xserver/include/regionstr.h
 cfbglblt8.o: ../../../programs/Xserver/include/miscstruct.h
@@ -3621,10 +3621,10 @@ cfbtegblt.o: ../../../exports/include/X11/Xdefs.h
 cfbtegblt.o: ../../../programs/Xserver/include/os.h
 cfbtegblt.o: ../../../exports/include/X11/Xalloca.h
 cfbtegblt.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbtegblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbtegblt.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbtegblt.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbtegblt.o: ../../../exports/include/X11/Xfuncs.h
-cfbtegblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbtegblt.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbtegblt.o: ../../../programs/Xserver/include/region.h
 cfbtegblt.o: ../../../programs/Xserver/include/regionstr.h
 cfbtegblt.o: ../../../programs/Xserver/include/miscstruct.h
@@ -3676,10 +3676,10 @@ cfbbstore.o: ../../../exports/include/X11/Xdefs.h
 cfbbstore.o: ../../../programs/Xserver/include/os.h
 cfbbstore.o: ../../../exports/include/X11/Xalloca.h
 cfbbstore.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbbstore.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbbstore.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbbstore.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbbstore.o: ../../../exports/include/X11/Xfuncs.h
-cfbbstore.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbbstore.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbbstore.o: ../../../programs/Xserver/include/region.h
 cfbbstore.o: ../../../programs/Xserver/include/regionstr.h
 cfbbstore.o: ../../../programs/Xserver/include/miscstruct.h
@@ -3725,10 +3725,10 @@ cfbbltC.o: ../../../exports/include/X11/Xdefs.h
 cfbbltC.o: ../../../programs/Xserver/include/os.h
 cfbbltC.o: ../../../exports/include/X11/Xalloca.h
 cfbbltC.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbbltC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbbltC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbbltC.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbbltC.o: ../../../exports/include/X11/Xfuncs.h
-cfbbltC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbbltC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbbltC.o: ../../../programs/Xserver/include/pixmap.h
 cfbbltC.o: ../../../programs/Xserver/include/regionstr.h
 cfbbltC.o: ../../../programs/Xserver/include/miscstruct.h
@@ -3778,10 +3778,10 @@ cfbbltX.o: ../../../exports/include/X11/Xdefs.h
 cfbbltX.o: ../../../programs/Xserver/include/os.h
 cfbbltX.o: ../../../exports/include/X11/Xalloca.h
 cfbbltX.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbbltX.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbbltX.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbbltX.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbbltX.o: ../../../exports/include/X11/Xfuncs.h
-cfbbltX.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbbltX.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbbltX.o: ../../../programs/Xserver/include/pixmap.h
 cfbbltX.o: ../../../programs/Xserver/include/regionstr.h
 cfbbltX.o: ../../../programs/Xserver/include/miscstruct.h
@@ -3831,10 +3831,10 @@ cfbbltO.o: ../../../exports/include/X11/Xdefs.h
 cfbbltO.o: ../../../programs/Xserver/include/os.h
 cfbbltO.o: ../../../exports/include/X11/Xalloca.h
 cfbbltO.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbbltO.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbbltO.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbbltO.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbbltO.o: ../../../exports/include/X11/Xfuncs.h
-cfbbltO.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbbltO.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbbltO.o: ../../../programs/Xserver/include/pixmap.h
 cfbbltO.o: ../../../programs/Xserver/include/regionstr.h
 cfbbltO.o: ../../../programs/Xserver/include/miscstruct.h
@@ -3884,10 +3884,10 @@ cfbbltG.o: ../../../exports/include/X11/Xdefs.h
 cfbbltG.o: ../../../programs/Xserver/include/os.h
 cfbbltG.o: ../../../exports/include/X11/Xalloca.h
 cfbbltG.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbbltG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbbltG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbbltG.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbbltG.o: ../../../exports/include/X11/Xfuncs.h
-cfbbltG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbbltG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbbltG.o: ../../../programs/Xserver/include/pixmap.h
 cfbbltG.o: ../../../programs/Xserver/include/regionstr.h
 cfbbltG.o: ../../../programs/Xserver/include/miscstruct.h
@@ -3934,10 +3934,10 @@ cfbpolypnt.o: ../../../exports/include/X11/Xdefs.h
 cfbpolypnt.o: ../../../programs/Xserver/include/os.h
 cfbpolypnt.o: ../../../exports/include/X11/Xalloca.h
 cfbpolypnt.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbpolypnt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbpolypnt.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbpolypnt.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbpolypnt.o: ../../../exports/include/X11/Xfuncs.h
-cfbpolypnt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbpolypnt.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbpolypnt.o: ../../../programs/Xserver/include/pixmap.h
 cfbpolypnt.o: ../../../programs/Xserver/include/regionstr.h
 cfbpolypnt.o: ../../../programs/Xserver/include/miscstruct.h
@@ -3978,10 +3978,10 @@ cfbbres.o: ../../../exports/include/X11/Xdefs.h
 cfbbres.o: ../../../programs/Xserver/include/os.h
 cfbbres.o: ../../../exports/include/X11/Xalloca.h
 cfbbres.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbbres.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbbres.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbbres.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbbres.o: ../../../exports/include/X11/Xfuncs.h
-cfbbres.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbbres.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbbres.o: ../../../programs/Xserver/cfb/cfb.h
 cfbbres.o: ../../../programs/Xserver/include/globals.h
 cfbbres.o: ../../../programs/Xserver/include/window.h
@@ -4027,10 +4027,10 @@ cfbline.o: ../../../exports/include/X11/Xdefs.h
 cfbline.o: ../../../programs/Xserver/include/os.h
 cfbline.o: ../../../exports/include/X11/Xalloca.h
 cfbline.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbline.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbline.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbline.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbline.o: ../../../exports/include/X11/Xfuncs.h
-cfbline.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbline.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbline.o: ../../../programs/Xserver/include/pixmap.h
 cfbline.o: ../../../programs/Xserver/include/regionstr.h
 cfbline.o: ../../../programs/Xserver/include/miscstruct.h
@@ -4079,10 +4079,10 @@ cfbhrzvert.o: ../../../exports/include/X11/Xdefs.h
 cfbhrzvert.o: ../../../programs/Xserver/include/os.h
 cfbhrzvert.o: ../../../exports/include/X11/Xalloca.h
 cfbhrzvert.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbhrzvert.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbhrzvert.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbhrzvert.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbhrzvert.o: ../../../exports/include/X11/Xfuncs.h
-cfbhrzvert.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbhrzvert.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbhrzvert.o: ../../../programs/Xserver/include/pixmap.h
 cfbhrzvert.o: ../../../programs/Xserver/include/window.h
 cfbhrzvert.o: ../../../programs/Xserver/include/region.h
@@ -4118,10 +4118,10 @@ cfbbresd.o: ../../../exports/include/X11/Xdefs.h
 cfbbresd.o: ../../../programs/Xserver/include/os.h
 cfbbresd.o: ../../../exports/include/X11/Xalloca.h
 cfbbresd.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbbresd.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbbresd.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbbresd.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbbresd.o: ../../../exports/include/X11/Xfuncs.h
-cfbbresd.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbbresd.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbbresd.o: ../../../programs/Xserver/cfb/cfb.h
 cfbbresd.o: ../../../programs/Xserver/include/globals.h
 cfbbresd.o: ../../../programs/Xserver/include/window.h
@@ -4164,10 +4164,10 @@ cfbimage.o: ../../../exports/include/X11/Xdefs.h
 cfbimage.o: ../../../programs/Xserver/include/os.h
 cfbimage.o: ../../../exports/include/X11/Xalloca.h
 cfbimage.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbimage.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbimage.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbimage.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbimage.o: ../../../exports/include/X11/Xfuncs.h
-cfbimage.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbimage.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbimage.o: ../../../programs/Xserver/include/region.h
 cfbimage.o: ../../../programs/Xserver/include/regionstr.h
 cfbimage.o: ../../../programs/Xserver/include/miscstruct.h
@@ -4218,10 +4218,10 @@ cfbseg.o: ../../../exports/include/X11/Xdefs.h
 cfbseg.o: ../../../programs/Xserver/include/os.h
 cfbseg.o: ../../../exports/include/X11/Xalloca.h
 cfbseg.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbseg.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbseg.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbseg.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbseg.o: ../../../exports/include/X11/Xfuncs.h
-cfbseg.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbseg.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbseg.o: ../../../programs/Xserver/include/pixmap.h
 cfbseg.o: ../../../programs/Xserver/include/regionstr.h
 cfbseg.o: ../../../programs/Xserver/include/miscstruct.h
@@ -4271,10 +4271,10 @@ cfb8lineCO.o: ../../../exports/include/X11/Xdefs.h
 cfb8lineCO.o: ../../../programs/Xserver/include/os.h
 cfb8lineCO.o: ../../../exports/include/X11/Xalloca.h
 cfb8lineCO.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfb8lineCO.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfb8lineCO.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfb8lineCO.o: ../../../programs/Xserver/include/xf86_libc.h
 cfb8lineCO.o: ../../../exports/include/X11/Xfuncs.h
-cfb8lineCO.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfb8lineCO.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfb8lineCO.o: ../../../programs/Xserver/include/pixmap.h
 cfb8lineCO.o: ../../../programs/Xserver/include/regionstr.h
 cfb8lineCO.o: ../../../programs/Xserver/include/miscstruct.h
@@ -4325,10 +4325,10 @@ cfb8lineX.o: ../../../exports/include/X11/Xdefs.h
 cfb8lineX.o: ../../../programs/Xserver/include/os.h
 cfb8lineX.o: ../../../exports/include/X11/Xalloca.h
 cfb8lineX.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfb8lineX.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfb8lineX.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfb8lineX.o: ../../../programs/Xserver/include/xf86_libc.h
 cfb8lineX.o: ../../../exports/include/X11/Xfuncs.h
-cfb8lineX.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfb8lineX.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfb8lineX.o: ../../../programs/Xserver/include/pixmap.h
 cfb8lineX.o: ../../../programs/Xserver/include/regionstr.h
 cfb8lineX.o: ../../../programs/Xserver/include/miscstruct.h
@@ -4379,10 +4379,10 @@ cfb8lineG.o: ../../../exports/include/X11/Xdefs.h
 cfb8lineG.o: ../../../programs/Xserver/include/os.h
 cfb8lineG.o: ../../../exports/include/X11/Xalloca.h
 cfb8lineG.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfb8lineG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfb8lineG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfb8lineG.o: ../../../programs/Xserver/include/xf86_libc.h
 cfb8lineG.o: ../../../exports/include/X11/Xfuncs.h
-cfb8lineG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfb8lineG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfb8lineG.o: ../../../programs/Xserver/include/pixmap.h
 cfb8lineG.o: ../../../programs/Xserver/include/regionstr.h
 cfb8lineG.o: ../../../programs/Xserver/include/miscstruct.h
@@ -4433,10 +4433,10 @@ cfb8lineCP.o: ../../../exports/include/X11/Xdefs.h
 cfb8lineCP.o: ../../../programs/Xserver/include/os.h
 cfb8lineCP.o: ../../../exports/include/X11/Xalloca.h
 cfb8lineCP.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfb8lineCP.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfb8lineCP.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfb8lineCP.o: ../../../programs/Xserver/include/xf86_libc.h
 cfb8lineCP.o: ../../../exports/include/X11/Xfuncs.h
-cfb8lineCP.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfb8lineCP.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfb8lineCP.o: ../../../programs/Xserver/include/pixmap.h
 cfb8lineCP.o: ../../../programs/Xserver/include/regionstr.h
 cfb8lineCP.o: ../../../programs/Xserver/include/miscstruct.h
@@ -4487,10 +4487,10 @@ cfb8segC.o: ../../../exports/include/X11/Xdefs.h
 cfb8segC.o: ../../../programs/Xserver/include/os.h
 cfb8segC.o: ../../../exports/include/X11/Xalloca.h
 cfb8segC.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfb8segC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfb8segC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfb8segC.o: ../../../programs/Xserver/include/xf86_libc.h
 cfb8segC.o: ../../../exports/include/X11/Xfuncs.h
-cfb8segC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfb8segC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfb8segC.o: ../../../programs/Xserver/include/pixmap.h
 cfb8segC.o: ../../../programs/Xserver/include/regionstr.h
 cfb8segC.o: ../../../programs/Xserver/include/miscstruct.h
@@ -4541,10 +4541,10 @@ cfb8segX.o: ../../../exports/include/X11/Xdefs.h
 cfb8segX.o: ../../../programs/Xserver/include/os.h
 cfb8segX.o: ../../../exports/include/X11/Xalloca.h
 cfb8segX.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfb8segX.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfb8segX.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfb8segX.o: ../../../programs/Xserver/include/xf86_libc.h
 cfb8segX.o: ../../../exports/include/X11/Xfuncs.h
-cfb8segX.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfb8segX.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfb8segX.o: ../../../programs/Xserver/include/pixmap.h
 cfb8segX.o: ../../../programs/Xserver/include/regionstr.h
 cfb8segX.o: ../../../programs/Xserver/include/miscstruct.h
@@ -4595,10 +4595,10 @@ cfb8segG.o: ../../../exports/include/X11/Xdefs.h
 cfb8segG.o: ../../../programs/Xserver/include/os.h
 cfb8segG.o: ../../../exports/include/X11/Xalloca.h
 cfb8segG.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfb8segG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfb8segG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfb8segG.o: ../../../programs/Xserver/include/xf86_libc.h
 cfb8segG.o: ../../../exports/include/X11/Xfuncs.h
-cfb8segG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfb8segG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfb8segG.o: ../../../programs/Xserver/include/pixmap.h
 cfb8segG.o: ../../../programs/Xserver/include/regionstr.h
 cfb8segG.o: ../../../programs/Xserver/include/miscstruct.h
@@ -4649,10 +4649,10 @@ cfb8segCS.o: ../../../exports/include/X11/Xdefs.h
 cfb8segCS.o: ../../../programs/Xserver/include/os.h
 cfb8segCS.o: ../../../exports/include/X11/Xalloca.h
 cfb8segCS.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfb8segCS.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfb8segCS.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfb8segCS.o: ../../../programs/Xserver/include/xf86_libc.h
 cfb8segCS.o: ../../../exports/include/X11/Xfuncs.h
-cfb8segCS.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfb8segCS.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfb8segCS.o: ../../../programs/Xserver/include/pixmap.h
 cfb8segCS.o: ../../../programs/Xserver/include/regionstr.h
 cfb8segCS.o: ../../../programs/Xserver/include/miscstruct.h
@@ -4703,10 +4703,10 @@ cfbply1rctC.o: ../../../exports/include/X11/Xdefs.h
 cfbply1rctC.o: ../../../programs/Xserver/include/os.h
 cfbply1rctC.o: ../../../exports/include/X11/Xalloca.h
 cfbply1rctC.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbply1rctC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbply1rctC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbply1rctC.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbply1rctC.o: ../../../exports/include/X11/Xfuncs.h
-cfbply1rctC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbply1rctC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbply1rctC.o: ../../../programs/Xserver/include/pixmap.h
 cfbply1rctC.o: ../../../programs/Xserver/include/regionstr.h
 cfbply1rctC.o: ../../../programs/Xserver/include/miscstruct.h
@@ -4756,10 +4756,10 @@ cfbply1rctG.o: ../../../exports/include/X11/Xdefs.h
 cfbply1rctG.o: ../../../programs/Xserver/include/os.h
 cfbply1rctG.o: ../../../exports/include/X11/Xalloca.h
 cfbply1rctG.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbply1rctG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbply1rctG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbply1rctG.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbply1rctG.o: ../../../exports/include/X11/Xfuncs.h
-cfbply1rctG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbply1rctG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbply1rctG.o: ../../../programs/Xserver/include/pixmap.h
 cfbply1rctG.o: ../../../programs/Xserver/include/regionstr.h
 cfbply1rctG.o: ../../../programs/Xserver/include/miscstruct.h
@@ -4810,10 +4810,10 @@ cfbcppl.o: ../../../exports/include/X11/Xdefs.h
 cfbcppl.o: ../../../programs/Xserver/include/os.h
 cfbcppl.o: ../../../exports/include/X11/Xalloca.h
 cfbcppl.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbcppl.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbcppl.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbcppl.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbcppl.o: ../../../exports/include/X11/Xfuncs.h
-cfbcppl.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbcppl.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbcppl.o: ../../../programs/Xserver/include/pixmap.h
 cfbcppl.o: ../../../programs/Xserver/include/regionstr.h
 cfbcppl.o: ../../../programs/Xserver/include/miscstruct.h
@@ -4852,10 +4852,10 @@ cfbmodule.o: ../../../exports/include/X11/Xdefs.h
 cfbmodule.o: ../../../programs/Xserver/include/os.h
 cfbmodule.o: ../../../exports/include/X11/Xalloca.h
 cfbmodule.o: ../../../programs/Xserver/include/xf86_ansic.h
-cfbmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+cfbmodule.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 cfbmodule.o: ../../../programs/Xserver/include/xf86_libc.h
 cfbmodule.o: ../../../exports/include/X11/Xfuncs.h
-cfbmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+cfbmodule.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 cfbmodule.o: ../../../programs/Xserver/include/xf86Version.h
 cfbmodule.o: ../../../programs/Xserver/cfb/cfb.h
 cfbmodule.o: ../../../exports/include/X11/X.h

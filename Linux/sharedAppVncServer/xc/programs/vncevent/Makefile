@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
-# libc:	(6.3.5)
+# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
+# libc:	(6.3.3)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce
+      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -1094,15 +1094,14 @@ distclean::
 vncevent.o: ../../exports/include/X11/Xmd.h /usr/X11R6/include/X11/Xlib.h
 vncevent.o: /usr/include/sys/types.h /usr/include/features.h
 vncevent.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
-vncevent.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
-vncevent.o: /usr/include/bits/types.h
-vncevent.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+vncevent.o: /usr/include/bits/types.h /usr/include/bits/wordsize.h
+vncevent.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 vncevent.o: /usr/include/bits/typesizes.h /usr/include/time.h
 vncevent.o: /usr/include/endian.h /usr/include/bits/endian.h
 vncevent.o: /usr/include/sys/select.h /usr/include/bits/select.h
 vncevent.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 vncevent.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
-vncevent.o: ../../exports/include/X11/X.h
+vncevent.o: /usr/include/bits/sched.h ../../exports/include/X11/X.h
 vncevent.o: ../../exports/include/X11/Xfuncproto.h
 vncevent.o: ../../exports/include/X11/Xosdefs.h
 vncevent.o: ../../exports/include/X11/extensions/vnc.h
@@ -1110,7 +1109,7 @@ vncevent.o: /usr/include/netinet/in.h /usr/include/stdint.h
 vncevent.o: /usr/include/bits/wchar.h /usr/include/sys/socket.h
 vncevent.o: /usr/include/sys/uio.h /usr/include/bits/uio.h
 vncevent.o: /usr/include/bits/socket.h /usr/include/limits.h
-vncevent.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
+vncevent.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/limits.h
 vncevent.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 vncevent.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 vncevent.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1120,7 +1119,7 @@ vncevent.o: /usr/include/bits/byteswap.h /usr/include/string.h
 vncevent.o: /usr/include/xlocale.h /usr/include/stdio.h /usr/include/libio.h
 vncevent.o: /usr/include/_G_config.h /usr/include/wchar.h
 vncevent.o: /usr/include/gconv.h
-vncevent.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+vncevent.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 vncevent.o: /usr/include/bits/sys_errlist.h /usr/include/stdlib.h
 vncevent.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 vncevent.o: /usr/include/alloca.h

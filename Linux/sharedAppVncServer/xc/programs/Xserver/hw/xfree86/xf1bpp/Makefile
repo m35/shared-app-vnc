@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
-# libc:	(6.3.5)
+# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
+# libc:	(6.3.3)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce
+      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -929,7 +929,7 @@ CXXPROJECT_DEFINES =
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 -DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP 	-DXCSECURITY -DTOGCUP  	-DXF86BIGFONT -DDPMSExtension 	  -DPANORAMIX 	 -DRENDER -DRANDR -DGCCUSESGAS -DAVOID_GLYPHBLT -DPIXPRIV -DSINGLEDEPTH 				-DXFreeXDGA -DXvExtension 				-DXFree86LOADER  -DXFree86Server 				-DXF86VIDMODE 				-DXvMCExtension 				-DSMART_SCHEDULE 				-DBUILDDEBUG -DXResExtension 				-DX_BYTE_ORDER=$(X_BYTE_ORDER) -DNDEBUG  $(SERVER_THREAD_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce
+CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 EXT_DEFINES =  -DMITMISC -DXTEST -DXTRAP 	-DXSYNC -DXCMISC -DXRECORD 	-DMITSHM -DBIGREQS -DXF86VIDMODE 	-DXF86MISC -DDBE -DDPMSExtension -DEVI 	-DSCREENSAVER -DXV -DXVMC 	-DGLXEXT -DXF86DRI -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN -DGLX_USE_MESA  -DFONTCACHE          -DRES
 OS_DEFINES  = -DDDXOSINIT -DSERVER_LOCK -DDDXOSFATALERROR 				-DDDXOSVERRORF -DDDXTIME -DPART_NET
 
@@ -2383,10 +2383,10 @@ mfbgc.o: ../../../../../exports/include/X11/Xdefs.h
 mfbgc.o: ../../../../../programs/Xserver/include/os.h
 mfbgc.o: ../../../../../exports/include/X11/Xalloca.h
 mfbgc.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbgc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbgc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbgc.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbgc.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbgc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbgc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbgc.o: ../../../../../programs/Xserver/include/screenint.h
 mfbgc.o: ../../../../../programs/Xserver/include/region.h
 mfbgc.o: ../../../../../programs/Xserver/include/regionstr.h
@@ -2437,10 +2437,10 @@ mfbwindow.o: ../../../../../exports/include/X11/Xdefs.h
 mfbwindow.o: ../../../../../programs/Xserver/include/os.h
 mfbwindow.o: ../../../../../exports/include/X11/Xalloca.h
 mfbwindow.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbwindow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbwindow.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbwindow.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbwindow.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbwindow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbwindow.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbwindow.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbwindow.o: ../../../../../programs/Xserver/include/miscstruct.h
 mfbwindow.o: ../../../../../exports/include/X11/Xprotostr.h
@@ -2488,10 +2488,10 @@ mfbfont.o: ../../../../../exports/include/X11/Xdefs.h
 mfbfont.o: ../../../../../programs/Xserver/include/os.h
 mfbfont.o: ../../../../../exports/include/X11/Xalloca.h
 mfbfont.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbfont.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbfont.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbfont.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbfont.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbfont.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbfont.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbfont.o: ../../../../../programs/Xserver/include/screenint.h
 mfbfont.o: ../../../../../programs/Xserver/include/region.h
 mfbfont.o: ../../../../../programs/Xserver/include/regionstr.h
@@ -2531,10 +2531,10 @@ mfbfillrct.o: ../../../../../exports/include/X11/Xdefs.h
 mfbfillrct.o: ../../../../../programs/Xserver/include/os.h
 mfbfillrct.o: ../../../../../exports/include/X11/Xalloca.h
 mfbfillrct.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbfillrct.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbfillrct.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbfillrct.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbfillrct.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbfillrct.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbfillrct.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbfillrct.o: ../../../../../programs/Xserver/include/screenint.h
 mfbfillrct.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbfillrct.o: ../../../../../programs/Xserver/include/miscstruct.h
@@ -2576,10 +2576,10 @@ mfbpntwin.o: ../../../../../exports/include/X11/Xdefs.h
 mfbpntwin.o: ../../../../../programs/Xserver/include/os.h
 mfbpntwin.o: ../../../../../exports/include/X11/Xalloca.h
 mfbpntwin.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbpntwin.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbpntwin.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbpntwin.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbpntwin.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbpntwin.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbpntwin.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbpntwin.o: ../../../../../programs/Xserver/include/region.h
 mfbpntwin.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbpntwin.o: ../../../../../programs/Xserver/include/miscstruct.h
@@ -2629,10 +2629,10 @@ mfbpixmap.o: ../../../../../exports/include/X11/Xdefs.h
 mfbpixmap.o: ../../../../../programs/Xserver/include/os.h
 mfbpixmap.o: ../../../../../exports/include/X11/Xalloca.h
 mfbpixmap.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbpixmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbpixmap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbpixmap.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbpixmap.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbpixmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbpixmap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbpixmap.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbpixmap.o: ../../../../../programs/Xserver/include/miscstruct.h
 mfbpixmap.o: ../../../../../exports/include/X11/Xprotostr.h
@@ -2671,10 +2671,10 @@ mfbimage.o: ../../../../../exports/include/X11/Xdefs.h
 mfbimage.o: ../../../../../programs/Xserver/include/os.h
 mfbimage.o: ../../../../../exports/include/X11/Xalloca.h
 mfbimage.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbimage.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbimage.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbimage.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbimage.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbimage.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbimage.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbimage.o: ../../../../../programs/Xserver/include/region.h
 mfbimage.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbimage.o: ../../../../../programs/Xserver/include/miscstruct.h
@@ -2723,10 +2723,10 @@ mfbline.o: ../../../../../exports/include/X11/Xdefs.h
 mfbline.o: ../../../../../programs/Xserver/include/os.h
 mfbline.o: ../../../../../exports/include/X11/Xalloca.h
 mfbline.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbline.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbline.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbline.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbline.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbline.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbline.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbline.o: ../../../../../programs/Xserver/include/pixmap.h
 mfbline.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbline.o: ../../../../../programs/Xserver/include/miscstruct.h
@@ -2769,10 +2769,10 @@ mfbbres.o: ../../../../../exports/include/X11/Xdefs.h
 mfbbres.o: ../../../../../programs/Xserver/include/os.h
 mfbbres.o: ../../../../../exports/include/X11/Xalloca.h
 mfbbres.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbbres.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbbres.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbbres.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbbres.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbbres.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbbres.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbbres.o: ../../../../../programs/Xserver/mfb/mfb.h
 mfbbres.o: ../../../../../programs/Xserver/include/pixmap.h
 mfbbres.o: ../../../../../programs/Xserver/include/screenint.h
@@ -2805,10 +2805,10 @@ mfbhrzvert.o: ../../../../../exports/include/X11/Xdefs.h
 mfbhrzvert.o: ../../../../../programs/Xserver/include/os.h
 mfbhrzvert.o: ../../../../../exports/include/X11/Xalloca.h
 mfbhrzvert.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbhrzvert.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbhrzvert.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbhrzvert.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbhrzvert.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbhrzvert.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbhrzvert.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbhrzvert.o: ../../../../../programs/Xserver/include/pixmap.h
 mfbhrzvert.o: ../../../../../programs/Xserver/include/window.h
 mfbhrzvert.o: ../../../../../programs/Xserver/include/region.h
@@ -2832,10 +2832,10 @@ mfbbresd.o: ../../../../../exports/include/X11/Xdefs.h
 mfbbresd.o: ../../../../../programs/Xserver/include/os.h
 mfbbresd.o: ../../../../../exports/include/X11/Xalloca.h
 mfbbresd.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbbresd.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbbresd.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbbresd.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbbresd.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbbresd.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbbresd.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbbresd.o: ../../../../../programs/Xserver/mfb/mfb.h
 mfbbresd.o: ../../../../../programs/Xserver/include/pixmap.h
 mfbbresd.o: ../../../../../programs/Xserver/include/screenint.h
@@ -2869,10 +2869,10 @@ mfbpushpxl.o: ../../../../../exports/include/X11/Xdefs.h
 mfbpushpxl.o: ../../../../../programs/Xserver/include/os.h
 mfbpushpxl.o: ../../../../../exports/include/X11/Xalloca.h
 mfbpushpxl.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbpushpxl.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbpushpxl.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbpushpxl.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbpushpxl.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbpushpxl.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbpushpxl.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbpushpxl.o: ../../../../../programs/Xserver/include/pixmap.h
 mfbpushpxl.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbpushpxl.o: ../../../../../programs/Xserver/include/miscstruct.h
@@ -2908,10 +2908,10 @@ mfbzerarc.o: ../../../../../exports/include/X11/Xdefs.h
 mfbzerarc.o: ../../../../../programs/Xserver/include/os.h
 mfbzerarc.o: ../../../../../exports/include/X11/Xalloca.h
 mfbzerarc.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbzerarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbzerarc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbzerarc.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbzerarc.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbzerarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbzerarc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbzerarc.o: ../../../../../exports/include/X11/Xprotostr.h
 mfbzerarc.o: ../../../../../programs/Xserver/include/gc.h
 mfbzerarc.o: ../../../../../exports/include/X11/Xdefs.h
@@ -2953,10 +2953,10 @@ mfbfillarc.o: ../../../../../exports/include/X11/Xdefs.h
 mfbfillarc.o: ../../../../../programs/Xserver/include/os.h
 mfbfillarc.o: ../../../../../exports/include/X11/Xalloca.h
 mfbfillarc.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbfillarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbfillarc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbfillarc.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbfillarc.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbfillarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbfillarc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbfillarc.o: ../../../../../exports/include/X11/Xprotostr.h
 mfbfillarc.o: ../../../../../programs/Xserver/include/gc.h
 mfbfillarc.o: ../../../../../exports/include/X11/Xdefs.h
@@ -3001,10 +3001,10 @@ mfbfillsp.o: ../../../../../exports/include/X11/Xdefs.h
 mfbfillsp.o: ../../../../../programs/Xserver/include/os.h
 mfbfillsp.o: ../../../../../exports/include/X11/Xalloca.h
 mfbfillsp.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbfillsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbfillsp.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbfillsp.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbfillsp.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbfillsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbfillsp.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbfillsp.o: ../../../../../programs/Xserver/include/pixmap.h
 mfbfillsp.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbfillsp.o: ../../../../../programs/Xserver/include/miscstruct.h
@@ -3047,10 +3047,10 @@ mfbsetsp.o: ../../../../../exports/include/X11/Xdefs.h
 mfbsetsp.o: ../../../../../programs/Xserver/include/os.h
 mfbsetsp.o: ../../../../../exports/include/X11/Xalloca.h
 mfbsetsp.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbsetsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbsetsp.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbsetsp.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbsetsp.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbsetsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbsetsp.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbsetsp.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbsetsp.o: ../../../../../programs/Xserver/include/miscstruct.h
 mfbsetsp.o: ../../../../../exports/include/X11/Xprotostr.h
@@ -3097,10 +3097,10 @@ mfbscrinit.o: ../../../../../exports/include/X11/Xdefs.h
 mfbscrinit.o: ../../../../../programs/Xserver/include/os.h
 mfbscrinit.o: ../../../../../exports/include/X11/Xalloca.h
 mfbscrinit.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbscrinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbscrinit.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbscrinit.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbscrinit.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbscrinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbscrinit.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbscrinit.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbscrinit.o: ../../../../../programs/Xserver/include/miscstruct.h
 mfbscrinit.o: ../../../../../programs/Xserver/include/gc.h
@@ -3142,10 +3142,10 @@ mfbscrclse.o: ../../../../../exports/include/X11/Xdefs.h
 mfbscrclse.o: ../../../../../programs/Xserver/include/os.h
 mfbscrclse.o: ../../../../../exports/include/X11/Xalloca.h
 mfbscrclse.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbscrclse.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbscrclse.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbscrclse.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbscrclse.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbscrclse.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbscrclse.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbscrclse.o: ../../../../../programs/Xserver/include/screenint.h
 mfbscrclse.o: ../../../../../programs/Xserver/include/region.h
 mfbscrclse.o: ../../../../../programs/Xserver/include/regionstr.h
@@ -3177,10 +3177,10 @@ mfbclip.o: ../../../../../exports/include/X11/Xdefs.h
 mfbclip.o: ../../../../../programs/Xserver/include/os.h
 mfbclip.o: ../../../../../exports/include/X11/Xalloca.h
 mfbclip.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbclip.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbclip.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbclip.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbclip.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbclip.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbclip.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbclip.o: ../../../../../exports/include/X11/Xprotostr.h
 mfbclip.o: ../../../../../programs/Xserver/include/gc.h
 mfbclip.o: ../../../../../exports/include/X11/Xdefs.h
@@ -3220,10 +3220,10 @@ mfbbitblt.o: ../../../../../exports/include/X11/Xdefs.h
 mfbbitblt.o: ../../../../../programs/Xserver/include/os.h
 mfbbitblt.o: ../../../../../exports/include/X11/Xalloca.h
 mfbbitblt.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbbitblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbbitblt.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbbitblt.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbbitblt.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbbitblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbbitblt.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbbitblt.o: ../../../../../exports/include/X11/Xprotostr.h
 mfbbitblt.o: ../../../../../programs/Xserver/include/gc.h
 mfbbitblt.o: ../../../../../exports/include/X11/Xdefs.h
@@ -3267,10 +3267,10 @@ mfbgetsp.o: ../../../../../exports/include/X11/Xdefs.h
 mfbgetsp.o: ../../../../../programs/Xserver/include/os.h
 mfbgetsp.o: ../../../../../exports/include/X11/Xalloca.h
 mfbgetsp.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbgetsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbgetsp.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbgetsp.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbgetsp.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbgetsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbgetsp.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbgetsp.o: ../../../../../programs/Xserver/include/region.h
 mfbgetsp.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbgetsp.o: ../../../../../programs/Xserver/include/miscstruct.h
@@ -3313,10 +3313,10 @@ mfbpolypnt.o: ../../../../../exports/include/X11/Xdefs.h
 mfbpolypnt.o: ../../../../../programs/Xserver/include/os.h
 mfbpolypnt.o: ../../../../../exports/include/X11/Xalloca.h
 mfbpolypnt.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbpolypnt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbpolypnt.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbpolypnt.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbpolypnt.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbpolypnt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbpolypnt.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbpolypnt.o: ../../../../../programs/Xserver/include/screenint.h
 mfbpolypnt.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbpolypnt.o: ../../../../../programs/Xserver/include/miscstruct.h
@@ -3361,10 +3361,10 @@ mfbbltC.o: ../../../../../exports/include/X11/Xdefs.h
 mfbbltC.o: ../../../../../programs/Xserver/include/os.h
 mfbbltC.o: ../../../../../exports/include/X11/Xalloca.h
 mfbbltC.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbbltC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbbltC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbbltC.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbbltC.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbbltC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbbltC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbbltC.o: ../../../../../programs/Xserver/include/screenint.h
 mfbbltC.o: ../../../../../programs/Xserver/include/region.h
 mfbbltC.o: ../../../../../programs/Xserver/include/regionstr.h
@@ -3410,10 +3410,10 @@ mfbbltX.o: ../../../../../exports/include/X11/Xdefs.h
 mfbbltX.o: ../../../../../programs/Xserver/include/os.h
 mfbbltX.o: ../../../../../exports/include/X11/Xalloca.h
 mfbbltX.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbbltX.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbbltX.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbbltX.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbbltX.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbbltX.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbbltX.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbbltX.o: ../../../../../programs/Xserver/include/screenint.h
 mfbbltX.o: ../../../../../programs/Xserver/include/region.h
 mfbbltX.o: ../../../../../programs/Xserver/include/regionstr.h
@@ -3459,10 +3459,10 @@ mfbbltCI.o: ../../../../../exports/include/X11/Xdefs.h
 mfbbltCI.o: ../../../../../programs/Xserver/include/os.h
 mfbbltCI.o: ../../../../../exports/include/X11/Xalloca.h
 mfbbltCI.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbbltCI.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbbltCI.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbbltCI.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbbltCI.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbbltCI.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbbltCI.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbbltCI.o: ../../../../../programs/Xserver/include/screenint.h
 mfbbltCI.o: ../../../../../programs/Xserver/include/region.h
 mfbbltCI.o: ../../../../../programs/Xserver/include/regionstr.h
@@ -3508,10 +3508,10 @@ mfbbltO.o: ../../../../../exports/include/X11/Xdefs.h
 mfbbltO.o: ../../../../../programs/Xserver/include/os.h
 mfbbltO.o: ../../../../../exports/include/X11/Xalloca.h
 mfbbltO.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbbltO.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbbltO.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbbltO.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbbltO.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbbltO.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbbltO.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbbltO.o: ../../../../../programs/Xserver/include/screenint.h
 mfbbltO.o: ../../../../../programs/Xserver/include/region.h
 mfbbltO.o: ../../../../../programs/Xserver/include/regionstr.h
@@ -3557,10 +3557,10 @@ mfbbltG.o: ../../../../../exports/include/X11/Xdefs.h
 mfbbltG.o: ../../../../../programs/Xserver/include/os.h
 mfbbltG.o: ../../../../../exports/include/X11/Xalloca.h
 mfbbltG.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbbltG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbbltG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbbltG.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbbltG.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbbltG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbbltG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbbltG.o: ../../../../../programs/Xserver/include/screenint.h
 mfbbltG.o: ../../../../../programs/Xserver/include/region.h
 mfbbltG.o: ../../../../../programs/Xserver/include/regionstr.h
@@ -3603,10 +3603,10 @@ mfbcmap.o: ../../../../../exports/include/X11/Xdefs.h
 mfbcmap.o: ../../../../../programs/Xserver/include/os.h
 mfbcmap.o: ../../../../../exports/include/X11/Xalloca.h
 mfbcmap.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbcmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbcmap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbcmap.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbcmap.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbcmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbcmap.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbcmap.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbcmap.o: ../../../../../programs/Xserver/include/miscstruct.h
 mfbcmap.o: ../../../../../exports/include/X11/Xprotostr.h
@@ -3641,10 +3641,10 @@ mfbtileC.o: ../../../../../exports/include/X11/Xdefs.h
 mfbtileC.o: ../../../../../programs/Xserver/include/os.h
 mfbtileC.o: ../../../../../exports/include/X11/Xalloca.h
 mfbtileC.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbtileC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbtileC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbtileC.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbtileC.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbtileC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbtileC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbtileC.o: ../../../../../programs/Xserver/include/region.h
 mfbtileC.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbtileC.o: ../../../../../programs/Xserver/include/miscstruct.h
@@ -3686,10 +3686,10 @@ mfbtileG.o: ../../../../../exports/include/X11/Xdefs.h
 mfbtileG.o: ../../../../../programs/Xserver/include/os.h
 mfbtileG.o: ../../../../../exports/include/X11/Xalloca.h
 mfbtileG.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbtileG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbtileG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbtileG.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbtileG.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbtileG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbtileG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbtileG.o: ../../../../../programs/Xserver/include/region.h
 mfbtileG.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbtileG.o: ../../../../../programs/Xserver/include/miscstruct.h
@@ -3729,10 +3729,10 @@ mfbmisc.o: ../../../../../exports/include/X11/Xdefs.h
 mfbmisc.o: ../../../../../programs/Xserver/include/os.h
 mfbmisc.o: ../../../../../exports/include/X11/Xalloca.h
 mfbmisc.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbmisc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbmisc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbmisc.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbmisc.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbmisc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbmisc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbmisc.o: ../../../../../programs/Xserver/include/cursor.h
 mfbmisc.o: ../../../../../programs/Xserver/include/screenint.h
 mfbmisc.o: ../../../../../programs/Xserver/include/window.h
@@ -3765,10 +3765,10 @@ mfbbstore.o: ../../../../../exports/include/X11/Xdefs.h
 mfbbstore.o: ../../../../../programs/Xserver/include/os.h
 mfbbstore.o: ../../../../../exports/include/X11/Xalloca.h
 mfbbstore.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbbstore.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbbstore.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbbstore.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbbstore.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbbstore.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbbstore.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbbstore.o: ../../../../../programs/Xserver/include/screenint.h
 mfbbstore.o: ../../../../../programs/Xserver/include/region.h
 mfbbstore.o: ../../../../../programs/Xserver/include/regionstr.h
@@ -3804,10 +3804,10 @@ mfbmodule.o: ../../../../../exports/include/X11/Xdefs.h
 mfbmodule.o: ../../../../../programs/Xserver/include/os.h
 mfbmodule.o: ../../../../../exports/include/X11/Xalloca.h
 mfbmodule.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbmodule.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbmodule.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbmodule.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbmodule.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbmodule.o: ../../../../../programs/Xserver/include/xf86Version.h
 mfbseg.o: mfbmap.h ../../../../../programs/Xserver/mfb/mfbline.c
 mfbseg.o: ../../../../../exports/include/X11/X.h
@@ -3825,10 +3825,10 @@ mfbseg.o: ../../../../../exports/include/X11/Xdefs.h
 mfbseg.o: ../../../../../programs/Xserver/include/os.h
 mfbseg.o: ../../../../../exports/include/X11/Xalloca.h
 mfbseg.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbseg.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbseg.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbseg.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbseg.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbseg.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbseg.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbseg.o: ../../../../../programs/Xserver/include/pixmap.h
 mfbseg.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbseg.o: ../../../../../programs/Xserver/include/miscstruct.h
@@ -3876,10 +3876,10 @@ mfbpgbwht.o: ../../../../../exports/include/X11/Xdefs.h
 mfbpgbwht.o: ../../../../../programs/Xserver/include/os.h
 mfbpgbwht.o: ../../../../../exports/include/X11/Xalloca.h
 mfbpgbwht.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbpgbwht.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbpgbwht.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbpgbwht.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbpgbwht.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbpgbwht.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbpgbwht.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbpgbwht.o: ../../../../../programs/Xserver/include/screenint.h
 mfbpgbwht.o: ../../../../../programs/Xserver/include/region.h
 mfbpgbwht.o: ../../../../../programs/Xserver/include/regionstr.h
@@ -3930,10 +3930,10 @@ mfbpgbblak.o: ../../../../../exports/include/X11/Xdefs.h
 mfbpgbblak.o: ../../../../../programs/Xserver/include/os.h
 mfbpgbblak.o: ../../../../../exports/include/X11/Xalloca.h
 mfbpgbblak.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbpgbblak.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbpgbblak.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbpgbblak.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbpgbblak.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbpgbblak.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbpgbblak.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbpgbblak.o: ../../../../../programs/Xserver/include/screenint.h
 mfbpgbblak.o: ../../../../../programs/Xserver/include/region.h
 mfbpgbblak.o: ../../../../../programs/Xserver/include/regionstr.h
@@ -3984,10 +3984,10 @@ mfbpgbinv.o: ../../../../../exports/include/X11/Xdefs.h
 mfbpgbinv.o: ../../../../../programs/Xserver/include/os.h
 mfbpgbinv.o: ../../../../../exports/include/X11/Xalloca.h
 mfbpgbinv.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbpgbinv.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbpgbinv.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbpgbinv.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbpgbinv.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbpgbinv.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbpgbinv.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbpgbinv.o: ../../../../../programs/Xserver/include/screenint.h
 mfbpgbinv.o: ../../../../../programs/Xserver/include/region.h
 mfbpgbinv.o: ../../../../../programs/Xserver/include/regionstr.h
@@ -4038,10 +4038,10 @@ mfbigbwht.o: ../../../../../exports/include/X11/Xdefs.h
 mfbigbwht.o: ../../../../../programs/Xserver/include/os.h
 mfbigbwht.o: ../../../../../exports/include/X11/Xalloca.h
 mfbigbwht.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbigbwht.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbigbwht.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbigbwht.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbigbwht.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbigbwht.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbigbwht.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbigbwht.o: ../../../../../programs/Xserver/include/screenint.h
 mfbigbwht.o: ../../../../../programs/Xserver/include/region.h
 mfbigbwht.o: ../../../../../programs/Xserver/include/regionstr.h
@@ -4092,10 +4092,10 @@ mfbigbblak.o: ../../../../../exports/include/X11/Xdefs.h
 mfbigbblak.o: ../../../../../programs/Xserver/include/os.h
 mfbigbblak.o: ../../../../../exports/include/X11/Xalloca.h
 mfbigbblak.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbigbblak.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbigbblak.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbigbblak.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbigbblak.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbigbblak.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbigbblak.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbigbblak.o: ../../../../../programs/Xserver/include/screenint.h
 mfbigbblak.o: ../../../../../programs/Xserver/include/region.h
 mfbigbblak.o: ../../../../../programs/Xserver/include/regionstr.h
@@ -4143,10 +4143,10 @@ mfbpawhite.o: ../../../../../exports/include/X11/Xdefs.h
 mfbpawhite.o: ../../../../../programs/Xserver/include/os.h
 mfbpawhite.o: ../../../../../exports/include/X11/Xalloca.h
 mfbpawhite.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbpawhite.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbpawhite.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbpawhite.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbpawhite.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbpawhite.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbpawhite.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbpawhite.o: ../../../../../programs/Xserver/include/region.h
 mfbpawhite.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbpawhite.o: ../../../../../programs/Xserver/include/miscstruct.h
@@ -4187,10 +4187,10 @@ mfbpablack.o: ../../../../../exports/include/X11/Xdefs.h
 mfbpablack.o: ../../../../../programs/Xserver/include/os.h
 mfbpablack.o: ../../../../../exports/include/X11/Xalloca.h
 mfbpablack.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbpablack.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbpablack.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbpablack.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbpablack.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbpablack.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbpablack.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbpablack.o: ../../../../../programs/Xserver/include/region.h
 mfbpablack.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbpablack.o: ../../../../../programs/Xserver/include/miscstruct.h
@@ -4231,10 +4231,10 @@ mfbpainv.o: ../../../../../exports/include/X11/Xdefs.h
 mfbpainv.o: ../../../../../programs/Xserver/include/os.h
 mfbpainv.o: ../../../../../exports/include/X11/Xalloca.h
 mfbpainv.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbpainv.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbpainv.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbpainv.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbpainv.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbpainv.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbpainv.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbpainv.o: ../../../../../programs/Xserver/include/region.h
 mfbpainv.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbpainv.o: ../../../../../programs/Xserver/include/miscstruct.h
@@ -4278,10 +4278,10 @@ mfbtewhite.o: ../../../../../exports/include/X11/Xdefs.h
 mfbtewhite.o: ../../../../../programs/Xserver/include/os.h
 mfbtewhite.o: ../../../../../exports/include/X11/Xalloca.h
 mfbtewhite.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbtewhite.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbtewhite.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbtewhite.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbtewhite.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbtewhite.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbtewhite.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbtewhite.o: ../../../../../programs/Xserver/include/screenint.h
 mfbtewhite.o: ../../../../../programs/Xserver/include/region.h
 mfbtewhite.o: ../../../../../programs/Xserver/include/regionstr.h
@@ -4332,10 +4332,10 @@ mfbteblack.o: ../../../../../exports/include/X11/Xdefs.h
 mfbteblack.o: ../../../../../programs/Xserver/include/os.h
 mfbteblack.o: ../../../../../exports/include/X11/Xalloca.h
 mfbteblack.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbteblack.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbteblack.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbteblack.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbteblack.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbteblack.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbteblack.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbteblack.o: ../../../../../programs/Xserver/include/screenint.h
 mfbteblack.o: ../../../../../programs/Xserver/include/region.h
 mfbteblack.o: ../../../../../programs/Xserver/include/regionstr.h
@@ -4386,10 +4386,10 @@ mfbbltC.o: ../../../../../exports/include/X11/Xdefs.h
 mfbbltC.o: ../../../../../programs/Xserver/include/os.h
 mfbbltC.o: ../../../../../exports/include/X11/Xalloca.h
 mfbbltC.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbbltC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbbltC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbbltC.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbbltC.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbbltC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbbltC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbbltC.o: ../../../../../programs/Xserver/include/screenint.h
 mfbbltC.o: ../../../../../programs/Xserver/include/region.h
 mfbbltC.o: ../../../../../programs/Xserver/include/regionstr.h
@@ -4435,10 +4435,10 @@ mfbbltX.o: ../../../../../exports/include/X11/Xdefs.h
 mfbbltX.o: ../../../../../programs/Xserver/include/os.h
 mfbbltX.o: ../../../../../exports/include/X11/Xalloca.h
 mfbbltX.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbbltX.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbbltX.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbbltX.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbbltX.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbbltX.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbbltX.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbbltX.o: ../../../../../programs/Xserver/include/screenint.h
 mfbbltX.o: ../../../../../programs/Xserver/include/region.h
 mfbbltX.o: ../../../../../programs/Xserver/include/regionstr.h
@@ -4484,10 +4484,10 @@ mfbbltCI.o: ../../../../../exports/include/X11/Xdefs.h
 mfbbltCI.o: ../../../../../programs/Xserver/include/os.h
 mfbbltCI.o: ../../../../../exports/include/X11/Xalloca.h
 mfbbltCI.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbbltCI.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbbltCI.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbbltCI.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbbltCI.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbbltCI.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbbltCI.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbbltCI.o: ../../../../../programs/Xserver/include/screenint.h
 mfbbltCI.o: ../../../../../programs/Xserver/include/region.h
 mfbbltCI.o: ../../../../../programs/Xserver/include/regionstr.h
@@ -4533,10 +4533,10 @@ mfbbltO.o: ../../../../../exports/include/X11/Xdefs.h
 mfbbltO.o: ../../../../../programs/Xserver/include/os.h
 mfbbltO.o: ../../../../../exports/include/X11/Xalloca.h
 mfbbltO.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbbltO.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbbltO.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbbltO.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbbltO.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbbltO.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbbltO.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbbltO.o: ../../../../../programs/Xserver/include/screenint.h
 mfbbltO.o: ../../../../../programs/Xserver/include/region.h
 mfbbltO.o: ../../../../../programs/Xserver/include/regionstr.h
@@ -4582,10 +4582,10 @@ mfbbltG.o: ../../../../../exports/include/X11/Xdefs.h
 mfbbltG.o: ../../../../../programs/Xserver/include/os.h
 mfbbltG.o: ../../../../../exports/include/X11/Xalloca.h
 mfbbltG.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbbltG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbbltG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbbltG.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbbltG.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbbltG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbbltG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbbltG.o: ../../../../../programs/Xserver/include/screenint.h
 mfbbltG.o: ../../../../../programs/Xserver/include/region.h
 mfbbltG.o: ../../../../../programs/Xserver/include/regionstr.h
@@ -4628,10 +4628,10 @@ mfbtileC.o: ../../../../../exports/include/X11/Xdefs.h
 mfbtileC.o: ../../../../../programs/Xserver/include/os.h
 mfbtileC.o: ../../../../../exports/include/X11/Xalloca.h
 mfbtileC.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbtileC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbtileC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbtileC.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbtileC.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbtileC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbtileC.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbtileC.o: ../../../../../programs/Xserver/include/region.h
 mfbtileC.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbtileC.o: ../../../../../programs/Xserver/include/miscstruct.h
@@ -4673,10 +4673,10 @@ mfbtileG.o: ../../../../../exports/include/X11/Xdefs.h
 mfbtileG.o: ../../../../../programs/Xserver/include/os.h
 mfbtileG.o: ../../../../../exports/include/X11/Xalloca.h
 mfbtileG.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbtileG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbtileG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbtileG.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbtileG.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbtileG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbtileG.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbtileG.o: ../../../../../programs/Xserver/include/region.h
 mfbtileG.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbtileG.o: ../../../../../programs/Xserver/include/miscstruct.h
@@ -4721,10 +4721,10 @@ mfbplywhite.o: ../../../../../exports/include/X11/Xdefs.h
 mfbplywhite.o: ../../../../../programs/Xserver/include/os.h
 mfbplywhite.o: ../../../../../exports/include/X11/Xalloca.h
 mfbplywhite.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbplywhite.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbplywhite.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbplywhite.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbplywhite.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbplywhite.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbplywhite.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbplywhite.o: ../../../../../programs/Xserver/include/pixmap.h
 mfbplywhite.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbplywhite.o: ../../../../../programs/Xserver/include/miscstruct.h
@@ -4771,10 +4771,10 @@ mfbplyblack.o: ../../../../../exports/include/X11/Xdefs.h
 mfbplyblack.o: ../../../../../programs/Xserver/include/os.h
 mfbplyblack.o: ../../../../../exports/include/X11/Xalloca.h
 mfbplyblack.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbplyblack.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbplyblack.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbplyblack.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbplyblack.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbplyblack.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbplyblack.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbplyblack.o: ../../../../../programs/Xserver/include/pixmap.h
 mfbplyblack.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbplyblack.o: ../../../../../programs/Xserver/include/miscstruct.h
@@ -4821,10 +4821,10 @@ mfbplyinv.o: ../../../../../exports/include/X11/Xdefs.h
 mfbplyinv.o: ../../../../../programs/Xserver/include/os.h
 mfbplyinv.o: ../../../../../exports/include/X11/Xalloca.h
 mfbplyinv.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-mfbplyinv.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+mfbplyinv.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 mfbplyinv.o: ../../../../../programs/Xserver/include/xf86_libc.h
 mfbplyinv.o: ../../../../../exports/include/X11/Xfuncs.h
-mfbplyinv.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+mfbplyinv.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 mfbplyinv.o: ../../../../../programs/Xserver/include/pixmap.h
 mfbplyinv.o: ../../../../../programs/Xserver/include/regionstr.h
 mfbplyinv.o: ../../../../../programs/Xserver/include/miscstruct.h

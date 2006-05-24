@@ -728,7 +728,7 @@ extern void rfbPrintStats(rfbClientPtr cl);
 extern void sharedapp_Init(SharedAppVncPtr shapp);
 extern void sharedapp_HandleRequest(rfbClientPtr cl, unsigned int command, unsigned int id);
 extern Bool sharedapp_RfbSendUpdates(ScreenPtr pScreen, rfbClientPtr cl);
-extern Bool sharedapp_CheckPointer(rfbClientPtr cl, sharedAppPointerEventMsg *spe);
+extern Bool sharedapp_CheckPointer(rfbClientPtr cl, rfbPointerEventMsg *pe);
 extern void sharedapp_InitReverseConnection(ScreenPtr pScreen);
 extern void sharedapp_CheckForClosedWindows(ScreenPtr pScreen, rfbClientPtr rfbClientHead);
 #endif

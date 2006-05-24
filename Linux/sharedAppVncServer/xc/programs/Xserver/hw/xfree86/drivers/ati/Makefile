@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
-# libc:	(6.3.5)
+# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
+# libc:	(6.3.3)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce
+      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -950,7 +950,7 @@ CXXPROJECT_DEFINES =
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 -DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP 	-DXCSECURITY -DTOGCUP  	-DXF86BIGFONT -DDPMSExtension 	  -DPANORAMIX 	 -DRENDER -DRANDR -DGCCUSESGAS -DAVOID_GLYPHBLT -DPIXPRIV -DSINGLEDEPTH 				-DXFreeXDGA -DXvExtension 				-DXFree86LOADER  -DXFree86Server 				-DXF86VIDMODE 				-DXvMCExtension 				-DSMART_SCHEDULE 				-DBUILDDEBUG -DXResExtension 				-DX_BYTE_ORDER=$(X_BYTE_ORDER) -DNDEBUG  $(SERVER_THREAD_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce
+CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 EXT_DEFINES =  -DMITMISC -DXTEST -DXTRAP 	-DXSYNC -DXCMISC -DXRECORD 	-DMITSHM -DBIGREQS -DXF86VIDMODE 	-DXF86MISC -DDBE -DDPMSExtension -DEVI 	-DSCREENSAVER -DXV -DXVMC 	-DGLXEXT -DXF86DRI -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN -DGLX_USE_MESA  -DFONTCACHE          -DRES
 OS_DEFINES  = -DDDXOSINIT -DSERVER_LOCK -DDDXOSFATALERROR 				-DDDXOSVERRORF -DDDXTIME -DPART_NET
 
@@ -2831,10 +2831,10 @@ ati.o: ../../../../../../exports/include/X11/Xdefs.h
 ati.o: ../../../../../../programs/Xserver/include/os.h
 ati.o: ../../../../../../include/Xalloca.h
 ati.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-ati.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+ati.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 ati.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 ati.o: ../../../../../../include/Xfuncs.h
-ati.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+ati.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 ati.o: ../../../../../../programs/Xserver/include/input.h
 ati.o: ../../../../../../programs/Xserver/include/screenint.h
 ati.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2874,10 +2874,10 @@ atibus.o: ../../../../../../exports/include/X11/Xdefs.h
 atibus.o: ../../../../../../programs/Xserver/include/os.h
 atibus.o: ../../../../../../include/Xalloca.h
 atibus.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atibus.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atibus.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atibus.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atibus.o: ../../../../../../include/Xfuncs.h
-atibus.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atibus.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atibus.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atibus.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atibus.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -2941,10 +2941,10 @@ atichip.o: ../../../../../../exports/include/X11/Xdefs.h
 atichip.o: ../../../../../../programs/Xserver/include/os.h
 atichip.o: ../../../../../../include/Xalloca.h
 atichip.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atichip.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atichip.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atichip.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atichip.o: ../../../../../../include/Xfuncs.h
-atichip.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atichip.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atichip.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atichip.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atichip.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -3008,10 +3008,10 @@ atiident.o: ../../../../../../exports/include/X11/Xdefs.h
 atiident.o: ../../../../../../programs/Xserver/include/os.h
 atiident.o: ../../../../../../include/Xalloca.h
 atiident.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atiident.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atiident.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atiident.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atiident.o: ../../../../../../include/Xfuncs.h
-atiident.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atiident.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atiident.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atiident.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atiident.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -3061,10 +3061,10 @@ atioption.o: ../../../../../../exports/include/X11/Xdefs.h
 atioption.o: ../../../../../../programs/Xserver/include/os.h
 atioption.o: ../../../../../../include/Xalloca.h
 atioption.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atioption.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atioption.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atioption.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atioption.o: ../../../../../../include/Xfuncs.h
-atioption.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atioption.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atioption.o: ../../../../../../programs/Xserver/include/input.h
 atioption.o: ../../../../../../programs/Xserver/include/screenint.h
 atioption.o: ../../../../../../exports/include/X11/Xproto.h
@@ -3109,10 +3109,10 @@ atiprobe.o: ../../../../../../exports/include/X11/Xdefs.h
 atiprobe.o: ../../../../../../programs/Xserver/include/os.h
 atiprobe.o: ../../../../../../include/Xalloca.h
 atiprobe.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atiprobe.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atiprobe.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atiprobe.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atiprobe.o: ../../../../../../include/Xfuncs.h
-atiprobe.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atiprobe.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atiprobe.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atiprobe.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atiprobe.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -3184,10 +3184,10 @@ atividmem.o: ../../../../../../exports/include/X11/Xdefs.h
 atividmem.o: ../../../../../../programs/Xserver/include/os.h
 atividmem.o: ../../../../../../include/Xalloca.h
 atividmem.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atividmem.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atividmem.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atividmem.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atividmem.o: ../../../../../../include/Xfuncs.h
-atividmem.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atividmem.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atividmem.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atividmem.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atividmem.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -3249,10 +3249,10 @@ ativgaio.o: ../../../../../../exports/include/X11/Xdefs.h
 ativgaio.o: ../../../../../../programs/Xserver/include/os.h
 ativgaio.o: ../../../../../../include/Xalloca.h
 ativgaio.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-ativgaio.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+ativgaio.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 ativgaio.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 ativgaio.o: ../../../../../../include/Xfuncs.h
-ativgaio.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+ativgaio.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 ativgaio.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 ativgaio.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 ativgaio.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -3315,10 +3315,10 @@ atimodule.o: ../../../../../../exports/include/X11/Xdefs.h
 atimodule.o: ../../../../../../programs/Xserver/include/os.h
 atimodule.o: ../../../../../../include/Xalloca.h
 atimodule.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atimodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atimodule.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atimodule.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atimodule.o: ../../../../../../include/Xfuncs.h
-atimodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atimodule.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atimodule.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atimodule.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atimodule.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -3363,10 +3363,10 @@ radeon_probe.o: ../../../../../../exports/include/X11/Xdefs.h
 radeon_probe.o: ../../../../../../programs/Xserver/include/os.h
 radeon_probe.o: ../../../../../../include/Xalloca.h
 radeon_probe.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-radeon_probe.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+radeon_probe.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 radeon_probe.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 radeon_probe.o: ../../../../../../include/Xfuncs.h
-radeon_probe.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+radeon_probe.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 radeon_probe.o: ../../../../../../programs/Xserver/include/input.h
 radeon_probe.o: ../../../../../../programs/Xserver/include/screenint.h
 radeon_probe.o: ../../../../../../exports/include/X11/Xproto.h
@@ -3416,10 +3416,10 @@ r128_probe.o: ../../../../../../exports/include/X11/Xdefs.h
 r128_probe.o: ../../../../../../programs/Xserver/include/os.h
 r128_probe.o: ../../../../../../include/Xalloca.h
 r128_probe.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-r128_probe.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+r128_probe.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 r128_probe.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 r128_probe.o: ../../../../../../include/Xfuncs.h
-r128_probe.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+r128_probe.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 r128_probe.o: ../../../../../../programs/Xserver/include/input.h
 r128_probe.o: ../../../../../../programs/Xserver/include/screenint.h
 r128_probe.o: ../../../../../../exports/include/X11/Xproto.h
@@ -3462,10 +3462,10 @@ atiaccel.o: ../../../../../../exports/include/X11/Xdefs.h
 atiaccel.o: ../../../../../../programs/Xserver/include/os.h
 atiaccel.o: ../../../../../../include/Xalloca.h
 atiaccel.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atiaccel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atiaccel.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atiaccel.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atiaccel.o: ../../../../../../include/Xfuncs.h
-atiaccel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atiaccel.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atiaccel.o: ../../../../../../programs/Xserver/include/input.h
 atiaccel.o: ../../../../../../programs/Xserver/include/screenint.h
 atiaccel.o: ../../../../../../exports/include/X11/Xproto.h
@@ -3520,10 +3520,10 @@ atiadjust.o: ../../../../../../exports/include/X11/Xdefs.h
 atiadjust.o: ../../../../../../programs/Xserver/include/os.h
 atiadjust.o: ../../../../../../include/Xalloca.h
 atiadjust.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atiadjust.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atiadjust.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atiadjust.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atiadjust.o: ../../../../../../include/Xfuncs.h
-atiadjust.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atiadjust.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atiadjust.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atiadjust.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atiadjust.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -3589,10 +3589,10 @@ aticlock.o: ../../../../../../exports/include/X11/Xdefs.h
 aticlock.o: ../../../../../../programs/Xserver/include/os.h
 aticlock.o: ../../../../../../include/Xalloca.h
 aticlock.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-aticlock.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+aticlock.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 aticlock.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 aticlock.o: ../../../../../../include/Xfuncs.h
-aticlock.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+aticlock.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 aticlock.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 aticlock.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 aticlock.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -3657,10 +3657,10 @@ aticonfig.o: ../../../../../../exports/include/X11/Xdefs.h
 aticonfig.o: ../../../../../../programs/Xserver/include/os.h
 aticonfig.o: ../../../../../../include/Xalloca.h
 aticonfig.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-aticonfig.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+aticonfig.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 aticonfig.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 aticonfig.o: ../../../../../../include/Xfuncs.h
-aticonfig.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+aticonfig.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 aticonfig.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 aticonfig.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 aticonfig.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -3721,10 +3721,10 @@ aticonsole.o: ../../../../../../exports/include/X11/Xdefs.h
 aticonsole.o: ../../../../../../programs/Xserver/include/os.h
 aticonsole.o: ../../../../../../include/Xalloca.h
 aticonsole.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-aticonsole.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+aticonsole.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 aticonsole.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 aticonsole.o: ../../../../../../include/Xfuncs.h
-aticonsole.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+aticonsole.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 aticonsole.o: ../../../../../../programs/Xserver/include/input.h
 aticonsole.o: ../../../../../../programs/Xserver/include/screenint.h
 aticonsole.o: ../../../../../../exports/include/X11/Xproto.h
@@ -3783,10 +3783,10 @@ aticursor.o: ../../../../../../exports/include/X11/Xdefs.h
 aticursor.o: ../../../../../../programs/Xserver/include/os.h
 aticursor.o: ../../../../../../include/Xalloca.h
 aticursor.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-aticursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+aticursor.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 aticursor.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 aticursor.o: ../../../../../../include/Xfuncs.h
-aticursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+aticursor.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 aticursor.o: atimach64cursor.h
 aticursor.o: ../../../../../../programs/Xserver/hw/xfree86/ramdac/xf86Cursor.h
 aticursor.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -3844,10 +3844,10 @@ atidac.o: ../../../../../../exports/include/X11/Xdefs.h
 atidac.o: ../../../../../../programs/Xserver/include/os.h
 atidac.o: ../../../../../../include/Xalloca.h
 atidac.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atidac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atidac.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atidac.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atidac.o: ../../../../../../include/Xfuncs.h
-atidac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atidac.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atidac.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atidac.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atidac.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -3912,10 +3912,10 @@ atidsp.o: ../../../../../../exports/include/X11/Xdefs.h
 atidsp.o: ../../../../../../programs/Xserver/include/os.h
 atidsp.o: ../../../../../../include/Xalloca.h
 atidsp.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atidsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atidsp.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atidsp.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atidsp.o: ../../../../../../include/Xfuncs.h
-atidsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atidsp.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atidsp.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atidsp.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atidsp.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -3979,10 +3979,10 @@ atii2c.o: ../../../../../../exports/include/X11/Xdefs.h
 atii2c.o: ../../../../../../programs/Xserver/include/os.h
 atii2c.o: ../../../../../../include/Xalloca.h
 atii2c.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atii2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atii2c.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atii2c.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atii2c.o: ../../../../../../include/Xfuncs.h
-atii2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atii2c.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atii2c.o: ../../../../../../programs/Xserver/include/input.h
 atii2c.o: ../../../../../../programs/Xserver/include/screenint.h
 atii2c.o: ../../../../../../exports/include/X11/Xproto.h
@@ -4040,10 +4040,10 @@ atilock.o: ../../../../../../exports/include/X11/Xdefs.h
 atilock.o: ../../../../../../programs/Xserver/include/os.h
 atilock.o: ../../../../../../include/Xalloca.h
 atilock.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atilock.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atilock.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atilock.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atilock.o: ../../../../../../include/Xfuncs.h
-atilock.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atilock.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atilock.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atilock.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atilock.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -4107,10 +4107,10 @@ atimach64.o: ../../../../../../exports/include/X11/Xdefs.h
 atimach64.o: ../../../../../../programs/Xserver/include/os.h
 atimach64.o: ../../../../../../include/Xalloca.h
 atimach64.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atimach64.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atimach64.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atimach64.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atimach64.o: ../../../../../../include/Xfuncs.h
-atimach64.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atimach64.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atimach64.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atimach64.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atimach64.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -4176,10 +4176,10 @@ atimach64accel.o: ../../../../../../exports/include/X11/Xdefs.h
 atimach64accel.o: ../../../../../../programs/Xserver/include/os.h
 atimach64accel.o: ../../../../../../include/Xalloca.h
 atimach64accel.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atimach64accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atimach64accel.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atimach64accel.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atimach64accel.o: ../../../../../../include/Xfuncs.h
-atimach64accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atimach64accel.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atimach64accel.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atimach64accel.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atimach64accel.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -4244,10 +4244,10 @@ atimach64cursor.o: ../../../../../../exports/include/X11/Xdefs.h
 atimach64cursor.o: ../../../../../../programs/Xserver/include/os.h
 atimach64cursor.o: ../../../../../../include/Xalloca.h
 atimach64cursor.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atimach64cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atimach64cursor.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atimach64cursor.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atimach64cursor.o: ../../../../../../include/Xfuncs.h
-atimach64cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atimach64cursor.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atimach64cursor.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atimach64cursor.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atimach64cursor.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -4311,10 +4311,10 @@ atimach64i2c.o: ../../../../../../exports/include/X11/Xdefs.h
 atimach64i2c.o: ../../../../../../programs/Xserver/include/os.h
 atimach64i2c.o: ../../../../../../include/Xalloca.h
 atimach64i2c.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atimach64i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atimach64i2c.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atimach64i2c.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atimach64i2c.o: ../../../../../../include/Xfuncs.h
-atimach64i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atimach64i2c.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atimach64i2c.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atimach64i2c.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atimach64i2c.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -4380,10 +4380,10 @@ atimach64io.o: ../../../../../../exports/include/X11/Xdefs.h
 atimach64io.o: ../../../../../../programs/Xserver/include/os.h
 atimach64io.o: ../../../../../../include/Xalloca.h
 atimach64io.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atimach64io.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atimach64io.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atimach64io.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atimach64io.o: ../../../../../../include/Xfuncs.h
-atimach64io.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atimach64io.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atimach64io.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atimach64io.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atimach64io.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -4446,10 +4446,10 @@ atimach64xv.o: ../../../../../../exports/include/X11/Xdefs.h
 atimach64xv.o: ../../../../../../programs/Xserver/include/os.h
 atimach64xv.o: ../../../../../../include/Xalloca.h
 atimach64xv.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atimach64xv.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atimach64xv.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atimach64xv.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atimach64xv.o: ../../../../../../include/Xfuncs.h
-atimach64xv.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atimach64xv.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atimach64xv.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atimach64xv.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atimach64xv.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -4520,10 +4520,10 @@ atimode.o: ../../../../../../exports/include/X11/Xdefs.h
 atimode.o: ../../../../../../programs/Xserver/include/os.h
 atimode.o: ../../../../../../include/Xalloca.h
 atimode.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atimode.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atimode.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atimode.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atimode.o: ../../../../../../include/Xfuncs.h
-atimode.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atimode.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atimode.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atimode.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atimode.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -4589,10 +4589,10 @@ atipreinit.o: ../../../../../../exports/include/X11/Xdefs.h
 atipreinit.o: ../../../../../../programs/Xserver/include/os.h
 atipreinit.o: ../../../../../../include/Xalloca.h
 atipreinit.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atipreinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atipreinit.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atipreinit.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atipreinit.o: ../../../../../../include/Xfuncs.h
-atipreinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atipreinit.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atipreinit.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atipreinit.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atipreinit.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -4668,10 +4668,10 @@ atiprint.o: ../../../../../../exports/include/X11/Xdefs.h
 atiprint.o: ../../../../../../programs/Xserver/include/os.h
 atiprint.o: ../../../../../../include/Xalloca.h
 atiprint.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atiprint.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atiprint.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atiprint.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atiprint.o: ../../../../../../include/Xfuncs.h
-atiprint.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atiprint.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atiprint.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atiprint.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atiprint.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -4736,10 +4736,10 @@ atirgb514.o: ../../../../../../exports/include/X11/Xdefs.h
 atirgb514.o: ../../../../../../programs/Xserver/include/os.h
 atirgb514.o: ../../../../../../include/Xalloca.h
 atirgb514.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atirgb514.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atirgb514.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atirgb514.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atirgb514.o: ../../../../../../include/Xfuncs.h
-atirgb514.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atirgb514.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atirgb514.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atirgb514.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atirgb514.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -4802,10 +4802,10 @@ atiscreen.o: ../../../../../../exports/include/X11/Xdefs.h
 atiscreen.o: ../../../../../../programs/Xserver/include/os.h
 atiscreen.o: ../../../../../../include/Xalloca.h
 atiscreen.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atiscreen.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atiscreen.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atiscreen.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atiscreen.o: ../../../../../../include/Xfuncs.h
-atiscreen.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atiscreen.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atiscreen.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atiscreen.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atiscreen.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -4888,10 +4888,10 @@ atituner.o: ../../../../../../exports/include/X11/Xdefs.h
 atituner.o: ../../../../../../programs/Xserver/include/os.h
 atituner.o: ../../../../../../include/Xalloca.h
 atituner.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atituner.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atituner.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atituner.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atituner.o: ../../../../../../include/Xfuncs.h
-atituner.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atituner.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atituner.o: ../../../../../../programs/Xserver/include/input.h
 atituner.o: ../../../../../../programs/Xserver/include/screenint.h
 atituner.o: ../../../../../../exports/include/X11/Xproto.h
@@ -4934,10 +4934,10 @@ ativalid.o: ../../../../../../exports/include/X11/Xdefs.h
 ativalid.o: ../../../../../../programs/Xserver/include/os.h
 ativalid.o: ../../../../../../include/Xalloca.h
 ativalid.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-ativalid.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+ativalid.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 ativalid.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 ativalid.o: ../../../../../../include/Xfuncs.h
-ativalid.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+ativalid.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 ativalid.o: ../../../../../../programs/Xserver/include/regionstr.h
 ativalid.o: ../../../../../../programs/Xserver/include/miscstruct.h
 ativalid.o: ../../../../../../exports/include/X11/Xprotostr.h
@@ -4991,10 +4991,10 @@ atixv.o: ../../../../../../exports/include/X11/Xdefs.h
 atixv.o: ../../../../../../programs/Xserver/include/os.h
 atixv.o: ../../../../../../include/Xalloca.h
 atixv.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atixv.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atixv.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atixv.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atixv.o: ../../../../../../include/Xfuncs.h
-atixv.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atixv.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atixv.o: ../../../../../../programs/Xserver/include/input.h
 atixv.o: ../../../../../../programs/Xserver/include/screenint.h
 atixv.o: ../../../../../../exports/include/X11/Xproto.h
@@ -5051,10 +5051,10 @@ atibank.o: ../../../../../../exports/include/X11/Xdefs.h
 atibank.o: ../../../../../../programs/Xserver/include/os.h
 atibank.o: ../../../../../../include/Xalloca.h
 atibank.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atibank.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atibank.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atibank.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atibank.o: ../../../../../../include/Xfuncs.h
-atibank.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atibank.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atibank.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atibank.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atibank.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -5118,10 +5118,10 @@ ativga.o: ../../../../../../exports/include/X11/Xdefs.h
 ativga.o: ../../../../../../programs/Xserver/include/os.h
 ativga.o: ../../../../../../include/Xalloca.h
 ativga.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-ativga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+ativga.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 ativga.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 ativga.o: ../../../../../../include/Xfuncs.h
-ativga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+ativga.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 ativga.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 ativga.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 ativga.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -5185,10 +5185,10 @@ atiwonder.o: ../../../../../../exports/include/X11/Xdefs.h
 atiwonder.o: ../../../../../../programs/Xserver/include/os.h
 atiwonder.o: ../../../../../../include/Xalloca.h
 atiwonder.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atiwonder.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atiwonder.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atiwonder.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atiwonder.o: ../../../../../../include/Xfuncs.h
-atiwonder.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atiwonder.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atiwonder.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atiwonder.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atiwonder.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -5252,10 +5252,10 @@ atiwonderio.o: ../../../../../../exports/include/X11/Xdefs.h
 atiwonderio.o: ../../../../../../programs/Xserver/include/os.h
 atiwonderio.o: ../../../../../../include/Xalloca.h
 atiwonderio.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atiwonderio.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atiwonderio.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atiwonderio.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atiwonderio.o: ../../../../../../include/Xfuncs.h
-atiwonderio.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atiwonderio.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atiwonderio.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atiwonderio.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atiwonderio.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -5319,10 +5319,10 @@ atidga.o: ../../../../../../exports/include/X11/Xdefs.h
 atidga.o: ../../../../../../programs/Xserver/include/os.h
 atidga.o: ../../../../../../include/Xalloca.h
 atidga.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atidga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atidga.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atidga.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atidga.o: ../../../../../../include/Xfuncs.h
-atidga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atidga.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atidga.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atidga.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atidga.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -5386,10 +5386,10 @@ atiload.o: ../../../../../../exports/include/X11/Xdefs.h
 atiload.o: ../../../../../../programs/Xserver/include/os.h
 atiload.o: ../../../../../../include/Xalloca.h
 atiload.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atiload.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atiload.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atiload.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atiload.o: ../../../../../../include/Xfuncs.h
-atiload.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atiload.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atiload.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atiload.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atiload.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -5450,10 +5450,10 @@ atimisc.o: ../../../../../../exports/include/X11/Xdefs.h
 atimisc.o: ../../../../../../programs/Xserver/include/os.h
 atimisc.o: ../../../../../../include/Xalloca.h
 atimisc.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-atimisc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+atimisc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 atimisc.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 atimisc.o: ../../../../../../include/Xfuncs.h
-atimisc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+atimisc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 atimisc.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86PciInfo.h
 atimisc.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 atimisc.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -5497,10 +5497,10 @@ r128_accel.o: ../../../../../../exports/include/X11/Xdefs.h
 r128_accel.o: ../../../../../../programs/Xserver/include/os.h
 r128_accel.o: ../../../../../../include/Xalloca.h
 r128_accel.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-r128_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+r128_accel.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 r128_accel.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 r128_accel.o: ../../../../../../include/Xfuncs.h
-r128_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+r128_accel.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 r128_accel.o: ../../../../../../programs/Xserver/include/input.h
 r128_accel.o: ../../../../../../programs/Xserver/include/screenint.h
 r128_accel.o: ../../../../../../exports/include/X11/Xproto.h
@@ -5569,10 +5569,10 @@ r128_cursor.o: ../../../../../../exports/include/X11/Xdefs.h
 r128_cursor.o: ../../../../../../programs/Xserver/include/os.h
 r128_cursor.o: ../../../../../../include/Xalloca.h
 r128_cursor.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-r128_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+r128_cursor.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 r128_cursor.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 r128_cursor.o: ../../../../../../include/Xfuncs.h
-r128_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+r128_cursor.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 r128_cursor.o: ../../../../../../programs/Xserver/include/input.h
 r128_cursor.o: ../../../../../../programs/Xserver/include/screenint.h
 r128_cursor.o: ../../../../../../exports/include/X11/Xproto.h
@@ -5639,10 +5639,10 @@ r128_dga.o: ../../../../../../exports/include/X11/Xdefs.h
 r128_dga.o: ../../../../../../programs/Xserver/include/os.h
 r128_dga.o: ../../../../../../include/Xalloca.h
 r128_dga.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-r128_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+r128_dga.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 r128_dga.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 r128_dga.o: ../../../../../../include/Xfuncs.h
-r128_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+r128_dga.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 r128_dga.o: ../../../../../../programs/Xserver/include/input.h
 r128_dga.o: ../../../../../../programs/Xserver/include/screenint.h
 r128_dga.o: ../../../../../../exports/include/X11/Xproto.h
@@ -5710,10 +5710,10 @@ r128_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 r128_driver.o: ../../../../../../programs/Xserver/include/os.h
 r128_driver.o: ../../../../../../include/Xalloca.h
 r128_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-r128_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+r128_driver.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 r128_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 r128_driver.o: ../../../../../../include/Xfuncs.h
-r128_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+r128_driver.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 r128_driver.o: ../../../../../../programs/Xserver/include/input.h
 r128_driver.o: ../../../../../../programs/Xserver/include/screenint.h
 r128_driver.o: ../../../../../../exports/include/X11/Xproto.h
@@ -5806,10 +5806,10 @@ r128_video.o: ../../../../../../exports/include/X11/Xdefs.h
 r128_video.o: ../../../../../../programs/Xserver/include/os.h
 r128_video.o: ../../../../../../include/Xalloca.h
 r128_video.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-r128_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+r128_video.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 r128_video.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 r128_video.o: ../../../../../../include/Xfuncs.h
-r128_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+r128_video.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 r128_video.o: ../../../../../../programs/Xserver/include/input.h
 r128_video.o: ../../../../../../programs/Xserver/include/screenint.h
 r128_video.o: ../../../../../../exports/include/X11/Xproto.h
@@ -5880,10 +5880,10 @@ r128_dri.o: ../../../../../../exports/include/X11/Xdefs.h
 r128_dri.o: ../../../../../../programs/Xserver/include/os.h
 r128_dri.o: ../../../../../../include/Xalloca.h
 r128_dri.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-r128_dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+r128_dri.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 r128_dri.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 r128_dri.o: ../../../../../../include/Xfuncs.h
-r128_dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+r128_dri.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 r128_dri.o: ../../../../../../programs/Xserver/include/input.h
 r128_dri.o: ../../../../../../programs/Xserver/include/screenint.h
 r128_dri.o: ../../../../../../exports/include/X11/Xproto.h
@@ -5959,10 +5959,10 @@ r128_misc.o: ../../../../../../exports/include/X11/Xdefs.h
 r128_misc.o: ../../../../../../programs/Xserver/include/os.h
 r128_misc.o: ../../../../../../include/Xalloca.h
 r128_misc.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-r128_misc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+r128_misc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 r128_misc.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 r128_misc.o: ../../../../../../include/Xfuncs.h
-r128_misc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+r128_misc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 r128_misc.o: ../../../../../../programs/Xserver/include/input.h
 r128_misc.o: ../../../../../../programs/Xserver/include/screenint.h
 r128_misc.o: ../../../../../../exports/include/X11/Xproto.h
@@ -6002,10 +6002,10 @@ radeon_accel.o: ../../../../../../exports/include/X11/Xdefs.h
 radeon_accel.o: ../../../../../../programs/Xserver/include/os.h
 radeon_accel.o: ../../../../../../include/Xalloca.h
 radeon_accel.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-radeon_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+radeon_accel.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 radeon_accel.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 radeon_accel.o: ../../../../../../include/Xfuncs.h
-radeon_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+radeon_accel.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 radeon_accel.o: ../../../../../../programs/Xserver/include/input.h
 radeon_accel.o: ../../../../../../programs/Xserver/include/screenint.h
 radeon_accel.o: ../../../../../../exports/include/X11/Xproto.h
@@ -6078,10 +6078,10 @@ radeon_cursor.o: ../../../../../../exports/include/X11/Xdefs.h
 radeon_cursor.o: ../../../../../../programs/Xserver/include/os.h
 radeon_cursor.o: ../../../../../../include/Xalloca.h
 radeon_cursor.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-radeon_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+radeon_cursor.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 radeon_cursor.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 radeon_cursor.o: ../../../../../../include/Xfuncs.h
-radeon_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+radeon_cursor.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 radeon_cursor.o: ../../../../../../programs/Xserver/include/input.h
 radeon_cursor.o: ../../../../../../programs/Xserver/include/screenint.h
 radeon_cursor.o: ../../../../../../exports/include/X11/Xproto.h
@@ -6151,10 +6151,10 @@ radeon_dga.o: ../../../../../../exports/include/X11/Xdefs.h
 radeon_dga.o: ../../../../../../programs/Xserver/include/os.h
 radeon_dga.o: ../../../../../../include/Xalloca.h
 radeon_dga.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-radeon_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+radeon_dga.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 radeon_dga.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 radeon_dga.o: ../../../../../../include/Xfuncs.h
-radeon_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+radeon_dga.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 radeon_dga.o: ../../../../../../programs/Xserver/include/input.h
 radeon_dga.o: ../../../../../../programs/Xserver/include/screenint.h
 radeon_dga.o: ../../../../../../exports/include/X11/Xproto.h
@@ -6223,10 +6223,10 @@ radeon_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 radeon_driver.o: ../../../../../../programs/Xserver/include/os.h
 radeon_driver.o: ../../../../../../include/Xalloca.h
 radeon_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-radeon_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+radeon_driver.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 radeon_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 radeon_driver.o: ../../../../../../include/Xfuncs.h
-radeon_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+radeon_driver.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 radeon_driver.o: ../../../../../../programs/Xserver/include/input.h
 radeon_driver.o: ../../../../../../programs/Xserver/include/screenint.h
 radeon_driver.o: ../../../../../../exports/include/X11/Xproto.h
@@ -6322,10 +6322,10 @@ radeon_video.o: ../../../../../../exports/include/X11/Xdefs.h
 radeon_video.o: ../../../../../../programs/Xserver/include/os.h
 radeon_video.o: ../../../../../../include/Xalloca.h
 radeon_video.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-radeon_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+radeon_video.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 radeon_video.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 radeon_video.o: ../../../../../../include/Xfuncs.h
-radeon_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+radeon_video.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 radeon_video.o: ../../../../../../programs/Xserver/include/input.h
 radeon_video.o: ../../../../../../programs/Xserver/include/screenint.h
 radeon_video.o: ../../../../../../exports/include/X11/Xproto.h
@@ -6398,10 +6398,10 @@ radeon_dri.o: ../../../../../../exports/include/X11/Xdefs.h
 radeon_dri.o: ../../../../../../programs/Xserver/include/os.h
 radeon_dri.o: ../../../../../../include/Xalloca.h
 radeon_dri.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-radeon_dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+radeon_dri.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 radeon_dri.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 radeon_dri.o: ../../../../../../include/Xfuncs.h
-radeon_dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+radeon_dri.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 radeon_dri.o: ../../../../../../programs/Xserver/include/input.h
 radeon_dri.o: ../../../../../../programs/Xserver/include/screenint.h
 radeon_dri.o: ../../../../../../exports/include/X11/Xproto.h
@@ -6478,10 +6478,10 @@ radeon_misc.o: ../../../../../../exports/include/X11/Xdefs.h
 radeon_misc.o: ../../../../../../programs/Xserver/include/os.h
 radeon_misc.o: ../../../../../../include/Xalloca.h
 radeon_misc.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-radeon_misc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+radeon_misc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 radeon_misc.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 radeon_misc.o: ../../../../../../include/Xfuncs.h
-radeon_misc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+radeon_misc.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 radeon_misc.o: ../../../../../../programs/Xserver/include/input.h
 radeon_misc.o: ../../../../../../programs/Xserver/include/screenint.h
 radeon_misc.o: ../../../../../../exports/include/X11/Xproto.h

@@ -38,8 +38,8 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
-# libc:	(6.3.5)
+# operating system:  Linux 2.6.11-1.14_FC3 i686 [ELF] (2.6.11)
+# libc:	(6.3.3)
 # binutils:	(215)
 
 # $Xorg: lnxLib.rules,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
@@ -163,7 +163,7 @@ TCLIBDIR =
 
            CXXLIB = -lstdc++
 
-    CXXDEBUGFLAGS = -O2 -fno-strength-reduce
+    CXXDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 CXXDEPENDINCLUDES =
  CXXEXTRA_DEFINES =
 CXXEXTRA_INCLUDES =
@@ -280,7 +280,7 @@ MODLDCOMBINEFLAGS = -r
 
       PROJECTROOT = /usr/X11R6
 
-      CDEBUGFLAGS = -O2 -fno-strength-reduce
+      CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
         CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
       ALLINCLUDES = $(INCLUDES) $(EXTRA_INCLUDES) $(TOP_INCLUDES) $(INSTALLED_INCLUDES) $(STD_INCLUDES)
@@ -929,7 +929,7 @@ CXXPROJECT_DEFINES =
   CCOPTIONS = -ansi -pedantic -Wall -Wpointer-arith -Wstrict-prototypes 			  -Wmissing-prototypes -Wmissing-declarations 			  -Wredundant-decls -Wnested-externs -Wundef
 
 STD_DEFINES = -Dlinux -D__i386__ -D_POSIX_C_SOURCE=199309L 				-D_POSIX_SOURCE -D_XOPEN_SOURCE 				-D_BSD_SOURCE -D_SVID_SOURCE 				 -D_GNU_SOURCE 				 -DSHAPE -DXINPUT -DXKB -DLBX -DXAPPGROUP 	-DXCSECURITY -DTOGCUP  	-DXF86BIGFONT -DDPMSExtension 	  -DPANORAMIX 	 -DRENDER -DRANDR -DGCCUSESGAS -DAVOID_GLYPHBLT -DPIXPRIV -DSINGLEDEPTH 				-DXFreeXDGA -DXvExtension 				-DXFree86LOADER  -DXFree86Server 				-DXF86VIDMODE 				-DXvMCExtension 				-DSMART_SCHEDULE 				-DBUILDDEBUG -DXResExtension 				-DX_BYTE_ORDER=$(X_BYTE_ORDER) -DNDEBUG  $(SERVER_THREAD_DEFINES)
-CDEBUGFLAGS = -O2 -fno-strength-reduce
+CDEBUGFLAGS = -O2 -fno-strength-reduce -fno-strict-aliasing
 EXT_DEFINES =  -DMITMISC -DXTEST -DXTRAP 	-DXSYNC -DXCMISC -DXRECORD 	-DMITSHM -DBIGREQS -DXF86VIDMODE 	-DXF86MISC -DDBE -DDPMSExtension -DEVI 	-DSCREENSAVER -DXV -DXVMC 	-DGLXEXT -DXF86DRI -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN -DGLX_USE_MESA  -DFONTCACHE          -DRES
 OS_DEFINES  = -DDDXOSINIT -DSERVER_LOCK -DDDXOSFATALERROR 				-DDDXOSVERRORF -DDDXTIME -DPART_NET
 
@@ -1292,10 +1292,10 @@ pci.o: ../../../../../../../exports/include/X11/Xdefs.h
 pci.o: ../../../../../../../programs/Xserver/include/os.h
 pci.o: ../../../../../../../exports/include/X11/Xalloca.h
 pci.o: ../../../../../../../programs/Xserver/include/xf86_ansic.h
-pci.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+pci.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 pci.o: ../../../../../../../programs/Xserver/include/xf86_libc.h
 pci.o: ../../../../../../../exports/include/X11/Xfuncs.h
-pci.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+pci.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 pci.o: ../../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 pci.o: ../../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 pci.o: ../../../../../../../programs/Xserver/include/input.h
@@ -1336,10 +1336,10 @@ xf86int10module.o: ../../../../../../../exports/include/X11/Xdefs.h
 xf86int10module.o: ../../../../../../../programs/Xserver/include/os.h
 xf86int10module.o: ../../../../../../../exports/include/X11/Xalloca.h
 xf86int10module.o: ../../../../../../../programs/Xserver/include/xf86_ansic.h
-xf86int10module.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+xf86int10module.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 xf86int10module.o: ../../../../../../../programs/Xserver/include/xf86_libc.h
 xf86int10module.o: ../../../../../../../exports/include/X11/Xfuncs.h
-xf86int10module.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+xf86int10module.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 xf86int10module.o: ../../../../../../../programs/Xserver/include/input.h
 xf86int10module.o: ../../../../../../../programs/Xserver/include/screenint.h
 xf86int10module.o: ../../../../../../../exports/include/X11/Xproto.h
@@ -1381,10 +1381,10 @@ helper_mem.o: ../../../../../../../exports/include/X11/Xdefs.h
 helper_mem.o: ../../../../../../../programs/Xserver/include/os.h
 helper_mem.o: ../../../../../../../exports/include/X11/Xalloca.h
 helper_mem.o: ../../../../../../../programs/Xserver/include/xf86_ansic.h
-helper_mem.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+helper_mem.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 helper_mem.o: ../../../../../../../programs/Xserver/include/xf86_libc.h
 helper_mem.o: ../../../../../../../exports/include/X11/Xfuncs.h
-helper_mem.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+helper_mem.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 helper_mem.o: ../../../../../../../programs/Xserver/include/input.h
 helper_mem.o: ../../../../../../../programs/Xserver/include/screenint.h
 helper_mem.o: ../../../../../../../exports/include/X11/Xproto.h
@@ -1430,10 +1430,10 @@ linux.o: ../../../../../../../exports/include/X11/Xdefs.h
 linux.o: ../../../../../../../programs/Xserver/include/os.h
 linux.o: ../../../../../../../exports/include/X11/Xalloca.h
 linux.o: ../../../../../../../programs/Xserver/include/xf86_ansic.h
-linux.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
+linux.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stdarg.h
 linux.o: ../../../../../../../programs/Xserver/include/xf86_libc.h
 linux.o: ../../../../../../../exports/include/X11/Xfuncs.h
-linux.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+linux.o: /usr/lib/gcc/i386-redhat-linux/3.4.2/include/stddef.h
 linux.o: ../../../../../../../programs/Xserver/include/input.h
 linux.o: ../../../../../../../programs/Xserver/include/screenint.h
 linux.o: ../../../../../../../exports/include/X11/Xproto.h
