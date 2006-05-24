@@ -334,7 +334,7 @@ extern void rfbShutdown();
 
 //GRW - SharedAppVnc
 #define DEBUG_SEND_PIXELS_ONLY 0
-#if 1
+#if 0
 // turn trace on
 //#define SHAREDAPP_TRACE(...) rfbLog(__VA_ARGS__)
 #define SHAREDAPP_TRACE(args...) rfbLog(args) // alternate syntax
