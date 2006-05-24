@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1096,7 +1096,7 @@ vncevent.o: /usr/include/sys/types.h /usr/include/features.h
 vncevent.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 vncevent.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
 vncevent.o: /usr/include/bits/types.h
-vncevent.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+vncevent.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 vncevent.o: /usr/include/bits/typesizes.h /usr/include/time.h
 vncevent.o: /usr/include/endian.h /usr/include/bits/endian.h
 vncevent.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1110,7 +1110,7 @@ vncevent.o: /usr/include/netinet/in.h /usr/include/stdint.h
 vncevent.o: /usr/include/bits/wchar.h /usr/include/sys/socket.h
 vncevent.o: /usr/include/sys/uio.h /usr/include/bits/uio.h
 vncevent.o: /usr/include/bits/socket.h /usr/include/limits.h
-vncevent.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+vncevent.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 vncevent.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 vncevent.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 vncevent.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1120,7 +1120,7 @@ vncevent.o: /usr/include/bits/byteswap.h /usr/include/string.h
 vncevent.o: /usr/include/xlocale.h /usr/include/stdio.h /usr/include/libio.h
 vncevent.o: /usr/include/_G_config.h /usr/include/wchar.h
 vncevent.o: /usr/include/gconv.h
-vncevent.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+vncevent.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 vncevent.o: /usr/include/bits/sys_errlist.h /usr/include/stdlib.h
 vncevent.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 vncevent.o: /usr/include/alloca.h

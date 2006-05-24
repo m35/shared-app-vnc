@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1145,10 +1145,10 @@ main.o: ../../../../../exports/include/X11/Xdefs.h
 main.o: ../../../../../programs/Xserver/include/os.h
 main.o: ../../../../../include/Xalloca.h
 main.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-main.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+main.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 main.o: ../../../../../programs/Xserver/include/xf86_libc.h
 main.o: ../../../../../include/Xfuncs.h
-main.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+main.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 main.o: ../../../../../programs/Xserver/include/xf86Version.h
 main.o: ../../../include/fontmisc.h
 main.o: ../../../../../extras/FreeType/lib/freetype.h
@@ -1167,10 +1167,10 @@ ISO8859_8toUCS2.o: ../../../../../exports/include/X11/Xdefs.h
 ISO8859_8toUCS2.o: ../../../../../programs/Xserver/include/os.h
 ISO8859_8toUCS2.o: ../../../../../include/Xalloca.h
 ISO8859_8toUCS2.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-ISO8859_8toUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ISO8859_8toUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ISO8859_8toUCS2.o: ../../../../../programs/Xserver/include/xf86_libc.h
 ISO8859_8toUCS2.o: ../../../../../include/Xfuncs.h
-ISO8859_8toUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ISO8859_8toUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ISO8859_8toUCS2.o: ../../../../../programs/Xserver/include/xf86Version.h
 ISO8859_8toUCS2.o: ../../../include/fontmisc.h
 ISO8859_8toUCS2.o: ../../../../../extras/FreeType/lib/freetype.h

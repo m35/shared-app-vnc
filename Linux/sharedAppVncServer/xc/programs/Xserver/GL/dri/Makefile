@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1172,10 +1172,10 @@ xf86dri.o: ../../../../exports/include/X11/Xdefs.h
 xf86dri.o: ../../../../programs/Xserver/include/os.h
 xf86dri.o: ../../../../exports/include/X11/Xalloca.h
 xf86dri.o: ../../../../programs/Xserver/include/xf86_ansic.h
-xf86dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xf86dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xf86dri.o: ../../../../programs/Xserver/include/xf86_libc.h
 xf86dri.o: ../../../../exports/include/X11/Xfuncs.h
-xf86dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xf86dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xf86dri.o: ../../../../programs/Xserver/include/input.h
 xf86dri.o: ../../../../programs/Xserver/include/screenint.h
 xf86dri.o: ../../../../exports/include/X11/Xproto.h
@@ -1227,10 +1227,10 @@ dri.o: ../../../../exports/include/X11/Xdefs.h
 dri.o: ../../../../programs/Xserver/include/os.h
 dri.o: ../../../../exports/include/X11/Xalloca.h
 dri.o: ../../../../programs/Xserver/include/xf86_ansic.h
-dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 dri.o: ../../../../programs/Xserver/include/xf86_libc.h
 dri.o: ../../../../exports/include/X11/Xfuncs.h
-dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 dri.o: ../../../../programs/Xserver/include/input.h
 dri.o: ../../../../programs/Xserver/include/screenint.h
 dri.o: ../../../../exports/include/X11/Xproto.h
@@ -1295,10 +1295,10 @@ drimodule.o: ../../../../exports/include/X11/Xdefs.h
 drimodule.o: ../../../../programs/Xserver/include/os.h
 drimodule.o: ../../../../exports/include/X11/Xalloca.h
 drimodule.o: ../../../../programs/Xserver/include/xf86_ansic.h
-drimodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+drimodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 drimodule.o: ../../../../programs/Xserver/include/xf86_libc.h
 drimodule.o: ../../../../exports/include/X11/Xfuncs.h
-drimodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+drimodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 drimodule.o: ../../../../programs/Xserver/hw/xfree86/common/xf86Version.h
 drimodule.o: xf86dristr.h xf86dri.h
 drimodule.o: ../../../../programs/Xserver/hw/xfree86/os-support/xf86drm.h

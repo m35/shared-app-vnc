@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1168,10 +1168,10 @@ ark_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 ark_driver.o: ../../../../../../programs/Xserver/include/os.h
 ark_driver.o: ../../../../../../exports/include/X11/Xalloca.h
 ark_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-ark_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ark_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ark_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 ark_driver.o: ../../../../../../exports/include/X11/Xfuncs.h
-ark_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ark_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ark_driver.o: ../../../../../../programs/Xserver/include/input.h
 ark_driver.o: ../../../../../../programs/Xserver/include/screenint.h
 ark_driver.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1249,10 +1249,10 @@ ark_accel.o: ../../../../../../exports/include/X11/Xdefs.h
 ark_accel.o: ../../../../../../programs/Xserver/include/os.h
 ark_accel.o: ../../../../../../exports/include/X11/Xalloca.h
 ark_accel.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-ark_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ark_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ark_accel.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 ark_accel.o: ../../../../../../exports/include/X11/Xfuncs.h
-ark_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ark_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ark_accel.o: ../../../../../../programs/Xserver/include/input.h
 ark_accel.o: ../../../../../../programs/Xserver/include/screenint.h
 ark_accel.o: ../../../../../../exports/include/X11/Xproto.h

@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1202,10 +1202,10 @@ xf86RamDacMod.o: ../../../../../exports/include/X11/Xdefs.h
 xf86RamDacMod.o: ../../../../../programs/Xserver/include/os.h
 xf86RamDacMod.o: ../../../../../exports/include/X11/Xalloca.h
 xf86RamDacMod.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xf86RamDacMod.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xf86RamDacMod.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xf86RamDacMod.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xf86RamDacMod.o: ../../../../../exports/include/X11/Xfuncs.h
-xf86RamDacMod.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xf86RamDacMod.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xf86RamDacMod.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86Version.h
 xf86RamDac.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xf86RamDac.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
@@ -1218,10 +1218,10 @@ xf86RamDac.o: ../../../../../exports/include/X11/Xdefs.h
 xf86RamDac.o: ../../../../../programs/Xserver/include/os.h
 xf86RamDac.o: ../../../../../exports/include/X11/Xalloca.h
 xf86RamDac.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xf86RamDac.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xf86RamDac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xf86RamDac.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xf86RamDac.o: ../../../../../exports/include/X11/Xfuncs.h
-xf86RamDac.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xf86RamDac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xf86RamDac.o: ../../../../../programs/Xserver/include/input.h
 xf86RamDac.o: ../../../../../programs/Xserver/include/screenint.h
 xf86RamDac.o: ../../../../../exports/include/X11/Xproto.h
@@ -1270,10 +1270,10 @@ xf86RamDacCmap.o: ../../../../../exports/include/X11/Xdefs.h
 xf86RamDacCmap.o: ../../../../../programs/Xserver/include/os.h
 xf86RamDacCmap.o: ../../../../../exports/include/X11/Xalloca.h
 xf86RamDacCmap.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xf86RamDacCmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xf86RamDacCmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xf86RamDacCmap.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xf86RamDacCmap.o: ../../../../../exports/include/X11/Xfuncs.h
-xf86RamDacCmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xf86RamDacCmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xf86RamDacCmap.o: ../../../../../programs/Xserver/include/region.h
 xf86RamDacCmap.o: ../../../../../programs/Xserver/include/regionstr.h
 xf86RamDacCmap.o: ../../../../../programs/Xserver/include/miscstruct.h
@@ -1322,10 +1322,10 @@ xf86Cursor.o: ../../../../../exports/include/X11/Xdefs.h
 xf86Cursor.o: ../../../../../programs/Xserver/include/os.h
 xf86Cursor.o: ../../../../../exports/include/X11/Xalloca.h
 xf86Cursor.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xf86Cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xf86Cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xf86Cursor.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xf86Cursor.o: ../../../../../exports/include/X11/Xfuncs.h
-xf86Cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xf86Cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xf86Cursor.o: ../../../../../programs/Xserver/include/input.h
 xf86Cursor.o: ../../../../../programs/Xserver/include/screenint.h
 xf86Cursor.o: ../../../../../exports/include/X11/Xproto.h
@@ -1367,10 +1367,10 @@ xf86HWCurs.o: ../../../../../exports/include/X11/Xdefs.h
 xf86HWCurs.o: ../../../../../programs/Xserver/include/os.h
 xf86HWCurs.o: ../../../../../exports/include/X11/Xalloca.h
 xf86HWCurs.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xf86HWCurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xf86HWCurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xf86HWCurs.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xf86HWCurs.o: ../../../../../exports/include/X11/Xfuncs.h
-xf86HWCurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xf86HWCurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xf86HWCurs.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 xf86HWCurs.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 xf86HWCurs.o: ../../../../../programs/Xserver/include/input.h
@@ -1426,10 +1426,10 @@ IBM.o: ../../../../../exports/include/X11/Xdefs.h
 IBM.o: ../../../../../programs/Xserver/include/os.h
 IBM.o: ../../../../../exports/include/X11/Xalloca.h
 IBM.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-IBM.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+IBM.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 IBM.o: ../../../../../programs/Xserver/include/xf86_libc.h
 IBM.o: ../../../../../exports/include/X11/Xfuncs.h
-IBM.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+IBM.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 IBM.o: ../../../../../programs/Xserver/include/input.h
 IBM.o: ../../../../../programs/Xserver/include/screenint.h
 IBM.o: ../../../../../exports/include/X11/Xproto.h
@@ -1475,10 +1475,10 @@ BT.o: ../../../../../exports/include/X11/Xdefs.h
 BT.o: ../../../../../programs/Xserver/include/os.h
 BT.o: ../../../../../exports/include/X11/Xalloca.h
 BT.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-BT.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+BT.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 BT.o: ../../../../../programs/Xserver/include/xf86_libc.h
 BT.o: ../../../../../exports/include/X11/Xfuncs.h
-BT.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+BT.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 BT.o: ../../../../../programs/Xserver/include/input.h
 BT.o: ../../../../../programs/Xserver/include/screenint.h
 BT.o: ../../../../../exports/include/X11/Xproto.h
@@ -1524,10 +1524,10 @@ TI.o: ../../../../../exports/include/X11/Xdefs.h
 TI.o: ../../../../../programs/Xserver/include/os.h
 TI.o: ../../../../../exports/include/X11/Xalloca.h
 TI.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-TI.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+TI.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 TI.o: ../../../../../programs/Xserver/include/xf86_libc.h
 TI.o: ../../../../../exports/include/X11/Xfuncs.h
-TI.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+TI.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 TI.o: ../../../../../programs/Xserver/include/input.h
 TI.o: ../../../../../programs/Xserver/include/screenint.h
 TI.o: ../../../../../exports/include/X11/Xproto.h

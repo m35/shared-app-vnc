@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1158,7 +1158,7 @@ distclean::
 # DO NOT DELETE
 
 xtrapddmi.o: ../../include/xf86_ansic.h
-xtrapddmi.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xtrapddmi.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xtrapddmi.o: ../../include/misc.h ../../../../exports/include/X11/Xosdefs.h
 xtrapddmi.o: ../../../../exports/include/X11/Xfuncproto.h
 xtrapddmi.o: ../../../../exports/include/X11/Xmd.h
@@ -1167,7 +1167,7 @@ xtrapddmi.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 xtrapddmi.o: ../../../../exports/include/X11/Xalloca.h
 xtrapddmi.o: ../../include/xf86_libc.h
 xtrapddmi.o: ../../../../exports/include/X11/Xfuncs.h
-xtrapddmi.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xtrapddmi.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xtrapddmi.o: ../../include/input.h ../../include/screenint.h
 xtrapddmi.o: ../../../../exports/include/X11/Xproto.h
 xtrapddmi.o: ../../../../exports/include/X11/Xprotostr.h
@@ -1184,7 +1184,7 @@ xtrapddmi.o: ../../../../exports/include/X11/extensions/xtrapbits.h
 xtrapddmi.o: ../../../../exports/include/X11/extensions/xtrapddmi.h
 xtrapddmi.o: ../../../../exports/include/X11/extensions/xtrapproto.h
 xtrapdi.o: ../../include/xf86_ansic.h
-xtrapdi.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xtrapdi.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xtrapdi.o: ../../include/misc.h ../../../../exports/include/X11/Xosdefs.h
 xtrapdi.o: ../../../../exports/include/X11/Xfuncproto.h
 xtrapdi.o: ../../../../exports/include/X11/Xmd.h
@@ -1192,7 +1192,7 @@ xtrapdi.o: ../../../../exports/include/X11/X.h
 xtrapdi.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 xtrapdi.o: ../../../../exports/include/X11/Xalloca.h
 xtrapdi.o: ../../include/xf86_libc.h ../../../../exports/include/X11/Xfuncs.h
-xtrapdi.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xtrapdi.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xtrapdi.o: ../../../../exports/include/X11/Xproto.h
 xtrapdi.o: ../../../../exports/include/X11/Xprotostr.h ../../include/input.h
 xtrapdi.o: ../../include/screenint.h ../../include/window.h
@@ -1229,10 +1229,10 @@ xtrapdiswp.o: ../../../../exports/include/X11/Xfuncproto.h
 xtrapdiswp.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 xtrapdiswp.o: ../../../../exports/include/X11/Xalloca.h
 xtrapdiswp.o: ../../include/xf86_ansic.h
-xtrapdiswp.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xtrapdiswp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xtrapdiswp.o: ../../include/xf86_libc.h
 xtrapdiswp.o: ../../../../exports/include/X11/Xfuncs.h
-xtrapdiswp.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xtrapdiswp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xtrapdiswp.o: ../../include/screenint.h ../../include/window.h
 xtrapdiswp.o: ../../include/region.h ../../include/regionstr.h
 xtrapdiswp.o: ../../include/miscstruct.h ../../include/gc.h
@@ -1255,10 +1255,10 @@ xtrapditbl.o: ../../../../exports/include/X11/Xfuncproto.h
 xtrapditbl.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 xtrapditbl.o: ../../../../exports/include/X11/Xalloca.h
 xtrapditbl.o: ../../include/xf86_ansic.h
-xtrapditbl.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xtrapditbl.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xtrapditbl.o: ../../include/xf86_libc.h
 xtrapditbl.o: ../../../../exports/include/X11/Xfuncs.h
-xtrapditbl.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xtrapditbl.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xtrapditbl.o: ../../include/screenint.h ../../include/window.h
 xtrapditbl.o: ../../include/region.h ../../include/regionstr.h
 xtrapditbl.o: ../../include/miscstruct.h ../../include/gc.h
@@ -1276,10 +1276,10 @@ xf86XTrapModule.o: ../../../../exports/include/X11/X.h
 xf86XTrapModule.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 xf86XTrapModule.o: ../../../../exports/include/X11/Xalloca.h
 xf86XTrapModule.o: ../../include/xf86_ansic.h
-xf86XTrapModule.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xf86XTrapModule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xf86XTrapModule.o: ../../include/xf86_libc.h
 xf86XTrapModule.o: ../../../../exports/include/X11/Xfuncs.h
-xf86XTrapModule.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xf86XTrapModule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xf86XTrapModule.o: ../../include/xf86Version.h
 xf86XTrapModule.o: ../../../../exports/include/X11/extensions/xtrapdi.h
 xf86XTrapModule.o: ../../../../exports/include/X11/Xproto.h

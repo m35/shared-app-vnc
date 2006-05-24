@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1336,10 +1336,10 @@ vmware.o: ../../../../../../exports/include/X11/Xdefs.h
 vmware.o: ../../../../../../programs/Xserver/include/os.h
 vmware.o: ../../../../../../exports/include/X11/Xalloca.h
 vmware.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-vmware.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+vmware.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 vmware.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 vmware.o: ../../../../../../exports/include/X11/Xfuncs.h
-vmware.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+vmware.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 vmware.o: ../../../../../../programs/Xserver/include/input.h
 vmware.o: ../../../../../../programs/Xserver/include/screenint.h
 vmware.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1422,10 +1422,10 @@ vmwarecurs.o: ../../../../../../exports/include/X11/Xdefs.h
 vmwarecurs.o: ../../../../../../programs/Xserver/include/os.h
 vmwarecurs.o: ../../../../../../exports/include/X11/Xalloca.h
 vmwarecurs.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-vmwarecurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+vmwarecurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 vmwarecurs.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 vmwarecurs.o: ../../../../../../exports/include/X11/Xfuncs.h
-vmwarecurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+vmwarecurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 vmwarecurs.o: ../../../../../../programs/Xserver/include/input.h
 vmwarecurs.o: ../../../../../../programs/Xserver/include/screenint.h
 vmwarecurs.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1506,10 +1506,10 @@ vmwarexaa.o: ../../../../../../exports/include/X11/Xdefs.h
 vmwarexaa.o: ../../../../../../programs/Xserver/include/os.h
 vmwarexaa.o: ../../../../../../exports/include/X11/Xalloca.h
 vmwarexaa.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-vmwarexaa.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+vmwarexaa.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 vmwarexaa.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 vmwarexaa.o: ../../../../../../exports/include/X11/Xfuncs.h
-vmwarexaa.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+vmwarexaa.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 vmwarexaa.o: ../../../../../../programs/Xserver/include/input.h
 vmwarexaa.o: ../../../../../../programs/Xserver/include/screenint.h
 vmwarexaa.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1590,10 +1590,10 @@ offscreen_manager.o: ../../../../../../exports/include/X11/Xdefs.h
 offscreen_manager.o: ../../../../../../programs/Xserver/include/os.h
 offscreen_manager.o: ../../../../../../exports/include/X11/Xalloca.h
 offscreen_manager.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-offscreen_manager.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+offscreen_manager.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 offscreen_manager.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 offscreen_manager.o: ../../../../../../exports/include/X11/Xfuncs.h
-offscreen_manager.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+offscreen_manager.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 offscreen_manager.o: ../../../../../../programs/Xserver/include/input.h
 offscreen_manager.o: ../../../../../../programs/Xserver/include/screenint.h
 offscreen_manager.o: ../../../../../../exports/include/X11/Xproto.h

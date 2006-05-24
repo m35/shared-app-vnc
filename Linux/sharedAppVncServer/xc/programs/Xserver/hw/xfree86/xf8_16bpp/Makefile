@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1138,10 +1138,10 @@ cfbscrinit.o: ../../../../../exports/include/X11/Xdefs.h
 cfbscrinit.o: ../../../../../programs/Xserver/include/os.h
 cfbscrinit.o: ../../../../../exports/include/X11/Xalloca.h
 cfbscrinit.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-cfbscrinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+cfbscrinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 cfbscrinit.o: ../../../../../programs/Xserver/include/xf86_libc.h
 cfbscrinit.o: ../../../../../exports/include/X11/Xfuncs.h
-cfbscrinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+cfbscrinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 cfbscrinit.o: ../../../../../programs/Xserver/include/servermd.h
 cfbscrinit.o: ../../../../../programs/Xserver/include/scrnintstr.h
 cfbscrinit.o: ../../../../../programs/Xserver/include/screenint.h
@@ -1203,10 +1203,10 @@ cfbwindow.o: ../../../../../exports/include/X11/Xdefs.h
 cfbwindow.o: ../../../../../programs/Xserver/include/os.h
 cfbwindow.o: ../../../../../exports/include/X11/Xalloca.h
 cfbwindow.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-cfbwindow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+cfbwindow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 cfbwindow.o: ../../../../../programs/Xserver/include/xf86_libc.h
 cfbwindow.o: ../../../../../exports/include/X11/Xfuncs.h
-cfbwindow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+cfbwindow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 cfbwindow.o: ../../../../../programs/Xserver/include/regionstr.h
 cfbwindow.o: ../../../../../programs/Xserver/include/miscstruct.h
 cfbwindow.o: ../../../../../exports/include/X11/Xprotostr.h
@@ -1263,8 +1263,8 @@ cfb8_16module.o: ../../../../../exports/include/X11/Xdefs.h
 cfb8_16module.o: ../../../../../programs/Xserver/include/os.h
 cfb8_16module.o: ../../../../../exports/include/X11/Xalloca.h
 cfb8_16module.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-cfb8_16module.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+cfb8_16module.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 cfb8_16module.o: ../../../../../programs/Xserver/include/xf86_libc.h
 cfb8_16module.o: ../../../../../exports/include/X11/Xfuncs.h
-cfb8_16module.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+cfb8_16module.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 cfb8_16module.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86Version.h

@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1117,7 +1117,7 @@ distclean::
 
 ac_context.o: ../../../../../../extras/Mesa/src/glheader.h
 ac_context.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-ac_context.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ac_context.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ac_context.o: ../../../../../../programs/Xserver/include/misc.h
 ac_context.o: ../../../../../../exports/include/X11/Xosdefs.h
 ac_context.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -1128,8 +1128,8 @@ ac_context.o: ../../../../../../programs/Xserver/include/os.h
 ac_context.o: ../../../../../../exports/include/X11/Xalloca.h
 ac_context.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 ac_context.o: ../../../../../../exports/include/X11/Xfuncs.h
-ac_context.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
-ac_context.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/float.h
+ac_context.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+ac_context.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/float.h
 ac_context.o: ../../../../../../extras/Mesa/include/GL/gl.h
 ac_context.o: ../../../../../../extras/Mesa/include/GL/glext.h
 ac_context.o: ../../../../../../lib/GL/include/GL/internal/glcore.h
@@ -1146,7 +1146,7 @@ ac_context.o: ../../../../../../extras/Mesa/src/array_cache/ac_context.h
 ac_context.o: ../../../../../../extras/Mesa/src/array_cache/acache.h
 ac_import.o: ../../../../../../extras/Mesa/src/glheader.h
 ac_import.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-ac_import.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ac_import.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ac_import.o: ../../../../../../programs/Xserver/include/misc.h
 ac_import.o: ../../../../../../exports/include/X11/Xosdefs.h
 ac_import.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -1157,8 +1157,8 @@ ac_import.o: ../../../../../../programs/Xserver/include/os.h
 ac_import.o: ../../../../../../exports/include/X11/Xalloca.h
 ac_import.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 ac_import.o: ../../../../../../exports/include/X11/Xfuncs.h
-ac_import.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
-ac_import.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/float.h
+ac_import.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+ac_import.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/float.h
 ac_import.o: ../../../../../../extras/Mesa/include/GL/gl.h
 ac_import.o: ../../../../../../extras/Mesa/include/GL/glext.h
 ac_import.o: ../../../../../../lib/GL/include/GL/internal/glcore.h

@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1290,10 +1290,10 @@ i740_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 i740_driver.o: ../../../../../../programs/Xserver/include/os.h
 i740_driver.o: ../../../../../../exports/include/X11/Xalloca.h
 i740_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i740_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i740_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i740_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i740_driver.o: ../../../../../../exports/include/X11/Xfuncs.h
-i740_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i740_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i740_driver.o: ../../../../../../programs/Xserver/include/input.h
 i740_driver.o: ../../../../../../programs/Xserver/include/screenint.h
 i740_driver.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1380,10 +1380,10 @@ i740_cursor.o: ../../../../../../exports/include/X11/Xdefs.h
 i740_cursor.o: ../../../../../../programs/Xserver/include/os.h
 i740_cursor.o: ../../../../../../exports/include/X11/Xalloca.h
 i740_cursor.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i740_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i740_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i740_cursor.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i740_cursor.o: ../../../../../../exports/include/X11/Xfuncs.h
-i740_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i740_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i740_cursor.o: ../../../../../../programs/Xserver/include/input.h
 i740_cursor.o: ../../../../../../programs/Xserver/include/screenint.h
 i740_cursor.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1452,10 +1452,10 @@ i740_accel.o: ../../../../../../exports/include/X11/Xdefs.h
 i740_accel.o: ../../../../../../programs/Xserver/include/os.h
 i740_accel.o: ../../../../../../exports/include/X11/Xalloca.h
 i740_accel.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i740_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i740_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i740_accel.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i740_accel.o: ../../../../../../exports/include/X11/Xfuncs.h
-i740_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i740_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i740_accel.o: ../../../../../../programs/Xserver/include/input.h
 i740_accel.o: ../../../../../../programs/Xserver/include/screenint.h
 i740_accel.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1524,10 +1524,10 @@ i740_io.o: ../../../../../../exports/include/X11/Xdefs.h
 i740_io.o: ../../../../../../programs/Xserver/include/os.h
 i740_io.o: ../../../../../../exports/include/X11/Xalloca.h
 i740_io.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i740_io.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i740_io.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i740_io.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i740_io.o: ../../../../../../exports/include/X11/Xfuncs.h
-i740_io.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i740_io.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i740_io.o: ../../../../../../programs/Xserver/include/input.h
 i740_io.o: ../../../../../../programs/Xserver/include/screenint.h
 i740_io.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1596,10 +1596,10 @@ i740_dga.o: ../../../../../../exports/include/X11/Xdefs.h
 i740_dga.o: ../../../../../../programs/Xserver/include/os.h
 i740_dga.o: ../../../../../../exports/include/X11/Xalloca.h
 i740_dga.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i740_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i740_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i740_dga.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i740_dga.o: ../../../../../../exports/include/X11/Xfuncs.h
-i740_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i740_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i740_dga.o: ../../../../../../programs/Xserver/include/input.h
 i740_dga.o: ../../../../../../programs/Xserver/include/screenint.h
 i740_dga.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1673,10 +1673,10 @@ i740_i2c.o: ../../../../../../exports/include/X11/Xdefs.h
 i740_i2c.o: ../../../../../../programs/Xserver/include/os.h
 i740_i2c.o: ../../../../../../exports/include/X11/Xalloca.h
 i740_i2c.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i740_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i740_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i740_i2c.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i740_i2c.o: ../../../../../../exports/include/X11/Xfuncs.h
-i740_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i740_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i740_i2c.o: ../../../../../../programs/Xserver/include/input.h
 i740_i2c.o: ../../../../../../programs/Xserver/include/screenint.h
 i740_i2c.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1745,10 +1745,10 @@ i740_video.o: ../../../../../../exports/include/X11/Xdefs.h
 i740_video.o: ../../../../../../programs/Xserver/include/os.h
 i740_video.o: ../../../../../../exports/include/X11/Xalloca.h
 i740_video.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i740_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i740_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i740_video.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i740_video.o: ../../../../../../exports/include/X11/Xfuncs.h
-i740_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i740_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i740_video.o: ../../../../../../programs/Xserver/include/input.h
 i740_video.o: ../../../../../../programs/Xserver/include/screenint.h
 i740_video.o: ../../../../../../exports/include/X11/Xproto.h

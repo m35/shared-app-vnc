@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1222,7 +1222,7 @@ xttcap.o: ../../../exports/include/X11/Xosdefs.h /usr/include/string.h
 xttcap.o: /usr/include/features.h /usr/include/sys/cdefs.h
 xttcap.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 xttcap.o: /usr/include/gnu/stubs-32.h
-xttcap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xttcap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xttcap.o: /usr/include/xlocale.h /usr/include/stdlib.h
 xttcap.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 xttcap.o: /usr/include/endian.h /usr/include/bits/endian.h
@@ -1234,7 +1234,7 @@ xttcap.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
 xttcap.o: /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h
 xttcap.o: /usr/include/_G_config.h /usr/include/wchar.h
 xttcap.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-xttcap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xttcap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xttcap.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 xttcap.o: /usr/include/unistd.h /usr/include/bits/posix_opt.h
 xttcap.o: /usr/include/bits/environments.h /usr/include/bits/confname.h
@@ -1249,7 +1249,7 @@ ftfuncs.o: ../../../exports/include/X11/Xosdefs.h /usr/include/string.h
 ftfuncs.o: /usr/include/features.h /usr/include/sys/cdefs.h
 ftfuncs.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 ftfuncs.o: /usr/include/gnu/stubs-32.h
-ftfuncs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ftfuncs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ftfuncs.o: /usr/include/xlocale.h /usr/include/stdlib.h
 ftfuncs.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 ftfuncs.o: /usr/include/endian.h /usr/include/bits/endian.h
@@ -1261,7 +1261,7 @@ ftfuncs.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
 ftfuncs.o: /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h
 ftfuncs.o: /usr/include/_G_config.h /usr/include/wchar.h
 ftfuncs.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-ftfuncs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ftfuncs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ftfuncs.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 ftfuncs.o: /usr/include/unistd.h /usr/include/bits/posix_opt.h
 ftfuncs.o: /usr/include/bits/environments.h /usr/include/bits/confname.h
@@ -1292,7 +1292,7 @@ ftfuncs.o: ../../../exports/include/freetype2/freetype/config/ftconfig.h
 ftfuncs.o: ../../../exports/include/freetype2/freetype/config/ftoption.h
 ftfuncs.o: ../../../exports/include/freetype2/freetype/config/ftstdlib.h
 ftfuncs.o: /usr/include/limits.h
-ftfuncs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+ftfuncs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 ftfuncs.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 ftfuncs.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 ftfuncs.o: /usr/include/bits/xopen_lim.h /usr/include/ctype.h
@@ -1333,7 +1333,7 @@ ftfuncs.o: ../include/fontenc.h ft.h ftfuncs.h xttcap.h
 ftenc.o: /usr/include/string.h /usr/include/features.h
 ftenc.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 ftenc.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
-ftenc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ftenc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ftenc.o: /usr/include/xlocale.h ../include/fntfilst.h
 ftenc.o: ../../../exports/include/X11/Xos.h
 ftenc.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
@@ -1353,7 +1353,7 @@ ftenc.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 ftenc.o: /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h
 ftenc.o: /usr/include/_G_config.h /usr/include/wchar.h
 ftenc.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-ftenc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ftenc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ftenc.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 ftenc.o: ../../../exports/include/X11/Xdefs.h
 ftenc.o: ../../../include/fonts/fontstruct.h
@@ -1381,7 +1381,7 @@ fttools.o: ../../../exports/include/X11/Xosdefs.h /usr/include/string.h
 fttools.o: /usr/include/features.h /usr/include/sys/cdefs.h
 fttools.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 fttools.o: /usr/include/gnu/stubs-32.h
-fttools.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fttools.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 fttools.o: /usr/include/xlocale.h /usr/include/stdlib.h
 fttools.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 fttools.o: /usr/include/endian.h /usr/include/bits/endian.h
@@ -1393,7 +1393,7 @@ fttools.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
 fttools.o: /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h
 fttools.o: /usr/include/_G_config.h /usr/include/wchar.h
 fttools.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-fttools.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fttools.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 fttools.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 fttools.o: /usr/include/unistd.h /usr/include/bits/posix_opt.h
 fttools.o: /usr/include/bits/environments.h /usr/include/bits/confname.h

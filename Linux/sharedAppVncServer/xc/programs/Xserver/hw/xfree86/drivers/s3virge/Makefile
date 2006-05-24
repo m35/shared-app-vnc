@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1324,10 +1324,10 @@ s3v_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 s3v_driver.o: ../../../../../../programs/Xserver/include/os.h
 s3v_driver.o: ../../../../../../exports/include/X11/Xalloca.h
 s3v_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-s3v_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+s3v_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 s3v_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 s3v_driver.o: ../../../../../../exports/include/X11/Xfuncs.h
-s3v_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+s3v_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 s3v_driver.o: ../../../../../../programs/Xserver/include/input.h
 s3v_driver.o: ../../../../../../programs/Xserver/include/screenint.h
 s3v_driver.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1426,10 +1426,10 @@ s3v_accel.o: ../../../../../../exports/include/X11/Xdefs.h
 s3v_accel.o: ../../../../../../programs/Xserver/include/os.h
 s3v_accel.o: ../../../../../../exports/include/X11/Xalloca.h
 s3v_accel.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-s3v_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+s3v_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 s3v_accel.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 s3v_accel.o: ../../../../../../exports/include/X11/Xfuncs.h
-s3v_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+s3v_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 s3v_accel.o: ../../../../../../programs/Xserver/include/input.h
 s3v_accel.o: ../../../../../../programs/Xserver/include/screenint.h
 s3v_accel.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1525,10 +1525,10 @@ s3v_dac.o: ../../../../../../exports/include/X11/Xdefs.h
 s3v_dac.o: ../../../../../../programs/Xserver/include/os.h
 s3v_dac.o: ../../../../../../exports/include/X11/Xalloca.h
 s3v_dac.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-s3v_dac.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+s3v_dac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 s3v_dac.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 s3v_dac.o: ../../../../../../exports/include/X11/Xfuncs.h
-s3v_dac.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+s3v_dac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 s3v_dac.o: ../../../../../../programs/Xserver/include/input.h
 s3v_dac.o: ../../../../../../programs/Xserver/include/screenint.h
 s3v_dac.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1623,10 +1623,10 @@ s3v_hwcurs.o: ../../../../../../exports/include/X11/Xdefs.h
 s3v_hwcurs.o: ../../../../../../programs/Xserver/include/os.h
 s3v_hwcurs.o: ../../../../../../exports/include/X11/Xalloca.h
 s3v_hwcurs.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-s3v_hwcurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+s3v_hwcurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 s3v_hwcurs.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 s3v_hwcurs.o: ../../../../../../exports/include/X11/Xfuncs.h
-s3v_hwcurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+s3v_hwcurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 s3v_hwcurs.o: ../../../../../../programs/Xserver/include/input.h
 s3v_hwcurs.o: ../../../../../../programs/Xserver/include/screenint.h
 s3v_hwcurs.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1720,10 +1720,10 @@ s3v_dga.o: ../../../../../../exports/include/X11/Xdefs.h
 s3v_dga.o: ../../../../../../programs/Xserver/include/os.h
 s3v_dga.o: ../../../../../../exports/include/X11/Xalloca.h
 s3v_dga.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-s3v_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+s3v_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 s3v_dga.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 s3v_dga.o: ../../../../../../exports/include/X11/Xfuncs.h
-s3v_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+s3v_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 s3v_dga.o: ../../../../../../programs/Xserver/include/input.h
 s3v_dga.o: ../../../../../../programs/Xserver/include/screenint.h
 s3v_dga.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1819,10 +1819,10 @@ s3v_i2c.o: ../../../../../../exports/include/X11/Xdefs.h
 s3v_i2c.o: ../../../../../../programs/Xserver/include/os.h
 s3v_i2c.o: ../../../../../../exports/include/X11/Xalloca.h
 s3v_i2c.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-s3v_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+s3v_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 s3v_i2c.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 s3v_i2c.o: ../../../../../../exports/include/X11/Xfuncs.h
-s3v_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+s3v_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 s3v_i2c.o: ../../../../../../programs/Xserver/include/input.h
 s3v_i2c.o: ../../../../../../programs/Xserver/include/screenint.h
 s3v_i2c.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1916,10 +1916,10 @@ s3v_shadow.o: ../../../../../../exports/include/X11/Xdefs.h
 s3v_shadow.o: ../../../../../../programs/Xserver/include/os.h
 s3v_shadow.o: ../../../../../../exports/include/X11/Xalloca.h
 s3v_shadow.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-s3v_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+s3v_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 s3v_shadow.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 s3v_shadow.o: ../../../../../../exports/include/X11/Xfuncs.h
-s3v_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+s3v_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 s3v_shadow.o: ../../../../../../programs/Xserver/include/input.h
 s3v_shadow.o: ../../../../../../programs/Xserver/include/screenint.h
 s3v_shadow.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2015,10 +2015,10 @@ s3v_xv.o: ../../../../../../exports/include/X11/Xdefs.h
 s3v_xv.o: ../../../../../../programs/Xserver/include/os.h
 s3v_xv.o: ../../../../../../exports/include/X11/Xalloca.h
 s3v_xv.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-s3v_xv.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+s3v_xv.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 s3v_xv.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 s3v_xv.o: ../../../../../../exports/include/X11/Xfuncs.h
-s3v_xv.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+s3v_xv.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 s3v_xv.o: ../../../../../../programs/Xserver/include/input.h
 s3v_xv.o: ../../../../../../programs/Xserver/include/screenint.h
 s3v_xv.o: ../../../../../../exports/include/X11/Xproto.h

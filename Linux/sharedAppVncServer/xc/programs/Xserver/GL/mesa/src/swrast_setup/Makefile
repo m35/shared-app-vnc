@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1128,7 +1128,7 @@ distclean::
 
 ss_context.o: ../../../../../../extras/Mesa/src/glheader.h
 ss_context.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-ss_context.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ss_context.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ss_context.o: ../../../../../../programs/Xserver/include/misc.h
 ss_context.o: ../../../../../../exports/include/X11/Xosdefs.h
 ss_context.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -1139,8 +1139,8 @@ ss_context.o: ../../../../../../programs/Xserver/include/os.h
 ss_context.o: ../../../../../../exports/include/X11/Xalloca.h
 ss_context.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 ss_context.o: ../../../../../../exports/include/X11/Xfuncs.h
-ss_context.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
-ss_context.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/float.h
+ss_context.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+ss_context.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/float.h
 ss_context.o: ../../../../../../extras/Mesa/include/GL/gl.h
 ss_context.o: ../../../../../../extras/Mesa/include/GL/glext.h
 ss_context.o: ../../../../../../lib/GL/include/GL/internal/glcore.h
@@ -1164,7 +1164,7 @@ ss_context.o: ../../../../../../extras/Mesa/src/tnl/t_pipeline.h
 ss_context.o: ../../../../../../extras/Mesa/src/tnl/t_context.h
 ss_triangle.o: ../../../../../../extras/Mesa/src/glheader.h
 ss_triangle.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-ss_triangle.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ss_triangle.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ss_triangle.o: ../../../../../../programs/Xserver/include/misc.h
 ss_triangle.o: ../../../../../../exports/include/X11/Xosdefs.h
 ss_triangle.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -1175,8 +1175,8 @@ ss_triangle.o: ../../../../../../programs/Xserver/include/os.h
 ss_triangle.o: ../../../../../../exports/include/X11/Xalloca.h
 ss_triangle.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 ss_triangle.o: ../../../../../../exports/include/X11/Xfuncs.h
-ss_triangle.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
-ss_triangle.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/float.h
+ss_triangle.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+ss_triangle.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/float.h
 ss_triangle.o: ../../../../../../extras/Mesa/include/GL/gl.h
 ss_triangle.o: ../../../../../../extras/Mesa/include/GL/glext.h
 ss_triangle.o: ../../../../../../lib/GL/include/GL/internal/glcore.h
@@ -1200,7 +1200,7 @@ ss_triangle.o: ../../../../../../extras/Mesa/src/swrast_setup/swrast_setup.h
 ss_triangle.o: ../../../../../../extras/Mesa/src/swrast_setup/ss_tritmp.h
 ss_vb.o: ../../../../../../extras/Mesa/src/glheader.h
 ss_vb.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-ss_vb.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ss_vb.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ss_vb.o: ../../../../../../programs/Xserver/include/misc.h
 ss_vb.o: ../../../../../../exports/include/X11/Xosdefs.h
 ss_vb.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -1211,8 +1211,8 @@ ss_vb.o: ../../../../../../programs/Xserver/include/os.h
 ss_vb.o: ../../../../../../exports/include/X11/Xalloca.h
 ss_vb.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 ss_vb.o: ../../../../../../exports/include/X11/Xfuncs.h
-ss_vb.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
-ss_vb.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/float.h
+ss_vb.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
+ss_vb.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/float.h
 ss_vb.o: ../../../../../../extras/Mesa/include/GL/gl.h
 ss_vb.o: ../../../../../../extras/Mesa/include/GL/glext.h
 ss_vb.o: ../../../../../../lib/GL/include/GL/internal/glcore.h

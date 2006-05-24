@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1224,7 +1224,7 @@ spfuncs.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 spfuncs.o: /usr/include/features.h /usr/include/sys/cdefs.h
 spfuncs.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 spfuncs.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-spfuncs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+spfuncs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 spfuncs.o: /usr/include/bits/typesizes.h /usr/include/time.h
 spfuncs.o: /usr/include/endian.h /usr/include/bits/endian.h
 spfuncs.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1242,7 +1242,7 @@ spfuncs.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 spfuncs.o: /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h
 spfuncs.o: /usr/include/_G_config.h /usr/include/wchar.h
 spfuncs.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-spfuncs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+spfuncs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 spfuncs.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 spfuncs.o: ../../../exports/include/X11/Xdefs.h
 spfuncs.o: ../../../include/fonts/fontstruct.h
@@ -1261,7 +1261,7 @@ spfile.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 spfile.o: /usr/include/features.h /usr/include/sys/cdefs.h
 spfile.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 spfile.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-spfile.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+spfile.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 spfile.o: /usr/include/bits/typesizes.h /usr/include/time.h
 spfile.o: /usr/include/endian.h /usr/include/bits/endian.h
 spfile.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1278,7 +1278,7 @@ spfile.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 spfile.o: /usr/include/bits/waitstatus.h /usr/include/alloca.h
 spfile.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
 spfile.o: /usr/include/wchar.h /usr/include/bits/wchar.h /usr/include/gconv.h
-spfile.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+spfile.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 spfile.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 spfile.o: ../../../exports/include/X11/Xdefs.h
 spfile.o: ../../../include/fonts/fontstruct.h
@@ -1298,7 +1298,7 @@ spinfo.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 spinfo.o: /usr/include/features.h /usr/include/sys/cdefs.h
 spinfo.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 spinfo.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-spinfo.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+spinfo.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 spinfo.o: /usr/include/bits/typesizes.h /usr/include/time.h
 spinfo.o: /usr/include/endian.h /usr/include/bits/endian.h
 spinfo.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1315,7 +1315,7 @@ spinfo.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 spinfo.o: /usr/include/bits/waitstatus.h /usr/include/alloca.h
 spinfo.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
 spinfo.o: /usr/include/wchar.h /usr/include/bits/wchar.h /usr/include/gconv.h
-spinfo.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+spinfo.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 spinfo.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 spinfo.o: ../../../exports/include/X11/Xdefs.h
 spinfo.o: ../../../include/fonts/fontstruct.h
@@ -1338,7 +1338,7 @@ sperr.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 sperr.o: /usr/include/features.h /usr/include/sys/cdefs.h
 sperr.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 sperr.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-sperr.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+sperr.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 sperr.o: /usr/include/bits/typesizes.h /usr/include/time.h
 sperr.o: /usr/include/endian.h /usr/include/bits/endian.h
 sperr.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1355,7 +1355,7 @@ sperr.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 sperr.o: /usr/include/bits/waitstatus.h /usr/include/alloca.h
 sperr.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
 sperr.o: /usr/include/wchar.h /usr/include/bits/wchar.h /usr/include/gconv.h
-sperr.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+sperr.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 sperr.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 sperr.o: ../../../exports/include/X11/Xdefs.h
 sperr.o: ../../../include/fonts/fontstruct.h
@@ -1378,7 +1378,7 @@ spfont.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 spfont.o: /usr/include/features.h /usr/include/sys/cdefs.h
 spfont.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 spfont.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-spfont.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+spfont.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 spfont.o: /usr/include/bits/typesizes.h /usr/include/time.h
 spfont.o: /usr/include/endian.h /usr/include/bits/endian.h
 spfont.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1395,7 +1395,7 @@ spfont.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 spfont.o: /usr/include/bits/waitstatus.h /usr/include/alloca.h
 spfont.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
 spfont.o: /usr/include/wchar.h /usr/include/bits/wchar.h /usr/include/gconv.h
-spfont.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+spfont.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 spfont.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 spfont.o: ../../../include/fonts/fontstruct.h
 spfont.o: ../../../exports/include/X11/Xproto.h
@@ -1416,7 +1416,7 @@ spglyph.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 spglyph.o: /usr/include/features.h /usr/include/sys/cdefs.h
 spglyph.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 spglyph.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-spglyph.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+spglyph.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 spglyph.o: /usr/include/bits/typesizes.h /usr/include/time.h
 spglyph.o: /usr/include/endian.h /usr/include/bits/endian.h
 spglyph.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1434,7 +1434,7 @@ spglyph.o: /usr/include/bits/waitstatus.h /usr/include/alloca.h
 spglyph.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
 spglyph.o: /usr/include/wchar.h /usr/include/bits/wchar.h
 spglyph.o: /usr/include/gconv.h
-spglyph.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+spglyph.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 spglyph.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 spglyph.o: ../../../exports/include/X11/Xdefs.h
 spglyph.o: ../../../include/fonts/fontstruct.h
@@ -1453,7 +1453,7 @@ spencode.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 spencode.o: /usr/include/features.h /usr/include/sys/cdefs.h
 spencode.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 spencode.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-spencode.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+spencode.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 spencode.o: /usr/include/bits/typesizes.h /usr/include/time.h
 spencode.o: /usr/include/endian.h /usr/include/bits/endian.h
 spencode.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1471,7 +1471,7 @@ spencode.o: /usr/include/bits/waitstatus.h /usr/include/alloca.h
 spencode.o: /usr/include/stdio.h /usr/include/libio.h
 spencode.o: /usr/include/_G_config.h /usr/include/wchar.h
 spencode.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-spencode.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+spencode.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 spencode.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 spencode.o: ../../../exports/include/X11/Xdefs.h
 spencode.o: ../../../include/fonts/fontstruct.h

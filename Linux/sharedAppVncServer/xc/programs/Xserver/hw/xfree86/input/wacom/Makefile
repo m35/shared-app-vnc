@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1179,7 +1179,7 @@ xf86Wacom.o: /usr/include/sys/time.h /usr/include/features.h
 xf86Wacom.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 xf86Wacom.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
 xf86Wacom.o: /usr/include/bits/types.h
-xf86Wacom.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xf86Wacom.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xf86Wacom.o: /usr/include/bits/typesizes.h /usr/include/time.h
 xf86Wacom.o: /usr/include/bits/time.h /usr/include/sys/select.h
 xf86Wacom.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
@@ -1195,7 +1195,7 @@ xf86Wacom.o: ../../../../../../exports/include/X11/Xdefs.h
 xf86Wacom.o: ../../../../../../programs/Xserver/include/os.h
 xf86Wacom.o: ../../../../../../exports/include/X11/Xalloca.h
 xf86Wacom.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-xf86Wacom.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xf86Wacom.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xf86Wacom.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 xf86Wacom.o: ../../../../../../exports/include/X11/Xfuncs.h
 xf86Wacom.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h

@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1127,12 +1127,12 @@ distclean::
 fontcache.o: /usr/include/stdio.h /usr/include/features.h
 fontcache.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 fontcache.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
-fontcache.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fontcache.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 fontcache.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 fontcache.o: /usr/include/libio.h /usr/include/_G_config.h
 fontcache.o: /usr/include/wchar.h /usr/include/bits/wchar.h
 fontcache.o: /usr/include/gconv.h
-fontcache.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fontcache.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 fontcache.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 fontcache.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 fontcache.o: /usr/include/bits/waitstatus.h /usr/include/endian.h

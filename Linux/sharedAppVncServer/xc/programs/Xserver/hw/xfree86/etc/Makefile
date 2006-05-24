@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1384,7 +1384,7 @@ scanpci.o: ../../../../../exports/include/X11/Xfuncproto.h
 scanpci.o: ../../../../../exports/include/X11/Xmd.h
 scanpci.o: ../../../../../exports/include/X11/X.h
 scanpci.o: ../../../../../exports/include/X11/Xdefs.h
-scanpci.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+scanpci.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 scanpci.o: ../../../../../exports/include/X11/Xfuncs.h /usr/include/string.h
 scanpci.o: /usr/include/features.h /usr/include/sys/cdefs.h
 scanpci.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
@@ -1398,7 +1398,7 @@ scanpci.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 scanpci.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 scanpci.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 scanpci.o: /usr/include/limits.h
-scanpci.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+scanpci.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 scanpci.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 scanpci.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 scanpci.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1409,7 +1409,7 @@ scanpci.o: /usr/include/bits/mathdef.h /usr/include/bits/mathcalls.h
 scanpci.o: /usr/include/assert.h /usr/include/ctype.h /usr/include/stdio.h
 scanpci.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 scanpci.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-scanpci.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+scanpci.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 scanpci.o: /usr/include/bits/sys_errlist.h
 scanpci.o: ../../../../../exports/include/X11/Xalloca.h
 scanpci.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
@@ -1463,7 +1463,7 @@ pcitweak.o: ../../../../../exports/include/X11/Xfuncproto.h
 pcitweak.o: ../../../../../exports/include/X11/Xmd.h
 pcitweak.o: ../../../../../exports/include/X11/X.h
 pcitweak.o: ../../../../../exports/include/X11/Xdefs.h
-pcitweak.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+pcitweak.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 pcitweak.o: ../../../../../exports/include/X11/Xfuncs.h /usr/include/string.h
 pcitweak.o: /usr/include/features.h /usr/include/sys/cdefs.h
 pcitweak.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
@@ -1477,7 +1477,7 @@ pcitweak.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 pcitweak.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 pcitweak.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 pcitweak.o: /usr/include/limits.h
-pcitweak.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+pcitweak.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 pcitweak.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 pcitweak.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 pcitweak.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1489,7 +1489,7 @@ pcitweak.o: /usr/include/assert.h /usr/include/ctype.h /usr/include/stdio.h
 pcitweak.o: /usr/include/libio.h /usr/include/_G_config.h
 pcitweak.o: /usr/include/wchar.h /usr/include/bits/wchar.h
 pcitweak.o: /usr/include/gconv.h
-pcitweak.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+pcitweak.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 pcitweak.o: /usr/include/bits/sys_errlist.h
 pcitweak.o: ../../../../../exports/include/X11/Xalloca.h
 pcitweak.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
@@ -1538,7 +1538,7 @@ mmapr.o: /usr/include/bits/errno.h /usr/include/linux/errno.h
 mmapr.o: /usr/include/asm/errno.h /usr/include/fcntl.h
 mmapr.o: /usr/include/bits/fcntl.h /usr/include/sys/types.h
 mmapr.o: /usr/include/bits/types.h
-mmapr.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mmapr.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mmapr.o: /usr/include/bits/typesizes.h /usr/include/time.h
 mmapr.o: /usr/include/endian.h /usr/include/bits/endian.h
 mmapr.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1547,7 +1547,7 @@ mmapr.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
 mmapr.o: /usr/include/sys/stat.h /usr/include/bits/stat.h
 mmapr.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
 mmapr.o: /usr/include/wchar.h /usr/include/bits/wchar.h /usr/include/gconv.h
-mmapr.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mmapr.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mmapr.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 mmapr.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 mmapr.o: /usr/include/bits/waitstatus.h /usr/include/xlocale.h
@@ -1562,7 +1562,7 @@ mmapw.o: /usr/include/bits/errno.h /usr/include/linux/errno.h
 mmapw.o: /usr/include/asm/errno.h /usr/include/fcntl.h
 mmapw.o: /usr/include/bits/fcntl.h /usr/include/sys/types.h
 mmapw.o: /usr/include/bits/types.h
-mmapw.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mmapw.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mmapw.o: /usr/include/bits/typesizes.h /usr/include/time.h
 mmapw.o: /usr/include/endian.h /usr/include/bits/endian.h
 mmapw.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1571,7 +1571,7 @@ mmapw.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
 mmapw.o: /usr/include/sys/stat.h /usr/include/bits/stat.h
 mmapw.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
 mmapw.o: /usr/include/wchar.h /usr/include/bits/wchar.h /usr/include/gconv.h
-mmapw.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mmapw.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mmapw.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 mmapw.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 mmapw.o: /usr/include/bits/waitstatus.h /usr/include/xlocale.h
@@ -1590,10 +1590,10 @@ ioport.o: ../../../../../programs/Xserver/include/misc.h
 ioport.o: ../../../../../exports/include/X11/Xosdefs.h
 ioport.o: ../../../../../exports/include/X11/X.h
 ioport.o: ../../../../../exports/include/X11/Xdefs.h
-ioport.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ioport.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ioport.o: ../../../../../programs/Xserver/include/os.h
 ioport.o: ../../../../../exports/include/X11/Xalloca.h
-ioport.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ioport.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ioport.o: /usr/include/string.h /usr/include/features.h
 ioport.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 ioport.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -1607,7 +1607,7 @@ ioport.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 ioport.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 ioport.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 ioport.o: /usr/include/limits.h
-ioport.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+ioport.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 ioport.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 ioport.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 ioport.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1657,11 +1657,11 @@ ioport.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86Privstr.h
 gtf.o: /usr/include/stdio.h /usr/include/features.h /usr/include/sys/cdefs.h
 gtf.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 gtf.o: /usr/include/gnu/stubs-32.h
-gtf.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+gtf.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 gtf.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 gtf.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 gtf.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-gtf.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+gtf.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 gtf.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 gtf.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 gtf.o: /usr/include/bits/waitstatus.h /usr/include/endian.h

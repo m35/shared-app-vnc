@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1168,10 +1168,10 @@ dummy_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 dummy_driver.o: ../../../../../../programs/Xserver/include/os.h
 dummy_driver.o: ../../../../../../exports/include/X11/Xalloca.h
 dummy_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-dummy_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+dummy_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 dummy_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 dummy_driver.o: ../../../../../../exports/include/X11/Xfuncs.h
-dummy_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+dummy_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 dummy_driver.o: ../../../../../../programs/Xserver/include/input.h
 dummy_driver.o: ../../../../../../programs/Xserver/include/screenint.h
 dummy_driver.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1245,10 +1245,10 @@ dummy_cursor.o: ../../../../../../exports/include/X11/Xdefs.h
 dummy_cursor.o: ../../../../../../programs/Xserver/include/os.h
 dummy_cursor.o: ../../../../../../exports/include/X11/Xalloca.h
 dummy_cursor.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-dummy_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+dummy_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 dummy_cursor.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 dummy_cursor.o: ../../../../../../exports/include/X11/Xfuncs.h
-dummy_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+dummy_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 dummy_cursor.o: ../../../../../../programs/Xserver/include/input.h
 dummy_cursor.o: ../../../../../../programs/Xserver/include/screenint.h
 dummy_cursor.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1299,10 +1299,10 @@ dummy_dga.o: ../../../../../../exports/include/X11/Xdefs.h
 dummy_dga.o: ../../../../../../programs/Xserver/include/os.h
 dummy_dga.o: ../../../../../../exports/include/X11/Xalloca.h
 dummy_dga.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-dummy_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+dummy_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 dummy_dga.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 dummy_dga.o: ../../../../../../exports/include/X11/Xfuncs.h
-dummy_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+dummy_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 dummy_dga.o: ../../../../../../programs/Xserver/include/input.h
 dummy_dga.o: ../../../../../../programs/Xserver/include/screenint.h
 dummy_dga.o: ../../../../../../exports/include/X11/Xproto.h

@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1139,10 +1139,10 @@ vbe.o: ../../../../../exports/include/X11/Xdefs.h
 vbe.o: ../../../../../programs/Xserver/include/os.h
 vbe.o: ../../../../../exports/include/X11/Xalloca.h
 vbe.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-vbe.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+vbe.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 vbe.o: ../../../../../programs/Xserver/include/xf86_libc.h
 vbe.o: ../../../../../exports/include/X11/Xfuncs.h
-vbe.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+vbe.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 vbe.o: ../../../../../programs/Xserver/include/input.h
 vbe.o: ../../../../../programs/Xserver/include/screenint.h
 vbe.o: ../../../../../exports/include/X11/Xproto.h
@@ -1189,10 +1189,10 @@ vbeModes.o: ../../../../../exports/include/X11/Xdefs.h
 vbeModes.o: ../../../../../programs/Xserver/include/os.h
 vbeModes.o: ../../../../../exports/include/X11/Xalloca.h
 vbeModes.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-vbeModes.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+vbeModes.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 vbeModes.o: ../../../../../programs/Xserver/include/xf86_libc.h
 vbeModes.o: ../../../../../exports/include/X11/Xfuncs.h
-vbeModes.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+vbeModes.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 vbeModes.o: ../../../../../programs/Xserver/include/input.h
 vbeModes.o: ../../../../../programs/Xserver/include/screenint.h
 vbeModes.o: ../../../../../exports/include/X11/Xproto.h
@@ -1239,10 +1239,10 @@ vbe_module.o: ../../../../../exports/include/X11/Xdefs.h
 vbe_module.o: ../../../../../programs/Xserver/include/os.h
 vbe_module.o: ../../../../../exports/include/X11/Xalloca.h
 vbe_module.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-vbe_module.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+vbe_module.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 vbe_module.o: ../../../../../programs/Xserver/include/xf86_libc.h
 vbe_module.o: ../../../../../exports/include/X11/Xfuncs.h
-vbe_module.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+vbe_module.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 vbe_module.o: ../../../../../programs/Xserver/include/input.h
 vbe_module.o: ../../../../../programs/Xserver/include/screenint.h
 vbe_module.o: ../../../../../exports/include/X11/Xproto.h

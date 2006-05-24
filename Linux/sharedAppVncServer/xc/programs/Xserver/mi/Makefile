@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1234,9 +1234,9 @@ mivaltree.o: ../../../exports/include/X11/Xfuncproto.h
 mivaltree.o: ../../../exports/include/X11/Xmd.h
 mivaltree.o: ../../../exports/include/X11/X.h
 mivaltree.o: ../../../exports/include/X11/Xdefs.h
-mivaltree.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mivaltree.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mivaltree.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-mivaltree.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mivaltree.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mivaltree.o: /usr/include/string.h /usr/include/features.h
 mivaltree.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 mivaltree.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -1250,7 +1250,7 @@ mivaltree.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 mivaltree.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 mivaltree.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 mivaltree.o: /usr/include/limits.h
-mivaltree.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mivaltree.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mivaltree.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mivaltree.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mivaltree.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1281,9 +1281,9 @@ mipolyseg.o: ../../../exports/include/X11/Xosdefs.h
 mipolyseg.o: ../../../exports/include/X11/Xfuncproto.h
 mipolyseg.o: ../../../exports/include/X11/X.h
 mipolyseg.o: ../../../exports/include/X11/Xdefs.h
-mipolyseg.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mipolyseg.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mipolyseg.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-mipolyseg.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mipolyseg.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mipolyseg.o: /usr/include/string.h /usr/include/features.h
 mipolyseg.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 mipolyseg.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -1297,7 +1297,7 @@ mipolyseg.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 mipolyseg.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 mipolyseg.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 mipolyseg.o: /usr/include/limits.h
-mipolyseg.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mipolyseg.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mipolyseg.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mipolyseg.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mipolyseg.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1324,9 +1324,9 @@ mipolyrect.o: ../../../exports/include/X11/Xosdefs.h
 mipolyrect.o: ../../../exports/include/X11/Xfuncproto.h
 mipolyrect.o: ../../../exports/include/X11/X.h
 mipolyrect.o: ../../../exports/include/X11/Xdefs.h
-mipolyrect.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mipolyrect.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mipolyrect.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-mipolyrect.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mipolyrect.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mipolyrect.o: /usr/include/string.h /usr/include/features.h
 mipolyrect.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 mipolyrect.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -1340,7 +1340,7 @@ mipolyrect.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 mipolyrect.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 mipolyrect.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 mipolyrect.o: /usr/include/limits.h
-mipolyrect.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mipolyrect.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mipolyrect.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mipolyrect.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mipolyrect.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1365,9 +1365,9 @@ mipoly.o: ../../../exports/include/X11/Xosdefs.h
 mipoly.o: ../../../exports/include/X11/Xfuncproto.h
 mipoly.o: ../../../exports/include/X11/Xmd.h ../../../exports/include/X11/X.h
 mipoly.o: ../../../exports/include/X11/Xdefs.h
-mipoly.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mipoly.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mipoly.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-mipoly.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mipoly.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mipoly.o: /usr/include/string.h /usr/include/features.h
 mipoly.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 mipoly.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -1381,7 +1381,7 @@ mipoly.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 mipoly.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 mipoly.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 mipoly.o: /usr/include/limits.h
-mipoly.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mipoly.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mipoly.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mipoly.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mipoly.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1412,9 +1412,9 @@ mipolycon.o: ../../../exports/include/X11/Xprotostr.h ../include/screenint.h
 mipolycon.o: ../include/misc.h ../../../exports/include/X11/Xosdefs.h
 mipolycon.o: ../../../exports/include/X11/Xfuncproto.h
 mipolycon.o: ../../../exports/include/X11/Xdefs.h
-mipolycon.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mipolycon.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mipolycon.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-mipolycon.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mipolycon.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mipolycon.o: /usr/include/string.h /usr/include/features.h
 mipolycon.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 mipolycon.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -1428,7 +1428,7 @@ mipolycon.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 mipolycon.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 mipolycon.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 mipolycon.o: /usr/include/limits.h
-mipolycon.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mipolycon.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mipolycon.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mipolycon.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mipolycon.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1455,9 +1455,9 @@ mipolygen.o: ../../../exports/include/X11/Xprotostr.h ../include/screenint.h
 mipolygen.o: ../include/misc.h ../../../exports/include/X11/Xosdefs.h
 mipolygen.o: ../../../exports/include/X11/Xfuncproto.h
 mipolygen.o: ../../../exports/include/X11/Xdefs.h
-mipolygen.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mipolygen.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mipolygen.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-mipolygen.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mipolygen.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mipolygen.o: /usr/include/string.h /usr/include/features.h
 mipolygen.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 mipolygen.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -1471,7 +1471,7 @@ mipolygen.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 mipolygen.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 mipolygen.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 mipolygen.o: /usr/include/limits.h
-mipolygen.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mipolygen.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mipolygen.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mipolygen.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mipolygen.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1495,9 +1495,9 @@ mipolyutil.o: ../../../exports/include/X11/Xfuncproto.h
 mipolyutil.o: ../../../exports/include/X11/Xmd.h
 mipolyutil.o: ../../../exports/include/X11/X.h
 mipolyutil.o: ../../../exports/include/X11/Xdefs.h
-mipolyutil.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mipolyutil.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mipolyutil.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-mipolyutil.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mipolyutil.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mipolyutil.o: /usr/include/string.h /usr/include/features.h
 mipolyutil.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 mipolyutil.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -1511,7 +1511,7 @@ mipolyutil.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 mipolyutil.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 mipolyutil.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 mipolyutil.o: /usr/include/limits.h
-mipolyutil.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mipolyutil.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mipolyutil.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mipolyutil.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mipolyutil.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1537,9 +1537,9 @@ mifillrct.o: ../../../exports/include/X11/Xprotostr.h ../include/screenint.h
 mifillrct.o: ../include/misc.h ../../../exports/include/X11/Xosdefs.h
 mifillrct.o: ../../../exports/include/X11/Xfuncproto.h
 mifillrct.o: ../../../exports/include/X11/Xdefs.h
-mifillrct.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mifillrct.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mifillrct.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-mifillrct.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mifillrct.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mifillrct.o: /usr/include/string.h /usr/include/features.h
 mifillrct.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 mifillrct.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -1553,7 +1553,7 @@ mifillrct.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 mifillrct.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 mifillrct.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 mifillrct.o: /usr/include/limits.h
-mifillrct.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mifillrct.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mifillrct.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mifillrct.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mifillrct.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1576,12 +1576,12 @@ mifillrct.o: ../../../include/fonts/fsmasks.h
 miwideline.o: /usr/include/stdio.h /usr/include/features.h
 miwideline.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 miwideline.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
-miwideline.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+miwideline.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 miwideline.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 miwideline.o: /usr/include/libio.h /usr/include/_G_config.h
 miwideline.o: /usr/include/wchar.h /usr/include/bits/wchar.h
 miwideline.o: /usr/include/gconv.h
-miwideline.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+miwideline.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 miwideline.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 miwideline.o: /usr/include/math.h /usr/include/bits/huge_val.h
 miwideline.o: /usr/include/bits/huge_valf.h /usr/include/bits/huge_vall.h
@@ -1604,7 +1604,7 @@ miwideline.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 miwideline.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 miwideline.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 miwideline.o: /usr/include/limits.h
-miwideline.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+miwideline.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 miwideline.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 miwideline.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 miwideline.o: /usr/include/bits/xopen_lim.h /usr/include/assert.h
@@ -1624,9 +1624,9 @@ mispans.o: ../../../exports/include/X11/Xfuncproto.h
 mispans.o: ../../../exports/include/X11/Xmd.h
 mispans.o: ../../../exports/include/X11/X.h
 mispans.o: ../../../exports/include/X11/Xdefs.h
-mispans.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mispans.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mispans.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-mispans.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mispans.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mispans.o: /usr/include/string.h /usr/include/features.h
 mispans.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 mispans.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -1640,7 +1640,7 @@ mispans.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 mispans.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 mispans.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 mispans.o: /usr/include/limits.h
-mispans.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mispans.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mispans.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mispans.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mispans.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1671,9 +1671,9 @@ miarc.o: ../../../exports/include/X11/Xosdefs.h
 miarc.o: ../../../exports/include/X11/Xfuncproto.h
 miarc.o: ../../../exports/include/X11/X.h
 miarc.o: ../../../exports/include/X11/Xdefs.h
-miarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+miarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 miarc.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-miarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+miarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 miarc.o: /usr/include/string.h /usr/include/xlocale.h
 miarc.o: ../../../exports/include/X11/Xfuncs.h /usr/include/stdlib.h
 miarc.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
@@ -1684,7 +1684,7 @@ miarc.o: /usr/include/sys/select.h /usr/include/bits/select.h
 miarc.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 miarc.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
 miarc.o: /usr/include/alloca.h /usr/include/limits.h
-miarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+miarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 miarc.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 miarc.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 miarc.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1718,9 +1718,9 @@ mizerarc.o: ../../../exports/include/X11/Xosdefs.h
 mizerarc.o: ../../../exports/include/X11/Xfuncproto.h
 mizerarc.o: ../../../exports/include/X11/X.h
 mizerarc.o: ../../../exports/include/X11/Xdefs.h
-mizerarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mizerarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mizerarc.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-mizerarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mizerarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mizerarc.o: /usr/include/string.h /usr/include/xlocale.h
 mizerarc.o: ../../../exports/include/X11/Xfuncs.h /usr/include/stdlib.h
 mizerarc.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
@@ -1731,7 +1731,7 @@ mizerarc.o: /usr/include/sys/select.h /usr/include/bits/select.h
 mizerarc.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 mizerarc.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
 mizerarc.o: /usr/include/alloca.h /usr/include/limits.h
-mizerarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mizerarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mizerarc.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mizerarc.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mizerarc.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1761,9 +1761,9 @@ mifillarc.o: ../../../exports/include/X11/Xosdefs.h
 mifillarc.o: ../../../exports/include/X11/Xfuncproto.h
 mifillarc.o: ../../../exports/include/X11/X.h
 mifillarc.o: ../../../exports/include/X11/Xdefs.h
-mifillarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mifillarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mifillarc.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-mifillarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mifillarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mifillarc.o: /usr/include/string.h /usr/include/xlocale.h
 mifillarc.o: ../../../exports/include/X11/Xfuncs.h /usr/include/stdlib.h
 mifillarc.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
@@ -1774,7 +1774,7 @@ mifillarc.o: /usr/include/sys/select.h /usr/include/bits/select.h
 mifillarc.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 mifillarc.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
 mifillarc.o: /usr/include/alloca.h /usr/include/limits.h
-mifillarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mifillarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mifillarc.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mifillarc.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mifillarc.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1797,9 +1797,9 @@ miwindow.o: ../../../exports/include/X11/Xfuncproto.h
 miwindow.o: ../../../exports/include/X11/Xmd.h
 miwindow.o: ../../../exports/include/X11/X.h
 miwindow.o: ../../../exports/include/X11/Xdefs.h
-miwindow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+miwindow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 miwindow.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-miwindow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+miwindow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 miwindow.o: /usr/include/string.h /usr/include/features.h
 miwindow.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 miwindow.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -1813,7 +1813,7 @@ miwindow.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 miwindow.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 miwindow.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 miwindow.o: /usr/include/limits.h
-miwindow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+miwindow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 miwindow.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 miwindow.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 miwindow.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1842,9 +1842,9 @@ micursor.o: ../../../exports/include/X11/Xfuncproto.h
 micursor.o: ../../../exports/include/X11/Xmd.h
 micursor.o: ../../../exports/include/X11/X.h
 micursor.o: ../../../exports/include/X11/Xdefs.h
-micursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+micursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 micursor.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-micursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+micursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 micursor.o: /usr/include/string.h /usr/include/features.h
 micursor.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 micursor.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -1858,7 +1858,7 @@ micursor.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 micursor.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 micursor.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 micursor.o: /usr/include/limits.h
-micursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+micursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 micursor.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 micursor.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 micursor.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1884,9 +1884,9 @@ miregion.o: ../../../exports/include/X11/Xfuncproto.h
 miregion.o: ../../../exports/include/X11/Xmd.h
 miregion.o: ../../../exports/include/X11/X.h
 miregion.o: ../../../exports/include/X11/Xdefs.h
-miregion.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+miregion.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 miregion.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-miregion.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+miregion.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 miregion.o: /usr/include/string.h /usr/include/features.h
 miregion.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 miregion.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -1900,7 +1900,7 @@ miregion.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 miregion.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 miregion.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 miregion.o: /usr/include/limits.h
-miregion.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+miregion.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 miregion.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 miregion.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 miregion.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1928,9 +1928,9 @@ mipolytext.o: ../../../exports/include/X11/Xosdefs.h
 mipolytext.o: ../../../exports/include/X11/Xfuncproto.h
 mipolytext.o: ../../../exports/include/X11/X.h
 mipolytext.o: ../../../exports/include/X11/Xdefs.h
-mipolytext.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mipolytext.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mipolytext.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-mipolytext.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mipolytext.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mipolytext.o: /usr/include/string.h /usr/include/features.h
 mipolytext.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 mipolytext.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -1944,7 +1944,7 @@ mipolytext.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 mipolytext.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 mipolytext.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 mipolytext.o: /usr/include/limits.h
-mipolytext.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mipolytext.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mipolytext.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mipolytext.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mipolytext.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1975,9 +1975,9 @@ mibitblt.o: ../../../exports/include/X11/Xosdefs.h
 mibitblt.o: ../../../exports/include/X11/Xfuncproto.h
 mibitblt.o: ../../../exports/include/X11/X.h
 mibitblt.o: ../../../exports/include/X11/Xdefs.h
-mibitblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mibitblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mibitblt.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-mibitblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mibitblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mibitblt.o: /usr/include/string.h /usr/include/features.h
 mibitblt.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 mibitblt.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -1991,7 +1991,7 @@ mibitblt.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 mibitblt.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 mibitblt.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 mibitblt.o: /usr/include/limits.h
-mibitblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mibitblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mibitblt.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mibitblt.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mibitblt.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -2025,9 +2025,9 @@ mipolypnt.o: ../../../exports/include/X11/Xosdefs.h
 mipolypnt.o: ../../../exports/include/X11/Xfuncproto.h
 mipolypnt.o: ../../../exports/include/X11/X.h
 mipolypnt.o: ../../../exports/include/X11/Xdefs.h
-mipolypnt.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mipolypnt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mipolypnt.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-mipolypnt.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mipolypnt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mipolypnt.o: /usr/include/string.h /usr/include/features.h
 mipolypnt.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 mipolypnt.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -2041,7 +2041,7 @@ mipolypnt.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 mipolypnt.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 mipolypnt.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 mipolypnt.o: /usr/include/limits.h
-mipolypnt.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mipolypnt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mipolypnt.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mipolypnt.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mipolypnt.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -2071,9 +2071,9 @@ mipushpxl.o: ../../../exports/include/X11/Xprotostr.h ../include/screenint.h
 mipushpxl.o: ../include/misc.h ../../../exports/include/X11/Xosdefs.h
 mipushpxl.o: ../../../exports/include/X11/Xfuncproto.h
 mipushpxl.o: ../../../exports/include/X11/Xdefs.h
-mipushpxl.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mipushpxl.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mipushpxl.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-mipushpxl.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mipushpxl.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mipushpxl.o: /usr/include/string.h /usr/include/features.h
 mipushpxl.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 mipushpxl.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -2087,7 +2087,7 @@ mipushpxl.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 mipushpxl.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 mipushpxl.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 mipushpxl.o: /usr/include/limits.h
-mipushpxl.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mipushpxl.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mipushpxl.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mipushpxl.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mipushpxl.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -2117,9 +2117,9 @@ miexpose.o: ../../../exports/include/X11/Xosdefs.h
 miexpose.o: ../../../exports/include/X11/Xfuncproto.h
 miexpose.o: ../../../exports/include/X11/X.h
 miexpose.o: ../../../exports/include/X11/Xdefs.h
-miexpose.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+miexpose.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 miexpose.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-miexpose.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+miexpose.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 miexpose.o: /usr/include/string.h /usr/include/features.h
 miexpose.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 miexpose.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -2133,7 +2133,7 @@ miexpose.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 miexpose.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 miexpose.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 miexpose.o: /usr/include/limits.h
-miexpose.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+miexpose.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 miexpose.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 miexpose.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 miexpose.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -2169,9 +2169,9 @@ miglblt.o: ../../../exports/include/X11/Xosdefs.h
 miglblt.o: ../../../exports/include/X11/Xfuncproto.h
 miglblt.o: ../../../exports/include/X11/X.h
 miglblt.o: ../../../exports/include/X11/Xdefs.h
-miglblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+miglblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 miglblt.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-miglblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+miglblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 miglblt.o: /usr/include/string.h /usr/include/features.h
 miglblt.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 miglblt.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -2185,7 +2185,7 @@ miglblt.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 miglblt.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 miglblt.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 miglblt.o: /usr/include/limits.h
-miglblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+miglblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 miglblt.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 miglblt.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 miglblt.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -2217,9 +2217,9 @@ mizerline.o: ../../../exports/include/X11/Xfuncproto.h
 mizerline.o: ../../../exports/include/X11/Xmd.h
 mizerline.o: ../../../exports/include/X11/X.h
 mizerline.o: ../../../exports/include/X11/Xdefs.h
-mizerline.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mizerline.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mizerline.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-mizerline.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mizerline.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mizerline.o: /usr/include/string.h /usr/include/features.h
 mizerline.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 mizerline.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -2233,7 +2233,7 @@ mizerline.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 mizerline.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 mizerline.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 mizerline.o: /usr/include/limits.h
-mizerline.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mizerline.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mizerline.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mizerline.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mizerline.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -2264,9 +2264,9 @@ mizerclip.o: ../../../exports/include/X11/Xfuncproto.h
 mizerclip.o: ../../../exports/include/X11/Xmd.h
 mizerclip.o: ../../../exports/include/X11/X.h
 mizerclip.o: ../../../exports/include/X11/Xdefs.h
-mizerclip.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mizerclip.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mizerclip.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-mizerclip.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mizerclip.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mizerclip.o: /usr/include/string.h /usr/include/features.h
 mizerclip.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 mizerclip.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -2280,7 +2280,7 @@ mizerclip.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 mizerclip.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 mizerclip.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 mizerclip.o: /usr/include/limits.h
-mizerclip.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mizerclip.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mizerclip.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mizerclip.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mizerclip.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -2321,9 +2321,9 @@ mifpolycon.o: ../../../exports/include/X11/Xprotostr.h ../include/screenint.h
 mifpolycon.o: ../include/misc.h ../../../exports/include/X11/Xosdefs.h
 mifpolycon.o: ../../../exports/include/X11/Xfuncproto.h
 mifpolycon.o: ../../../exports/include/X11/Xdefs.h
-mifpolycon.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mifpolycon.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mifpolycon.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-mifpolycon.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mifpolycon.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mifpolycon.o: /usr/include/string.h /usr/include/xlocale.h
 mifpolycon.o: ../../../exports/include/X11/Xfuncs.h /usr/include/stdlib.h
 mifpolycon.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
@@ -2334,7 +2334,7 @@ mifpolycon.o: /usr/include/sys/select.h /usr/include/bits/select.h
 mifpolycon.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 mifpolycon.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
 mifpolycon.o: /usr/include/alloca.h /usr/include/limits.h
-mifpolycon.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mifpolycon.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mifpolycon.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mifpolycon.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mifpolycon.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -2354,9 +2354,9 @@ midash.o: ../../../exports/include/X11/Xosdefs.h
 midash.o: ../../../exports/include/X11/Xfuncproto.h
 midash.o: ../../../exports/include/X11/Xmd.h ../../../exports/include/X11/X.h
 midash.o: ../../../exports/include/X11/Xdefs.h
-midash.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+midash.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 midash.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-midash.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+midash.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 midash.o: /usr/include/string.h /usr/include/features.h
 midash.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 midash.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -2370,7 +2370,7 @@ midash.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 midash.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 midash.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 midash.o: /usr/include/limits.h
-midash.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+midash.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 midash.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 midash.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 midash.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -2398,9 +2398,9 @@ mibstore.o: ../../../exports/include/X11/Xosdefs.h
 mibstore.o: ../../../exports/include/X11/Xfuncproto.h
 mibstore.o: ../../../exports/include/X11/X.h
 mibstore.o: ../../../exports/include/X11/Xdefs.h
-mibstore.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mibstore.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mibstore.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-mibstore.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mibstore.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mibstore.o: /usr/include/string.h /usr/include/features.h
 mibstore.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 mibstore.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -2414,7 +2414,7 @@ mibstore.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 mibstore.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 mibstore.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 mibstore.o: /usr/include/limits.h
-mibstore.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mibstore.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mibstore.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mibstore.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mibstore.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -2450,9 +2450,9 @@ mibank.o: ../../../exports/include/X11/Xprotostr.h ../include/screenint.h
 mibank.o: ../include/misc.h ../../../exports/include/X11/Xosdefs.h
 mibank.o: ../../../exports/include/X11/Xfuncproto.h
 mibank.o: ../../../exports/include/X11/Xdefs.h
-mibank.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mibank.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mibank.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-mibank.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mibank.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mibank.o: /usr/include/string.h /usr/include/features.h
 mibank.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 mibank.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -2466,7 +2466,7 @@ mibank.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 mibank.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 mibank.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 mibank.o: /usr/include/limits.h
-mibank.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mibank.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mibank.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mibank.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mibank.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -2494,9 +2494,9 @@ mieq.o: ../../../exports/include/X11/Xprotostr.h ../include/misc.h
 mieq.o: ../../../exports/include/X11/Xosdefs.h
 mieq.o: ../../../exports/include/X11/Xfuncproto.h
 mieq.o: ../../../exports/include/X11/X.h ../../../exports/include/X11/Xdefs.h
-mieq.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../include/os.h
+mieq.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h ../include/os.h
 mieq.o: ../../../exports/include/X11/Xalloca.h
-mieq.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mieq.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mieq.o: /usr/include/string.h /usr/include/features.h
 mieq.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 mieq.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -2510,7 +2510,7 @@ mieq.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 mieq.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 mieq.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 mieq.o: /usr/include/limits.h
-mieq.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mieq.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mieq.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mieq.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mieq.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -2542,9 +2542,9 @@ mipointer.o: ../../../exports/include/X11/Xosdefs.h
 mipointer.o: ../../../exports/include/X11/Xfuncproto.h
 mipointer.o: ../../../exports/include/X11/X.h
 mipointer.o: ../../../exports/include/X11/Xdefs.h
-mipointer.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mipointer.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mipointer.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-mipointer.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mipointer.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mipointer.o: /usr/include/string.h /usr/include/features.h
 mipointer.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 mipointer.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -2558,7 +2558,7 @@ mipointer.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 mipointer.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 mipointer.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 mipointer.o: /usr/include/limits.h
-mipointer.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mipointer.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mipointer.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mipointer.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mipointer.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -2590,9 +2590,9 @@ misprite.o: ../../../exports/include/X11/Xosdefs.h
 misprite.o: ../../../exports/include/X11/Xfuncproto.h
 misprite.o: ../../../exports/include/X11/X.h
 misprite.o: ../../../exports/include/X11/Xdefs.h
-misprite.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+misprite.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 misprite.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-misprite.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+misprite.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 misprite.o: /usr/include/string.h /usr/include/features.h
 misprite.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 misprite.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -2606,7 +2606,7 @@ misprite.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 misprite.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 misprite.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 misprite.o: /usr/include/limits.h
-misprite.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+misprite.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 misprite.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 misprite.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 misprite.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -2644,9 +2644,9 @@ midispcur.o: ../../../exports/include/X11/Xfuncproto.h
 midispcur.o: ../../../exports/include/X11/Xmd.h
 midispcur.o: ../../../exports/include/X11/X.h
 midispcur.o: ../../../exports/include/X11/Xdefs.h
-midispcur.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+midispcur.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 midispcur.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-midispcur.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+midispcur.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 midispcur.o: /usr/include/string.h /usr/include/features.h
 midispcur.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 midispcur.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -2660,7 +2660,7 @@ midispcur.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 midispcur.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 midispcur.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 midispcur.o: /usr/include/limits.h
-midispcur.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+midispcur.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 midispcur.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 midispcur.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 midispcur.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -2696,9 +2696,9 @@ miscrinit.o: ../../../exports/include/X11/Xfuncproto.h
 miscrinit.o: ../../../exports/include/X11/Xmd.h
 miscrinit.o: ../../../exports/include/X11/X.h
 miscrinit.o: ../../../exports/include/X11/Xdefs.h
-miscrinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+miscrinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 miscrinit.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-miscrinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+miscrinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 miscrinit.o: /usr/include/string.h /usr/include/features.h
 miscrinit.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 miscrinit.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -2712,7 +2712,7 @@ miscrinit.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 miscrinit.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 miscrinit.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 miscrinit.o: /usr/include/limits.h
-miscrinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+miscrinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 miscrinit.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 miscrinit.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 miscrinit.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -2740,9 +2740,9 @@ miclipn.o: ../../../exports/include/X11/Xfuncproto.h
 miclipn.o: ../../../exports/include/X11/Xmd.h
 miclipn.o: ../../../exports/include/X11/X.h
 miclipn.o: ../../../exports/include/X11/Xdefs.h
-miclipn.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+miclipn.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 miclipn.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-miclipn.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+miclipn.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 miclipn.o: /usr/include/string.h /usr/include/features.h
 miclipn.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 miclipn.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -2756,7 +2756,7 @@ miclipn.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 miclipn.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 miclipn.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 miclipn.o: /usr/include/limits.h
-miclipn.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+miclipn.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 miclipn.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 miclipn.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 miclipn.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -2783,9 +2783,9 @@ migc.o: ../../../exports/include/X11/Xosdefs.h
 migc.o: ../../../exports/include/X11/Xfuncproto.h
 migc.o: ../../../exports/include/X11/Xmd.h ../../../exports/include/X11/X.h
 migc.o: ../../../exports/include/X11/Xdefs.h
-migc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../include/os.h
+migc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h ../include/os.h
 migc.o: ../../../exports/include/X11/Xalloca.h
-migc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+migc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 migc.o: /usr/include/string.h /usr/include/features.h
 migc.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 migc.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -2799,7 +2799,7 @@ migc.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 migc.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 migc.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 migc.o: /usr/include/limits.h
-migc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+migc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 migc.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 migc.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 migc.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -2829,9 +2829,9 @@ micmap.o: ../../../exports/include/X11/Xosdefs.h
 micmap.o: ../../../exports/include/X11/Xfuncproto.h
 micmap.o: ../../../exports/include/X11/X.h
 micmap.o: ../../../exports/include/X11/Xdefs.h
-micmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+micmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 micmap.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-micmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+micmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 micmap.o: /usr/include/string.h /usr/include/features.h
 micmap.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 micmap.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -2845,7 +2845,7 @@ micmap.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 micmap.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 micmap.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 micmap.o: /usr/include/limits.h
-micmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+micmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 micmap.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 micmap.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 micmap.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -2872,9 +2872,9 @@ mioverlay.o: ../../../exports/include/X11/Xfuncproto.h
 mioverlay.o: ../../../exports/include/X11/Xmd.h
 mioverlay.o: ../../../exports/include/X11/X.h
 mioverlay.o: ../../../exports/include/X11/Xdefs.h
-mioverlay.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mioverlay.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mioverlay.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-mioverlay.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mioverlay.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mioverlay.o: /usr/include/string.h /usr/include/features.h
 mioverlay.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 mioverlay.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -2888,7 +2888,7 @@ mioverlay.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 mioverlay.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 mioverlay.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 mioverlay.o: /usr/include/limits.h
-mioverlay.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mioverlay.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mioverlay.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mioverlay.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mioverlay.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h

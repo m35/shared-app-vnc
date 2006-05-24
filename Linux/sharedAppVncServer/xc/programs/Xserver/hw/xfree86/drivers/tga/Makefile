@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1268,10 +1268,10 @@ tga_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 tga_driver.o: ../../../../../../programs/Xserver/include/os.h
 tga_driver.o: ../../../../../../exports/include/X11/Xalloca.h
 tga_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tga_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+tga_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 tga_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tga_driver.o: ../../../../../../exports/include/X11/Xfuncs.h
-tga_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+tga_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 tga_driver.o: ../../../../../../programs/Xserver/include/input.h
 tga_driver.o: ../../../../../../programs/Xserver/include/screenint.h
 tga_driver.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1353,10 +1353,10 @@ tga_dac.o: ../../../../../../exports/include/X11/Xdefs.h
 tga_dac.o: ../../../../../../programs/Xserver/include/os.h
 tga_dac.o: ../../../../../../exports/include/X11/Xalloca.h
 tga_dac.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tga_dac.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+tga_dac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 tga_dac.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tga_dac.o: ../../../../../../exports/include/X11/Xfuncs.h
-tga_dac.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+tga_dac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 tga_dac.o: ../../../../../../programs/Xserver/include/input.h
 tga_dac.o: ../../../../../../programs/Xserver/include/screenint.h
 tga_dac.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1417,10 +1417,10 @@ tga_accel.o: ../../../../../../exports/include/X11/Xdefs.h
 tga_accel.o: ../../../../../../programs/Xserver/include/os.h
 tga_accel.o: ../../../../../../exports/include/X11/Xalloca.h
 tga_accel.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tga_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+tga_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 tga_accel.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tga_accel.o: ../../../../../../exports/include/X11/Xfuncs.h
-tga_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+tga_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 tga_accel.o: ../../../../../../programs/Xserver/include/regionstr.h
 tga_accel.o: ../../../../../../programs/Xserver/include/miscstruct.h
 tga_accel.o: ../../../../../../exports/include/X11/Xprotostr.h
@@ -1491,10 +1491,10 @@ BTramdac.o: ../../../../../../exports/include/X11/Xdefs.h
 BTramdac.o: ../../../../../../programs/Xserver/include/os.h
 BTramdac.o: ../../../../../../exports/include/X11/Xalloca.h
 BTramdac.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-BTramdac.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+BTramdac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 BTramdac.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 BTramdac.o: ../../../../../../exports/include/X11/Xfuncs.h
-BTramdac.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+BTramdac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 BTramdac.o: ../../../../../../programs/Xserver/include/input.h
 BTramdac.o: ../../../../../../programs/Xserver/include/screenint.h
 BTramdac.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1554,10 +1554,10 @@ BT463ramdac.o: ../../../../../../exports/include/X11/Xdefs.h
 BT463ramdac.o: ../../../../../../programs/Xserver/include/os.h
 BT463ramdac.o: ../../../../../../exports/include/X11/Xalloca.h
 BT463ramdac.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-BT463ramdac.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+BT463ramdac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 BT463ramdac.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 BT463ramdac.o: ../../../../../../exports/include/X11/Xfuncs.h
-BT463ramdac.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+BT463ramdac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 BT463ramdac.o: ../../../../../../programs/Xserver/include/input.h
 BT463ramdac.o: ../../../../../../programs/Xserver/include/screenint.h
 BT463ramdac.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1616,10 +1616,10 @@ tga_cursor.o: ../../../../../../exports/include/X11/Xdefs.h
 tga_cursor.o: ../../../../../../programs/Xserver/include/os.h
 tga_cursor.o: ../../../../../../exports/include/X11/Xalloca.h
 tga_cursor.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tga_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+tga_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 tga_cursor.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tga_cursor.o: ../../../../../../exports/include/X11/Xfuncs.h
-tga_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+tga_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 tga_cursor.o: ../../../../../../programs/Xserver/include/input.h
 tga_cursor.o: ../../../../../../programs/Xserver/include/screenint.h
 tga_cursor.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1675,10 +1675,10 @@ tga_line.o: ../../../../../../exports/include/X11/Xdefs.h
 tga_line.o: ../../../../../../programs/Xserver/include/os.h
 tga_line.o: ../../../../../../exports/include/X11/Xalloca.h
 tga_line.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tga_line.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+tga_line.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 tga_line.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tga_line.o: ../../../../../../exports/include/X11/Xfuncs.h
-tga_line.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+tga_line.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 tga_line.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 tga_line.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 tga_line.o: ../../../../../../programs/Xserver/include/input.h
@@ -1738,10 +1738,10 @@ tga_seg.o: ../../../../../../exports/include/X11/Xdefs.h
 tga_seg.o: ../../../../../../programs/Xserver/include/os.h
 tga_seg.o: ../../../../../../exports/include/X11/Xalloca.h
 tga_seg.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tga_seg.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+tga_seg.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 tga_seg.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tga_seg.o: ../../../../../../exports/include/X11/Xfuncs.h
-tga_seg.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+tga_seg.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 tga_seg.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 tga_seg.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 tga_seg.o: ../../../../../../programs/Xserver/include/input.h
@@ -1802,10 +1802,10 @@ IBM561ramdac.o: ../../../../../../exports/include/X11/Xdefs.h
 IBM561ramdac.o: ../../../../../../programs/Xserver/include/os.h
 IBM561ramdac.o: ../../../../../../exports/include/X11/Xalloca.h
 IBM561ramdac.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-IBM561ramdac.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+IBM561ramdac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 IBM561ramdac.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 IBM561ramdac.o: ../../../../../../exports/include/X11/Xfuncs.h
-IBM561ramdac.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+IBM561ramdac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 IBM561ramdac.o: ../../../../../../programs/Xserver/include/input.h
 IBM561ramdac.o: ../../../../../../programs/Xserver/include/screenint.h
 IBM561ramdac.o: ../../../../../../exports/include/X11/Xproto.h

@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1133,7 +1133,7 @@ fsconvert.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 fsconvert.o: /usr/include/features.h /usr/include/sys/cdefs.h
 fsconvert.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 fsconvert.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-fsconvert.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fsconvert.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 fsconvert.o: /usr/include/bits/typesizes.h /usr/include/time.h
 fsconvert.o: /usr/include/endian.h /usr/include/bits/endian.h
 fsconvert.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1148,7 +1148,7 @@ fsconvert.o: /usr/include/getopt.h /usr/include/sys/time.h
 fsconvert.o: ../../../exports/include/X11/Xarch.h /usr/include/sys/socket.h
 fsconvert.o: /usr/include/sys/uio.h /usr/include/bits/uio.h
 fsconvert.o: /usr/include/bits/socket.h /usr/include/limits.h
-fsconvert.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+fsconvert.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 fsconvert.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 fsconvert.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 fsconvert.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1164,7 +1164,7 @@ fsconvert.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 fsconvert.o: /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h
 fsconvert.o: /usr/include/_G_config.h /usr/include/wchar.h
 fsconvert.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-fsconvert.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fsconvert.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 fsconvert.o: /usr/include/bits/sys_errlist.h
 fsconvert.o: ../../../include/fonts/fontstruct.h
 fsconvert.o: ../../../exports/include/X11/Xproto.h
@@ -1180,7 +1180,7 @@ fserve.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 fserve.o: /usr/include/features.h /usr/include/sys/cdefs.h
 fserve.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 fserve.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-fserve.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fserve.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 fserve.o: /usr/include/bits/typesizes.h /usr/include/time.h
 fserve.o: /usr/include/endian.h /usr/include/bits/endian.h
 fserve.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1195,7 +1195,7 @@ fserve.o: /usr/include/sys/time.h ../../../exports/include/X11/Xarch.h
 fserve.o: /usr/include/sys/socket.h /usr/include/sys/uio.h
 fserve.o: /usr/include/bits/uio.h /usr/include/bits/socket.h
 fserve.o: /usr/include/limits.h
-fserve.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+fserve.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 fserve.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 fserve.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 fserve.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1212,7 +1212,7 @@ fserve.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 fserve.o: /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h
 fserve.o: /usr/include/_G_config.h /usr/include/wchar.h
 fserve.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-fserve.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fserve.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 fserve.o: /usr/include/bits/sys_errlist.h ../../../include/fonts/fontstruct.h
 fserve.o: ../../../exports/include/X11/Xproto.h
 fserve.o: ../../../exports/include/X11/Xprotostr.h
@@ -1227,7 +1227,7 @@ fsio.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 fsio.o: /usr/include/features.h /usr/include/sys/cdefs.h
 fsio.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 fsio.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-fsio.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fsio.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 fsio.o: /usr/include/bits/typesizes.h /usr/include/time.h
 fsio.o: /usr/include/endian.h /usr/include/bits/endian.h
 fsio.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1242,7 +1242,7 @@ fsio.o: /usr/include/sys/time.h ../../../exports/include/X11/Xarch.h
 fsio.o: /usr/include/sys/socket.h /usr/include/sys/uio.h
 fsio.o: /usr/include/bits/uio.h /usr/include/bits/socket.h
 fsio.o: /usr/include/limits.h
-fsio.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+fsio.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 fsio.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 fsio.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 fsio.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1258,7 +1258,7 @@ fsio.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 fsio.o: /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h
 fsio.o: /usr/include/_G_config.h /usr/include/wchar.h
 fsio.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-fsio.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fsio.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 fsio.o: /usr/include/bits/sys_errlist.h ../../../include/fonts/fontstruct.h
 fsio.o: ../../../exports/include/X11/Xproto.h
 fsio.o: ../../../exports/include/X11/Xprotostr.h
@@ -1273,7 +1273,7 @@ fsio.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
 transport.o: /usr/include/stdlib.h /usr/include/features.h
 transport.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 transport.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
-transport.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+transport.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 transport.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 transport.o: /usr/include/endian.h /usr/include/bits/endian.h
 transport.o: /usr/include/xlocale.h /usr/include/sys/types.h
@@ -1294,7 +1294,7 @@ transport.o: /usr/include/getopt.h /usr/include/sys/time.h
 transport.o: ../../../exports/include/X11/Xarch.h /usr/include/sys/socket.h
 transport.o: /usr/include/sys/uio.h /usr/include/bits/uio.h
 transport.o: /usr/include/bits/socket.h /usr/include/limits.h
-transport.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+transport.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 transport.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 transport.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 transport.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1303,7 +1303,7 @@ transport.o: /usr/include/asm/sockios.h /usr/include/stdio.h
 transport.o: /usr/include/libio.h /usr/include/_G_config.h
 transport.o: /usr/include/wchar.h /usr/include/bits/wchar.h
 transport.o: /usr/include/gconv.h
-transport.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+transport.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 transport.o: /usr/include/bits/sys_errlist.h /usr/include/errno.h
 transport.o: /usr/include/bits/errno.h /usr/include/linux/errno.h
 transport.o: /usr/include/asm/errno.h /usr/include/netinet/in.h

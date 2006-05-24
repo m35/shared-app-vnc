@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1263,7 +1263,7 @@ bdfread.o: /usr/include/ctype.h /usr/include/features.h
 bdfread.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 bdfread.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
 bdfread.o: /usr/include/bits/types.h
-bdfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+bdfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 bdfread.o: /usr/include/bits/typesizes.h /usr/include/endian.h
 bdfread.o: /usr/include/bits/endian.h /usr/include/xlocale.h
 bdfread.o: ../include/fntfilst.h ../../../exports/include/X11/Xos.h
@@ -1283,7 +1283,7 @@ bdfread.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 bdfread.o: /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h
 bdfread.o: /usr/include/_G_config.h /usr/include/wchar.h
 bdfread.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-bdfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+bdfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 bdfread.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 bdfread.o: ../../../exports/include/X11/Xdefs.h
 bdfread.o: ../../../include/fonts/fontstruct.h
@@ -1302,13 +1302,13 @@ bdfutils.o: /usr/include/ctype.h /usr/include/features.h
 bdfutils.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 bdfutils.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
 bdfutils.o: /usr/include/bits/types.h
-bdfutils.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+bdfutils.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 bdfutils.o: /usr/include/bits/typesizes.h /usr/include/endian.h
 bdfutils.o: /usr/include/bits/endian.h /usr/include/xlocale.h
 bdfutils.o: /usr/include/stdio.h /usr/include/libio.h
 bdfutils.o: /usr/include/_G_config.h /usr/include/wchar.h
 bdfutils.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-bdfutils.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+bdfutils.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 bdfutils.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 bdfutils.o: ../include/fntfilst.h ../../../exports/include/X11/Xos.h
 bdfutils.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
@@ -1342,7 +1342,7 @@ bitmap.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 bitmap.o: /usr/include/features.h /usr/include/sys/cdefs.h
 bitmap.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 bitmap.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-bitmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+bitmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 bitmap.o: /usr/include/bits/typesizes.h /usr/include/time.h
 bitmap.o: /usr/include/endian.h /usr/include/bits/endian.h
 bitmap.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1359,7 +1359,7 @@ bitmap.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 bitmap.o: /usr/include/bits/waitstatus.h /usr/include/alloca.h
 bitmap.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
 bitmap.o: /usr/include/wchar.h /usr/include/bits/wchar.h /usr/include/gconv.h
-bitmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+bitmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 bitmap.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 bitmap.o: ../../../exports/include/X11/Xdefs.h
 bitmap.o: ../../../include/fonts/fontstruct.h
@@ -1378,7 +1378,7 @@ bitmaputil.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 bitmaputil.o: /usr/include/features.h /usr/include/sys/cdefs.h
 bitmaputil.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 bitmaputil.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-bitmaputil.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+bitmaputil.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 bitmaputil.o: /usr/include/bits/typesizes.h /usr/include/time.h
 bitmaputil.o: /usr/include/endian.h /usr/include/bits/endian.h
 bitmaputil.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1396,7 +1396,7 @@ bitmaputil.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 bitmaputil.o: /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h
 bitmaputil.o: /usr/include/_G_config.h /usr/include/wchar.h
 bitmaputil.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-bitmaputil.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+bitmaputil.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 bitmaputil.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 bitmaputil.o: ../../../exports/include/X11/Xdefs.h
 bitmaputil.o: ../../../include/fonts/fontstruct.h
@@ -1416,7 +1416,7 @@ bitscale.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 bitscale.o: /usr/include/features.h /usr/include/sys/cdefs.h
 bitscale.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 bitscale.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-bitscale.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+bitscale.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 bitscale.o: /usr/include/bits/typesizes.h /usr/include/time.h
 bitscale.o: /usr/include/endian.h /usr/include/bits/endian.h
 bitscale.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1434,7 +1434,7 @@ bitscale.o: /usr/include/bits/waitstatus.h /usr/include/alloca.h
 bitscale.o: /usr/include/stdio.h /usr/include/libio.h
 bitscale.o: /usr/include/_G_config.h /usr/include/wchar.h
 bitscale.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-bitscale.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+bitscale.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 bitscale.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 bitscale.o: ../../../exports/include/X11/Xdefs.h
 bitscale.o: ../../../include/fonts/fontstruct.h
@@ -1458,7 +1458,7 @@ bitmapfunc.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 bitmapfunc.o: /usr/include/features.h /usr/include/sys/cdefs.h
 bitmapfunc.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 bitmapfunc.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-bitmapfunc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+bitmapfunc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 bitmapfunc.o: /usr/include/bits/typesizes.h /usr/include/time.h
 bitmapfunc.o: /usr/include/endian.h /usr/include/bits/endian.h
 bitmapfunc.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1476,7 +1476,7 @@ bitmapfunc.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 bitmapfunc.o: /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h
 bitmapfunc.o: /usr/include/_G_config.h /usr/include/wchar.h
 bitmapfunc.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-bitmapfunc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+bitmapfunc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 bitmapfunc.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 bitmapfunc.o: ../../../exports/include/X11/Xdefs.h
 bitmapfunc.o: ../../../include/fonts/fontstruct.h
@@ -1497,7 +1497,7 @@ pcfread.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 pcfread.o: /usr/include/features.h /usr/include/sys/cdefs.h
 pcfread.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 pcfread.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-pcfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+pcfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 pcfread.o: /usr/include/bits/typesizes.h /usr/include/time.h
 pcfread.o: /usr/include/endian.h /usr/include/bits/endian.h
 pcfread.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1515,7 +1515,7 @@ pcfread.o: /usr/include/bits/waitstatus.h /usr/include/alloca.h
 pcfread.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
 pcfread.o: /usr/include/wchar.h /usr/include/bits/wchar.h
 pcfread.o: /usr/include/gconv.h
-pcfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+pcfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 pcfread.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 pcfread.o: ../../../exports/include/X11/Xdefs.h
 pcfread.o: ../../../include/fonts/fontstruct.h
@@ -1534,7 +1534,7 @@ pcfwrite.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 pcfwrite.o: /usr/include/features.h /usr/include/sys/cdefs.h
 pcfwrite.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 pcfwrite.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-pcfwrite.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+pcfwrite.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 pcfwrite.o: /usr/include/bits/typesizes.h /usr/include/time.h
 pcfwrite.o: /usr/include/endian.h /usr/include/bits/endian.h
 pcfwrite.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1552,7 +1552,7 @@ pcfwrite.o: /usr/include/bits/waitstatus.h /usr/include/alloca.h
 pcfwrite.o: /usr/include/stdio.h /usr/include/libio.h
 pcfwrite.o: /usr/include/_G_config.h /usr/include/wchar.h
 pcfwrite.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-pcfwrite.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+pcfwrite.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 pcfwrite.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 pcfwrite.o: ../../../exports/include/X11/Xdefs.h
 pcfwrite.o: ../../../include/fonts/fontstruct.h
@@ -1571,7 +1571,7 @@ snfread.o: /usr/include/ctype.h /usr/include/features.h
 snfread.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 snfread.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
 snfread.o: /usr/include/bits/types.h
-snfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+snfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 snfread.o: /usr/include/bits/typesizes.h /usr/include/endian.h
 snfread.o: /usr/include/bits/endian.h /usr/include/xlocale.h
 snfread.o: ../include/fntfilst.h ../../../exports/include/X11/Xos.h
@@ -1591,7 +1591,7 @@ snfread.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 snfread.o: /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h
 snfread.o: /usr/include/_G_config.h /usr/include/wchar.h
 snfread.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-snfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+snfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 snfread.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 snfread.o: ../../../exports/include/X11/Xdefs.h
 snfread.o: ../../../include/fonts/fontstruct.h
@@ -1611,7 +1611,7 @@ fontink.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 fontink.o: /usr/include/features.h /usr/include/sys/cdefs.h
 fontink.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 fontink.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-fontink.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fontink.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 fontink.o: /usr/include/bits/typesizes.h /usr/include/time.h
 fontink.o: /usr/include/endian.h /usr/include/bits/endian.h
 fontink.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1629,7 +1629,7 @@ fontink.o: /usr/include/bits/waitstatus.h /usr/include/alloca.h
 fontink.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
 fontink.o: /usr/include/wchar.h /usr/include/bits/wchar.h
 fontink.o: /usr/include/gconv.h
-fontink.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fontink.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 fontink.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 fontink.o: ../../../exports/include/X11/Xdefs.h
 fontink.o: ../../../include/fonts/fontstruct.h

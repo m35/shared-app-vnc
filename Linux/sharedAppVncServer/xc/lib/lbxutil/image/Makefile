@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1078,7 +1078,7 @@ dfaxg42d.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 dfaxg42d.o: /usr/include/features.h /usr/include/sys/cdefs.h
 dfaxg42d.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 dfaxg42d.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-dfaxg42d.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+dfaxg42d.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 dfaxg42d.o: /usr/include/bits/typesizes.h /usr/include/time.h
 dfaxg42d.o: /usr/include/endian.h /usr/include/bits/endian.h
 dfaxg42d.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1100,7 +1100,7 @@ dpackbits.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 dpackbits.o: /usr/include/features.h /usr/include/sys/cdefs.h
 dpackbits.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 dpackbits.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-dpackbits.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+dpackbits.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 dpackbits.o: /usr/include/bits/typesizes.h /usr/include/time.h
 dpackbits.o: /usr/include/endian.h /usr/include/bits/endian.h
 dpackbits.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1120,7 +1120,7 @@ efaxg42d.o: ../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 efaxg42d.o: /usr/include/features.h /usr/include/sys/cdefs.h
 efaxg42d.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 efaxg42d.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-efaxg42d.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+efaxg42d.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 efaxg42d.o: /usr/include/bits/typesizes.h /usr/include/time.h
 efaxg42d.o: /usr/include/endian.h /usr/include/bits/endian.h
 efaxg42d.o: /usr/include/sys/select.h /usr/include/bits/select.h

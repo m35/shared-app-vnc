@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1246,11 +1246,11 @@ bdfread.o: ../../include/fntfil.h ../../include/fontutil.h
 bdfread.o: ../../include/bitmap.h ../../include/fntfilio.h
 bdfread.o: ../../include/bufio.h
 bdfread.o: ../../../../programs/Xserver/include/xf86_ansic.h
-bdfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+bdfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 bdfread.o: ../../../../programs/Xserver/include/xf86_libc.h
 bdfread.o: ../../../../exports/include/X11/Xfuncs.h
 bdfread.o: ../../../../exports/include/X11/Xosdefs.h
-bdfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../bdfint.h
+bdfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h ../bdfint.h
 bdfutils.o: ../../include/fntfilst.h ../../include/fontmisc.h
 bdfutils.o: ../../../../exports/include/X11/Xdefs.h
 bdfutils.o: ../../../../include/fonts/fontstruct.h
@@ -1267,11 +1267,11 @@ bdfutils.o: ../../../../exports/include/X11/fonts/fsmasks.h
 bdfutils.o: ../../include/fntfil.h ../../include/bitmap.h
 bdfutils.o: ../../include/fntfilio.h ../../include/bufio.h
 bdfutils.o: ../../../../programs/Xserver/include/xf86_ansic.h
-bdfutils.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+bdfutils.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 bdfutils.o: ../../../../programs/Xserver/include/xf86_libc.h
 bdfutils.o: ../../../../exports/include/X11/Xfuncs.h
 bdfutils.o: ../../../../exports/include/X11/Xosdefs.h
-bdfutils.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../bdfint.h
+bdfutils.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h ../bdfint.h
 bitmap.o: ../../include/fntfilst.h ../../include/fontmisc.h
 bitmap.o: ../../../../exports/include/X11/Xdefs.h
 bitmap.o: ../../../../include/fonts/fontstruct.h
@@ -1288,11 +1288,11 @@ bitmap.o: ../../../../exports/include/X11/fonts/fsmasks.h
 bitmap.o: ../../include/fntfil.h ../../include/bitmap.h
 bitmap.o: ../../include/fntfilio.h ../../include/bufio.h
 bitmap.o: ../../../../programs/Xserver/include/xf86_ansic.h
-bitmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+bitmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 bitmap.o: ../../../../programs/Xserver/include/xf86_libc.h
 bitmap.o: ../../../../exports/include/X11/Xfuncs.h
 bitmap.o: ../../../../exports/include/X11/Xosdefs.h
-bitmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+bitmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 bitmaputil.o: ../../include/fntfilst.h ../../include/fontmisc.h
 bitmaputil.o: ../../../../exports/include/X11/Xdefs.h
 bitmaputil.o: ../../../../include/fonts/fontstruct.h
@@ -1309,11 +1309,11 @@ bitmaputil.o: ../../../../exports/include/X11/fonts/fsmasks.h
 bitmaputil.o: ../../include/fntfil.h ../../include/bitmap.h
 bitmaputil.o: ../../include/fntfilio.h ../../include/bufio.h
 bitmaputil.o: ../../../../programs/Xserver/include/xf86_ansic.h
-bitmaputil.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+bitmaputil.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 bitmaputil.o: ../../../../programs/Xserver/include/xf86_libc.h
 bitmaputil.o: ../../../../exports/include/X11/Xfuncs.h
 bitmaputil.o: ../../../../exports/include/X11/Xosdefs.h
-bitmaputil.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+bitmaputil.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 bitmaputil.o: ../bdfint.h
 bitscale.o: ../../include/fntfilst.h ../../include/fontmisc.h
 bitscale.o: ../../../../exports/include/X11/Xdefs.h
@@ -1331,11 +1331,11 @@ bitscale.o: ../../../../exports/include/X11/fonts/fsmasks.h
 bitscale.o: ../../include/fntfil.h ../../include/bitmap.h
 bitscale.o: ../../include/fntfilio.h ../../include/bufio.h
 bitscale.o: ../../../../programs/Xserver/include/xf86_ansic.h
-bitscale.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+bitscale.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 bitscale.o: ../../../../programs/Xserver/include/xf86_libc.h
 bitscale.o: ../../../../exports/include/X11/Xfuncs.h
 bitscale.o: ../../../../exports/include/X11/Xosdefs.h
-bitscale.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+bitscale.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 bitscale.o: ../../include/fontutil.h
 bitmapfunc.o: ../../include/fntfilst.h ../../include/fontmisc.h
 bitmapfunc.o: ../../../../exports/include/X11/Xdefs.h
@@ -1353,11 +1353,11 @@ bitmapfunc.o: ../../../../exports/include/X11/fonts/fsmasks.h
 bitmapfunc.o: ../../include/fntfil.h ../../include/bitmap.h
 bitmapfunc.o: ../../include/fntfilio.h ../../include/bufio.h
 bitmapfunc.o: ../../../../programs/Xserver/include/xf86_ansic.h
-bitmapfunc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+bitmapfunc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 bitmapfunc.o: ../../../../programs/Xserver/include/xf86_libc.h
 bitmapfunc.o: ../../../../exports/include/X11/Xfuncs.h
 bitmapfunc.o: ../../../../exports/include/X11/Xosdefs.h
-bitmapfunc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+bitmapfunc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 bitmapfunc.o: ../../include/fontutil.h ../bdfint.h ../pcf.h ../snfstr.h
 pcfread.o: ../../include/fntfilst.h ../../include/fontmisc.h
 pcfread.o: ../../../../exports/include/X11/Xdefs.h
@@ -1375,11 +1375,11 @@ pcfread.o: ../../../../exports/include/X11/fonts/fsmasks.h
 pcfread.o: ../../include/fntfil.h ../../include/bitmap.h
 pcfread.o: ../../include/fntfilio.h ../../include/bufio.h
 pcfread.o: ../../../../programs/Xserver/include/xf86_ansic.h
-pcfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+pcfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 pcfread.o: ../../../../programs/Xserver/include/xf86_libc.h
 pcfread.o: ../../../../exports/include/X11/Xfuncs.h
 pcfread.o: ../../../../exports/include/X11/Xosdefs.h
-pcfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../pcf.h
+pcfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h ../pcf.h
 pcfwrite.o: ../../include/fntfilst.h ../../include/fontmisc.h
 pcfwrite.o: ../../../../exports/include/X11/Xdefs.h
 pcfwrite.o: ../../../../include/fonts/fontstruct.h
@@ -1396,11 +1396,11 @@ pcfwrite.o: ../../../../exports/include/X11/fonts/fsmasks.h
 pcfwrite.o: ../../include/fntfil.h ../../include/bitmap.h
 pcfwrite.o: ../../include/fntfilio.h ../../include/bufio.h
 pcfwrite.o: ../../../../programs/Xserver/include/xf86_ansic.h
-pcfwrite.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+pcfwrite.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 pcfwrite.o: ../../../../programs/Xserver/include/xf86_libc.h
 pcfwrite.o: ../../../../exports/include/X11/Xfuncs.h
 pcfwrite.o: ../../../../exports/include/X11/Xosdefs.h
-pcfwrite.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../pcf.h
+pcfwrite.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h ../pcf.h
 snfread.o: ../../include/fntfilst.h ../../include/fontmisc.h
 snfread.o: ../../../../exports/include/X11/Xdefs.h
 snfread.o: ../../../../include/fonts/fontstruct.h
@@ -1417,11 +1417,11 @@ snfread.o: ../../../../exports/include/X11/fonts/fsmasks.h
 snfread.o: ../../include/fntfil.h ../../include/bitmap.h
 snfread.o: ../../include/fntfilio.h ../../include/bufio.h
 snfread.o: ../../../../programs/Xserver/include/xf86_ansic.h
-snfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+snfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 snfread.o: ../../../../programs/Xserver/include/xf86_libc.h
 snfread.o: ../../../../exports/include/X11/Xfuncs.h
 snfread.o: ../../../../exports/include/X11/Xosdefs.h
-snfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../snfstr.h
+snfread.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h ../snfstr.h
 fontink.o: ../../include/fntfilst.h ../../include/fontmisc.h
 fontink.o: ../../../../exports/include/X11/Xdefs.h
 fontink.o: ../../../../include/fonts/fontstruct.h
@@ -1438,11 +1438,11 @@ fontink.o: ../../../../exports/include/X11/fonts/fsmasks.h
 fontink.o: ../../include/fntfil.h ../../include/bitmap.h
 fontink.o: ../../include/fntfilio.h ../../include/bufio.h
 fontink.o: ../../../../programs/Xserver/include/xf86_ansic.h
-fontink.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fontink.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 fontink.o: ../../../../programs/Xserver/include/xf86_libc.h
 fontink.o: ../../../../exports/include/X11/Xfuncs.h
 fontink.o: ../../../../exports/include/X11/Xosdefs.h
-fontink.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../bdfint.h
+fontink.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h ../bdfint.h
 bitmapmod.o: ../../../../programs/Xserver/include/misc.h
 bitmapmod.o: ../../../../exports/include/X11/Xosdefs.h
 bitmapmod.o: ../../../../exports/include/X11/Xfuncproto.h
@@ -1452,10 +1452,10 @@ bitmapmod.o: ../../../../exports/include/X11/Xdefs.h
 bitmapmod.o: ../../../../programs/Xserver/include/os.h
 bitmapmod.o: ../../../../exports/include/X11/Xalloca.h
 bitmapmod.o: ../../../../programs/Xserver/include/xf86_ansic.h
-bitmapmod.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+bitmapmod.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 bitmapmod.o: ../../../../programs/Xserver/include/xf86_libc.h
 bitmapmod.o: ../../../../exports/include/X11/Xfuncs.h
-bitmapmod.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+bitmapmod.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 bitmapmod.o: ../../include/fontmod.h
 bitmapmod.o: ../../../../programs/Xserver/include/xf86Module.h
 bitmapmod.o: ../../../../programs/Xserver/include/xf86Version.h

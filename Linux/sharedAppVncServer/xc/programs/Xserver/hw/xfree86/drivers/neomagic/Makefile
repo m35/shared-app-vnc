@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1333,10 +1333,10 @@ neo_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 neo_driver.o: ../../../../../../programs/Xserver/include/os.h
 neo_driver.o: ../../../../../../exports/include/X11/Xalloca.h
 neo_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-neo_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+neo_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 neo_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 neo_driver.o: ../../../../../../exports/include/X11/Xfuncs.h
-neo_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+neo_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 neo_driver.o: ../../../../../../programs/Xserver/include/input.h
 neo_driver.o: ../../../../../../programs/Xserver/include/screenint.h
 neo_driver.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1429,10 +1429,10 @@ neo_bank.o: ../../../../../../exports/include/X11/Xdefs.h
 neo_bank.o: ../../../../../../programs/Xserver/include/os.h
 neo_bank.o: ../../../../../../exports/include/X11/Xalloca.h
 neo_bank.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-neo_bank.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+neo_bank.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 neo_bank.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 neo_bank.o: ../../../../../../exports/include/X11/Xfuncs.h
-neo_bank.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+neo_bank.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 neo_bank.o: ../../../../../../programs/Xserver/include/input.h
 neo_bank.o: ../../../../../../programs/Xserver/include/screenint.h
 neo_bank.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1505,10 +1505,10 @@ neo_cursor.o: ../../../../../../exports/include/X11/Xdefs.h
 neo_cursor.o: ../../../../../../programs/Xserver/include/os.h
 neo_cursor.o: ../../../../../../exports/include/X11/Xalloca.h
 neo_cursor.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-neo_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+neo_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 neo_cursor.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 neo_cursor.o: ../../../../../../exports/include/X11/Xfuncs.h
-neo_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+neo_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 neo_cursor.o: ../../../../../../programs/Xserver/include/input.h
 neo_cursor.o: ../../../../../../programs/Xserver/include/screenint.h
 neo_cursor.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1586,10 +1586,10 @@ neo_2097.o: ../../../../../../exports/include/X11/Xdefs.h
 neo_2097.o: ../../../../../../programs/Xserver/include/os.h
 neo_2097.o: ../../../../../../exports/include/X11/Xalloca.h
 neo_2097.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-neo_2097.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+neo_2097.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 neo_2097.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 neo_2097.o: ../../../../../../exports/include/X11/Xfuncs.h
-neo_2097.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+neo_2097.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 neo_2097.o: ../../../../../../programs/Xserver/include/input.h
 neo_2097.o: ../../../../../../programs/Xserver/include/screenint.h
 neo_2097.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1663,10 +1663,10 @@ neo_2070.o: ../../../../../../exports/include/X11/Xdefs.h
 neo_2070.o: ../../../../../../programs/Xserver/include/os.h
 neo_2070.o: ../../../../../../exports/include/X11/Xalloca.h
 neo_2070.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-neo_2070.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+neo_2070.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 neo_2070.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 neo_2070.o: ../../../../../../exports/include/X11/Xfuncs.h
-neo_2070.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+neo_2070.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 neo_2070.o: ../../../../../../programs/Xserver/include/input.h
 neo_2070.o: ../../../../../../programs/Xserver/include/screenint.h
 neo_2070.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1740,10 +1740,10 @@ neo_2090.o: ../../../../../../exports/include/X11/Xdefs.h
 neo_2090.o: ../../../../../../programs/Xserver/include/os.h
 neo_2090.o: ../../../../../../exports/include/X11/Xalloca.h
 neo_2090.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-neo_2090.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+neo_2090.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 neo_2090.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 neo_2090.o: ../../../../../../exports/include/X11/Xfuncs.h
-neo_2090.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+neo_2090.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 neo_2090.o: ../../../../../../programs/Xserver/include/input.h
 neo_2090.o: ../../../../../../programs/Xserver/include/screenint.h
 neo_2090.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1818,10 +1818,10 @@ neo_2200.o: ../../../../../../exports/include/X11/Xdefs.h
 neo_2200.o: ../../../../../../programs/Xserver/include/os.h
 neo_2200.o: ../../../../../../exports/include/X11/Xalloca.h
 neo_2200.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-neo_2200.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+neo_2200.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 neo_2200.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 neo_2200.o: ../../../../../../exports/include/X11/Xfuncs.h
-neo_2200.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+neo_2200.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 neo_2200.o: ../../../../../../programs/Xserver/include/input.h
 neo_2200.o: ../../../../../../programs/Xserver/include/screenint.h
 neo_2200.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1895,10 +1895,10 @@ neo_i2c.o: ../../../../../../exports/include/X11/Xdefs.h
 neo_i2c.o: ../../../../../../programs/Xserver/include/os.h
 neo_i2c.o: ../../../../../../exports/include/X11/Xalloca.h
 neo_i2c.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-neo_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+neo_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 neo_i2c.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 neo_i2c.o: ../../../../../../exports/include/X11/Xfuncs.h
-neo_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+neo_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 neo_i2c.o: ../../../../../../programs/Xserver/include/input.h
 neo_i2c.o: ../../../../../../programs/Xserver/include/screenint.h
 neo_i2c.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1975,10 +1975,10 @@ neo_shadow.o: ../../../../../../exports/include/X11/Xdefs.h
 neo_shadow.o: ../../../../../../programs/Xserver/include/os.h
 neo_shadow.o: ../../../../../../exports/include/X11/Xalloca.h
 neo_shadow.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-neo_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+neo_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 neo_shadow.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 neo_shadow.o: ../../../../../../exports/include/X11/Xfuncs.h
-neo_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+neo_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 neo_shadow.o: ../../../../../../programs/Xserver/include/input.h
 neo_shadow.o: ../../../../../../programs/Xserver/include/screenint.h
 neo_shadow.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2055,10 +2055,10 @@ neo_dga.o: ../../../../../../exports/include/X11/Xdefs.h
 neo_dga.o: ../../../../../../programs/Xserver/include/os.h
 neo_dga.o: ../../../../../../exports/include/X11/Xalloca.h
 neo_dga.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-neo_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+neo_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 neo_dga.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 neo_dga.o: ../../../../../../exports/include/X11/Xfuncs.h
-neo_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+neo_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 neo_dga.o: ../../../../../../programs/Xserver/include/input.h
 neo_dga.o: ../../../../../../programs/Xserver/include/screenint.h
 neo_dga.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2138,10 +2138,10 @@ neo_video.o: ../../../../../../exports/include/X11/Xdefs.h
 neo_video.o: ../../../../../../programs/Xserver/include/os.h
 neo_video.o: ../../../../../../exports/include/X11/Xalloca.h
 neo_video.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-neo_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+neo_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 neo_video.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 neo_video.o: ../../../../../../exports/include/X11/Xfuncs.h
-neo_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+neo_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 neo_video.o: ../../../../../../programs/Xserver/include/input.h
 neo_video.o: ../../../../../../programs/Xserver/include/screenint.h
 neo_video.o: ../../../../../../exports/include/X11/Xproto.h

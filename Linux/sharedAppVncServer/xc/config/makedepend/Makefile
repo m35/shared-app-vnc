@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -939,7 +939,7 @@ PREINC_DEFINES = -DPREINCDIR=\"$(PREINCDIR)\"
 STDINCDIR = /usr/include
 STDINC_DEFINES = -DINCLUDEDIR=\"$(STDINCDIR)\"
 
-POSTINCDIR = "/usr/lib/gcc/i386-redhat-linux/4.0.2/include"
+POSTINCDIR = "/usr/lib/gcc/i386-redhat-linux/4.0.0/include"
 POSTINC_DEFINES = -DPOSTINCDIR=\"$(POSTINCDIR)\"
 
 INC_DEFINES = $(PREINC_DEFINES) $(STDINC_DEFINES) $(POSTINC_DEFINES) 	      $(EXTRAINC_DEFINES)
@@ -1155,7 +1155,7 @@ include.o: /usr/include/sys/types.h /usr/include/features.h
 include.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 include.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
 include.o: /usr/include/bits/types.h
-include.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+include.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 include.o: /usr/include/bits/typesizes.h /usr/include/time.h
 include.o: /usr/include/endian.h /usr/include/bits/endian.h
 include.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1172,7 +1172,7 @@ include.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 include.o: /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h
 include.o: /usr/include/_G_config.h /usr/include/wchar.h
 include.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-include.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+include.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 include.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 include.o: /usr/include/ctype.h
 main.o: def.h ../../include/Xos.h ../../exports/include/X11/Xosdefs.h
@@ -1180,7 +1180,7 @@ main.o: /usr/include/sys/types.h /usr/include/features.h
 main.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 main.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
 main.o: /usr/include/bits/types.h
-main.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+main.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 main.o: /usr/include/bits/typesizes.h /usr/include/time.h
 main.o: /usr/include/endian.h /usr/include/bits/endian.h
 main.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1197,7 +1197,7 @@ main.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 main.o: /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h
 main.o: /usr/include/_G_config.h /usr/include/wchar.h
 main.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-main.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+main.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 main.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 main.o: /usr/include/ctype.h /usr/include/signal.h /usr/include/bits/signum.h
 main.o: /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h
@@ -1209,7 +1209,7 @@ parse.o: /usr/include/sys/types.h /usr/include/features.h
 parse.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 parse.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
 parse.o: /usr/include/bits/types.h
-parse.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+parse.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 parse.o: /usr/include/bits/typesizes.h /usr/include/time.h
 parse.o: /usr/include/endian.h /usr/include/bits/endian.h
 parse.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1226,7 +1226,7 @@ parse.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 parse.o: /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h
 parse.o: /usr/include/_G_config.h /usr/include/wchar.h
 parse.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-parse.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+parse.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 parse.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 parse.o: /usr/include/ctype.h
 pr.o: def.h ../../include/Xos.h ../../exports/include/X11/Xosdefs.h
@@ -1234,7 +1234,7 @@ pr.o: /usr/include/sys/types.h /usr/include/features.h
 pr.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 pr.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
 pr.o: /usr/include/bits/types.h
-pr.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+pr.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 pr.o: /usr/include/bits/typesizes.h /usr/include/time.h /usr/include/endian.h
 pr.o: /usr/include/bits/endian.h /usr/include/sys/select.h
 pr.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
@@ -1250,7 +1250,7 @@ pr.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 pr.o: /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h
 pr.o: /usr/include/_G_config.h /usr/include/wchar.h /usr/include/bits/wchar.h
 pr.o: /usr/include/gconv.h
-pr.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+pr.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 pr.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 pr.o: /usr/include/ctype.h
 cppsetup.o: def.h ../../include/Xos.h ../../exports/include/X11/Xosdefs.h
@@ -1258,7 +1258,7 @@ cppsetup.o: /usr/include/sys/types.h /usr/include/features.h
 cppsetup.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 cppsetup.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
 cppsetup.o: /usr/include/bits/types.h
-cppsetup.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+cppsetup.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 cppsetup.o: /usr/include/bits/typesizes.h /usr/include/time.h
 cppsetup.o: /usr/include/endian.h /usr/include/bits/endian.h
 cppsetup.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1275,18 +1275,18 @@ cppsetup.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 cppsetup.o: /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h
 cppsetup.o: /usr/include/_G_config.h /usr/include/wchar.h
 cppsetup.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-cppsetup.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+cppsetup.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 cppsetup.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 cppsetup.o: /usr/include/ctype.h ifparser.h
 ifparser.o: ifparser.h /usr/include/stdio.h /usr/include/features.h
 ifparser.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 ifparser.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
-ifparser.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ifparser.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ifparser.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 ifparser.o: /usr/include/libio.h /usr/include/_G_config.h
 ifparser.o: /usr/include/wchar.h /usr/include/bits/wchar.h
 ifparser.o: /usr/include/gconv.h
-ifparser.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ifparser.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ifparser.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 ifparser.o: /usr/include/ctype.h /usr/include/endian.h
 ifparser.o: /usr/include/bits/endian.h /usr/include/xlocale.h

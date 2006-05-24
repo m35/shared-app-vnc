@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1165,9 +1165,9 @@ record.o: ../../../../exports/include/X11/Xfuncproto.h
 record.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 record.o: ../../../../exports/include/X11/Xalloca.h
 record.o: ../../include/xf86_ansic.h
-record.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+record.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 record.o: ../../include/xf86_libc.h ../../../../exports/include/X11/Xfuncs.h
-record.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+record.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 record.o: ../../include/pixmap.h ../../include/window.h
 record.o: ../../include/region.h ../../include/regionstr.h
 record.o: ../../include/miscstruct.h ../../include/input.h
@@ -1187,9 +1187,9 @@ set.o: ../../../../exports/include/X11/Xmd.h
 set.o: ../../../../exports/include/X11/X.h
 set.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 set.o: ../../../../exports/include/X11/Xalloca.h ../../include/xf86_ansic.h
-set.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+set.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 set.o: ../../include/xf86_libc.h ../../../../exports/include/X11/Xfuncs.h
-set.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../set.h
+set.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h ../set.h
 recordmod.o: ../../include/xf86Module.h ../../include/misc.h
 recordmod.o: ../../../../exports/include/X11/Xosdefs.h
 recordmod.o: ../../../../exports/include/X11/Xfuncproto.h
@@ -1198,8 +1198,8 @@ recordmod.o: ../../../../exports/include/X11/X.h
 recordmod.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 recordmod.o: ../../../../exports/include/X11/Xalloca.h
 recordmod.o: ../../include/xf86_ansic.h
-recordmod.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+recordmod.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 recordmod.o: ../../include/xf86_libc.h
 recordmod.o: ../../../../exports/include/X11/Xfuncs.h
-recordmod.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+recordmod.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 recordmod.o: ../../include/xf86Version.h

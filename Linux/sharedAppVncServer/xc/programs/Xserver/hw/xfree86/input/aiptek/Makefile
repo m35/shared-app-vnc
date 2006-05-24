@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1152,7 +1152,7 @@ xf86Aiptek.o: /usr/include/linux/input.h /usr/include/sys/time.h
 xf86Aiptek.o: /usr/include/features.h /usr/include/sys/cdefs.h
 xf86Aiptek.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 xf86Aiptek.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-xf86Aiptek.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xf86Aiptek.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xf86Aiptek.o: /usr/include/bits/typesizes.h /usr/include/time.h
 xf86Aiptek.o: /usr/include/bits/time.h /usr/include/sys/select.h
 xf86Aiptek.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
@@ -1169,7 +1169,7 @@ xf86Aiptek.o: ../../../../../../exports/include/X11/Xdefs.h
 xf86Aiptek.o: ../../../../../../programs/Xserver/include/os.h
 xf86Aiptek.o: ../../../../../../exports/include/X11/Xalloca.h
 xf86Aiptek.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-xf86Aiptek.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xf86Aiptek.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xf86Aiptek.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 xf86Aiptek.o: ../../../../../../exports/include/X11/Xfuncs.h
 xf86Aiptek.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h

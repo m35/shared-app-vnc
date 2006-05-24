@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1085,9 +1085,9 @@ randr.o: ../../../exports/include/X11/Xosdefs.h
 randr.o: ../../../exports/include/X11/Xfuncproto.h
 randr.o: ../../../exports/include/X11/X.h
 randr.o: ../../../exports/include/X11/Xdefs.h
-randr.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+randr.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 randr.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-randr.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+randr.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 randr.o: /usr/include/string.h /usr/include/features.h
 randr.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 randr.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -1101,7 +1101,7 @@ randr.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 randr.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 randr.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 randr.o: /usr/include/limits.h
-randr.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+randr.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 randr.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 randr.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 randr.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1136,9 +1136,9 @@ mirandr.o: ../../../exports/include/X11/Xfuncproto.h
 mirandr.o: ../../../exports/include/X11/Xmd.h
 mirandr.o: ../../../exports/include/X11/X.h
 mirandr.o: ../../../exports/include/X11/Xdefs.h
-mirandr.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+mirandr.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 mirandr.o: ../include/os.h ../../../exports/include/X11/Xalloca.h
-mirandr.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+mirandr.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 mirandr.o: /usr/include/string.h /usr/include/features.h
 mirandr.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 mirandr.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -1152,7 +1152,7 @@ mirandr.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 mirandr.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 mirandr.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 mirandr.o: /usr/include/limits.h
-mirandr.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+mirandr.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 mirandr.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 mirandr.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 mirandr.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h

@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1454,10 +1454,10 @@ cir_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 cir_driver.o: ../../../../../../programs/Xserver/include/os.h
 cir_driver.o: ../../../../../../exports/include/X11/Xalloca.h
 cir_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-cir_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+cir_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 cir_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 cir_driver.o: ../../../../../../exports/include/X11/Xfuncs.h
-cir_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+cir_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 cir_driver.o: ../../../../../../programs/Xserver/include/input.h
 cir_driver.o: ../../../../../../programs/Xserver/include/screenint.h
 cir_driver.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1523,10 +1523,10 @@ CirrusClk.o: ../../../../../../exports/include/X11/Xdefs.h
 CirrusClk.o: ../../../../../../programs/Xserver/include/os.h
 CirrusClk.o: ../../../../../../exports/include/X11/Xalloca.h
 CirrusClk.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-CirrusClk.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+CirrusClk.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 CirrusClk.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 CirrusClk.o: ../../../../../../exports/include/X11/Xfuncs.h
-CirrusClk.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+CirrusClk.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 CirrusClk.o: ../../../../../../programs/Xserver/include/input.h
 CirrusClk.o: ../../../../../../programs/Xserver/include/screenint.h
 CirrusClk.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1584,10 +1584,10 @@ cir_shadow.o: ../../../../../../exports/include/X11/Xdefs.h
 cir_shadow.o: ../../../../../../programs/Xserver/include/os.h
 cir_shadow.o: ../../../../../../exports/include/X11/Xalloca.h
 cir_shadow.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-cir_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+cir_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 cir_shadow.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 cir_shadow.o: ../../../../../../exports/include/X11/Xfuncs.h
-cir_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+cir_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 cir_shadow.o: ../../../../../../programs/Xserver/include/input.h
 cir_shadow.o: ../../../../../../programs/Xserver/include/screenint.h
 cir_shadow.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1648,10 +1648,10 @@ cir_dga.o: ../../../../../../exports/include/X11/Xdefs.h
 cir_dga.o: ../../../../../../programs/Xserver/include/os.h
 cir_dga.o: ../../../../../../exports/include/X11/Xalloca.h
 cir_dga.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-cir_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+cir_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 cir_dga.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 cir_dga.o: ../../../../../../exports/include/X11/Xfuncs.h
-cir_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+cir_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 cir_dga.o: ../../../../../../programs/Xserver/include/input.h
 cir_dga.o: ../../../../../../programs/Xserver/include/screenint.h
 cir_dga.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1721,10 +1721,10 @@ alp_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 alp_driver.o: ../../../../../../programs/Xserver/include/os.h
 alp_driver.o: ../../../../../../exports/include/X11/Xalloca.h
 alp_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-alp_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+alp_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 alp_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 alp_driver.o: ../../../../../../exports/include/X11/Xfuncs.h
-alp_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+alp_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 alp_driver.o: ../../../../../../programs/Xserver/include/input.h
 alp_driver.o: ../../../../../../programs/Xserver/include/screenint.h
 alp_driver.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1816,10 +1816,10 @@ alp_xaa.o: ../../../../../../exports/include/X11/Xdefs.h
 alp_xaa.o: ../../../../../../programs/Xserver/include/os.h
 alp_xaa.o: ../../../../../../exports/include/X11/Xalloca.h
 alp_xaa.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-alp_xaa.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+alp_xaa.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 alp_xaa.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 alp_xaa.o: ../../../../../../exports/include/X11/Xfuncs.h
-alp_xaa.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+alp_xaa.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 alp_xaa.o: ../../../../../../programs/Xserver/include/input.h
 alp_xaa.o: ../../../../../../programs/Xserver/include/screenint.h
 alp_xaa.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1884,10 +1884,10 @@ alp_hwcurs.o: ../../../../../../exports/include/X11/Xdefs.h
 alp_hwcurs.o: ../../../../../../programs/Xserver/include/os.h
 alp_hwcurs.o: ../../../../../../exports/include/X11/Xalloca.h
 alp_hwcurs.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-alp_hwcurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+alp_hwcurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 alp_hwcurs.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 alp_hwcurs.o: ../../../../../../exports/include/X11/Xfuncs.h
-alp_hwcurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+alp_hwcurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 alp_hwcurs.o: ../../../../../../programs/Xserver/include/input.h
 alp_hwcurs.o: ../../../../../../programs/Xserver/include/screenint.h
 alp_hwcurs.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1952,10 +1952,10 @@ alp_i2c.o: ../../../../../../exports/include/X11/Xdefs.h
 alp_i2c.o: ../../../../../../programs/Xserver/include/os.h
 alp_i2c.o: ../../../../../../exports/include/X11/Xalloca.h
 alp_i2c.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-alp_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+alp_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 alp_i2c.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 alp_i2c.o: ../../../../../../exports/include/X11/Xfuncs.h
-alp_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+alp_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 alp_i2c.o: ../../../../../../programs/Xserver/include/input.h
 alp_i2c.o: ../../../../../../programs/Xserver/include/screenint.h
 alp_i2c.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2020,10 +2020,10 @@ alp_xaam.o: ../../../../../../exports/include/X11/Xdefs.h
 alp_xaam.o: ../../../../../../programs/Xserver/include/os.h
 alp_xaam.o: ../../../../../../exports/include/X11/Xalloca.h
 alp_xaam.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-alp_xaam.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+alp_xaam.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 alp_xaam.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 alp_xaam.o: ../../../../../../exports/include/X11/Xfuncs.h
-alp_xaam.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+alp_xaam.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 alp_xaam.o: ../../../../../../programs/Xserver/include/input.h
 alp_xaam.o: ../../../../../../programs/Xserver/include/screenint.h
 alp_xaam.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2088,10 +2088,10 @@ lg_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 lg_driver.o: ../../../../../../programs/Xserver/include/os.h
 lg_driver.o: ../../../../../../exports/include/X11/Xalloca.h
 lg_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-lg_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+lg_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 lg_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 lg_driver.o: ../../../../../../exports/include/X11/Xfuncs.h
-lg_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+lg_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 lg_driver.o: ../../../../../../programs/Xserver/include/input.h
 lg_driver.o: ../../../../../../programs/Xserver/include/screenint.h
 lg_driver.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2176,10 +2176,10 @@ lg_i2c.o: ../../../../../../exports/include/X11/Xdefs.h
 lg_i2c.o: ../../../../../../programs/Xserver/include/os.h
 lg_i2c.o: ../../../../../../exports/include/X11/Xalloca.h
 lg_i2c.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-lg_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+lg_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 lg_i2c.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 lg_i2c.o: ../../../../../../exports/include/X11/Xfuncs.h
-lg_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+lg_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 lg_i2c.o: ../../../../../../programs/Xserver/include/input.h
 lg_i2c.o: ../../../../../../programs/Xserver/include/screenint.h
 lg_i2c.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2244,10 +2244,10 @@ lg_xaa.o: ../../../../../../exports/include/X11/Xdefs.h
 lg_xaa.o: ../../../../../../programs/Xserver/include/os.h
 lg_xaa.o: ../../../../../../exports/include/X11/Xalloca.h
 lg_xaa.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-lg_xaa.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+lg_xaa.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 lg_xaa.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 lg_xaa.o: ../../../../../../exports/include/X11/Xfuncs.h
-lg_xaa.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+lg_xaa.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 lg_xaa.o: ../../../../../../programs/Xserver/include/input.h
 lg_xaa.o: ../../../../../../programs/Xserver/include/screenint.h
 lg_xaa.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2312,10 +2312,10 @@ lg_hwcurs.o: ../../../../../../exports/include/X11/Xdefs.h
 lg_hwcurs.o: ../../../../../../programs/Xserver/include/os.h
 lg_hwcurs.o: ../../../../../../exports/include/X11/Xalloca.h
 lg_hwcurs.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-lg_hwcurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+lg_hwcurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 lg_hwcurs.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 lg_hwcurs.o: ../../../../../../exports/include/X11/Xfuncs.h
-lg_hwcurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+lg_hwcurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 lg_hwcurs.o: ../../../../../../programs/Xserver/include/input.h
 lg_hwcurs.o: ../../../../../../programs/Xserver/include/screenint.h
 lg_hwcurs.o: ../../../../../../exports/include/X11/Xproto.h

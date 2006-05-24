@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1122,7 +1122,7 @@ xf86_Util.o: /usr/include/ctype.h /usr/include/features.h
 xf86_Util.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 xf86_Util.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
 xf86_Util.o: /usr/include/bits/types.h
-xf86_Util.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xf86_Util.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xf86_Util.o: /usr/include/bits/typesizes.h /usr/include/endian.h
 xf86_Util.o: /usr/include/bits/endian.h /usr/include/xlocale.h
 Delay.o: ../../../../../../exports/include/X11/X.h
@@ -1134,10 +1134,10 @@ Delay.o: ../../../../../../exports/include/X11/Xfuncproto.h
 Delay.o: ../../../../../../exports/include/X11/Xmd.h
 Delay.o: ../../../../../../exports/include/X11/X.h
 Delay.o: ../../../../../../exports/include/X11/Xdefs.h
-Delay.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+Delay.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 Delay.o: ../../../../../../programs/Xserver/include/os.h
 Delay.o: ../../../../../../exports/include/X11/Xalloca.h
-Delay.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+Delay.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 Delay.o: /usr/include/string.h /usr/include/features.h
 Delay.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 Delay.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
@@ -1151,7 +1151,7 @@ Delay.o: /usr/include/sys/select.h /usr/include/bits/select.h
 Delay.o: /usr/include/bits/sigset.h /usr/include/bits/time.h
 Delay.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
 Delay.o: /usr/include/alloca.h /usr/include/limits.h
-Delay.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+Delay.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 Delay.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 Delay.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 Delay.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h

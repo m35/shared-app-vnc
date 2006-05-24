@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1389,20 +1389,20 @@ xttcap.o: ../../include/fontmisc.h ../../../../exports/include/X11/Xdefs.h
 xttcap.o: ../../../../exports/include/X11/Xmd.h
 xttcap.o: ../../../../exports/include/X11/Xdefs.h
 xttcap.o: ../../../../programs/Xserver/include/xf86_ansic.h
-xttcap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xttcap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xttcap.o: ../../../../programs/Xserver/include/xf86_libc.h
 xttcap.o: ../../../../exports/include/X11/Xfuncs.h
 xttcap.o: ../../../../exports/include/X11/Xosdefs.h
-xttcap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h ../xttcap.h
+xttcap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h ../xttcap.h
 ftfuncs.o: ../../include/fontmisc.h ../../../../exports/include/X11/Xdefs.h
 ftfuncs.o: ../../../../exports/include/X11/Xmd.h
 ftfuncs.o: ../../../../exports/include/X11/Xdefs.h
 ftfuncs.o: ../../../../programs/Xserver/include/xf86_ansic.h
-ftfuncs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ftfuncs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ftfuncs.o: ../../../../programs/Xserver/include/xf86_libc.h
 ftfuncs.o: ../../../../exports/include/X11/Xfuncs.h
 ftfuncs.o: ../../../../exports/include/X11/Xosdefs.h
-ftfuncs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ftfuncs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ftfuncs.o: ../../include/fntfilst.h ../../../../include/fonts/fontstruct.h
 ftfuncs.o: ../../../../exports/include/X11/Xproto.h
 ftfuncs.o: ../../../../exports/include/X11/Xmd.h
@@ -1454,11 +1454,11 @@ ftfuncs.o: ../../include/fontenc.h ../ft.h ../ftfuncs.h ../xttcap.h
 ftenc.o: ../../../../exports/include/X11/Xmd.h
 ftenc.o: ../../../../exports/include/X11/Xdefs.h
 ftenc.o: ../../../../programs/Xserver/include/xf86_ansic.h
-ftenc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ftenc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ftenc.o: ../../../../programs/Xserver/include/xf86_libc.h
 ftenc.o: ../../../../exports/include/X11/Xfuncs.h
 ftenc.o: ../../../../exports/include/X11/Xosdefs.h
-ftenc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ftenc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ftenc.o: ../../include/fntfilst.h ../../include/fontmisc.h
 ftenc.o: ../../../../exports/include/X11/Xdefs.h
 ftenc.o: ../../../../include/fonts/fontstruct.h
@@ -1484,11 +1484,11 @@ fttools.o: ../../include/fontmisc.h ../../../../exports/include/X11/Xdefs.h
 fttools.o: ../../../../exports/include/X11/Xmd.h
 fttools.o: ../../../../exports/include/X11/Xdefs.h
 fttools.o: ../../../../programs/Xserver/include/xf86_ansic.h
-fttools.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fttools.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 fttools.o: ../../../../programs/Xserver/include/xf86_libc.h
 fttools.o: ../../../../exports/include/X11/Xfuncs.h
 fttools.o: ../../../../exports/include/X11/Xosdefs.h
-fttools.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fttools.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 fttools.o: ../../../../include/fonts/font.h
 fttools.o: ../../../../include/fonts/fsmasks.h
 fttools.o: ../../../../exports/include/X11/Xmd.h ./ft2build.h ftheader.h
@@ -1566,11 +1566,11 @@ ftsystem.o: ../../../../extras/freetype2/include/freetype/fterrdef.h
 ftsystem.o: ./fttypes.h ../../../../exports/include/X11/Xmd.h
 ftsystem.o: ../../../../exports/include/X11/Xdefs.h
 ftsystem.o: ../../../../programs/Xserver/include/xf86_ansic.h
-ftsystem.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ftsystem.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ftsystem.o: ../../../../programs/Xserver/include/xf86_libc.h
 ftsystem.o: ../../../../exports/include/X11/Xfuncs.h
 ftsystem.o: ../../../../exports/include/X11/Xosdefs.h
-ftsystem.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ftsystem.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 fttype1.o: ./ft2build.h ftheader.h
 fttype1.o: ../../../../extras/freetype2/include/freetype/internal/internal.h
 fttype1.o: ../../../../extras/freetype2/include/freetype/internal/t1types.h
@@ -1898,10 +1898,10 @@ ftmodule.o: ../../../../exports/include/X11/Xdefs.h
 ftmodule.o: ../../../../programs/Xserver/include/os.h
 ftmodule.o: ../../../../exports/include/X11/Xalloca.h
 ftmodule.o: ../../../../programs/Xserver/include/xf86_ansic.h
-ftmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ftmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ftmodule.o: ../../../../programs/Xserver/include/xf86_libc.h
 ftmodule.o: ../../../../exports/include/X11/Xfuncs.h
-ftmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ftmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ftmodule.o: ../../include/fontmod.h
 ftmodule.o: ../../../../programs/Xserver/include/xf86Module.h
 ftmodule.o: ../../../../programs/Xserver/include/xf86Version.h

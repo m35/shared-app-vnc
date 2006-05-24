@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1359,10 +1359,10 @@ ct_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 ct_driver.o: ../../../../../../programs/Xserver/include/os.h
 ct_driver.o: ../../../../../../exports/include/X11/Xalloca.h
 ct_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-ct_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ct_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ct_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 ct_driver.o: ../../../../../../exports/include/X11/Xfuncs.h
-ct_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ct_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ct_driver.o: ../../../../../../programs/Xserver/include/input.h
 ct_driver.o: ../../../../../../programs/Xserver/include/screenint.h
 ct_driver.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1459,10 +1459,10 @@ ct_bank.o: ../../../../../../exports/include/X11/Xdefs.h
 ct_bank.o: ../../../../../../programs/Xserver/include/os.h
 ct_bank.o: ../../../../../../exports/include/X11/Xalloca.h
 ct_bank.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-ct_bank.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ct_bank.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ct_bank.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 ct_bank.o: ../../../../../../exports/include/X11/Xfuncs.h
-ct_bank.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ct_bank.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ct_bank.o: ../../../../../../programs/Xserver/include/input.h
 ct_bank.o: ../../../../../../programs/Xserver/include/screenint.h
 ct_bank.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1537,10 +1537,10 @@ ct_accel.o: ../../../../../../exports/include/X11/Xdefs.h
 ct_accel.o: ../../../../../../programs/Xserver/include/os.h
 ct_accel.o: ../../../../../../exports/include/X11/Xalloca.h
 ct_accel.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-ct_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ct_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ct_accel.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 ct_accel.o: ../../../../../../exports/include/X11/Xfuncs.h
-ct_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ct_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ct_accel.o: ../../../../../../programs/Xserver/include/input.h
 ct_accel.o: ../../../../../../programs/Xserver/include/screenint.h
 ct_accel.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1616,10 +1616,10 @@ ct_accelmm.o: ../../../../../../exports/include/X11/Xdefs.h
 ct_accelmm.o: ../../../../../../programs/Xserver/include/os.h
 ct_accelmm.o: ../../../../../../exports/include/X11/Xalloca.h
 ct_accelmm.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-ct_accelmm.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ct_accelmm.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ct_accelmm.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 ct_accelmm.o: ../../../../../../exports/include/X11/Xfuncs.h
-ct_accelmm.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ct_accelmm.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ct_accelmm.o: ../../../../../../programs/Xserver/include/input.h
 ct_accelmm.o: ../../../../../../programs/Xserver/include/screenint.h
 ct_accelmm.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1695,10 +1695,10 @@ ct_accelhi.o: ../../../../../../exports/include/X11/Xdefs.h
 ct_accelhi.o: ../../../../../../programs/Xserver/include/os.h
 ct_accelhi.o: ../../../../../../exports/include/X11/Xalloca.h
 ct_accelhi.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-ct_accelhi.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ct_accelhi.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ct_accelhi.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 ct_accelhi.o: ../../../../../../exports/include/X11/Xfuncs.h
-ct_accelhi.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ct_accelhi.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ct_accelhi.o: ../../../../../../programs/Xserver/include/input.h
 ct_accelhi.o: ../../../../../../programs/Xserver/include/screenint.h
 ct_accelhi.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1774,10 +1774,10 @@ ct_cursor.o: ../../../../../../exports/include/X11/Xdefs.h
 ct_cursor.o: ../../../../../../programs/Xserver/include/os.h
 ct_cursor.o: ../../../../../../exports/include/X11/Xalloca.h
 ct_cursor.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-ct_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ct_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ct_cursor.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 ct_cursor.o: ../../../../../../exports/include/X11/Xfuncs.h
-ct_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ct_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ct_cursor.o: ../../../../../../programs/Xserver/include/input.h
 ct_cursor.o: ../../../../../../programs/Xserver/include/screenint.h
 ct_cursor.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1851,10 +1851,10 @@ ct_ddc.o: ../../../../../../exports/include/X11/Xdefs.h
 ct_ddc.o: ../../../../../../programs/Xserver/include/os.h
 ct_ddc.o: ../../../../../../exports/include/X11/Xalloca.h
 ct_ddc.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-ct_ddc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ct_ddc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ct_ddc.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 ct_ddc.o: ../../../../../../exports/include/X11/Xfuncs.h
-ct_ddc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ct_ddc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ct_ddc.o: ../../../../../../programs/Xserver/include/input.h
 ct_ddc.o: ../../../../../../programs/Xserver/include/screenint.h
 ct_ddc.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1928,10 +1928,10 @@ ct_regs.o: ../../../../../../exports/include/X11/Xdefs.h
 ct_regs.o: ../../../../../../programs/Xserver/include/os.h
 ct_regs.o: ../../../../../../exports/include/X11/Xalloca.h
 ct_regs.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-ct_regs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ct_regs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ct_regs.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 ct_regs.o: ../../../../../../exports/include/X11/Xfuncs.h
-ct_regs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ct_regs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ct_regs.o: ../../../../../../programs/Xserver/include/input.h
 ct_regs.o: ../../../../../../programs/Xserver/include/screenint.h
 ct_regs.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2006,10 +2006,10 @@ ct_dga.o: ../../../../../../exports/include/X11/Xdefs.h
 ct_dga.o: ../../../../../../programs/Xserver/include/os.h
 ct_dga.o: ../../../../../../exports/include/X11/Xalloca.h
 ct_dga.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-ct_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ct_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ct_dga.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 ct_dga.o: ../../../../../../exports/include/X11/Xfuncs.h
-ct_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ct_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ct_dga.o: ../../../../../../programs/Xserver/include/input.h
 ct_dga.o: ../../../../../../programs/Xserver/include/screenint.h
 ct_dga.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2084,10 +2084,10 @@ ct_shadow.o: ../../../../../../exports/include/X11/Xdefs.h
 ct_shadow.o: ../../../../../../programs/Xserver/include/os.h
 ct_shadow.o: ../../../../../../exports/include/X11/Xalloca.h
 ct_shadow.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-ct_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ct_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ct_shadow.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 ct_shadow.o: ../../../../../../exports/include/X11/Xfuncs.h
-ct_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ct_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ct_shadow.o: ../../../../../../programs/Xserver/include/input.h
 ct_shadow.o: ../../../../../../programs/Xserver/include/screenint.h
 ct_shadow.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2164,10 +2164,10 @@ ct_video.o: ../../../../../../exports/include/X11/Xdefs.h
 ct_video.o: ../../../../../../programs/Xserver/include/os.h
 ct_video.o: ../../../../../../exports/include/X11/Xalloca.h
 ct_video.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-ct_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ct_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ct_video.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 ct_video.o: ../../../../../../exports/include/X11/Xfuncs.h
-ct_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ct_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ct_video.o: ../../../../../../programs/Xserver/include/input.h
 ct_video.o: ../../../../../../programs/Xserver/include/screenint.h
 ct_video.o: ../../../../../../exports/include/X11/Xproto.h

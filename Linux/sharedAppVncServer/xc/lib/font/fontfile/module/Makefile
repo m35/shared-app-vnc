@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1098,7 +1098,7 @@ ffcheck.o: ../../../../exports/include/X11/Xosdefs.h /usr/include/sys/types.h
 ffcheck.o: /usr/include/features.h /usr/include/sys/cdefs.h
 ffcheck.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 ffcheck.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-ffcheck.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ffcheck.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ffcheck.o: /usr/include/bits/typesizes.h /usr/include/time.h
 ffcheck.o: /usr/include/endian.h /usr/include/bits/endian.h
 ffcheck.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1116,7 +1116,7 @@ ffcheck.o: /usr/include/bits/waitstatus.h /usr/include/alloca.h
 ffcheck.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
 ffcheck.o: /usr/include/wchar.h /usr/include/bits/wchar.h
 ffcheck.o: /usr/include/gconv.h
-ffcheck.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ffcheck.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ffcheck.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 ffcheck.o: ../../../../exports/include/X11/Xdefs.h
 ffcheck.o: ../../../../include/fonts/fontstruct.h
@@ -1138,7 +1138,7 @@ register.o: ../../../../exports/include/X11/Xosdefs.h /usr/include/string.h
 register.o: /usr/include/features.h /usr/include/sys/cdefs.h
 register.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 register.o: /usr/include/gnu/stubs-32.h
-register.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+register.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 register.o: /usr/include/xlocale.h /usr/include/stdlib.h
 register.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 register.o: /usr/include/endian.h /usr/include/bits/endian.h
@@ -1150,7 +1150,7 @@ register.o: /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h
 register.o: /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h
 register.o: /usr/include/_G_config.h /usr/include/wchar.h
 register.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-register.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+register.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 register.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 register.o: /usr/include/unistd.h /usr/include/bits/posix_opt.h
 register.o: /usr/include/bits/environments.h /usr/include/bits/confname.h

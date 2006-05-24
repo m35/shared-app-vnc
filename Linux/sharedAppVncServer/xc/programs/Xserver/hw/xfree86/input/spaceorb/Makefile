@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1110,10 +1110,10 @@ spaceorb.o: ../../../../../../exports/include/X11/Xdefs.h
 spaceorb.o: ../../../../../../programs/Xserver/include/os.h
 spaceorb.o: ../../../../../../exports/include/X11/Xalloca.h
 spaceorb.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-spaceorb.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+spaceorb.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 spaceorb.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 spaceorb.o: ../../../../../../exports/include/X11/Xfuncs.h
-spaceorb.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+spaceorb.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 spaceorb.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 spaceorb.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 spaceorb.o: ../../../../../../programs/Xserver/include/input.h

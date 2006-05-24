@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1171,7 +1171,7 @@ Vnc.o: /usr/include/sys/types.h /usr/include/features.h
 Vnc.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 Vnc.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
 Vnc.o: /usr/include/bits/types.h
-Vnc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+Vnc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 Vnc.o: /usr/include/bits/typesizes.h /usr/include/time.h
 Vnc.o: /usr/include/endian.h /usr/include/bits/endian.h
 Vnc.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1188,7 +1188,7 @@ Vnc.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 Vnc.o: /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h
 Vnc.o: /usr/include/_G_config.h /usr/include/wchar.h
 Vnc.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-Vnc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+Vnc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 Vnc.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 Vnc.o: ../../include/extensions/Xext.h ../../include/extensions/extutil.h
 Vnc.o: ../../exports/include/X11/extensions/Xext.h
@@ -1197,7 +1197,7 @@ Vnc.o: ../../exports/include/X11/extensions/vnc.h /usr/include/netinet/in.h
 Vnc.o: /usr/include/stdint.h /usr/include/sys/socket.h /usr/include/sys/uio.h
 Vnc.o: /usr/include/bits/uio.h /usr/include/bits/socket.h
 Vnc.o: /usr/include/limits.h
-Vnc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+Vnc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 Vnc.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 Vnc.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 Vnc.o: /usr/include/bits/xopen_lim.h /usr/include/bits/sockaddr.h

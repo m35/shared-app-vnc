@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1133,10 +1133,10 @@ linux_vm86.o: ../../../../../../../../exports/include/X11/Xdefs.h
 linux_vm86.o: ../../../../../../../../programs/Xserver/include/os.h
 linux_vm86.o: ../../../../../../../../exports/include/X11/Xalloca.h
 linux_vm86.o: ../../../../../../../../programs/Xserver/include/xf86_ansic.h
-linux_vm86.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+linux_vm86.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 linux_vm86.o: ../../../../../../../../programs/Xserver/include/xf86_libc.h
 linux_vm86.o: ../../../../../../../../exports/include/X11/Xfuncs.h
-linux_vm86.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+linux_vm86.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 linux_vm86.o: ../../../../../../../../programs/Xserver/include/input.h
 linux_vm86.o: ../../../../../../../../programs/Xserver/include/screenint.h
 linux_vm86.o: ../../../../../../../../exports/include/X11/Xproto.h
@@ -1182,10 +1182,10 @@ helper_exec.o: ../../../../../../../../exports/include/X11/Xdefs.h
 helper_exec.o: ../../../../../../../../programs/Xserver/include/os.h
 helper_exec.o: ../../../../../../../../exports/include/X11/Xalloca.h
 helper_exec.o: ../../../../../../../../programs/Xserver/include/xf86_ansic.h
-helper_exec.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+helper_exec.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 helper_exec.o: ../../../../../../../../programs/Xserver/include/xf86_libc.h
 helper_exec.o: ../../../../../../../../exports/include/X11/Xfuncs.h
-helper_exec.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+helper_exec.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 helper_exec.o: ../../../../../../../../programs/Xserver/include/input.h
 helper_exec.o: ../../../../../../../../programs/Xserver/include/screenint.h
 helper_exec.o: ../../../../../../../../exports/include/X11/Xproto.h
@@ -1232,10 +1232,10 @@ xf86int10.o: ../../../../../../../../exports/include/X11/Xdefs.h
 xf86int10.o: ../../../../../../../../programs/Xserver/include/os.h
 xf86int10.o: ../../../../../../../../exports/include/X11/Xalloca.h
 xf86int10.o: ../../../../../../../../programs/Xserver/include/xf86_ansic.h
-xf86int10.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xf86int10.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xf86int10.o: ../../../../../../../../programs/Xserver/include/xf86_libc.h
 xf86int10.o: ../../../../../../../../exports/include/X11/Xfuncs.h
-xf86int10.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xf86int10.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xf86int10.o: ../../../../../../../../programs/Xserver/include/input.h
 xf86int10.o: ../../../../../../../../programs/Xserver/include/screenint.h
 xf86int10.o: ../../../../../../../../exports/include/X11/Xproto.h

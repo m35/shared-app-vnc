@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1262,10 +1262,10 @@ xf86drm.o: ../../../../../../../exports/include/X11/Xdefs.h
 xf86drm.o: ../../../../../../../programs/Xserver/include/os.h
 xf86drm.o: ../../../../../../../exports/include/X11/Xalloca.h
 xf86drm.o: ../../../../../../../programs/Xserver/include/xf86_ansic.h
-xf86drm.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xf86drm.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xf86drm.o: ../../../../../../../programs/Xserver/include/xf86_libc.h
 xf86drm.o: ../../../../../../../exports/include/X11/Xfuncs.h
-xf86drm.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xf86drm.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xf86drm.o: ../../../../../../../programs/Xserver/include/input.h
 xf86drm.o: ../../../../../../../programs/Xserver/include/screenint.h
 xf86drm.o: ../../../../../../../exports/include/X11/Xproto.h
@@ -1311,10 +1311,10 @@ xf86drmHash.o: ../../../../../../../exports/include/X11/Xdefs.h
 xf86drmHash.o: ../../../../../../../programs/Xserver/include/os.h
 xf86drmHash.o: ../../../../../../../exports/include/X11/Xalloca.h
 xf86drmHash.o: ../../../../../../../programs/Xserver/include/xf86_ansic.h
-xf86drmHash.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xf86drmHash.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xf86drmHash.o: ../../../../../../../programs/Xserver/include/xf86_libc.h
 xf86drmHash.o: ../../../../../../../exports/include/X11/Xfuncs.h
-xf86drmHash.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xf86drmHash.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xf86drmHash.o: ../../../../../../../programs/Xserver/include/input.h
 xf86drmHash.o: ../../../../../../../programs/Xserver/include/screenint.h
 xf86drmHash.o: ../../../../../../../exports/include/X11/Xproto.h
@@ -1355,10 +1355,10 @@ xf86drmRandom.o: ../../../../../../../exports/include/X11/Xdefs.h
 xf86drmRandom.o: ../../../../../../../programs/Xserver/include/os.h
 xf86drmRandom.o: ../../../../../../../exports/include/X11/Xalloca.h
 xf86drmRandom.o: ../../../../../../../programs/Xserver/include/xf86_ansic.h
-xf86drmRandom.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xf86drmRandom.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xf86drmRandom.o: ../../../../../../../programs/Xserver/include/xf86_libc.h
 xf86drmRandom.o: ../../../../../../../exports/include/X11/Xfuncs.h
-xf86drmRandom.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xf86drmRandom.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xf86drmRandom.o: ../../../../../../../programs/Xserver/include/input.h
 xf86drmRandom.o: ../../../../../../../programs/Xserver/include/screenint.h
 xf86drmRandom.o: ../../../../../../../exports/include/X11/Xproto.h
@@ -1399,10 +1399,10 @@ xf86drmSL.o: ../../../../../../../exports/include/X11/Xdefs.h
 xf86drmSL.o: ../../../../../../../programs/Xserver/include/os.h
 xf86drmSL.o: ../../../../../../../exports/include/X11/Xalloca.h
 xf86drmSL.o: ../../../../../../../programs/Xserver/include/xf86_ansic.h
-xf86drmSL.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xf86drmSL.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xf86drmSL.o: ../../../../../../../programs/Xserver/include/xf86_libc.h
 xf86drmSL.o: ../../../../../../../exports/include/X11/Xfuncs.h
-xf86drmSL.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xf86drmSL.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xf86drmSL.o: ../../../../../../../programs/Xserver/include/input.h
 xf86drmSL.o: ../../../../../../../programs/Xserver/include/screenint.h
 xf86drmSL.o: ../../../../../../../exports/include/X11/Xproto.h
@@ -1442,10 +1442,10 @@ xf86drmCompat.o: ../../../../../../../exports/include/X11/Xdefs.h
 xf86drmCompat.o: ../../../../../../../programs/Xserver/include/os.h
 xf86drmCompat.o: ../../../../../../../exports/include/X11/Xalloca.h
 xf86drmCompat.o: ../../../../../../../programs/Xserver/include/xf86_ansic.h
-xf86drmCompat.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xf86drmCompat.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xf86drmCompat.o: ../../../../../../../programs/Xserver/include/xf86_libc.h
 xf86drmCompat.o: ../../../../../../../exports/include/X11/Xfuncs.h
-xf86drmCompat.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xf86drmCompat.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xf86drmCompat.o: ../../../../../../../programs/Xserver/include/input.h
 xf86drmCompat.o: ../../../../../../../programs/Xserver/include/screenint.h
 xf86drmCompat.o: ../../../../../../../exports/include/X11/Xproto.h
@@ -1496,8 +1496,8 @@ drmmodule.o: ../../../../../../../exports/include/X11/Xdefs.h
 drmmodule.o: ../../../../../../../programs/Xserver/include/os.h
 drmmodule.o: ../../../../../../../exports/include/X11/Xalloca.h
 drmmodule.o: ../../../../../../../programs/Xserver/include/xf86_ansic.h
-drmmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+drmmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 drmmodule.o: ../../../../../../../programs/Xserver/include/xf86_libc.h
 drmmodule.o: ../../../../../../../exports/include/X11/Xfuncs.h
-drmmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+drmmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 drmmodule.o: ../../../../../../../programs/Xserver/hw/xfree86/common/xf86Version.h

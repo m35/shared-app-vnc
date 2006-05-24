@@ -918,7 +918,7 @@ void sharedapp_GetMenuWindows(ScreenPtr pScreen, SharedWindowPtr shwin, RegionPt
 }
 
 
-Bool sharedapp_CheckPointer(rfbClientPtr cl, rfbPointerEventMsg *pe)
+Bool sharedapp_CheckPointer(rfbClientPtr cl, sharedAppPointerEventMsg *spe)
 {
   VNCSCREENPTR(cl->pScreen);
   SharedAppVnc *shapp = &pVNC->sharedApp;
@@ -931,9 +931,9 @@ Bool sharedapp_CheckPointer(rfbClientPtr cl, rfbPointerEventMsg *pe)
   /* Remove This */
   if (!cl->supportsSharedAppEncoding) return TRUE;
 
-  winId = Swap32IfLE (pe->windowId);
-  x = (int) Swap16IfLE (pe->x);
-  y = (int) Swap16IfLE (pe->y);
+  winId = Swap32IfLE (spe->windowId);
+  x = (int) Swap16IfLE (spe->x);
+  y = (int) Swap16IfLE (spe->y);
 
   /*rfbLog("CheckPointer looking for window 0x%x\n", winId);*/
 

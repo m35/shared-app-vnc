@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1065,7 +1065,7 @@ lbxdelta.o: ../../../exports/include/X11/Xosdefs.h
 lbxdelta.o: ../../../exports/include/X11/Xfuncproto.h
 lbxdelta.o: ../../../exports/include/X11/X.h
 lbxdelta.o: ../../../exports/include/X11/Xdefs.h
-lbxdelta.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+lbxdelta.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 lbxdelta.o: ../../../exports/include/X11/Xfuncs.h /usr/include/string.h
 lbxdelta.o: /usr/include/features.h /usr/include/sys/cdefs.h
 lbxdelta.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
@@ -1079,7 +1079,7 @@ lbxdelta.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
 lbxdelta.o: /usr/include/bits/time.h /usr/include/sys/sysmacros.h
 lbxdelta.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 lbxdelta.o: /usr/include/limits.h
-lbxdelta.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+lbxdelta.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 lbxdelta.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 lbxdelta.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 lbxdelta.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
@@ -1091,7 +1091,7 @@ lbxdelta.o: /usr/include/assert.h /usr/include/ctype.h /usr/include/stdio.h
 lbxdelta.o: /usr/include/libio.h /usr/include/_G_config.h
 lbxdelta.o: /usr/include/wchar.h /usr/include/bits/wchar.h
 lbxdelta.o: /usr/include/gconv.h
-lbxdelta.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+lbxdelta.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 lbxdelta.o: /usr/include/bits/sys_errlist.h
 lbxdelta.o: ../../../exports/include/X11/Xalloca.h
 lbxdelta.o: ../../../include/extensions/lbxstr.h

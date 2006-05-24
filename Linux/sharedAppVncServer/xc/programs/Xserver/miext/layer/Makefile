@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1143,9 +1143,9 @@ layergc.o: ../../../../exports/include/X11/X.h
 layergc.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 layergc.o: ../../../../exports/include/X11/Xalloca.h
 layergc.o: ../../include/xf86_ansic.h
-layergc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+layergc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 layergc.o: ../../include/xf86_libc.h ../../../../exports/include/X11/Xfuncs.h
-layergc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+layergc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 layergc.o: ../../include/regionstr.h ../../include/miscstruct.h
 layergc.o: ../../../../exports/include/X11/Xprotostr.h ../../include/gc.h
 layergc.o: ../../../../exports/include/X11/Xdefs.h
@@ -1178,10 +1178,10 @@ layerinit.o: ../../../../exports/include/X11/X.h
 layerinit.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 layerinit.o: ../../../../exports/include/X11/Xalloca.h
 layerinit.o: ../../include/xf86_ansic.h
-layerinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+layerinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 layerinit.o: ../../include/xf86_libc.h
 layerinit.o: ../../../../exports/include/X11/Xfuncs.h
-layerinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+layerinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 layerinit.o: ../../include/regionstr.h ../../include/miscstruct.h
 layerinit.o: ../../../../exports/include/X11/Xprotostr.h ../../include/gc.h
 layerinit.o: ../../../../exports/include/X11/Xdefs.h
@@ -1214,10 +1214,10 @@ layerpict.o: ../../../../exports/include/X11/X.h
 layerpict.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 layerpict.o: ../../../../exports/include/X11/Xalloca.h
 layerpict.o: ../../include/xf86_ansic.h
-layerpict.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+layerpict.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 layerpict.o: ../../include/xf86_libc.h
 layerpict.o: ../../../../exports/include/X11/Xfuncs.h
-layerpict.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+layerpict.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 layerpict.o: ../../include/regionstr.h ../../include/miscstruct.h
 layerpict.o: ../../../../exports/include/X11/Xprotostr.h ../../include/gc.h
 layerpict.o: ../../../../exports/include/X11/Xdefs.h
@@ -1250,10 +1250,10 @@ layerwin.o: ../../../../exports/include/X11/X.h
 layerwin.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 layerwin.o: ../../../../exports/include/X11/Xalloca.h
 layerwin.o: ../../include/xf86_ansic.h
-layerwin.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+layerwin.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 layerwin.o: ../../include/xf86_libc.h
 layerwin.o: ../../../../exports/include/X11/Xfuncs.h
-layerwin.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+layerwin.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 layerwin.o: ../../include/regionstr.h ../../include/miscstruct.h
 layerwin.o: ../../../../exports/include/X11/Xprotostr.h ../../include/gc.h
 layerwin.o: ../../../../exports/include/X11/Xdefs.h
@@ -1285,10 +1285,10 @@ laymodule.o: ../../../../exports/include/X11/X.h
 laymodule.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 laymodule.o: ../../../../exports/include/X11/Xalloca.h
 laymodule.o: ../../include/xf86_ansic.h
-laymodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+laymodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 laymodule.o: ../../include/xf86_libc.h
 laymodule.o: ../../../../exports/include/X11/Xfuncs.h
-laymodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+laymodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 laymodule.o: ../../include/xf86Version.h ../../../../exports/include/X11/X.h
 laymodule.o: ../../include/scrnintstr.h ../../include/screenint.h
 laymodule.o: ../../include/regionstr.h ../../include/miscstruct.h

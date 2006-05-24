@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1161,13 +1161,13 @@ AuDispose.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 AuDispose.o: /usr/include/features.h /usr/include/sys/cdefs.h
 AuDispose.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 AuDispose.o: /usr/include/gnu/stubs-32.h
-AuDispose.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+AuDispose.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 AuDispose.o: /usr/include/xlocale.h /usr/include/stdio.h
 AuDispose.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 AuDispose.o: /usr/include/libio.h /usr/include/_G_config.h
 AuDispose.o: /usr/include/wchar.h /usr/include/bits/wchar.h
 AuDispose.o: /usr/include/gconv.h
-AuDispose.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+AuDispose.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 AuDispose.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 AuDispose.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 AuDispose.o: /usr/include/bits/waitstatus.h /usr/include/endian.h
@@ -1183,13 +1183,13 @@ AuFileName.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 AuFileName.o: /usr/include/features.h /usr/include/sys/cdefs.h
 AuFileName.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 AuFileName.o: /usr/include/gnu/stubs-32.h
-AuFileName.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+AuFileName.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 AuFileName.o: /usr/include/xlocale.h /usr/include/stdio.h
 AuFileName.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 AuFileName.o: /usr/include/libio.h /usr/include/_G_config.h
 AuFileName.o: /usr/include/wchar.h /usr/include/bits/wchar.h
 AuFileName.o: /usr/include/gconv.h
-AuFileName.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+AuFileName.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 AuFileName.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 AuFileName.o: ../../exports/include/X11/Xos.h /usr/include/sys/types.h
 AuFileName.o: /usr/include/time.h /usr/include/endian.h
@@ -1211,13 +1211,13 @@ AuGetAddr.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 AuGetAddr.o: /usr/include/features.h /usr/include/sys/cdefs.h
 AuGetAddr.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 AuGetAddr.o: /usr/include/gnu/stubs-32.h
-AuGetAddr.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+AuGetAddr.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 AuGetAddr.o: /usr/include/xlocale.h /usr/include/stdio.h
 AuGetAddr.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 AuGetAddr.o: /usr/include/libio.h /usr/include/_G_config.h
 AuGetAddr.o: /usr/include/wchar.h /usr/include/bits/wchar.h
 AuGetAddr.o: /usr/include/gconv.h
-AuGetAddr.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+AuGetAddr.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 AuGetAddr.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 AuGetAddr.o: ../../exports/include/X11/Xos.h /usr/include/sys/types.h
 AuGetAddr.o: /usr/include/time.h /usr/include/endian.h
@@ -1237,13 +1237,13 @@ AuGetBest.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 AuGetBest.o: /usr/include/features.h /usr/include/sys/cdefs.h
 AuGetBest.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 AuGetBest.o: /usr/include/gnu/stubs-32.h
-AuGetBest.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+AuGetBest.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 AuGetBest.o: /usr/include/xlocale.h /usr/include/stdio.h
 AuGetBest.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 AuGetBest.o: /usr/include/libio.h /usr/include/_G_config.h
 AuGetBest.o: /usr/include/wchar.h /usr/include/bits/wchar.h
 AuGetBest.o: /usr/include/gconv.h
-AuGetBest.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+AuGetBest.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 AuGetBest.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 AuGetBest.o: ../../exports/include/X11/Xos.h /usr/include/sys/types.h
 AuGetBest.o: /usr/include/time.h /usr/include/endian.h
@@ -1266,12 +1266,12 @@ AuLock.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 AuLock.o: /usr/include/features.h /usr/include/sys/cdefs.h
 AuLock.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 AuLock.o: /usr/include/gnu/stubs-32.h
-AuLock.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+AuLock.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 AuLock.o: /usr/include/xlocale.h /usr/include/stdio.h
 AuLock.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 AuLock.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 AuLock.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-AuLock.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+AuLock.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 AuLock.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 AuLock.o: ../../exports/include/X11/Xos.h /usr/include/sys/types.h
 AuLock.o: /usr/include/time.h /usr/include/endian.h
@@ -1293,12 +1293,12 @@ AuRead.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 AuRead.o: /usr/include/features.h /usr/include/sys/cdefs.h
 AuRead.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 AuRead.o: /usr/include/gnu/stubs-32.h
-AuRead.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+AuRead.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 AuRead.o: /usr/include/xlocale.h /usr/include/stdio.h
 AuRead.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 AuRead.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 AuRead.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-AuRead.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+AuRead.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 AuRead.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 AuRead.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 AuRead.o: /usr/include/bits/waitstatus.h /usr/include/endian.h
@@ -1314,13 +1314,13 @@ AuUnlock.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 AuUnlock.o: /usr/include/features.h /usr/include/sys/cdefs.h
 AuUnlock.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 AuUnlock.o: /usr/include/gnu/stubs-32.h
-AuUnlock.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+AuUnlock.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 AuUnlock.o: /usr/include/xlocale.h /usr/include/stdio.h
 AuUnlock.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 AuUnlock.o: /usr/include/libio.h /usr/include/_G_config.h
 AuUnlock.o: /usr/include/wchar.h /usr/include/bits/wchar.h
 AuUnlock.o: /usr/include/gconv.h
-AuUnlock.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+AuUnlock.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 AuUnlock.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 AuUnlock.o: ../../exports/include/X11/Xos.h /usr/include/sys/types.h
 AuUnlock.o: /usr/include/time.h /usr/include/endian.h
@@ -1340,10 +1340,10 @@ AuWrite.o: ../../exports/include/X11/Xosdefs.h /usr/include/string.h
 AuWrite.o: /usr/include/features.h /usr/include/sys/cdefs.h
 AuWrite.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 AuWrite.o: /usr/include/gnu/stubs-32.h
-AuWrite.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+AuWrite.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 AuWrite.o: /usr/include/xlocale.h /usr/include/stdio.h
 AuWrite.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 AuWrite.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 AuWrite.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-AuWrite.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+AuWrite.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 AuWrite.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h

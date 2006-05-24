@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1208,10 +1208,10 @@ pci.o: ../../../../../exports/include/X11/Xdefs.h
 pci.o: ../../../../../programs/Xserver/include/os.h
 pci.o: ../../../../../exports/include/X11/Xalloca.h
 pci.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-pci.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+pci.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 pci.o: ../../../../../programs/Xserver/include/xf86_libc.h
 pci.o: ../../../../../exports/include/X11/Xfuncs.h
-pci.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+pci.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 pci.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 pci.o: ../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 pci.o: ../../../../../programs/Xserver/include/input.h
@@ -1251,10 +1251,10 @@ xf86int10module.o: ../../../../../exports/include/X11/Xdefs.h
 xf86int10module.o: ../../../../../programs/Xserver/include/os.h
 xf86int10module.o: ../../../../../exports/include/X11/Xalloca.h
 xf86int10module.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xf86int10module.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xf86int10module.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xf86int10module.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xf86int10module.o: ../../../../../exports/include/X11/Xfuncs.h
-xf86int10module.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xf86int10module.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xf86int10module.o: ../../../../../programs/Xserver/include/input.h
 xf86int10module.o: ../../../../../programs/Xserver/include/screenint.h
 xf86int10module.o: ../../../../../exports/include/X11/Xproto.h
@@ -1295,10 +1295,10 @@ helper_exec.o: ../../../../../exports/include/X11/Xdefs.h
 helper_exec.o: ../../../../../programs/Xserver/include/os.h
 helper_exec.o: ../../../../../exports/include/X11/Xalloca.h
 helper_exec.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-helper_exec.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+helper_exec.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 helper_exec.o: ../../../../../programs/Xserver/include/xf86_libc.h
 helper_exec.o: ../../../../../exports/include/X11/Xfuncs.h
-helper_exec.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+helper_exec.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 helper_exec.o: ../../../../../programs/Xserver/include/input.h
 helper_exec.o: ../../../../../programs/Xserver/include/screenint.h
 helper_exec.o: ../../../../../exports/include/X11/Xproto.h
@@ -1347,10 +1347,10 @@ helper_mem.o: ../../../../../exports/include/X11/Xdefs.h
 helper_mem.o: ../../../../../programs/Xserver/include/os.h
 helper_mem.o: ../../../../../exports/include/X11/Xalloca.h
 helper_mem.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-helper_mem.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+helper_mem.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 helper_mem.o: ../../../../../programs/Xserver/include/xf86_libc.h
 helper_mem.o: ../../../../../exports/include/X11/Xfuncs.h
-helper_mem.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+helper_mem.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 helper_mem.o: ../../../../../programs/Xserver/include/input.h
 helper_mem.o: ../../../../../programs/Xserver/include/screenint.h
 helper_mem.o: ../../../../../exports/include/X11/Xproto.h
@@ -1395,10 +1395,10 @@ xf86int10.o: ../../../../../exports/include/X11/Xdefs.h
 xf86int10.o: ../../../../../programs/Xserver/include/os.h
 xf86int10.o: ../../../../../exports/include/X11/Xalloca.h
 xf86int10.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xf86int10.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xf86int10.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xf86int10.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xf86int10.o: ../../../../../exports/include/X11/Xfuncs.h
-xf86int10.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xf86int10.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xf86int10.o: ../../../../../programs/Xserver/include/input.h
 xf86int10.o: ../../../../../programs/Xserver/include/screenint.h
 xf86int10.o: ../../../../../exports/include/X11/Xproto.h
@@ -1447,10 +1447,10 @@ xf86x86emu.o: ../../../../../exports/include/X11/Xdefs.h
 xf86x86emu.o: ../../../../../programs/Xserver/include/os.h
 xf86x86emu.o: ../../../../../exports/include/X11/Xalloca.h
 xf86x86emu.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-xf86x86emu.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xf86x86emu.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xf86x86emu.o: ../../../../../programs/Xserver/include/xf86_libc.h
 xf86x86emu.o: ../../../../../exports/include/X11/Xfuncs.h
-xf86x86emu.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xf86x86emu.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xf86x86emu.o: ../../../../../programs/Xserver/include/input.h
 xf86x86emu.o: ../../../../../programs/Xserver/include/screenint.h
 xf86x86emu.o: ../../../../../exports/include/X11/Xproto.h
@@ -1497,10 +1497,10 @@ generic.o: ../../../../../exports/include/X11/Xdefs.h
 generic.o: ../../../../../programs/Xserver/include/os.h
 generic.o: ../../../../../exports/include/X11/Xalloca.h
 generic.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-generic.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+generic.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 generic.o: ../../../../../programs/Xserver/include/xf86_libc.h
 generic.o: ../../../../../exports/include/X11/Xfuncs.h
-generic.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+generic.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 generic.o: ../../../../../programs/Xserver/include/input.h
 generic.o: ../../../../../programs/Xserver/include/screenint.h
 generic.o: ../../../../../exports/include/X11/Xproto.h
@@ -1550,7 +1550,7 @@ debug.o: ../../../../../extras/x86emu/src/x86emu/x86emu/prim_asm.h
 debug.o: ../../../../../extras/x86emu/src/x86emu/x86emu/fpu.h
 debug.o: ../../../../../extras/x86emu/include/x86emu/fpu_regs.h
 debug.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-debug.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+debug.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 debug.o: ../../../../../programs/Xserver/include/misc.h
 debug.o: ../../../../../exports/include/X11/Xosdefs.h
 debug.o: ../../../../../exports/include/X11/Xfuncproto.h
@@ -1561,7 +1561,7 @@ debug.o: ../../../../../programs/Xserver/include/os.h
 debug.o: ../../../../../exports/include/X11/Xalloca.h
 debug.o: ../../../../../programs/Xserver/include/xf86_libc.h
 debug.o: ../../../../../exports/include/X11/Xfuncs.h
-debug.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+debug.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 decode.o: ../../../../../extras/x86emu/src/x86emu/x86emu/x86emui.h
 decode.o: ../../../../../extras/x86emu/include/x86emu.h
 decode.o: ../../../../../extras/x86emu/include/x86emu/types.h
@@ -1574,7 +1574,7 @@ decode.o: ../../../../../extras/x86emu/src/x86emu/x86emu/prim_asm.h
 decode.o: ../../../../../extras/x86emu/src/x86emu/x86emu/fpu.h
 decode.o: ../../../../../extras/x86emu/include/x86emu/fpu_regs.h
 decode.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-decode.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+decode.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 decode.o: ../../../../../programs/Xserver/include/misc.h
 decode.o: ../../../../../exports/include/X11/Xosdefs.h
 decode.o: ../../../../../exports/include/X11/Xfuncproto.h
@@ -1585,7 +1585,7 @@ decode.o: ../../../../../programs/Xserver/include/os.h
 decode.o: ../../../../../exports/include/X11/Xalloca.h
 decode.o: ../../../../../programs/Xserver/include/xf86_libc.h
 decode.o: ../../../../../exports/include/X11/Xfuncs.h
-decode.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+decode.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 fpu.o: ../../../../../extras/x86emu/src/x86emu/x86emu/x86emui.h
 fpu.o: ../../../../../extras/x86emu/include/x86emu.h
 fpu.o: ../../../../../extras/x86emu/include/x86emu/types.h
@@ -1598,7 +1598,7 @@ fpu.o: ../../../../../extras/x86emu/src/x86emu/x86emu/prim_asm.h
 fpu.o: ../../../../../extras/x86emu/src/x86emu/x86emu/fpu.h
 fpu.o: ../../../../../extras/x86emu/include/x86emu/fpu_regs.h
 fpu.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-fpu.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+fpu.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 fpu.o: ../../../../../programs/Xserver/include/misc.h
 fpu.o: ../../../../../exports/include/X11/Xosdefs.h
 fpu.o: ../../../../../exports/include/X11/Xfuncproto.h
@@ -1609,7 +1609,7 @@ fpu.o: ../../../../../programs/Xserver/include/os.h
 fpu.o: ../../../../../exports/include/X11/Xalloca.h
 fpu.o: ../../../../../programs/Xserver/include/xf86_libc.h
 fpu.o: ../../../../../exports/include/X11/Xfuncs.h
-fpu.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+fpu.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ops.o: ../../../../../extras/x86emu/src/x86emu/x86emu/x86emui.h
 ops.o: ../../../../../extras/x86emu/include/x86emu.h
 ops.o: ../../../../../extras/x86emu/include/x86emu/types.h
@@ -1622,7 +1622,7 @@ ops.o: ../../../../../extras/x86emu/src/x86emu/x86emu/prim_asm.h
 ops.o: ../../../../../extras/x86emu/src/x86emu/x86emu/fpu.h
 ops.o: ../../../../../extras/x86emu/include/x86emu/fpu_regs.h
 ops.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-ops.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ops.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ops.o: ../../../../../programs/Xserver/include/misc.h
 ops.o: ../../../../../exports/include/X11/Xosdefs.h
 ops.o: ../../../../../exports/include/X11/Xfuncproto.h
@@ -1633,7 +1633,7 @@ ops.o: ../../../../../programs/Xserver/include/os.h
 ops.o: ../../../../../exports/include/X11/Xalloca.h
 ops.o: ../../../../../programs/Xserver/include/xf86_libc.h
 ops.o: ../../../../../exports/include/X11/Xfuncs.h
-ops.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ops.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ops2.o: ../../../../../extras/x86emu/src/x86emu/x86emu/x86emui.h
 ops2.o: ../../../../../extras/x86emu/include/x86emu.h
 ops2.o: ../../../../../extras/x86emu/include/x86emu/types.h
@@ -1646,7 +1646,7 @@ ops2.o: ../../../../../extras/x86emu/src/x86emu/x86emu/prim_asm.h
 ops2.o: ../../../../../extras/x86emu/src/x86emu/x86emu/fpu.h
 ops2.o: ../../../../../extras/x86emu/include/x86emu/fpu_regs.h
 ops2.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-ops2.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ops2.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ops2.o: ../../../../../programs/Xserver/include/misc.h
 ops2.o: ../../../../../exports/include/X11/Xosdefs.h
 ops2.o: ../../../../../exports/include/X11/Xfuncproto.h
@@ -1657,7 +1657,7 @@ ops2.o: ../../../../../programs/Xserver/include/os.h
 ops2.o: ../../../../../exports/include/X11/Xalloca.h
 ops2.o: ../../../../../programs/Xserver/include/xf86_libc.h
 ops2.o: ../../../../../exports/include/X11/Xfuncs.h
-ops2.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ops2.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 prim_ops.o: ../../../../../extras/x86emu/src/x86emu/x86emu/x86emui.h
 prim_ops.o: ../../../../../extras/x86emu/include/x86emu.h
 prim_ops.o: ../../../../../extras/x86emu/include/x86emu/types.h
@@ -1670,7 +1670,7 @@ prim_ops.o: ../../../../../extras/x86emu/src/x86emu/x86emu/prim_asm.h
 prim_ops.o: ../../../../../extras/x86emu/src/x86emu/x86emu/fpu.h
 prim_ops.o: ../../../../../extras/x86emu/include/x86emu/fpu_regs.h
 prim_ops.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-prim_ops.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+prim_ops.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 prim_ops.o: ../../../../../programs/Xserver/include/misc.h
 prim_ops.o: ../../../../../exports/include/X11/Xosdefs.h
 prim_ops.o: ../../../../../exports/include/X11/Xfuncproto.h
@@ -1681,7 +1681,7 @@ prim_ops.o: ../../../../../programs/Xserver/include/os.h
 prim_ops.o: ../../../../../exports/include/X11/Xalloca.h
 prim_ops.o: ../../../../../programs/Xserver/include/xf86_libc.h
 prim_ops.o: ../../../../../exports/include/X11/Xfuncs.h
-prim_ops.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+prim_ops.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 sys.o: ../../../../../extras/x86emu/include/x86emu.h
 sys.o: ../../../../../extras/x86emu/include/x86emu/types.h
 sys.o: ../../../../../extras/x86emu/include/x86emu/regs.h
@@ -1694,7 +1694,7 @@ sys.o: ../../../../../extras/x86emu/src/x86emu/x86emu/prim_asm.h
 sys.o: ../../../../../extras/x86emu/src/x86emu/x86emu/fpu.h
 sys.o: ../../../../../extras/x86emu/include/x86emu/fpu_regs.h
 sys.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-sys.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+sys.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 sys.o: ../../../../../programs/Xserver/include/misc.h
 sys.o: ../../../../../exports/include/X11/Xosdefs.h
 sys.o: ../../../../../exports/include/X11/Xfuncproto.h
@@ -1705,4 +1705,4 @@ sys.o: ../../../../../programs/Xserver/include/os.h
 sys.o: ../../../../../exports/include/X11/Xalloca.h
 sys.o: ../../../../../programs/Xserver/include/xf86_libc.h
 sys.o: ../../../../../exports/include/X11/Xfuncs.h
-sys.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+sys.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h

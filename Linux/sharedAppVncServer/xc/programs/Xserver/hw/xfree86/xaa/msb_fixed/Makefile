@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1197,10 +1197,10 @@ xaaBitmap.o: ../../../../../../exports/include/X11/Xdefs.h
 xaaBitmap.o: ../../../../../../programs/Xserver/include/os.h
 xaaBitmap.o: ../../../../../../exports/include/X11/Xalloca.h
 xaaBitmap.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-xaaBitmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaBitmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xaaBitmap.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 xaaBitmap.o: ../../../../../../exports/include/X11/Xfuncs.h
-xaaBitmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaBitmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xaaBitmap.o: ../../../../../../programs/Xserver/include/pixmap.h
 xaaBitmap.o: ../../../../../../programs/Xserver/include/regionstr.h
 xaaBitmap.o: ../../../../../../programs/Xserver/include/miscstruct.h
@@ -1252,10 +1252,10 @@ xaaBitmap3.o: ../../../../../../exports/include/X11/Xdefs.h
 xaaBitmap3.o: ../../../../../../programs/Xserver/include/os.h
 xaaBitmap3.o: ../../../../../../exports/include/X11/Xalloca.h
 xaaBitmap3.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-xaaBitmap3.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaBitmap3.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xaaBitmap3.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 xaaBitmap3.o: ../../../../../../exports/include/X11/Xfuncs.h
-xaaBitmap3.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaBitmap3.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xaaBitmap3.o: ../../../../../../programs/Xserver/include/pixmap.h
 xaaBitmap3.o: ../../../../../../programs/Xserver/include/regionstr.h
 xaaBitmap3.o: ../../../../../../programs/Xserver/include/miscstruct.h
@@ -1307,10 +1307,10 @@ xaaStipple.o: ../../../../../../exports/include/X11/Xdefs.h
 xaaStipple.o: ../../../../../../programs/Xserver/include/os.h
 xaaStipple.o: ../../../../../../exports/include/X11/Xalloca.h
 xaaStipple.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-xaaStipple.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaStipple.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xaaStipple.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 xaaStipple.o: ../../../../../../exports/include/X11/Xfuncs.h
-xaaStipple.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaStipple.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xaaStipple.o: ../../../../../../programs/Xserver/include/pixmap.h
 xaaStipple.o: ../../../../../../programs/Xserver/include/regionstr.h
 xaaStipple.o: ../../../../../../programs/Xserver/include/miscstruct.h
@@ -1362,10 +1362,10 @@ xaaStipple3.o: ../../../../../../exports/include/X11/Xdefs.h
 xaaStipple3.o: ../../../../../../programs/Xserver/include/os.h
 xaaStipple3.o: ../../../../../../exports/include/X11/Xalloca.h
 xaaStipple3.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-xaaStipple3.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaStipple3.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xaaStipple3.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 xaaStipple3.o: ../../../../../../exports/include/X11/Xfuncs.h
-xaaStipple3.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaStipple3.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xaaStipple3.o: ../../../../../../programs/Xserver/include/pixmap.h
 xaaStipple3.o: ../../../../../../programs/Xserver/include/regionstr.h
 xaaStipple3.o: ../../../../../../programs/Xserver/include/miscstruct.h
@@ -1417,10 +1417,10 @@ xaaTEGlyph.o: ../../../../../../exports/include/X11/Xdefs.h
 xaaTEGlyph.o: ../../../../../../programs/Xserver/include/os.h
 xaaTEGlyph.o: ../../../../../../exports/include/X11/Xalloca.h
 xaaTEGlyph.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-xaaTEGlyph.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xaaTEGlyph.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xaaTEGlyph.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 xaaTEGlyph.o: ../../../../../../exports/include/X11/Xfuncs.h
-xaaTEGlyph.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xaaTEGlyph.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xaaTEGlyph.o: ../../../../../../programs/Xserver/include/pixmap.h
 xaaTEGlyph.o: ../../../../../../programs/Xserver/include/regionstr.h
 xaaTEGlyph.o: ../../../../../../programs/Xserver/include/miscstruct.h

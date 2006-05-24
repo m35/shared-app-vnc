@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1281,10 +1281,10 @@ apm_accel.o: ../../../../../../exports/include/X11/Xdefs.h
 apm_accel.o: ../../../../../../programs/Xserver/include/os.h
 apm_accel.o: ../../../../../../exports/include/X11/Xalloca.h
 apm_accel.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-apm_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+apm_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 apm_accel.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 apm_accel.o: ../../../../../../exports/include/X11/Xfuncs.h
-apm_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+apm_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 apm_accel.o: ../../../../../../programs/Xserver/include/input.h
 apm_accel.o: ../../../../../../programs/Xserver/include/screenint.h
 apm_accel.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1378,10 +1378,10 @@ apm_cursor.o: ../../../../../../exports/include/X11/Xdefs.h
 apm_cursor.o: ../../../../../../programs/Xserver/include/os.h
 apm_cursor.o: ../../../../../../exports/include/X11/Xalloca.h
 apm_cursor.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-apm_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+apm_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 apm_cursor.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 apm_cursor.o: ../../../../../../exports/include/X11/Xfuncs.h
-apm_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+apm_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 apm_cursor.o: ../../../../../../programs/Xserver/include/input.h
 apm_cursor.o: ../../../../../../programs/Xserver/include/screenint.h
 apm_cursor.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1471,10 +1471,10 @@ apm_dga.o: ../../../../../../exports/include/X11/Xdefs.h
 apm_dga.o: ../../../../../../programs/Xserver/include/os.h
 apm_dga.o: ../../../../../../exports/include/X11/Xalloca.h
 apm_dga.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-apm_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+apm_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 apm_dga.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 apm_dga.o: ../../../../../../exports/include/X11/Xfuncs.h
-apm_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+apm_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 apm_dga.o: ../../../../../../programs/Xserver/include/input.h
 apm_dga.o: ../../../../../../programs/Xserver/include/screenint.h
 apm_dga.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1566,10 +1566,10 @@ apm_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 apm_driver.o: ../../../../../../programs/Xserver/include/os.h
 apm_driver.o: ../../../../../../exports/include/X11/Xalloca.h
 apm_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-apm_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+apm_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 apm_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 apm_driver.o: ../../../../../../exports/include/X11/Xfuncs.h
-apm_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+apm_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 apm_driver.o: ../../../../../../programs/Xserver/include/input.h
 apm_driver.o: ../../../../../../programs/Xserver/include/screenint.h
 apm_driver.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1664,10 +1664,10 @@ apm_i2c.o: ../../../../../../exports/include/X11/Xdefs.h
 apm_i2c.o: ../../../../../../programs/Xserver/include/os.h
 apm_i2c.o: ../../../../../../exports/include/X11/Xalloca.h
 apm_i2c.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-apm_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+apm_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 apm_i2c.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 apm_i2c.o: ../../../../../../exports/include/X11/Xfuncs.h
-apm_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+apm_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 apm_i2c.o: ../../../../../../programs/Xserver/include/input.h
 apm_i2c.o: ../../../../../../programs/Xserver/include/screenint.h
 apm_i2c.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1756,10 +1756,10 @@ apm_rush.o: ../../../../../../exports/include/X11/Xdefs.h
 apm_rush.o: ../../../../../../programs/Xserver/include/os.h
 apm_rush.o: ../../../../../../exports/include/X11/Xalloca.h
 apm_rush.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-apm_rush.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+apm_rush.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 apm_rush.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 apm_rush.o: ../../../../../../exports/include/X11/Xfuncs.h
-apm_rush.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+apm_rush.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 apm_rush.o: ../../../../../../programs/Xserver/include/input.h
 apm_rush.o: ../../../../../../programs/Xserver/include/screenint.h
 apm_rush.o: ../../../../../../exports/include/X11/Xproto.h

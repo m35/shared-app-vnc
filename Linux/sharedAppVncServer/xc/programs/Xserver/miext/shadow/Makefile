@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1139,10 +1139,10 @@ shmodule.o: ../../../../exports/include/X11/X.h
 shmodule.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 shmodule.o: ../../../../exports/include/X11/Xalloca.h
 shmodule.o: ../../include/xf86_ansic.h
-shmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+shmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 shmodule.o: ../../include/xf86_libc.h
 shmodule.o: ../../../../exports/include/X11/Xfuncs.h
-shmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+shmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 shmodule.o: ../../include/xf86Version.h ../../../../exports/include/X11/X.h
 shmodule.o: ../../include/scrnintstr.h ../../include/screenint.h
 shmodule.o: ../../include/regionstr.h ../../include/miscstruct.h
@@ -1176,9 +1176,9 @@ shadow.o: ../../../../exports/include/X11/X.h
 shadow.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 shadow.o: ../../../../exports/include/X11/Xalloca.h
 shadow.o: ../../include/xf86_ansic.h
-shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 shadow.o: ../../include/xf86_libc.h ../../../../exports/include/X11/Xfuncs.h
-shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 shadow.o: ../../include/regionstr.h ../../include/miscstruct.h
 shadow.o: ../../../../exports/include/X11/Xprotostr.h ../../include/gc.h
 shadow.o: ../../../../exports/include/X11/Xdefs.h
@@ -1210,9 +1210,9 @@ shalloc.o: ../../../../exports/include/X11/X.h
 shalloc.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 shalloc.o: ../../../../exports/include/X11/Xalloca.h
 shalloc.o: ../../include/xf86_ansic.h
-shalloc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+shalloc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 shalloc.o: ../../include/xf86_libc.h ../../../../exports/include/X11/Xfuncs.h
-shalloc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+shalloc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 shalloc.o: ../../include/regionstr.h ../../include/miscstruct.h
 shalloc.o: ../../../../exports/include/X11/Xprotostr.h ../../include/gc.h
 shalloc.o: ../../../../exports/include/X11/Xdefs.h
@@ -1244,10 +1244,10 @@ shplanar.o: ../../../../exports/include/X11/X.h
 shplanar.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 shplanar.o: ../../../../exports/include/X11/Xalloca.h
 shplanar.o: ../../include/xf86_ansic.h
-shplanar.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+shplanar.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 shplanar.o: ../../include/xf86_libc.h
 shplanar.o: ../../../../exports/include/X11/Xfuncs.h
-shplanar.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+shplanar.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 shplanar.o: ../../include/regionstr.h ../../include/miscstruct.h
 shplanar.o: ../../../../exports/include/X11/Xprotostr.h ../../include/gc.h
 shplanar.o: ../../../../exports/include/X11/Xdefs.h
@@ -1280,10 +1280,10 @@ shplanar8.o: ../../../../exports/include/X11/X.h
 shplanar8.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 shplanar8.o: ../../../../exports/include/X11/Xalloca.h
 shplanar8.o: ../../include/xf86_ansic.h
-shplanar8.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+shplanar8.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 shplanar8.o: ../../include/xf86_libc.h
 shplanar8.o: ../../../../exports/include/X11/Xfuncs.h
-shplanar8.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+shplanar8.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 shplanar8.o: ../../include/regionstr.h ../../include/miscstruct.h
 shplanar8.o: ../../../../exports/include/X11/Xprotostr.h ../../include/gc.h
 shplanar8.o: ../../../../exports/include/X11/Xdefs.h
@@ -1316,10 +1316,10 @@ shpacked.o: ../../../../exports/include/X11/X.h
 shpacked.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 shpacked.o: ../../../../exports/include/X11/Xalloca.h
 shpacked.o: ../../include/xf86_ansic.h
-shpacked.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+shpacked.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 shpacked.o: ../../include/xf86_libc.h
 shpacked.o: ../../../../exports/include/X11/Xfuncs.h
-shpacked.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+shpacked.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 shpacked.o: ../../include/regionstr.h ../../include/miscstruct.h
 shpacked.o: ../../../../exports/include/X11/Xprotostr.h ../../include/gc.h
 shpacked.o: ../../../../exports/include/X11/Xdefs.h
@@ -1352,10 +1352,10 @@ shrotate.o: ../../../../exports/include/X11/X.h
 shrotate.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 shrotate.o: ../../../../exports/include/X11/Xalloca.h
 shrotate.o: ../../include/xf86_ansic.h
-shrotate.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+shrotate.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 shrotate.o: ../../include/xf86_libc.h
 shrotate.o: ../../../../exports/include/X11/Xfuncs.h
-shrotate.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+shrotate.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 shrotate.o: ../../include/regionstr.h ../../include/miscstruct.h
 shrotate.o: ../../../../exports/include/X11/Xprotostr.h ../../include/gc.h
 shrotate.o: ../../../../exports/include/X11/Xdefs.h
@@ -1389,10 +1389,10 @@ shrot8pack_90.o: ../../../../exports/include/X11/X.h
 shrot8pack_90.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 shrot8pack_90.o: ../../../../exports/include/X11/Xalloca.h
 shrot8pack_90.o: ../../include/xf86_ansic.h
-shrot8pack_90.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+shrot8pack_90.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 shrot8pack_90.o: ../../include/xf86_libc.h
 shrot8pack_90.o: ../../../../exports/include/X11/Xfuncs.h
-shrot8pack_90.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+shrot8pack_90.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 shrot8pack_90.o: ../../include/regionstr.h ../../include/miscstruct.h
 shrot8pack_90.o: ../../../../exports/include/X11/Xprotostr.h
 shrot8pack_90.o: ../../include/gc.h ../../../../exports/include/X11/Xdefs.h
@@ -1428,10 +1428,10 @@ shrot8pack_180.o: ../../../../exports/include/X11/X.h
 shrot8pack_180.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 shrot8pack_180.o: ../../../../exports/include/X11/Xalloca.h
 shrot8pack_180.o: ../../include/xf86_ansic.h
-shrot8pack_180.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+shrot8pack_180.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 shrot8pack_180.o: ../../include/xf86_libc.h
 shrot8pack_180.o: ../../../../exports/include/X11/Xfuncs.h
-shrot8pack_180.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+shrot8pack_180.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 shrot8pack_180.o: ../../include/regionstr.h ../../include/miscstruct.h
 shrot8pack_180.o: ../../../../exports/include/X11/Xprotostr.h
 shrot8pack_180.o: ../../include/gc.h ../../../../exports/include/X11/Xdefs.h
@@ -1467,10 +1467,10 @@ shrot8pack_270.o: ../../../../exports/include/X11/X.h
 shrot8pack_270.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 shrot8pack_270.o: ../../../../exports/include/X11/Xalloca.h
 shrot8pack_270.o: ../../include/xf86_ansic.h
-shrot8pack_270.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+shrot8pack_270.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 shrot8pack_270.o: ../../include/xf86_libc.h
 shrot8pack_270.o: ../../../../exports/include/X11/Xfuncs.h
-shrot8pack_270.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+shrot8pack_270.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 shrot8pack_270.o: ../../include/regionstr.h ../../include/miscstruct.h
 shrot8pack_270.o: ../../../../exports/include/X11/Xprotostr.h
 shrot8pack_270.o: ../../include/gc.h ../../../../exports/include/X11/Xdefs.h
@@ -1506,10 +1506,10 @@ shrot16pack_90.o: ../../../../exports/include/X11/X.h
 shrot16pack_90.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 shrot16pack_90.o: ../../../../exports/include/X11/Xalloca.h
 shrot16pack_90.o: ../../include/xf86_ansic.h
-shrot16pack_90.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+shrot16pack_90.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 shrot16pack_90.o: ../../include/xf86_libc.h
 shrot16pack_90.o: ../../../../exports/include/X11/Xfuncs.h
-shrot16pack_90.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+shrot16pack_90.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 shrot16pack_90.o: ../../include/regionstr.h ../../include/miscstruct.h
 shrot16pack_90.o: ../../../../exports/include/X11/Xprotostr.h
 shrot16pack_90.o: ../../include/gc.h ../../../../exports/include/X11/Xdefs.h
@@ -1545,10 +1545,10 @@ shrot16pack_180.o: ../../../../exports/include/X11/X.h
 shrot16pack_180.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 shrot16pack_180.o: ../../../../exports/include/X11/Xalloca.h
 shrot16pack_180.o: ../../include/xf86_ansic.h
-shrot16pack_180.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+shrot16pack_180.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 shrot16pack_180.o: ../../include/xf86_libc.h
 shrot16pack_180.o: ../../../../exports/include/X11/Xfuncs.h
-shrot16pack_180.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+shrot16pack_180.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 shrot16pack_180.o: ../../include/regionstr.h ../../include/miscstruct.h
 shrot16pack_180.o: ../../../../exports/include/X11/Xprotostr.h
 shrot16pack_180.o: ../../include/gc.h ../../../../exports/include/X11/Xdefs.h
@@ -1584,10 +1584,10 @@ shrot16pack_270.o: ../../../../exports/include/X11/X.h
 shrot16pack_270.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 shrot16pack_270.o: ../../../../exports/include/X11/Xalloca.h
 shrot16pack_270.o: ../../include/xf86_ansic.h
-shrot16pack_270.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+shrot16pack_270.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 shrot16pack_270.o: ../../include/xf86_libc.h
 shrot16pack_270.o: ../../../../exports/include/X11/Xfuncs.h
-shrot16pack_270.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+shrot16pack_270.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 shrot16pack_270.o: ../../include/regionstr.h ../../include/miscstruct.h
 shrot16pack_270.o: ../../../../exports/include/X11/Xprotostr.h
 shrot16pack_270.o: ../../include/gc.h ../../../../exports/include/X11/Xdefs.h
@@ -1623,10 +1623,10 @@ shrot32pack_90.o: ../../../../exports/include/X11/X.h
 shrot32pack_90.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 shrot32pack_90.o: ../../../../exports/include/X11/Xalloca.h
 shrot32pack_90.o: ../../include/xf86_ansic.h
-shrot32pack_90.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+shrot32pack_90.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 shrot32pack_90.o: ../../include/xf86_libc.h
 shrot32pack_90.o: ../../../../exports/include/X11/Xfuncs.h
-shrot32pack_90.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+shrot32pack_90.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 shrot32pack_90.o: ../../include/regionstr.h ../../include/miscstruct.h
 shrot32pack_90.o: ../../../../exports/include/X11/Xprotostr.h
 shrot32pack_90.o: ../../include/gc.h ../../../../exports/include/X11/Xdefs.h
@@ -1662,10 +1662,10 @@ shrot32pack_180.o: ../../../../exports/include/X11/X.h
 shrot32pack_180.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 shrot32pack_180.o: ../../../../exports/include/X11/Xalloca.h
 shrot32pack_180.o: ../../include/xf86_ansic.h
-shrot32pack_180.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+shrot32pack_180.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 shrot32pack_180.o: ../../include/xf86_libc.h
 shrot32pack_180.o: ../../../../exports/include/X11/Xfuncs.h
-shrot32pack_180.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+shrot32pack_180.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 shrot32pack_180.o: ../../include/regionstr.h ../../include/miscstruct.h
 shrot32pack_180.o: ../../../../exports/include/X11/Xprotostr.h
 shrot32pack_180.o: ../../include/gc.h ../../../../exports/include/X11/Xdefs.h
@@ -1701,10 +1701,10 @@ shrot32pack_270.o: ../../../../exports/include/X11/X.h
 shrot32pack_270.o: ../../../../exports/include/X11/Xdefs.h ../../include/os.h
 shrot32pack_270.o: ../../../../exports/include/X11/Xalloca.h
 shrot32pack_270.o: ../../include/xf86_ansic.h
-shrot32pack_270.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+shrot32pack_270.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 shrot32pack_270.o: ../../include/xf86_libc.h
 shrot32pack_270.o: ../../../../exports/include/X11/Xfuncs.h
-shrot32pack_270.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+shrot32pack_270.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 shrot32pack_270.o: ../../include/regionstr.h ../../include/miscstruct.h
 shrot32pack_270.o: ../../../../exports/include/X11/Xprotostr.h
 shrot32pack_270.o: ../../include/gc.h ../../../../exports/include/X11/Xdefs.h

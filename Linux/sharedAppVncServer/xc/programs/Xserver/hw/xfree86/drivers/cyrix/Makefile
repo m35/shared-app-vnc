@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1236,10 +1236,10 @@ cyrix_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 cyrix_driver.o: ../../../../../../programs/Xserver/include/os.h
 cyrix_driver.o: ../../../../../../exports/include/X11/Xalloca.h
 cyrix_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-cyrix_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+cyrix_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 cyrix_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 cyrix_driver.o: ../../../../../../exports/include/X11/Xfuncs.h
-cyrix_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+cyrix_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 cyrix_driver.o: ../../../../../../programs/Xserver/include/regionstr.h
 cyrix_driver.o: ../../../../../../programs/Xserver/include/miscstruct.h
 cyrix_driver.o: ../../../../../../exports/include/X11/Xprotostr.h
@@ -1323,10 +1323,10 @@ cyrix_accel.o: ../../../../../../exports/include/X11/Xdefs.h
 cyrix_accel.o: ../../../../../../programs/Xserver/include/os.h
 cyrix_accel.o: ../../../../../../exports/include/X11/Xalloca.h
 cyrix_accel.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-cyrix_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+cyrix_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 cyrix_accel.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 cyrix_accel.o: ../../../../../../exports/include/X11/Xfuncs.h
-cyrix_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+cyrix_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 cyrix_accel.o: ../../../../../../programs/Xserver/include/input.h
 cyrix_accel.o: ../../../../../../programs/Xserver/include/screenint.h
 cyrix_accel.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1393,10 +1393,10 @@ cyrix_bank.o: ../../../../../../exports/include/X11/Xdefs.h
 cyrix_bank.o: ../../../../../../programs/Xserver/include/os.h
 cyrix_bank.o: ../../../../../../exports/include/X11/Xalloca.h
 cyrix_bank.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-cyrix_bank.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+cyrix_bank.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 cyrix_bank.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 cyrix_bank.o: ../../../../../../exports/include/X11/Xfuncs.h
-cyrix_bank.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+cyrix_bank.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 cyrix_bank.o: ../../../../../../programs/Xserver/include/input.h
 cyrix_bank.o: ../../../../../../programs/Xserver/include/screenint.h
 cyrix_bank.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1467,10 +1467,10 @@ cyrix_helper.o: ../../../../../../exports/include/X11/Xdefs.h
 cyrix_helper.o: ../../../../../../programs/Xserver/include/os.h
 cyrix_helper.o: ../../../../../../exports/include/X11/Xalloca.h
 cyrix_helper.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-cyrix_helper.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+cyrix_helper.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 cyrix_helper.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 cyrix_helper.o: ../../../../../../exports/include/X11/Xfuncs.h
-cyrix_helper.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+cyrix_helper.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 cyrix_helper.o: ../../../../../../programs/Xserver/include/pixmap.h
 cyrix_helper.o: ../../../../../../programs/Xserver/include/regionstr.h
 cyrix_helper.o: ../../../../../../programs/Xserver/include/miscstruct.h
@@ -1527,10 +1527,10 @@ cyrix_shadow.o: ../../../../../../exports/include/X11/Xdefs.h
 cyrix_shadow.o: ../../../../../../programs/Xserver/include/os.h
 cyrix_shadow.o: ../../../../../../exports/include/X11/Xalloca.h
 cyrix_shadow.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-cyrix_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+cyrix_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 cyrix_shadow.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 cyrix_shadow.o: ../../../../../../exports/include/X11/Xfuncs.h
-cyrix_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+cyrix_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 cyrix_shadow.o: ../../../../../../programs/Xserver/include/input.h
 cyrix_shadow.o: ../../../../../../programs/Xserver/include/screenint.h
 cyrix_shadow.o: ../../../../../../exports/include/X11/Xproto.h

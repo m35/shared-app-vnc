@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1163,11 +1163,11 @@ Device.o: xf86Parser.h xf86Optrec.h /usr/include/stdio.h
 Device.o: /usr/include/features.h /usr/include/sys/cdefs.h
 Device.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 Device.o: /usr/include/gnu/stubs-32.h
-Device.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+Device.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 Device.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 Device.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 Device.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-Device.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+Device.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 Device.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 Device.o: xf86tokens.h Configint.h /usr/include/string.h
 Device.o: /usr/include/xlocale.h configProcs.h /usr/include/stdlib.h
@@ -1184,7 +1184,7 @@ Files.o: /usr/include/sys/types.h /usr/include/features.h
 Files.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 Files.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
 Files.o: /usr/include/bits/types.h
-Files.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+Files.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 Files.o: /usr/include/bits/typesizes.h /usr/include/time.h
 Files.o: /usr/include/endian.h /usr/include/bits/endian.h
 Files.o: /usr/include/sys/select.h /usr/include/bits/select.h
@@ -1199,7 +1199,7 @@ Files.o: /usr/include/sys/time.h ../../../../../exports/include/X11/Xarch.h
 Files.o: xf86Parser.h xf86Optrec.h /usr/include/stdio.h /usr/include/libio.h
 Files.o: /usr/include/_G_config.h /usr/include/wchar.h
 Files.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-Files.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+Files.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 Files.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 Files.o: xf86tokens.h Configint.h configProcs.h /usr/include/stdlib.h
 Files.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
@@ -1208,11 +1208,11 @@ Flags.o: xf86Parser.h xf86Optrec.h /usr/include/stdio.h
 Flags.o: /usr/include/features.h /usr/include/sys/cdefs.h
 Flags.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 Flags.o: /usr/include/gnu/stubs-32.h
-Flags.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+Flags.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 Flags.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 Flags.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 Flags.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-Flags.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+Flags.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 Flags.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 Flags.o: xf86tokens.h Configint.h /usr/include/string.h
 Flags.o: /usr/include/xlocale.h configProcs.h /usr/include/stdlib.h
@@ -1231,11 +1231,11 @@ Input.o: xf86Parser.h xf86Optrec.h /usr/include/stdio.h
 Input.o: /usr/include/features.h /usr/include/sys/cdefs.h
 Input.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 Input.o: /usr/include/gnu/stubs-32.h
-Input.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+Input.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 Input.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 Input.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 Input.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-Input.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+Input.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 Input.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 Input.o: xf86tokens.h Configint.h /usr/include/string.h
 Input.o: /usr/include/xlocale.h configProcs.h /usr/include/stdlib.h
@@ -1250,12 +1250,12 @@ Keyboard.o: xf86Parser.h xf86Optrec.h /usr/include/stdio.h
 Keyboard.o: /usr/include/features.h /usr/include/sys/cdefs.h
 Keyboard.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 Keyboard.o: /usr/include/gnu/stubs-32.h
-Keyboard.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+Keyboard.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 Keyboard.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 Keyboard.o: /usr/include/libio.h /usr/include/_G_config.h
 Keyboard.o: /usr/include/wchar.h /usr/include/bits/wchar.h
 Keyboard.o: /usr/include/gconv.h
-Keyboard.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+Keyboard.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 Keyboard.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 Keyboard.o: xf86tokens.h Configint.h /usr/include/string.h
 Keyboard.o: /usr/include/xlocale.h configProcs.h /usr/include/stdlib.h
@@ -1270,11 +1270,11 @@ Layout.o: xf86Parser.h xf86Optrec.h /usr/include/stdio.h
 Layout.o: /usr/include/features.h /usr/include/sys/cdefs.h
 Layout.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 Layout.o: /usr/include/gnu/stubs-32.h
-Layout.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+Layout.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 Layout.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 Layout.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 Layout.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-Layout.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+Layout.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 Layout.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 Layout.o: xf86tokens.h Configint.h /usr/include/string.h
 Layout.o: /usr/include/xlocale.h configProcs.h /usr/include/stdlib.h
@@ -1289,11 +1289,11 @@ Module.o: xf86Parser.h xf86Optrec.h /usr/include/stdio.h
 Module.o: /usr/include/features.h /usr/include/sys/cdefs.h
 Module.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 Module.o: /usr/include/gnu/stubs-32.h
-Module.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+Module.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 Module.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 Module.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 Module.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-Module.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+Module.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 Module.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 Module.o: xf86tokens.h Configint.h /usr/include/string.h
 Module.o: /usr/include/xlocale.h configProcs.h /usr/include/stdlib.h
@@ -1308,11 +1308,11 @@ Video.o: xf86Parser.h xf86Optrec.h /usr/include/stdio.h
 Video.o: /usr/include/features.h /usr/include/sys/cdefs.h
 Video.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 Video.o: /usr/include/gnu/stubs-32.h
-Video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+Video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 Video.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 Video.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 Video.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-Video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+Video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 Video.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 Video.o: xf86tokens.h Configint.h /usr/include/string.h
 Video.o: /usr/include/xlocale.h configProcs.h /usr/include/stdlib.h
@@ -1327,11 +1327,11 @@ Monitor.o: xf86Parser.h xf86Optrec.h /usr/include/stdio.h
 Monitor.o: /usr/include/features.h /usr/include/sys/cdefs.h
 Monitor.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 Monitor.o: /usr/include/gnu/stubs-32.h
-Monitor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+Monitor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 Monitor.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 Monitor.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 Monitor.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-Monitor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+Monitor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 Monitor.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 Monitor.o: xf86tokens.h Configint.h /usr/include/string.h
 Monitor.o: /usr/include/xlocale.h configProcs.h /usr/include/stdlib.h
@@ -1346,11 +1346,11 @@ Pointer.o: xf86Parser.h xf86Optrec.h /usr/include/stdio.h
 Pointer.o: /usr/include/features.h /usr/include/sys/cdefs.h
 Pointer.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 Pointer.o: /usr/include/gnu/stubs-32.h
-Pointer.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+Pointer.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 Pointer.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 Pointer.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 Pointer.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-Pointer.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+Pointer.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 Pointer.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 Pointer.o: xf86tokens.h Configint.h /usr/include/string.h
 Pointer.o: /usr/include/xlocale.h configProcs.h /usr/include/stdlib.h
@@ -1365,11 +1365,11 @@ Screen.o: xf86Parser.h xf86Optrec.h /usr/include/stdio.h
 Screen.o: /usr/include/features.h /usr/include/sys/cdefs.h
 Screen.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 Screen.o: /usr/include/gnu/stubs-32.h
-Screen.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+Screen.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 Screen.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 Screen.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 Screen.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-Screen.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+Screen.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 Screen.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 Screen.o: xf86tokens.h Configint.h /usr/include/string.h
 Screen.o: /usr/include/xlocale.h configProcs.h /usr/include/stdlib.h
@@ -1384,11 +1384,11 @@ Vendor.o: xf86Parser.h xf86Optrec.h /usr/include/stdio.h
 Vendor.o: /usr/include/features.h /usr/include/sys/cdefs.h
 Vendor.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 Vendor.o: /usr/include/gnu/stubs-32.h
-Vendor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+Vendor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 Vendor.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 Vendor.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 Vendor.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-Vendor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+Vendor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 Vendor.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 Vendor.o: xf86tokens.h Configint.h /usr/include/string.h
 Vendor.o: /usr/include/xlocale.h configProcs.h /usr/include/stdlib.h
@@ -1403,11 +1403,11 @@ read.o: xf86Parser.h xf86Optrec.h /usr/include/stdio.h
 read.o: /usr/include/features.h /usr/include/sys/cdefs.h
 read.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 read.o: /usr/include/gnu/stubs-32.h
-read.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+read.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 read.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 read.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 read.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-read.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+read.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 read.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 read.o: xf86tokens.h Configint.h /usr/include/string.h /usr/include/xlocale.h
 read.o: configProcs.h /usr/include/stdlib.h /usr/include/bits/waitflags.h
@@ -1420,12 +1420,12 @@ read.o: /usr/include/bits/pthreadtypes.h /usr/include/alloca.h
 scan.o: /usr/include/ctype.h /usr/include/features.h /usr/include/sys/cdefs.h
 scan.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 scan.o: /usr/include/gnu/stubs-32.h /usr/include/bits/types.h
-scan.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+scan.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 scan.o: /usr/include/bits/typesizes.h /usr/include/endian.h
 scan.o: /usr/include/bits/endian.h /usr/include/xlocale.h
 scan.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
 scan.o: /usr/include/wchar.h /usr/include/bits/wchar.h /usr/include/gconv.h
-scan.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+scan.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 scan.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 scan.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 scan.o: /usr/include/bits/waitstatus.h /usr/include/sys/types.h
@@ -1437,7 +1437,7 @@ scan.o: /usr/include/string.h /usr/include/unistd.h
 scan.o: /usr/include/bits/posix_opt.h /usr/include/bits/environments.h
 scan.o: /usr/include/bits/confname.h /usr/include/getopt.h
 scan.o: /usr/include/limits.h
-scan.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+scan.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 scan.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 scan.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 scan.o: /usr/include/bits/xopen_lim.h Configint.h xf86Parser.h xf86Optrec.h
@@ -1446,11 +1446,11 @@ write.o: xf86Parser.h xf86Optrec.h /usr/include/stdio.h
 write.o: /usr/include/features.h /usr/include/sys/cdefs.h
 write.o: /usr/include/gnu/stubs.h /usr/include/bits/wordsize.h
 write.o: /usr/include/gnu/stubs-32.h
-write.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+write.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 write.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 write.o: /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h
 write.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-write.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+write.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 write.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 write.o: xf86tokens.h Configint.h /usr/include/string.h
 write.o: /usr/include/xlocale.h configProcs.h /usr/include/stdlib.h

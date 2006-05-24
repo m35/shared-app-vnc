@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1619,10 +1619,10 @@ sis_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 sis_driver.o: ../../../../../../programs/Xserver/include/os.h
 sis_driver.o: ../../../../../../exports/include/X11/Xalloca.h
 sis_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-sis_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+sis_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 sis_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 sis_driver.o: ../../../../../../exports/include/X11/Xfuncs.h
-sis_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+sis_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 sis_driver.o: ../../../../../../programs/Xserver/include/regionstr.h
 sis_driver.o: ../../../../../../programs/Xserver/include/miscstruct.h
 sis_driver.o: ../../../../../../exports/include/X11/Xprotostr.h
@@ -1723,10 +1723,10 @@ sis_dac.o: ../../../../../../exports/include/X11/Xdefs.h
 sis_dac.o: ../../../../../../programs/Xserver/include/os.h
 sis_dac.o: ../../../../../../exports/include/X11/Xalloca.h
 sis_dac.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-sis_dac.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+sis_dac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 sis_dac.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 sis_dac.o: ../../../../../../exports/include/X11/Xfuncs.h
-sis_dac.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+sis_dac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 sis_dac.o: ../../../../../../programs/Xserver/include/input.h
 sis_dac.o: ../../../../../../programs/Xserver/include/screenint.h
 sis_dac.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1806,10 +1806,10 @@ sis_cursor.o: ../../../../../../exports/include/X11/Xdefs.h
 sis_cursor.o: ../../../../../../programs/Xserver/include/os.h
 sis_cursor.o: ../../../../../../exports/include/X11/Xalloca.h
 sis_cursor.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-sis_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+sis_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 sis_cursor.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 sis_cursor.o: ../../../../../../exports/include/X11/Xfuncs.h
-sis_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+sis_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 sis_cursor.o: ../../../../../../programs/Xserver/include/input.h
 sis_cursor.o: ../../../../../../programs/Xserver/include/screenint.h
 sis_cursor.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1888,10 +1888,10 @@ sis_accel.o: ../../../../../../exports/include/X11/Xdefs.h
 sis_accel.o: ../../../../../../programs/Xserver/include/os.h
 sis_accel.o: ../../../../../../exports/include/X11/Xalloca.h
 sis_accel.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-sis_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+sis_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 sis_accel.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 sis_accel.o: ../../../../../../exports/include/X11/Xfuncs.h
-sis_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+sis_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 sis_accel.o: ../../../../../../programs/Xserver/include/input.h
 sis_accel.o: ../../../../../../programs/Xserver/include/screenint.h
 sis_accel.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1974,10 +1974,10 @@ sis_setup.o: ../../../../../../exports/include/X11/Xdefs.h
 sis_setup.o: ../../../../../../programs/Xserver/include/os.h
 sis_setup.o: ../../../../../../exports/include/X11/Xalloca.h
 sis_setup.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-sis_setup.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+sis_setup.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 sis_setup.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 sis_setup.o: ../../../../../../exports/include/X11/Xfuncs.h
-sis_setup.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+sis_setup.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 sis_setup.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 sis_setup.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 sis_setup.o: ../../../../../../programs/Xserver/include/input.h
@@ -2077,10 +2077,10 @@ sis300_accel.o: ../../../../../../exports/include/X11/Xdefs.h
 sis300_accel.o: ../../../../../../programs/Xserver/include/os.h
 sis300_accel.o: ../../../../../../exports/include/X11/Xalloca.h
 sis300_accel.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-sis300_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+sis300_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 sis300_accel.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 sis300_accel.o: ../../../../../../exports/include/X11/Xfuncs.h
-sis300_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+sis300_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 sis300_accel.o: ../../../../../../programs/Xserver/include/input.h
 sis300_accel.o: ../../../../../../programs/Xserver/include/screenint.h
 sis300_accel.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2164,10 +2164,10 @@ sis310_accel.o: ../../../../../../exports/include/X11/Xdefs.h
 sis310_accel.o: ../../../../../../programs/Xserver/include/os.h
 sis310_accel.o: ../../../../../../exports/include/X11/Xalloca.h
 sis310_accel.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-sis310_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+sis310_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 sis310_accel.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 sis310_accel.o: ../../../../../../exports/include/X11/Xfuncs.h
-sis310_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+sis310_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 sis310_accel.o: ../../../../../../programs/Xserver/include/input.h
 sis310_accel.o: ../../../../../../programs/Xserver/include/screenint.h
 sis310_accel.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2253,10 +2253,10 @@ sis_vga.o: ../../../../../../exports/include/X11/Xdefs.h
 sis_vga.o: ../../../../../../programs/Xserver/include/os.h
 sis_vga.o: ../../../../../../exports/include/X11/Xalloca.h
 sis_vga.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-sis_vga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+sis_vga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 sis_vga.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 sis_vga.o: ../../../../../../exports/include/X11/Xfuncs.h
-sis_vga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+sis_vga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 sis_vga.o: ../../../../../../programs/Xserver/include/input.h
 sis_vga.o: ../../../../../../programs/Xserver/include/screenint.h
 sis_vga.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2337,10 +2337,10 @@ sis_vb.o: ../../../../../../exports/include/X11/Xdefs.h
 sis_vb.o: ../../../../../../programs/Xserver/include/os.h
 sis_vb.o: ../../../../../../exports/include/X11/Xalloca.h
 sis_vb.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-sis_vb.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+sis_vb.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 sis_vb.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 sis_vb.o: ../../../../../../exports/include/X11/Xfuncs.h
-sis_vb.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+sis_vb.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 sis_vb.o: ../../../../../../programs/Xserver/include/input.h
 sis_vb.o: ../../../../../../programs/Xserver/include/screenint.h
 sis_vb.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2419,10 +2419,10 @@ sis_opt.o: ../../../../../../exports/include/X11/Xdefs.h
 sis_opt.o: ../../../../../../programs/Xserver/include/os.h
 sis_opt.o: ../../../../../../exports/include/X11/Xalloca.h
 sis_opt.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-sis_opt.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+sis_opt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 sis_opt.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 sis_opt.o: ../../../../../../exports/include/X11/Xfuncs.h
-sis_opt.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+sis_opt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 sis_opt.o: ../../../../../../programs/Xserver/include/input.h
 sis_opt.o: ../../../../../../programs/Xserver/include/screenint.h
 sis_opt.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2499,10 +2499,10 @@ sis_dga.o: ../../../../../../exports/include/X11/Xdefs.h
 sis_dga.o: ../../../../../../programs/Xserver/include/os.h
 sis_dga.o: ../../../../../../exports/include/X11/Xalloca.h
 sis_dga.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-sis_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+sis_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 sis_dga.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 sis_dga.o: ../../../../../../exports/include/X11/Xfuncs.h
-sis_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+sis_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 sis_dga.o: ../../../../../../programs/Xserver/include/input.h
 sis_dga.o: ../../../../../../programs/Xserver/include/screenint.h
 sis_dga.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2587,10 +2587,10 @@ sis_video.o: ../../../../../../exports/include/X11/Xdefs.h
 sis_video.o: ../../../../../../programs/Xserver/include/os.h
 sis_video.o: ../../../../../../exports/include/X11/Xalloca.h
 sis_video.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-sis_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+sis_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 sis_video.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 sis_video.o: ../../../../../../exports/include/X11/Xfuncs.h
-sis_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+sis_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 sis_video.o: ../../../../../../programs/Xserver/include/input.h
 sis_video.o: ../../../../../../programs/Xserver/include/screenint.h
 sis_video.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2682,10 +2682,10 @@ init.o: ../../../../../../exports/include/X11/Xdefs.h
 init.o: ../../../../../../programs/Xserver/include/os.h
 init.o: ../../../../../../exports/include/X11/Xalloca.h
 init.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-init.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+init.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 init.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 init.o: ../../../../../../exports/include/X11/Xfuncs.h
-init.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h vstruct.h
+init.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h vstruct.h
 init.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 init.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 init.o: ../../../../../../programs/Xserver/include/input.h
@@ -2765,10 +2765,10 @@ init301.o: ../../../../../../exports/include/X11/Xdefs.h
 init301.o: ../../../../../../programs/Xserver/include/os.h
 init301.o: ../../../../../../exports/include/X11/Xalloca.h
 init301.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-init301.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+init301.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 init301.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 init301.o: ../../../../../../exports/include/X11/Xfuncs.h
-init301.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h vstruct.h
+init301.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h vstruct.h
 init301.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 init301.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 init301.o: ../../../../../../programs/Xserver/include/input.h
@@ -2844,10 +2844,10 @@ sis_shadow.o: ../../../../../../exports/include/X11/Xdefs.h
 sis_shadow.o: ../../../../../../programs/Xserver/include/os.h
 sis_shadow.o: ../../../../../../exports/include/X11/Xalloca.h
 sis_shadow.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-sis_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+sis_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 sis_shadow.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 sis_shadow.o: ../../../../../../exports/include/X11/Xfuncs.h
-sis_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+sis_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 sis_shadow.o: ../../../../../../programs/Xserver/include/input.h
 sis_shadow.o: ../../../../../../programs/Xserver/include/screenint.h
 sis_shadow.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2932,10 +2932,10 @@ sis6326_video.o: ../../../../../../exports/include/X11/Xdefs.h
 sis6326_video.o: ../../../../../../programs/Xserver/include/os.h
 sis6326_video.o: ../../../../../../exports/include/X11/Xalloca.h
 sis6326_video.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-sis6326_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+sis6326_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 sis6326_video.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 sis6326_video.o: ../../../../../../exports/include/X11/Xfuncs.h
-sis6326_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+sis6326_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 sis6326_video.o: ../../../../../../programs/Xserver/hw/xfree86/ramdac/xf86Cursor.h
 sis6326_video.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 sis6326_video.o: ../../../../../../programs/Xserver/include/input.h
@@ -3022,10 +3022,10 @@ sis_dri.o: ../../../../../../exports/include/X11/Xdefs.h
 sis_dri.o: ../../../../../../programs/Xserver/include/os.h
 sis_dri.o: ../../../../../../exports/include/X11/Xalloca.h
 sis_dri.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-sis_dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+sis_dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 sis_dri.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 sis_dri.o: ../../../../../../exports/include/X11/Xfuncs.h
-sis_dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+sis_dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 sis_dri.o: ../../../../../../programs/Xserver/include/input.h
 sis_dri.o: ../../../../../../programs/Xserver/include/screenint.h
 sis_dri.o: ../../../../../../exports/include/X11/Xproto.h

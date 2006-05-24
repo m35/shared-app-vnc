@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1327,10 +1327,10 @@ tseng_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 tseng_driver.o: ../../../../../../programs/Xserver/include/os.h
 tseng_driver.o: ../../../../../../exports/include/X11/Xalloca.h
 tseng_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tseng_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+tseng_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 tseng_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tseng_driver.o: ../../../../../../exports/include/X11/Xfuncs.h
-tseng_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+tseng_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 tseng_driver.o: ../../../../../../programs/Xserver/include/input.h
 tseng_driver.o: ../../../../../../programs/Xserver/include/screenint.h
 tseng_driver.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1423,10 +1423,10 @@ tseng_ramdac.o: ../../../../../../exports/include/X11/Xdefs.h
 tseng_ramdac.o: ../../../../../../programs/Xserver/include/os.h
 tseng_ramdac.o: ../../../../../../exports/include/X11/Xalloca.h
 tseng_ramdac.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tseng_ramdac.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+tseng_ramdac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 tseng_ramdac.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tseng_ramdac.o: ../../../../../../exports/include/X11/Xfuncs.h
-tseng_ramdac.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+tseng_ramdac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 tseng_ramdac.o: ../../../../../../programs/Xserver/include/input.h
 tseng_ramdac.o: ../../../../../../programs/Xserver/include/screenint.h
 tseng_ramdac.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1512,10 +1512,10 @@ tseng_bank.o: ../../../../../../exports/include/X11/Xdefs.h
 tseng_bank.o: ../../../../../../programs/Xserver/include/os.h
 tseng_bank.o: ../../../../../../exports/include/X11/Xalloca.h
 tseng_bank.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tseng_bank.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+tseng_bank.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 tseng_bank.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tseng_bank.o: ../../../../../../exports/include/X11/Xfuncs.h
-tseng_bank.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+tseng_bank.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 tseng_bank.o: ../../../../../../programs/Xserver/include/input.h
 tseng_bank.o: ../../../../../../programs/Xserver/include/screenint.h
 tseng_bank.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1601,10 +1601,10 @@ tseng_clock.o: ../../../../../../exports/include/X11/Xdefs.h
 tseng_clock.o: ../../../../../../programs/Xserver/include/os.h
 tseng_clock.o: ../../../../../../exports/include/X11/Xalloca.h
 tseng_clock.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tseng_clock.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+tseng_clock.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 tseng_clock.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tseng_clock.o: ../../../../../../exports/include/X11/Xfuncs.h
-tseng_clock.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+tseng_clock.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 tseng_clock.o: ../../../../../../programs/Xserver/include/input.h
 tseng_clock.o: ../../../../../../programs/Xserver/include/screenint.h
 tseng_clock.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1690,10 +1690,10 @@ tseng_accel.o: ../../../../../../exports/include/X11/Xdefs.h
 tseng_accel.o: ../../../../../../programs/Xserver/include/os.h
 tseng_accel.o: ../../../../../../exports/include/X11/Xalloca.h
 tseng_accel.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tseng_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+tseng_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 tseng_accel.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tseng_accel.o: ../../../../../../exports/include/X11/Xfuncs.h
-tseng_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+tseng_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 tseng_accel.o: ../../../../../../programs/Xserver/include/input.h
 tseng_accel.o: ../../../../../../programs/Xserver/include/screenint.h
 tseng_accel.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1780,10 +1780,10 @@ tseng_acl.o: ../../../../../../exports/include/X11/Xdefs.h
 tseng_acl.o: ../../../../../../programs/Xserver/include/os.h
 tseng_acl.o: ../../../../../../exports/include/X11/Xalloca.h
 tseng_acl.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tseng_acl.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+tseng_acl.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 tseng_acl.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tseng_acl.o: ../../../../../../exports/include/X11/Xfuncs.h
-tseng_acl.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+tseng_acl.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 tseng_acl.o: ../../../../../../programs/Xserver/include/input.h
 tseng_acl.o: ../../../../../../programs/Xserver/include/screenint.h
 tseng_acl.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1869,10 +1869,10 @@ tseng_colexp.o: ../../../../../../exports/include/X11/Xdefs.h
 tseng_colexp.o: ../../../../../../programs/Xserver/include/os.h
 tseng_colexp.o: ../../../../../../exports/include/X11/Xalloca.h
 tseng_colexp.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tseng_colexp.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+tseng_colexp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 tseng_colexp.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tseng_colexp.o: ../../../../../../exports/include/X11/Xfuncs.h
-tseng_colexp.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+tseng_colexp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 tseng_colexp.o: ../../../../../../programs/Xserver/include/input.h
 tseng_colexp.o: ../../../../../../programs/Xserver/include/screenint.h
 tseng_colexp.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1959,10 +1959,10 @@ tseng_cursor.o: ../../../../../../exports/include/X11/Xdefs.h
 tseng_cursor.o: ../../../../../../programs/Xserver/include/os.h
 tseng_cursor.o: ../../../../../../exports/include/X11/Xalloca.h
 tseng_cursor.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tseng_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+tseng_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 tseng_cursor.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tseng_cursor.o: ../../../../../../exports/include/X11/Xfuncs.h
-tseng_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+tseng_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 tseng_cursor.o: ../../../../../../programs/Xserver/include/input.h
 tseng_cursor.o: ../../../../../../programs/Xserver/include/screenint.h
 tseng_cursor.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2048,10 +2048,10 @@ tseng_dpms.o: ../../../../../../exports/include/X11/Xdefs.h
 tseng_dpms.o: ../../../../../../programs/Xserver/include/os.h
 tseng_dpms.o: ../../../../../../exports/include/X11/Xalloca.h
 tseng_dpms.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tseng_dpms.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+tseng_dpms.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 tseng_dpms.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tseng_dpms.o: ../../../../../../exports/include/X11/Xfuncs.h
-tseng_dpms.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+tseng_dpms.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 tseng_dpms.o: ../../../../../../programs/Xserver/include/input.h
 tseng_dpms.o: ../../../../../../programs/Xserver/include/screenint.h
 tseng_dpms.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2137,10 +2137,10 @@ tseng_dga.o: ../../../../../../exports/include/X11/Xdefs.h
 tseng_dga.o: ../../../../../../programs/Xserver/include/os.h
 tseng_dga.o: ../../../../../../exports/include/X11/Xalloca.h
 tseng_dga.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-tseng_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+tseng_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 tseng_dga.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 tseng_dga.o: ../../../../../../exports/include/X11/Xfuncs.h
-tseng_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+tseng_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 tseng_dga.o: ../../../../../../programs/Xserver/include/input.h
 tseng_dga.o: ../../../../../../programs/Xserver/include/screenint.h
 tseng_dga.o: ../../../../../../exports/include/X11/Xproto.h

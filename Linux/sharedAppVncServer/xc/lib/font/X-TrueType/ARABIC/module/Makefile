@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1201,10 +1201,10 @@ main.o: ../../../../../exports/include/X11/Xdefs.h
 main.o: ../../../../../programs/Xserver/include/os.h
 main.o: ../../../../../include/Xalloca.h
 main.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-main.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+main.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 main.o: ../../../../../programs/Xserver/include/xf86_libc.h
 main.o: ../../../../../include/Xfuncs.h
-main.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+main.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 main.o: ../../../../../programs/Xserver/include/xf86Version.h
 main.o: ../../../include/fontmisc.h
 main.o: ../../../../../extras/FreeType/lib/freetype.h
@@ -1223,10 +1223,10 @@ MULEARABICtoUCS2.o: ../../../../../exports/include/X11/Xdefs.h
 MULEARABICtoUCS2.o: ../../../../../programs/Xserver/include/os.h
 MULEARABICtoUCS2.o: ../../../../../include/Xalloca.h
 MULEARABICtoUCS2.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-MULEARABICtoUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+MULEARABICtoUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 MULEARABICtoUCS2.o: ../../../../../programs/Xserver/include/xf86_libc.h
 MULEARABICtoUCS2.o: ../../../../../include/Xfuncs.h
-MULEARABICtoUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+MULEARABICtoUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 MULEARABICtoUCS2.o: ../../../../../programs/Xserver/include/xf86Version.h
 MULEARABICtoUCS2.o: ../../../include/fontmisc.h
 MULEARABICtoUCS2.o: ../../../../../extras/FreeType/lib/freetype.h
@@ -1246,10 +1246,10 @@ CP1256toUCS2.o: ../../../../../exports/include/X11/Xdefs.h
 CP1256toUCS2.o: ../../../../../programs/Xserver/include/os.h
 CP1256toUCS2.o: ../../../../../include/Xalloca.h
 CP1256toUCS2.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-CP1256toUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+CP1256toUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 CP1256toUCS2.o: ../../../../../programs/Xserver/include/xf86_libc.h
 CP1256toUCS2.o: ../../../../../include/Xfuncs.h
-CP1256toUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+CP1256toUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 CP1256toUCS2.o: ../../../../../programs/Xserver/include/xf86Version.h
 CP1256toUCS2.o: ../../../include/fontmisc.h
 CP1256toUCS2.o: ../../../../../extras/FreeType/lib/freetype.h
@@ -1269,10 +1269,10 @@ XATERMtoUCS2.o: ../../../../../exports/include/X11/Xdefs.h
 XATERMtoUCS2.o: ../../../../../programs/Xserver/include/os.h
 XATERMtoUCS2.o: ../../../../../include/Xalloca.h
 XATERMtoUCS2.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-XATERMtoUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+XATERMtoUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 XATERMtoUCS2.o: ../../../../../programs/Xserver/include/xf86_libc.h
 XATERMtoUCS2.o: ../../../../../include/Xfuncs.h
-XATERMtoUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+XATERMtoUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 XATERMtoUCS2.o: ../../../../../programs/Xserver/include/xf86Version.h
 XATERMtoUCS2.o: ../../../include/fontmisc.h
 XATERMtoUCS2.o: ../../../../../extras/FreeType/lib/freetype.h
@@ -1292,10 +1292,10 @@ ISIRI3342toUCS2.o: ../../../../../exports/include/X11/Xdefs.h
 ISIRI3342toUCS2.o: ../../../../../programs/Xserver/include/os.h
 ISIRI3342toUCS2.o: ../../../../../include/Xalloca.h
 ISIRI3342toUCS2.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-ISIRI3342toUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ISIRI3342toUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ISIRI3342toUCS2.o: ../../../../../programs/Xserver/include/xf86_libc.h
 ISIRI3342toUCS2.o: ../../../../../include/Xfuncs.h
-ISIRI3342toUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ISIRI3342toUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ISIRI3342toUCS2.o: ../../../../../programs/Xserver/include/xf86Version.h
 ISIRI3342toUCS2.o: ../../../include/fontmisc.h
 ISIRI3342toUCS2.o: ../../../../../extras/FreeType/lib/freetype.h
@@ -1315,10 +1315,10 @@ IRANSYSTEMtoUCS2.o: ../../../../../exports/include/X11/Xdefs.h
 IRANSYSTEMtoUCS2.o: ../../../../../programs/Xserver/include/os.h
 IRANSYSTEMtoUCS2.o: ../../../../../include/Xalloca.h
 IRANSYSTEMtoUCS2.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-IRANSYSTEMtoUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+IRANSYSTEMtoUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 IRANSYSTEMtoUCS2.o: ../../../../../programs/Xserver/include/xf86_libc.h
 IRANSYSTEMtoUCS2.o: ../../../../../include/Xfuncs.h
-IRANSYSTEMtoUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+IRANSYSTEMtoUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 IRANSYSTEMtoUCS2.o: ../../../../../programs/Xserver/include/xf86Version.h
 IRANSYSTEMtoUCS2.o: ../../../include/fontmisc.h
 IRANSYSTEMtoUCS2.o: ../../../../../extras/FreeType/lib/freetype.h
@@ -1338,10 +1338,10 @@ URDUNAQSHtoUCS2.o: ../../../../../exports/include/X11/Xdefs.h
 URDUNAQSHtoUCS2.o: ../../../../../programs/Xserver/include/os.h
 URDUNAQSHtoUCS2.o: ../../../../../include/Xalloca.h
 URDUNAQSHtoUCS2.o: ../../../../../programs/Xserver/include/xf86_ansic.h
-URDUNAQSHtoUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+URDUNAQSHtoUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 URDUNAQSHtoUCS2.o: ../../../../../programs/Xserver/include/xf86_libc.h
 URDUNAQSHtoUCS2.o: ../../../../../include/Xfuncs.h
-URDUNAQSHtoUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+URDUNAQSHtoUCS2.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 URDUNAQSHtoUCS2.o: ../../../../../programs/Xserver/include/xf86Version.h
 URDUNAQSHtoUCS2.o: ../../../include/fontmisc.h
 URDUNAQSHtoUCS2.o: ../../../../../extras/FreeType/lib/freetype.h

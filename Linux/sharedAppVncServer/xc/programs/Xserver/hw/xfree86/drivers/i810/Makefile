@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1515,10 +1515,10 @@ i810_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 i810_driver.o: ../../../../../../programs/Xserver/include/os.h
 i810_driver.o: ../../../../../../exports/include/X11/Xalloca.h
 i810_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i810_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i810_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i810_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i810_driver.o: ../../../../../../exports/include/X11/Xfuncs.h
-i810_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i810_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i810_driver.o: ../../../../../../programs/Xserver/include/input.h
 i810_driver.o: ../../../../../../programs/Xserver/include/screenint.h
 i810_driver.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1611,10 +1611,10 @@ i810_cursor.o: ../../../../../../exports/include/X11/Xdefs.h
 i810_cursor.o: ../../../../../../programs/Xserver/include/os.h
 i810_cursor.o: ../../../../../../exports/include/X11/Xalloca.h
 i810_cursor.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i810_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i810_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i810_cursor.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i810_cursor.o: ../../../../../../exports/include/X11/Xfuncs.h
-i810_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i810_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i810_cursor.o: ../../../../../../programs/Xserver/include/input.h
 i810_cursor.o: ../../../../../../programs/Xserver/include/screenint.h
 i810_cursor.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1682,7 +1682,7 @@ i810_cursor.o: ../../../../../../programs/Xserver/GL/dri/dri.h
 i810_cursor.o: ../../../../../../include/GL/glxint.h i810_dri.h i810_common.h
 i810_cursor.o: common.h
 i810_accel.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i810_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i810_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i810_accel.o: ../../../../../../programs/Xserver/include/misc.h
 i810_accel.o: ../../../../../../exports/include/X11/Xosdefs.h
 i810_accel.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -1693,7 +1693,7 @@ i810_accel.o: ../../../../../../programs/Xserver/include/os.h
 i810_accel.o: ../../../../../../exports/include/X11/Xalloca.h
 i810_accel.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i810_accel.o: ../../../../../../exports/include/X11/Xfuncs.h
-i810_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i810_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i810_accel.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 i810_accel.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 i810_accel.o: ../../../../../../programs/Xserver/include/input.h
@@ -1770,10 +1770,10 @@ i810_memory.o: ../../../../../../exports/include/X11/Xdefs.h
 i810_memory.o: ../../../../../../programs/Xserver/include/os.h
 i810_memory.o: ../../../../../../exports/include/X11/Xalloca.h
 i810_memory.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i810_memory.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i810_memory.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i810_memory.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i810_memory.o: ../../../../../../exports/include/X11/Xfuncs.h
-i810_memory.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i810_memory.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i810_memory.o: ../../../../../../programs/Xserver/include/input.h
 i810_memory.o: ../../../../../../programs/Xserver/include/screenint.h
 i810_memory.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1850,10 +1850,10 @@ i810_wmark.o: ../../../../../../exports/include/X11/Xdefs.h
 i810_wmark.o: ../../../../../../programs/Xserver/include/os.h
 i810_wmark.o: ../../../../../../exports/include/X11/Xalloca.h
 i810_wmark.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i810_wmark.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i810_wmark.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i810_wmark.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i810_wmark.o: ../../../../../../exports/include/X11/Xfuncs.h
-i810_wmark.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i810_wmark.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i810_wmark.o: ../../../../../../programs/Xserver/include/input.h
 i810_wmark.o: ../../../../../../programs/Xserver/include/screenint.h
 i810_wmark.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1928,10 +1928,10 @@ i810_dga.o: ../../../../../../exports/include/X11/Xdefs.h
 i810_dga.o: ../../../../../../programs/Xserver/include/os.h
 i810_dga.o: ../../../../../../exports/include/X11/Xalloca.h
 i810_dga.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i810_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i810_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i810_dga.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i810_dga.o: ../../../../../../exports/include/X11/Xfuncs.h
-i810_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i810_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i810_dga.o: ../../../../../../programs/Xserver/include/input.h
 i810_dga.o: ../../../../../../programs/Xserver/include/screenint.h
 i810_dga.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2013,10 +2013,10 @@ i810_video.o: ../../../../../../exports/include/X11/Xdefs.h
 i810_video.o: ../../../../../../programs/Xserver/include/os.h
 i810_video.o: ../../../../../../exports/include/X11/Xalloca.h
 i810_video.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i810_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i810_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i810_video.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i810_video.o: ../../../../../../exports/include/X11/Xfuncs.h
-i810_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i810_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i810_video.o: ../../../../../../programs/Xserver/include/input.h
 i810_video.o: ../../../../../../programs/Xserver/include/screenint.h
 i810_video.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2100,10 +2100,10 @@ i810_io.o: ../../../../../../exports/include/X11/Xdefs.h
 i810_io.o: ../../../../../../programs/Xserver/include/os.h
 i810_io.o: ../../../../../../exports/include/X11/Xalloca.h
 i810_io.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i810_io.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i810_io.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i810_io.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i810_io.o: ../../../../../../exports/include/X11/Xfuncs.h
-i810_io.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i810_io.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i810_io.o: ../../../../../../programs/Xserver/include/input.h
 i810_io.o: ../../../../../../programs/Xserver/include/screenint.h
 i810_io.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2180,10 +2180,10 @@ i830_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 i830_driver.o: ../../../../../../programs/Xserver/include/os.h
 i830_driver.o: ../../../../../../exports/include/X11/Xalloca.h
 i830_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i830_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i830_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i830_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i830_driver.o: ../../../../../../exports/include/X11/Xfuncs.h
-i830_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i830_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i830_driver.o: ../../../../../../programs/Xserver/include/input.h
 i830_driver.o: ../../../../../../programs/Xserver/include/screenint.h
 i830_driver.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2277,10 +2277,10 @@ i830_memory.o: ../../../../../../exports/include/X11/Xdefs.h
 i830_memory.o: ../../../../../../programs/Xserver/include/os.h
 i830_memory.o: ../../../../../../exports/include/X11/Xalloca.h
 i830_memory.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i830_memory.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i830_memory.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i830_memory.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i830_memory.o: ../../../../../../exports/include/X11/Xfuncs.h
-i830_memory.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i830_memory.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i830_memory.o: ../../../../../../programs/Xserver/include/input.h
 i830_memory.o: ../../../../../../programs/Xserver/include/screenint.h
 i830_memory.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2357,10 +2357,10 @@ i830_cursor.o: ../../../../../../exports/include/X11/Xdefs.h
 i830_cursor.o: ../../../../../../programs/Xserver/include/os.h
 i830_cursor.o: ../../../../../../exports/include/X11/Xalloca.h
 i830_cursor.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i830_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i830_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i830_cursor.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i830_cursor.o: ../../../../../../exports/include/X11/Xfuncs.h
-i830_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i830_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i830_cursor.o: ../../../../../../programs/Xserver/include/input.h
 i830_cursor.o: ../../../../../../programs/Xserver/include/screenint.h
 i830_cursor.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2428,7 +2428,7 @@ i830_cursor.o: ../../../../../../programs/Xserver/GL/dri/dri.h
 i830_cursor.o: ../../../../../../include/GL/glxint.h i830_dri.h i830_common.h
 i830_cursor.o: common.h
 i830_accel.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i830_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i830_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i830_accel.o: ../../../../../../programs/Xserver/include/misc.h
 i830_accel.o: ../../../../../../exports/include/X11/Xosdefs.h
 i830_accel.o: ../../../../../../exports/include/X11/Xfuncproto.h
@@ -2439,7 +2439,7 @@ i830_accel.o: ../../../../../../programs/Xserver/include/os.h
 i830_accel.o: ../../../../../../exports/include/X11/Xalloca.h
 i830_accel.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i830_accel.o: ../../../../../../exports/include/X11/Xfuncs.h
-i830_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i830_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i830_accel.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86.h
 i830_accel.o: ../../../../../../programs/Xserver/hw/xfree86/common/xf86str.h
 i830_accel.o: ../../../../../../programs/Xserver/include/input.h
@@ -2516,10 +2516,10 @@ i830_io.o: ../../../../../../exports/include/X11/Xdefs.h
 i830_io.o: ../../../../../../programs/Xserver/include/os.h
 i830_io.o: ../../../../../../exports/include/X11/Xalloca.h
 i830_io.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i830_io.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i830_io.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i830_io.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i830_io.o: ../../../../../../exports/include/X11/Xfuncs.h
-i830_io.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i830_io.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i830_io.o: ../../../../../../programs/Xserver/include/input.h
 i830_io.o: ../../../../../../programs/Xserver/include/screenint.h
 i830_io.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2596,10 +2596,10 @@ i830_dga.o: ../../../../../../exports/include/X11/Xdefs.h
 i830_dga.o: ../../../../../../programs/Xserver/include/os.h
 i830_dga.o: ../../../../../../exports/include/X11/Xalloca.h
 i830_dga.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i830_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i830_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i830_dga.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i830_dga.o: ../../../../../../exports/include/X11/Xfuncs.h
-i830_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i830_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i830_dga.o: ../../../../../../programs/Xserver/include/input.h
 i830_dga.o: ../../../../../../programs/Xserver/include/screenint.h
 i830_dga.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2681,10 +2681,10 @@ i830_video.o: ../../../../../../exports/include/X11/Xdefs.h
 i830_video.o: ../../../../../../programs/Xserver/include/os.h
 i830_video.o: ../../../../../../exports/include/X11/Xalloca.h
 i830_video.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i830_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i830_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i830_video.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i830_video.o: ../../../../../../exports/include/X11/Xfuncs.h
-i830_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i830_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i830_video.o: ../../../../../../programs/Xserver/include/input.h
 i830_video.o: ../../../../../../programs/Xserver/include/screenint.h
 i830_video.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2768,10 +2768,10 @@ i810_dri.o: ../../../../../../exports/include/X11/Xdefs.h
 i810_dri.o: ../../../../../../programs/Xserver/include/os.h
 i810_dri.o: ../../../../../../exports/include/X11/Xalloca.h
 i810_dri.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i810_dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i810_dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i810_dri.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i810_dri.o: ../../../../../../exports/include/X11/Xfuncs.h
-i810_dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i810_dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i810_dri.o: ../../../../../../programs/Xserver/include/input.h
 i810_dri.o: ../../../../../../programs/Xserver/include/screenint.h
 i810_dri.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2854,10 +2854,10 @@ i810_hwmc.o: ../../../../../../exports/include/X11/Xdefs.h
 i810_hwmc.o: ../../../../../../programs/Xserver/include/os.h
 i810_hwmc.o: ../../../../../../exports/include/X11/Xalloca.h
 i810_hwmc.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i810_hwmc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i810_hwmc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i810_hwmc.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i810_hwmc.o: ../../../../../../exports/include/X11/Xfuncs.h
-i810_hwmc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i810_hwmc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i810_hwmc.o: ../../../../../../programs/Xserver/include/input.h
 i810_hwmc.o: ../../../../../../programs/Xserver/include/screenint.h
 i810_hwmc.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2946,10 +2946,10 @@ i830_dri.o: ../../../../../../exports/include/X11/Xdefs.h
 i830_dri.o: ../../../../../../programs/Xserver/include/os.h
 i830_dri.o: ../../../../../../exports/include/X11/Xalloca.h
 i830_dri.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-i830_dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+i830_dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 i830_dri.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 i830_dri.o: ../../../../../../exports/include/X11/Xfuncs.h
-i830_dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+i830_dri.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 i830_dri.o: ../../../../../../programs/Xserver/include/input.h
 i830_dri.o: ../../../../../../programs/Xserver/include/screenint.h
 i830_dri.o: ../../../../../../exports/include/X11/Xproto.h

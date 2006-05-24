@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1327,9 +1327,9 @@ afbgc.o: ../../../exports/include/X11/Xfuncproto.h
 afbgc.o: ../../../exports/include/X11/X.h
 afbgc.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbgc.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbgc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbgc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbgc.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbgc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbgc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbgc.o: ../include/screenint.h ../include/region.h ../include/regionstr.h
 afbgc.o: ../include/miscstruct.h ../include/gc.h
 afbgc.o: ../../../exports/include/X11/Xdefs.h
@@ -1354,9 +1354,9 @@ afbwindow.o: ../../../exports/include/X11/Xmd.h
 afbwindow.o: ../../../exports/include/X11/X.h
 afbwindow.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbwindow.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbwindow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbwindow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbwindow.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbwindow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbwindow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbwindow.o: ../include/regionstr.h ../include/miscstruct.h
 afbwindow.o: ../../../exports/include/X11/Xprotostr.h ../include/gc.h
 afbwindow.o: ../../../exports/include/X11/Xdefs.h
@@ -1380,9 +1380,9 @@ afbfont.o: ../../../exports/include/X11/Xfuncproto.h
 afbfont.o: ../../../exports/include/X11/X.h
 afbfont.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbfont.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbfont.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbfont.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbfont.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbfont.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbfont.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbfont.o: ../include/screenint.h ../include/region.h ../include/regionstr.h
 afbfont.o: ../include/miscstruct.h ../include/gc.h
 afbfont.o: ../../../exports/include/X11/Xdefs.h
@@ -1404,9 +1404,9 @@ afbfillrct.o: ../../../exports/include/X11/Xmd.h
 afbfillrct.o: ../../../exports/include/X11/X.h
 afbfillrct.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbfillrct.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbfillrct.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbfillrct.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbfillrct.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbfillrct.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbfillrct.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbfillrct.o: ../include/screenint.h ../include/regionstr.h
 afbfillrct.o: ../include/miscstruct.h
 afbfillrct.o: ../../../exports/include/X11/Xprotostr.h ../include/gc.h
@@ -1428,9 +1428,9 @@ afbpntwin.o: ../../../exports/include/X11/Xmd.h
 afbpntwin.o: ../../../exports/include/X11/X.h
 afbpntwin.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbpntwin.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbpntwin.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbpntwin.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbpntwin.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbpntwin.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbpntwin.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbpntwin.o: ../include/region.h ../include/regionstr.h
 afbpntwin.o: ../include/miscstruct.h ../../../exports/include/X11/Xprotostr.h
 afbpntwin.o: ../include/gc.h ../../../exports/include/X11/Xdefs.h
@@ -1452,9 +1452,9 @@ afbpixmap.o: ../../../exports/include/X11/Xmd.h
 afbpixmap.o: ../../../exports/include/X11/X.h
 afbpixmap.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbpixmap.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbpixmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbpixmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbpixmap.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbpixmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbpixmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbpixmap.o: ../include/regionstr.h ../include/miscstruct.h
 afbpixmap.o: ../../../exports/include/X11/Xprotostr.h ../include/gc.h
 afbpixmap.o: ../../../exports/include/X11/Xdefs.h
@@ -1474,9 +1474,9 @@ afbimage.o: ../../../exports/include/X11/Xmd.h
 afbimage.o: ../../../exports/include/X11/X.h
 afbimage.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbimage.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbimage.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbimage.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbimage.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbimage.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbimage.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbimage.o: ../include/region.h ../include/regionstr.h
 afbimage.o: ../include/miscstruct.h ../../../exports/include/X11/Xprotostr.h
 afbimage.o: ../include/gc.h ../../../exports/include/X11/Xdefs.h
@@ -1499,9 +1499,9 @@ afbline.o: ../../../exports/include/X11/Xfuncproto.h
 afbline.o: ../../../exports/include/X11/Xmd.h
 afbline.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbline.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbline.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbline.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbline.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbline.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbline.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbline.o: ../include/pixmap.h ../include/regionstr.h ../include/miscstruct.h
 afbline.o: ../../../exports/include/X11/Xprotostr.h ../include/region.h
 afbline.o: ../../../exports/include/X11/Xprotostr.h ../include/windowstr.h
@@ -1521,9 +1521,9 @@ afbbres.o: ../../../exports/include/X11/Xmd.h
 afbbres.o: ../../../exports/include/X11/X.h
 afbbres.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbbres.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbbres.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbbres.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbbres.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbbres.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h afb.h
+afbbres.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h afb.h
 afbbres.o: ../include/pixmap.h ../include/screenint.h ../include/region.h
 afbbres.o: ../include/regionstr.h ../include/miscstruct.h
 afbbres.o: ../../../exports/include/X11/Xprotostr.h ../include/gc.h
@@ -1541,9 +1541,9 @@ afbhrzvert.o: ../../../exports/include/X11/Xfuncproto.h
 afbhrzvert.o: ../../../exports/include/X11/Xmd.h
 afbhrzvert.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbhrzvert.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbhrzvert.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbhrzvert.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbhrzvert.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbhrzvert.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbhrzvert.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbhrzvert.o: ../include/pixmap.h ../include/window.h ../include/region.h
 afbhrzvert.o: ../include/regionstr.h ../include/miscstruct.h
 afbhrzvert.o: ../../../exports/include/X11/Xprotostr.h afb.h
@@ -1557,9 +1557,9 @@ afbbresd.o: ../../../exports/include/X11/Xmd.h
 afbbresd.o: ../../../exports/include/X11/X.h
 afbbresd.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbbresd.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbbresd.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbbresd.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbbresd.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbbresd.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h afb.h
+afbbresd.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h afb.h
 afbbresd.o: ../include/pixmap.h ../include/screenint.h ../include/region.h
 afbbresd.o: ../include/regionstr.h ../include/miscstruct.h
 afbbresd.o: ../../../exports/include/X11/Xprotostr.h ../include/gc.h
@@ -1577,9 +1577,9 @@ afbpushpxl.o: ../../../exports/include/X11/Xfuncproto.h
 afbpushpxl.o: ../../../exports/include/X11/Xmd.h
 afbpushpxl.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbpushpxl.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbpushpxl.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbpushpxl.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbpushpxl.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbpushpxl.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbpushpxl.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbpushpxl.o: ../include/pixmap.h ../include/regionstr.h
 afbpushpxl.o: ../include/miscstruct.h
 afbpushpxl.o: ../../../exports/include/X11/Xprotostr.h ../include/region.h
@@ -1599,9 +1599,9 @@ afbzerarc.o: ../../../exports/include/X11/Xmd.h
 afbzerarc.o: ../../../exports/include/X11/X.h
 afbzerarc.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbzerarc.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbzerarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbzerarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbzerarc.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbzerarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbzerarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbzerarc.o: ../../../exports/include/X11/Xprotostr.h ../include/gc.h
 afbzerarc.o: ../../../exports/include/X11/Xdefs.h
 afbzerarc.o: ../../../exports/include/X11/Xproto.h ../include/screenint.h
@@ -1623,9 +1623,9 @@ afbfillarc.o: ../../../exports/include/X11/Xmd.h
 afbfillarc.o: ../../../exports/include/X11/X.h
 afbfillarc.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbfillarc.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbfillarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbfillarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbfillarc.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbfillarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbfillarc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbfillarc.o: ../../../exports/include/X11/Xprotostr.h ../include/gc.h
 afbfillarc.o: ../../../exports/include/X11/Xdefs.h
 afbfillarc.o: ../../../exports/include/X11/Xproto.h ../include/screenint.h
@@ -1648,9 +1648,9 @@ afbfillsp.o: ../../../exports/include/X11/Xfuncproto.h
 afbfillsp.o: ../../../exports/include/X11/Xmd.h
 afbfillsp.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbfillsp.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbfillsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbfillsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbfillsp.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbfillsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbfillsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbfillsp.o: ../include/pixmap.h ../include/regionstr.h
 afbfillsp.o: ../include/miscstruct.h ../../../exports/include/X11/Xprotostr.h
 afbfillsp.o: ../include/region.h ../../../exports/include/X11/Xprotostr.h
@@ -1672,9 +1672,9 @@ afbsetsp.o: ../../../exports/include/X11/Xmd.h
 afbsetsp.o: ../../../exports/include/X11/X.h
 afbsetsp.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbsetsp.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbsetsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbsetsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbsetsp.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbsetsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbsetsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbsetsp.o: ../include/regionstr.h ../include/miscstruct.h
 afbsetsp.o: ../../../exports/include/X11/Xprotostr.h ../include/gc.h
 afbsetsp.o: ../../../exports/include/X11/Xdefs.h
@@ -1699,9 +1699,9 @@ afbscrinit.o: ../../../exports/include/X11/Xfuncproto.h
 afbscrinit.o: ../../../exports/include/X11/X.h
 afbscrinit.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbscrinit.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbscrinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbscrinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbscrinit.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbscrinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbscrinit.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbscrinit.o: ../include/regionstr.h ../include/miscstruct.h ../include/gc.h
 afbscrinit.o: ../../../exports/include/X11/Xdefs.h
 afbscrinit.o: ../../../exports/include/X11/Xproto.h ../include/pixmap.h
@@ -1722,9 +1722,9 @@ afbclip.o: ../../../exports/include/X11/Xmd.h
 afbclip.o: ../../../exports/include/X11/X.h
 afbclip.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbclip.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbclip.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbclip.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbclip.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbclip.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbclip.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbclip.o: ../../../exports/include/X11/Xprotostr.h ../include/gc.h
 afbclip.o: ../../../exports/include/X11/Xdefs.h
 afbclip.o: ../../../exports/include/X11/Xproto.h ../include/screenint.h
@@ -1745,9 +1745,9 @@ afbbitblt.o: ../../../exports/include/X11/Xmd.h
 afbbitblt.o: ../../../exports/include/X11/X.h
 afbbitblt.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbbitblt.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbbitblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbbitblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbbitblt.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbbitblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbbitblt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbbitblt.o: ../../../exports/include/X11/Xprotostr.h ../include/gc.h
 afbbitblt.o: ../../../exports/include/X11/Xdefs.h
 afbbitblt.o: ../../../exports/include/X11/Xproto.h ../include/screenint.h
@@ -1769,9 +1769,9 @@ afbgetsp.o: ../../../exports/include/X11/Xmd.h
 afbgetsp.o: ../../../exports/include/X11/X.h
 afbgetsp.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbgetsp.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbgetsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbgetsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbgetsp.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbgetsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbgetsp.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbgetsp.o: ../include/region.h ../include/regionstr.h
 afbgetsp.o: ../include/miscstruct.h ../../../exports/include/X11/Xprotostr.h
 afbgetsp.o: ../include/gc.h ../../../exports/include/X11/Xdefs.h
@@ -1792,9 +1792,9 @@ afbpolypnt.o: ../../../exports/include/X11/Xmd.h
 afbpolypnt.o: ../../../exports/include/X11/X.h
 afbpolypnt.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbpolypnt.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbpolypnt.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbpolypnt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbpolypnt.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbpolypnt.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbpolypnt.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbpolypnt.o: ../include/screenint.h ../include/regionstr.h
 afbpolypnt.o: ../include/miscstruct.h
 afbpolypnt.o: ../../../exports/include/X11/Xprotostr.h ../include/gc.h
@@ -1818,9 +1818,9 @@ afbbltC.o: ../../../exports/include/X11/Xfuncproto.h
 afbbltC.o: ../../../exports/include/X11/X.h
 afbbltC.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbbltC.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbbltC.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbbltC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbbltC.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbbltC.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbbltC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbbltC.o: ../include/screenint.h ../include/region.h ../include/regionstr.h
 afbbltC.o: ../include/miscstruct.h ../include/gc.h
 afbbltC.o: ../../../exports/include/X11/Xdefs.h
@@ -1843,9 +1843,9 @@ afbbltX.o: ../../../exports/include/X11/Xfuncproto.h
 afbbltX.o: ../../../exports/include/X11/X.h
 afbbltX.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbbltX.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbbltX.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbbltX.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbbltX.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbbltX.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbbltX.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbbltX.o: ../include/screenint.h ../include/region.h ../include/regionstr.h
 afbbltX.o: ../include/miscstruct.h ../include/gc.h
 afbbltX.o: ../../../exports/include/X11/Xdefs.h
@@ -1869,9 +1869,9 @@ afbbltCI.o: ../../../exports/include/X11/Xfuncproto.h
 afbbltCI.o: ../../../exports/include/X11/X.h
 afbbltCI.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbbltCI.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbbltCI.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbbltCI.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbbltCI.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbbltCI.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbbltCI.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbbltCI.o: ../include/screenint.h ../include/region.h ../include/regionstr.h
 afbbltCI.o: ../include/miscstruct.h ../include/gc.h
 afbbltCI.o: ../../../exports/include/X11/Xdefs.h
@@ -1894,9 +1894,9 @@ afbbltO.o: ../../../exports/include/X11/Xfuncproto.h
 afbbltO.o: ../../../exports/include/X11/X.h
 afbbltO.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbbltO.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbbltO.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbbltO.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbbltO.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbbltO.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbbltO.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbbltO.o: ../include/screenint.h ../include/region.h ../include/regionstr.h
 afbbltO.o: ../include/miscstruct.h ../include/gc.h
 afbbltO.o: ../../../exports/include/X11/Xdefs.h
@@ -1919,9 +1919,9 @@ afbbltG.o: ../../../exports/include/X11/Xfuncproto.h
 afbbltG.o: ../../../exports/include/X11/X.h
 afbbltG.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbbltG.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbbltG.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbbltG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbbltG.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbbltG.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbbltG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbbltG.o: ../include/screenint.h ../include/region.h ../include/regionstr.h
 afbbltG.o: ../include/miscstruct.h ../include/gc.h
 afbbltG.o: ../../../exports/include/X11/Xdefs.h
@@ -1944,9 +1944,9 @@ afbcmap.o: ../../../exports/include/X11/Xfuncproto.h
 afbcmap.o: ../../../exports/include/X11/X.h
 afbcmap.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbcmap.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbcmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbcmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbcmap.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbcmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbcmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbcmap.o: ../include/regionstr.h ../include/miscstruct.h ../include/gc.h
 afbcmap.o: ../../../exports/include/X11/Xdefs.h
 afbcmap.o: ../../../exports/include/X11/Xproto.h ../include/pixmap.h
@@ -1962,9 +1962,9 @@ afbtileC.o: ../../../exports/include/X11/Xmd.h
 afbtileC.o: ../../../exports/include/X11/X.h
 afbtileC.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbtileC.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbtileC.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbtileC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbtileC.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbtileC.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbtileC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbtileC.o: ../include/region.h ../include/regionstr.h
 afbtileC.o: ../include/miscstruct.h ../../../exports/include/X11/Xprotostr.h
 afbtileC.o: ../include/gc.h ../../../exports/include/X11/Xdefs.h
@@ -1985,9 +1985,9 @@ afbtileG.o: ../../../exports/include/X11/Xmd.h
 afbtileG.o: ../../../exports/include/X11/X.h
 afbtileG.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbtileG.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbtileG.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbtileG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbtileG.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbtileG.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbtileG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbtileG.o: ../include/region.h ../include/regionstr.h
 afbtileG.o: ../include/miscstruct.h ../../../exports/include/X11/Xprotostr.h
 afbtileG.o: ../include/gc.h ../../../exports/include/X11/Xdefs.h
@@ -2007,9 +2007,9 @@ afbmisc.o: ../../../exports/include/X11/Xmd.h
 afbmisc.o: ../../../exports/include/X11/X.h
 afbmisc.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbmisc.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbmisc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbmisc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbmisc.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbmisc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbmisc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbmisc.o: ../include/cursor.h ../include/screenint.h ../include/window.h
 afbmisc.o: ../include/region.h ../include/regionstr.h ../include/miscstruct.h
 afbmisc.o: ../../../exports/include/X11/Xprotostr.h ../include/gc.h
@@ -2025,9 +2025,9 @@ afbbstore.o: ../../../exports/include/X11/Xmd.h
 afbbstore.o: ../../../exports/include/X11/X.h
 afbbstore.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbbstore.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbbstore.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbbstore.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbbstore.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbbstore.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbbstore.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbbstore.o: ../include/screenint.h ../include/region.h
 afbbstore.o: ../include/regionstr.h ../include/miscstruct.h
 afbbstore.o: ../../../exports/include/X11/Xprotostr.h ../include/gc.h
@@ -2049,9 +2049,9 @@ afbseg.o: ../../../exports/include/X11/Xfuncproto.h
 afbseg.o: ../../../exports/include/X11/Xmd.h
 afbseg.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbseg.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbseg.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbseg.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbseg.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbseg.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbseg.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbseg.o: ../include/pixmap.h ../include/regionstr.h ../include/miscstruct.h
 afbseg.o: ../../../exports/include/X11/Xprotostr.h ../include/region.h
 afbseg.o: ../../../exports/include/X11/Xprotostr.h ../include/windowstr.h
@@ -2074,9 +2074,9 @@ afbbltC.o: ../../../exports/include/X11/Xfuncproto.h
 afbbltC.o: ../../../exports/include/X11/X.h
 afbbltC.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbbltC.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbbltC.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbbltC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbbltC.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbbltC.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbbltC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbbltC.o: ../include/screenint.h ../include/region.h ../include/regionstr.h
 afbbltC.o: ../include/miscstruct.h ../include/gc.h
 afbbltC.o: ../../../exports/include/X11/Xdefs.h
@@ -2099,9 +2099,9 @@ afbbltX.o: ../../../exports/include/X11/Xfuncproto.h
 afbbltX.o: ../../../exports/include/X11/X.h
 afbbltX.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbbltX.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbbltX.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbbltX.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbbltX.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbbltX.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbbltX.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbbltX.o: ../include/screenint.h ../include/region.h ../include/regionstr.h
 afbbltX.o: ../include/miscstruct.h ../include/gc.h
 afbbltX.o: ../../../exports/include/X11/Xdefs.h
@@ -2125,9 +2125,9 @@ afbbltCI.o: ../../../exports/include/X11/Xfuncproto.h
 afbbltCI.o: ../../../exports/include/X11/X.h
 afbbltCI.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbbltCI.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbbltCI.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbbltCI.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbbltCI.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbbltCI.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbbltCI.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbbltCI.o: ../include/screenint.h ../include/region.h ../include/regionstr.h
 afbbltCI.o: ../include/miscstruct.h ../include/gc.h
 afbbltCI.o: ../../../exports/include/X11/Xdefs.h
@@ -2150,9 +2150,9 @@ afbbltO.o: ../../../exports/include/X11/Xfuncproto.h
 afbbltO.o: ../../../exports/include/X11/X.h
 afbbltO.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbbltO.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbbltO.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbbltO.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbbltO.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbbltO.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbbltO.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbbltO.o: ../include/screenint.h ../include/region.h ../include/regionstr.h
 afbbltO.o: ../include/miscstruct.h ../include/gc.h
 afbbltO.o: ../../../exports/include/X11/Xdefs.h
@@ -2175,9 +2175,9 @@ afbbltG.o: ../../../exports/include/X11/Xfuncproto.h
 afbbltG.o: ../../../exports/include/X11/X.h
 afbbltG.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbbltG.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbbltG.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbbltG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbbltG.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbbltG.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbbltG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbbltG.o: ../include/screenint.h ../include/region.h ../include/regionstr.h
 afbbltG.o: ../include/miscstruct.h ../include/gc.h
 afbbltG.o: ../../../exports/include/X11/Xdefs.h
@@ -2198,9 +2198,9 @@ afbtileC.o: ../../../exports/include/X11/Xmd.h
 afbtileC.o: ../../../exports/include/X11/X.h
 afbtileC.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbtileC.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbtileC.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbtileC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbtileC.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbtileC.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbtileC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbtileC.o: ../include/region.h ../include/regionstr.h
 afbtileC.o: ../include/miscstruct.h ../../../exports/include/X11/Xprotostr.h
 afbtileC.o: ../include/gc.h ../../../exports/include/X11/Xdefs.h
@@ -2221,9 +2221,9 @@ afbtileG.o: ../../../exports/include/X11/Xmd.h
 afbtileG.o: ../../../exports/include/X11/X.h
 afbtileG.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbtileG.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbtileG.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbtileG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbtileG.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbtileG.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbtileG.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbtileG.o: ../include/region.h ../include/regionstr.h
 afbtileG.o: ../include/miscstruct.h ../../../exports/include/X11/Xprotostr.h
 afbtileG.o: ../include/gc.h ../../../exports/include/X11/Xdefs.h
@@ -2243,9 +2243,9 @@ afbmodule.o: ../../../exports/include/X11/Xmd.h
 afbmodule.o: ../../../exports/include/X11/X.h
 afbmodule.o: ../../../exports/include/X11/Xdefs.h ../include/os.h
 afbmodule.o: ../../../exports/include/X11/Xalloca.h ../include/xf86_ansic.h
-afbmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+afbmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 afbmodule.o: ../include/xf86_libc.h ../../../exports/include/X11/Xfuncs.h
-afbmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+afbmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 afbmodule.o: ../include/xf86Version.h afb.h ../include/pixmap.h
 afbmodule.o: ../include/screenint.h ../include/region.h
 afbmodule.o: ../include/regionstr.h ../include/miscstruct.h

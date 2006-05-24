@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1338,10 +1338,10 @@ xttprop.o: ../../../../exports/include/X11/Xosdefs.h
 xttprop.o: ../../../../programs/Xserver/include/os.h
 xttprop.o: ../../../../exports/include/X11/Xalloca.h
 xttprop.o: ../../../../programs/Xserver/include/xf86_ansic.h
-xttprop.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xttprop.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xttprop.o: ../../../../programs/Xserver/include/xf86_libc.h
 xttprop.o: ../../../../exports/include/X11/Xfuncs.h
-xttprop.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xttprop.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xttprop.o: ../../../../programs/Xserver/include/xf86Version.h
 xttprop.o: ../../../../extras/FreeType/lib/freetype.h
 xttprop.o: ../../../../extras/FreeType/lib/fterrid.h
@@ -1368,10 +1368,10 @@ xttfuncs.o: ../../../../exports/include/X11/Xosdefs.h
 xttfuncs.o: ../../../../programs/Xserver/include/os.h
 xttfuncs.o: ../../../../exports/include/X11/Xalloca.h
 xttfuncs.o: ../../../../programs/Xserver/include/xf86_ansic.h
-xttfuncs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xttfuncs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xttfuncs.o: ../../../../programs/Xserver/include/xf86_libc.h
 xttfuncs.o: ../../../../exports/include/X11/Xfuncs.h
-xttfuncs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xttfuncs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xttfuncs.o: ../../../../programs/Xserver/include/xf86Version.h
 xttfuncs.o: ../../../../extras/FreeType/lib/freetype.h
 xttfuncs.o: ../../../../extras/FreeType/lib/fterrid.h
@@ -1392,10 +1392,10 @@ xttcconv.o: ../../../../exports/include/X11/Xdefs.h
 xttcconv.o: ../../../../programs/Xserver/include/os.h
 xttcconv.o: ../../../../exports/include/X11/Xalloca.h
 xttcconv.o: ../../../../programs/Xserver/include/xf86_ansic.h
-xttcconv.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xttcconv.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xttcconv.o: ../../../../programs/Xserver/include/xf86_libc.h
 xttcconv.o: ../../../../exports/include/X11/Xfuncs.h
-xttcconv.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xttcconv.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xttcconv.o: ../../../../programs/Xserver/include/xf86Version.h
 xttcconv.o: ../../include/fontmisc.h
 xttcconv.o: ../../../../extras/FreeType/lib/freetype.h
@@ -1413,10 +1413,10 @@ xttcap.o: ../../../../exports/include/X11/Xdefs.h
 xttcap.o: ../../../../programs/Xserver/include/os.h
 xttcap.o: ../../../../exports/include/X11/Xalloca.h
 xttcap.o: ../../../../programs/Xserver/include/xf86_ansic.h
-xttcap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xttcap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xttcap.o: ../../../../programs/Xserver/include/xf86_libc.h
 xttcap.o: ../../../../exports/include/X11/Xfuncs.h
-xttcap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xttcap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xttcap.o: ../../../../programs/Xserver/include/xf86Version.h
 xttcap.o: ../../include/fontmisc.h ../../../../extras/FreeType/lib/freetype.h
 xttcap.o: ../../../../extras/FreeType/lib/fterrid.h
@@ -1432,10 +1432,10 @@ xttmisc.o: ../../../../exports/include/X11/Xdefs.h
 xttmisc.o: ../../../../programs/Xserver/include/os.h
 xttmisc.o: ../../../../exports/include/X11/Xalloca.h
 xttmisc.o: ../../../../programs/Xserver/include/xf86_ansic.h
-xttmisc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xttmisc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xttmisc.o: ../../../../programs/Xserver/include/xf86_libc.h
 xttmisc.o: ../../../../exports/include/X11/Xfuncs.h
-xttmisc.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xttmisc.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xttmisc.o: ../../../../programs/Xserver/include/xf86Version.h
 xttmisc.o: ../../include/fontmisc.h
 xttmisc.o: ../../../../extras/FreeType/lib/freetype.h
@@ -1453,11 +1453,11 @@ freetype.o: ../../../../programs/Xserver/include/servermd.h
 freetype.o: ../../include/fontmisc.h ../../../../exports/include/X11/Xdefs.h
 freetype.o: ../../../../exports/include/X11/Xfuncproto.h
 freetype.o: ../../../../programs/Xserver/include/xf86_ansic.h
-freetype.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+freetype.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 freetype.o: ../../../../programs/Xserver/include/xf86_libc.h
 freetype.o: ../../../../exports/include/X11/Xfuncs.h
 freetype.o: ../../../../exports/include/X11/Xosdefs.h
-freetype.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+freetype.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 freetype.o: ../../../../extras/FreeType/lib/freetype.h
 freetype.o: ../../../../extras/FreeType/lib/fterrid.h
 freetype.o: ../../../../extras/FreeType/lib/ftnameid.h
@@ -1502,11 +1502,11 @@ ftxcmap.o: ../../../../programs/Xserver/include/servermd.h
 ftxcmap.o: ../../include/fontmisc.h ../../../../exports/include/X11/Xdefs.h
 ftxcmap.o: ../../../../exports/include/X11/Xfuncproto.h
 ftxcmap.o: ../../../../programs/Xserver/include/xf86_ansic.h
-ftxcmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ftxcmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ftxcmap.o: ../../../../programs/Xserver/include/xf86_libc.h
 ftxcmap.o: ../../../../exports/include/X11/Xfuncs.h
 ftxcmap.o: ../../../../exports/include/X11/Xosdefs.h
-ftxcmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ftxcmap.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ftxcmap.o: ../../../../extras/FreeType/lib/ttobjs.h
 ftxcmap.o: ../../../../extras/FreeType/lib/ttengine.h
 ftxcmap.o: ../../../../extras/FreeType/lib/ttmutex.h
@@ -1524,11 +1524,11 @@ ftxsbit.o: ../../../../programs/Xserver/include/servermd.h
 ftxsbit.o: ../../include/fontmisc.h ../../../../exports/include/X11/Xdefs.h
 ftxsbit.o: ../../../../exports/include/X11/Xfuncproto.h
 ftxsbit.o: ../../../../programs/Xserver/include/xf86_ansic.h
-ftxsbit.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ftxsbit.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ftxsbit.o: ../../../../programs/Xserver/include/xf86_libc.h
 ftxsbit.o: ../../../../exports/include/X11/Xfuncs.h
 ftxsbit.o: ../../../../exports/include/X11/Xosdefs.h
-ftxsbit.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ftxsbit.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ftxsbit.o: ../../../../extras/FreeType/lib/ttengine.h
 ftxsbit.o: ../../../../extras/FreeType/lib/tttypes.h
 ftxsbit.o: ../../../../extras/FreeType/lib/ttmutex.h
@@ -1550,10 +1550,10 @@ xttmodule.o: ../../../../exports/include/X11/Xdefs.h
 xttmodule.o: ../../../../programs/Xserver/include/os.h
 xttmodule.o: ../../../../exports/include/X11/Xalloca.h
 xttmodule.o: ../../../../programs/Xserver/include/xf86_ansic.h
-xttmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+xttmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 xttmodule.o: ../../../../programs/Xserver/include/xf86_libc.h
 xttmodule.o: ../../../../exports/include/X11/Xfuncs.h
-xttmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+xttmodule.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 xttmodule.o: ../../include/fontmod.h
 xttmodule.o: ../../../../programs/Xserver/include/xf86Module.h
 xttmodule.o: ../../../../programs/Xserver/include/xf86Version.h

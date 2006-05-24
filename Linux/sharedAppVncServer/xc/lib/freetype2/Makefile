@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1776,18 +1776,18 @@ ftapi.o: ./freetype/config/ftoption.h ./freetype/config/ftstdlib.h
 ftapi.o: /usr/include/limits.h /usr/include/features.h
 ftapi.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 ftapi.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
-ftapi.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/limits.h
+ftapi.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/limits.h
 ftapi.o: /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h
 ftapi.o: /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h
 ftapi.o: /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h
 ftapi.o: /usr/include/ctype.h /usr/include/bits/types.h
-ftapi.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ftapi.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ftapi.o: /usr/include/bits/typesizes.h /usr/include/endian.h
 ftapi.o: /usr/include/bits/endian.h /usr/include/xlocale.h
 ftapi.o: /usr/include/string.h /usr/include/stdio.h /usr/include/libio.h
 ftapi.o: /usr/include/_G_config.h /usr/include/wchar.h
 ftapi.o: /usr/include/bits/wchar.h /usr/include/gconv.h
-ftapi.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ftapi.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ftapi.o: /usr/include/bits/sys_errlist.h /usr/include/stdlib.h
 ftapi.o: /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h
 ftapi.o: /usr/include/sys/types.h /usr/include/time.h
@@ -1873,12 +1873,12 @@ ftsystem.o: ./freetype/fterrors.h ./freetype/ftmoderr.h ./freetype/fterrdef.h
 ftsystem.o: ./freetype/fttypes.h /usr/include/stdio.h /usr/include/features.h
 ftsystem.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
 ftsystem.o: /usr/include/bits/wordsize.h /usr/include/gnu/stubs-32.h
-ftsystem.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+ftsystem.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 ftsystem.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
 ftsystem.o: /usr/include/libio.h /usr/include/_G_config.h
 ftsystem.o: /usr/include/wchar.h /usr/include/bits/wchar.h
 ftsystem.o: /usr/include/gconv.h
-ftsystem.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+ftsystem.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 ftsystem.o: /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h
 ftsystem.o: /usr/include/stdlib.h /usr/include/bits/waitflags.h
 ftsystem.o: /usr/include/bits/waitstatus.h /usr/include/endian.h

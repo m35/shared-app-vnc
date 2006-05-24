@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1303,10 +1303,10 @@ smi_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 smi_driver.o: ../../../../../../programs/Xserver/include/os.h
 smi_driver.o: ../../../../../../exports/include/X11/Xalloca.h
 smi_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-smi_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+smi_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 smi_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 smi_driver.o: ../../../../../../exports/include/X11/Xfuncs.h
-smi_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+smi_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 smi_driver.o: ../../../../../../programs/Xserver/include/input.h
 smi_driver.o: ../../../../../../programs/Xserver/include/screenint.h
 smi_driver.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1394,10 +1394,10 @@ smi_accel.o: ../../../../../../exports/include/X11/Xdefs.h
 smi_accel.o: ../../../../../../programs/Xserver/include/os.h
 smi_accel.o: ../../../../../../exports/include/X11/Xalloca.h
 smi_accel.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-smi_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+smi_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 smi_accel.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 smi_accel.o: ../../../../../../exports/include/X11/Xfuncs.h
-smi_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+smi_accel.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 smi_accel.o: ../../../../../../programs/Xserver/include/input.h
 smi_accel.o: ../../../../../../programs/Xserver/include/screenint.h
 smi_accel.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1483,10 +1483,10 @@ smi_dac.o: ../../../../../../exports/include/X11/Xdefs.h
 smi_dac.o: ../../../../../../programs/Xserver/include/os.h
 smi_dac.o: ../../../../../../exports/include/X11/Xalloca.h
 smi_dac.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-smi_dac.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+smi_dac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 smi_dac.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 smi_dac.o: ../../../../../../exports/include/X11/Xfuncs.h
-smi_dac.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+smi_dac.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 smi_dac.o: ../../../../../../programs/Xserver/include/input.h
 smi_dac.o: ../../../../../../programs/Xserver/include/screenint.h
 smi_dac.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1569,10 +1569,10 @@ smi_hwcurs.o: ../../../../../../exports/include/X11/Xdefs.h
 smi_hwcurs.o: ../../../../../../programs/Xserver/include/os.h
 smi_hwcurs.o: ../../../../../../exports/include/X11/Xalloca.h
 smi_hwcurs.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-smi_hwcurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+smi_hwcurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 smi_hwcurs.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 smi_hwcurs.o: ../../../../../../exports/include/X11/Xfuncs.h
-smi_hwcurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+smi_hwcurs.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 smi_hwcurs.o: ../../../../../../programs/Xserver/include/screenint.h
 smi_hwcurs.o: ../../../../../../programs/Xserver/include/window.h
 smi_hwcurs.o: ../../../../../../programs/Xserver/include/region.h
@@ -1656,10 +1656,10 @@ smi_dga.o: ../../../../../../exports/include/X11/Xdefs.h
 smi_dga.o: ../../../../../../programs/Xserver/include/os.h
 smi_dga.o: ../../../../../../exports/include/X11/Xalloca.h
 smi_dga.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-smi_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+smi_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 smi_dga.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 smi_dga.o: ../../../../../../exports/include/X11/Xfuncs.h
-smi_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+smi_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 smi_dga.o: ../../../../../../programs/Xserver/include/input.h
 smi_dga.o: ../../../../../../programs/Xserver/include/screenint.h
 smi_dga.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1745,10 +1745,10 @@ smi_i2c.o: ../../../../../../exports/include/X11/Xdefs.h
 smi_i2c.o: ../../../../../../programs/Xserver/include/os.h
 smi_i2c.o: ../../../../../../exports/include/X11/Xalloca.h
 smi_i2c.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-smi_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+smi_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 smi_i2c.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 smi_i2c.o: ../../../../../../exports/include/X11/Xfuncs.h
-smi_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+smi_i2c.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 smi_i2c.o: ../../../../../../programs/Xserver/include/input.h
 smi_i2c.o: ../../../../../../programs/Xserver/include/screenint.h
 smi_i2c.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1831,10 +1831,10 @@ smi_shadow.o: ../../../../../../exports/include/X11/Xdefs.h
 smi_shadow.o: ../../../../../../programs/Xserver/include/os.h
 smi_shadow.o: ../../../../../../exports/include/X11/Xalloca.h
 smi_shadow.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-smi_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+smi_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 smi_shadow.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 smi_shadow.o: ../../../../../../exports/include/X11/Xfuncs.h
-smi_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+smi_shadow.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 smi_shadow.o: ../../../../../../programs/Xserver/include/input.h
 smi_shadow.o: ../../../../../../programs/Xserver/include/screenint.h
 smi_shadow.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1920,10 +1920,10 @@ smi_video.o: ../../../../../../exports/include/X11/Xdefs.h
 smi_video.o: ../../../../../../programs/Xserver/include/os.h
 smi_video.o: ../../../../../../exports/include/X11/Xalloca.h
 smi_video.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-smi_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+smi_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 smi_video.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 smi_video.o: ../../../../../../exports/include/X11/Xfuncs.h
-smi_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+smi_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 smi_video.o: ../../../../../../programs/Xserver/include/input.h
 smi_video.o: ../../../../../../programs/Xserver/include/screenint.h
 smi_video.o: ../../../../../../exports/include/X11/Xproto.h

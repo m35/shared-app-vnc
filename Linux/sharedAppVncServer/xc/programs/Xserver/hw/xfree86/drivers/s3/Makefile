@@ -38,7 +38,7 @@ all::
 
 # platform:  $XFree86: xc/config/cf/linux.cf,v 3.219 2003/12/19 01:47:26 dawes Exp $
 
-# operating system:  Linux 2.6.14-1.1644_FC4 i686 [ELF] (2.6.14)
+# operating system:  Linux 2.6.11-1.1369_FC4 i686 [ELF] (2.6.11)
 # libc:	(6.3.5)
 # binutils:	(215)
 
@@ -1312,10 +1312,10 @@ s3_driver.o: ../../../../../../exports/include/X11/Xdefs.h
 s3_driver.o: ../../../../../../programs/Xserver/include/os.h
 s3_driver.o: ../../../../../../exports/include/X11/Xalloca.h
 s3_driver.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-s3_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+s3_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 s3_driver.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 s3_driver.o: ../../../../../../exports/include/X11/Xfuncs.h
-s3_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+s3_driver.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 s3_driver.o: ../../../../../../programs/Xserver/include/input.h
 s3_driver.o: ../../../../../../programs/Xserver/include/screenint.h
 s3_driver.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1411,10 +1411,10 @@ s3_IBMRGB.o: ../../../../../../exports/include/X11/Xdefs.h
 s3_IBMRGB.o: ../../../../../../programs/Xserver/include/os.h
 s3_IBMRGB.o: ../../../../../../exports/include/X11/Xalloca.h
 s3_IBMRGB.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-s3_IBMRGB.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+s3_IBMRGB.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 s3_IBMRGB.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 s3_IBMRGB.o: ../../../../../../exports/include/X11/Xfuncs.h
-s3_IBMRGB.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+s3_IBMRGB.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 s3_IBMRGB.o: ../../../../../../programs/Xserver/include/input.h
 s3_IBMRGB.o: ../../../../../../programs/Xserver/include/screenint.h
 s3_IBMRGB.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1499,10 +1499,10 @@ s3_Trio64DAC.o: ../../../../../../exports/include/X11/Xdefs.h
 s3_Trio64DAC.o: ../../../../../../programs/Xserver/include/os.h
 s3_Trio64DAC.o: ../../../../../../exports/include/X11/Xalloca.h
 s3_Trio64DAC.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-s3_Trio64DAC.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+s3_Trio64DAC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 s3_Trio64DAC.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 s3_Trio64DAC.o: ../../../../../../exports/include/X11/Xfuncs.h
-s3_Trio64DAC.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+s3_Trio64DAC.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 s3_Trio64DAC.o: ../../../../../../programs/Xserver/include/input.h
 s3_Trio64DAC.o: ../../../../../../programs/Xserver/include/screenint.h
 s3_Trio64DAC.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1587,10 +1587,10 @@ s3_accel_newmmio.o: ../../../../../../exports/include/X11/Xdefs.h
 s3_accel_newmmio.o: ../../../../../../programs/Xserver/include/os.h
 s3_accel_newmmio.o: ../../../../../../exports/include/X11/Xalloca.h
 s3_accel_newmmio.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-s3_accel_newmmio.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+s3_accel_newmmio.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 s3_accel_newmmio.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 s3_accel_newmmio.o: ../../../../../../exports/include/X11/Xfuncs.h
-s3_accel_newmmio.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+s3_accel_newmmio.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 s3_accel_newmmio.o: ../../../../../../programs/Xserver/include/input.h
 s3_accel_newmmio.o: ../../../../../../programs/Xserver/include/screenint.h
 s3_accel_newmmio.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1674,10 +1674,10 @@ s3_accel_pio.o: ../../../../../../exports/include/X11/Xdefs.h
 s3_accel_pio.o: ../../../../../../programs/Xserver/include/os.h
 s3_accel_pio.o: ../../../../../../exports/include/X11/Xalloca.h
 s3_accel_pio.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-s3_accel_pio.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+s3_accel_pio.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 s3_accel_pio.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 s3_accel_pio.o: ../../../../../../exports/include/X11/Xfuncs.h
-s3_accel_pio.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+s3_accel_pio.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 s3_accel_pio.o: ../../../../../../programs/Xserver/include/input.h
 s3_accel_pio.o: ../../../../../../programs/Xserver/include/screenint.h
 s3_accel_pio.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1761,10 +1761,10 @@ s3_cursor.o: ../../../../../../exports/include/X11/Xdefs.h
 s3_cursor.o: ../../../../../../programs/Xserver/include/os.h
 s3_cursor.o: ../../../../../../exports/include/X11/Xalloca.h
 s3_cursor.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-s3_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+s3_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 s3_cursor.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 s3_cursor.o: ../../../../../../exports/include/X11/Xfuncs.h
-s3_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+s3_cursor.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 s3_cursor.o: ../../../../../../programs/Xserver/include/input.h
 s3_cursor.o: ../../../../../../programs/Xserver/include/screenint.h
 s3_cursor.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1849,10 +1849,10 @@ s3_bios.o: ../../../../../../exports/include/X11/Xdefs.h
 s3_bios.o: ../../../../../../programs/Xserver/include/os.h
 s3_bios.o: ../../../../../../exports/include/X11/Xalloca.h
 s3_bios.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-s3_bios.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+s3_bios.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 s3_bios.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 s3_bios.o: ../../../../../../exports/include/X11/Xfuncs.h
-s3_bios.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+s3_bios.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 s3_bios.o: ../../../../../../programs/Xserver/include/input.h
 s3_bios.o: ../../../../../../programs/Xserver/include/screenint.h
 s3_bios.o: ../../../../../../exports/include/X11/Xproto.h
@@ -1937,10 +1937,10 @@ s3_video.o: ../../../../../../exports/include/X11/Xdefs.h
 s3_video.o: ../../../../../../programs/Xserver/include/os.h
 s3_video.o: ../../../../../../exports/include/X11/Xalloca.h
 s3_video.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-s3_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+s3_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 s3_video.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 s3_video.o: ../../../../../../exports/include/X11/Xfuncs.h
-s3_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+s3_video.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 s3_video.o: ../../../../../../programs/Xserver/include/input.h
 s3_video.o: ../../../../../../programs/Xserver/include/screenint.h
 s3_video.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2025,10 +2025,10 @@ s3_dga.o: ../../../../../../exports/include/X11/Xdefs.h
 s3_dga.o: ../../../../../../programs/Xserver/include/os.h
 s3_dga.o: ../../../../../../exports/include/X11/Xalloca.h
 s3_dga.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-s3_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+s3_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 s3_dga.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 s3_dga.o: ../../../../../../exports/include/X11/Xfuncs.h
-s3_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+s3_dga.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 s3_dga.o: ../../../../../../programs/Xserver/include/input.h
 s3_dga.o: ../../../../../../programs/Xserver/include/screenint.h
 s3_dga.o: ../../../../../../exports/include/X11/Xproto.h
@@ -2114,10 +2114,10 @@ s3_Ti.o: ../../../../../../exports/include/X11/Xdefs.h
 s3_Ti.o: ../../../../../../programs/Xserver/include/os.h
 s3_Ti.o: ../../../../../../exports/include/X11/Xalloca.h
 s3_Ti.o: ../../../../../../programs/Xserver/include/xf86_ansic.h
-s3_Ti.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stdarg.h
+s3_Ti.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stdarg.h
 s3_Ti.o: ../../../../../../programs/Xserver/include/xf86_libc.h
 s3_Ti.o: ../../../../../../exports/include/X11/Xfuncs.h
-s3_Ti.o: /usr/lib/gcc/i386-redhat-linux/4.0.2/include/stddef.h
+s3_Ti.o: /usr/lib/gcc/i386-redhat-linux/4.0.0/include/stddef.h
 s3_Ti.o: ../../../../../../programs/Xserver/include/input.h
 s3_Ti.o: ../../../../../../programs/Xserver/include/screenint.h
 s3_Ti.o: ../../../../../../exports/include/X11/Xproto.h
