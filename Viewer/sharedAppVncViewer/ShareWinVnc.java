@@ -185,6 +185,9 @@ class ShareWinVnc
         } else if (argv[i].equals("-enable-blackout")) {
           System.out.println("Enabling blackout regions");
           options.setUseBlackOut(true);
+        } else if (argv[i].equals("-trace")) {
+          System.out.println("Enabling message trace");
+          options.trace = true;
         }
 
       }

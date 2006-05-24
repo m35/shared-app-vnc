@@ -54,6 +54,7 @@ class Dispatcher extends Thread {
   static int DesktopWindowId = 0;
 
   int msgCount  = 0;
+  boolean trace = false;
 
 
   Dispatcher(Socket s, Options o, Point location) throws Exception
@@ -73,6 +74,8 @@ class Dispatcher extends Thread {
     remoteHost = s.getInetAddress().getHostName();
 
     rfb = new RfbProto(s, o);
+
+    trace = o.trace;
 
     start();
   }
@@ -193,8 +196,11 @@ class Dispatcher extends Thread {
   
         cursorPosReceived = false;
 
-        System.out.println("TRACE [" + msgCount + "]: Message Type " + msgType);
-        msgCount++;
+        if (trace)
+	{
+          System.out.println("TRACE [" + msgCount + "]: Message Type " + msgType);
+          msgCount++;
+	}
   
         // Process the message depending on its type.
         switch (msgType) {
@@ -322,7 +328,10 @@ class Dispatcher extends Thread {
     rfb.updateRect.width = win.rect.width;
     rfb.updateRect.height = win.rect.height;
 
-    System.out.println("    nRects 0x" + Integer.toHexString(rfb.updateNRects)); // TRACE
+    if (trace)
+    {
+      System.out.println("    nRects 0x" + Integer.toHexString(rfb.updateNRects)); // TRACE
+    }
 
     for (int i = 0; i < rfb.updateNRects; i++) {
       rfb.readFramebufferUpdateRectHdr();
@@ -437,7 +446,10 @@ class Dispatcher extends Thread {
     win.setCursorOffset(rfb.cursorOffset.x, rfb.cursorOffset.y);
 
     //System.out.println("Update Win " + win.windowId + " rect: " + win.rect.toString());
-    System.out.println("    nRects 0x" + Integer.toHexString(rfb.updateNRects)); // TRACE
+    if (trace)
+    {
+      System.out.println("    nRects 0x" + Integer.toHexString(rfb.updateNRects)); // TRACE
+    }
 
     for (int j = 0; j < rfb.updateNRects; j++) {
       rfb.readFramebufferUpdateRectHdr();
@@ -446,8 +458,11 @@ class Dispatcher extends Thread {
       int rw = rfb.updateRectW;
       int rh = rfb.updateRectH;
 
+    if (trace)
+    {
       System.out.println("TRACE [" + msgCount + "]: Rect[" + j + "] Encoding " + Integer.toHexString(rfb.updateRectEncoding));
       msgCount++;
+    }
 
       if (rfb.updateRectEncoding == rfb.EncodingLastRect)
       {

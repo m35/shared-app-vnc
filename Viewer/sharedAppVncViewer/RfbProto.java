@@ -465,8 +465,8 @@ class RfbProto {
 
     os.write(b);
 
-    System.out.println("writeFramebufferUpdateRequest: " +x+", "+y+", "+w+", "+h + ", " + incremental);
-    System.out.println();
+    //System.out.println("writeFramebufferUpdateRequest: " +x+", "+y+", "+w+", "+h + ", " + incremental);
+    //System.out.println();
 
   }
 
@@ -701,7 +701,7 @@ class RfbProto {
       eventBuf[eventBufLen++] = (byte)  (0xad); //pad((winId >> 8) & 0xff);
       eventBuf[eventBufLen++] = (byte)  (0xad); //pad(winId & 0xff);
     }
-System.out.println("Trace Pointer(" + tmsgCount++ + "): x(" + x + ") y(" + y + ") button(" + Integer.toHexString(pointerMask) + ") winId(" + Integer.toHexString(winId) + ")");
+//System.out.println("Trace Pointer(" + tmsgCount++ + "): x(" + x + ") y(" + y + ") button(" + Integer.toHexString(pointerMask) + ") winId(" + Integer.toHexString(winId) + ")");
 */
 
 //    System.out.println("P: " + eventBuf);

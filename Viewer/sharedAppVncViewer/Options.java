@@ -74,6 +74,8 @@ class Options {
   private int multiCursor;
   private boolean useBlackOut;
 
+  public boolean trace = false;
+
 
   Options() {
     // Set up defaults
